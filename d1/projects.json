@@ -1,0 +1,7 @@
+{
+  "projects": [
+    ["Communicart", "https://github.com/18F/C2.git"],
+    ["AAA Experimental Prototype1", "https://github.com/18F/aaa-exp-proto1.git"],
+    ["DOI Extractives", "https://github.com/18F/doi-extractives-data.git"]
+  ]
+}

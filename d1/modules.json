@@ -1,0 +1,6 @@
+{
+  "modules": [
+    ["title", "title.js"],
+    ["link", "link.js"]
+  ]
+}
