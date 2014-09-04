@@ -6,7 +6,6 @@ var issues = "";
 
 modules[0] = function(repo_name) {
   $.getJSON(GITHUB_API+"repos/"+ORGANIZATION+"/"+repo_name+"/issues", function(data) {
-      alert("data"+JSON.stringify(data));
       issues = data;
       var num_issues = issues.length
       $("#"+repo_name+"_issues").text(""+num_issues);
@@ -17,7 +16,6 @@ modules[0] = function(repo_name) {
 
 $(document).ready(function() {
 //  $('#tab-container').easytabs();
-  
   render_all();
 });
 
