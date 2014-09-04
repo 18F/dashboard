@@ -10,7 +10,22 @@ modules[0] = function(repo_name) {
       var num_issues = issues.length
       $("#"+repo_name+"_issues").text(""+num_issues);
       
-    });
+    }).error(function () {
+      $("#"+repo_name+"_issues").text("Not available.");
+});
+}
+
+modules[1] = function(repo_name) {
+  $.getJSON(GITHUB_API+"repos/"+ORGANIZATION+"/"+repo_name+"/contents/status.txt", function(data) {
+      status = data.content;
+      if (typeof data.content != 'undefined' ) {
+	  $("#"+repo_name+"_status").text(atob(data.content));
+      } else {
+	  $("#"+repo_name+"_status").text("Status.txt file not found in master for repo: "+repo_name);
+      }
+    }).error(function () {
+	  $("#"+repo_name+"_status").text("Status.txt file not found in master for repo: "+repo_name);
+});
 }
 
 
@@ -57,6 +72,9 @@ var render_modules = function(projects) {
   _.map(projects,function(project) {
       modules[0](project.name);
   });
+  _.map(projects,function(project) {
+      modules[1](project.name);
+  });
 }
 
 var render_dashboard = function() {
@@ -70,7 +88,9 @@ var render_dashboard = function() {
       var project = {name: name,title: title, url: url};
       projects.push(project);
        return li(strong(title)+": " + name + " (source: " + link("#", url) + ")" + 
-		 " issues: " + span(name+"_issues",""));
+		 " <br> issues: " + span(name+"_issues","") +
+		 " <br> status: " + strong(span(name+"_status",""))
+		);
     }).join("");
     $("#dashboard").html(content);
     render_modules(projects);
