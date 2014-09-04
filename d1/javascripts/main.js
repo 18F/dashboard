@@ -16,7 +16,9 @@ modules[0] = function(repo_name) {
 }
 
 modules[1] = function(repo_name) {
-  $.getJSON(GITHUB_API+"repos/"+ORGANIZATION+"/"+repo_name+"/contents/status.txt", function(data) {
+  $.getJSON(GITHUB_API+"repos/"+ORGANIZATION+"/"+repo_name+"/contents/status.txt", 
+// { ref: "master" },
+ function(data) {
       status = data.content;
       if (typeof data.content != 'undefined' ) {
 	  $("#"+repo_name+"_status").text(atob(data.content));
@@ -68,6 +70,10 @@ var span = function(id, content) {
   return "<span id=" + id + ">" + content + "</span>";
 }
 
+var span_w_class = function(id, css_class, content) {
+  return '<span id=' + id + ' class="'+css_class+ '">' + content + '</span>';
+}
+
 var render_modules = function(projects) {
   _.map(projects,function(project) {
       modules[0](project.name);
@@ -86,10 +92,10 @@ var render_dashboard = function() {
       var name = p[1];
       var url = p[2];
       var project = {name: name,title: title, url: url};
-      projects.push(project);
+      projects.push(project); 
        return li(strong(title)+": " + name + " (source: " + link("#", url) + ")" + 
 		 " <br> issues: " + span(name+"_issues","") +
-		 " <br> status: " + strong(span(name+"_status",""))
+		 " <br> status: " + strong(span_w_class(name+"_status","status_text",""))
 		);
     }).join("");
     $("#dashboard").html(content);

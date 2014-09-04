@@ -1,9 +1,17 @@
 {
   "projects": [
-    ["Communicart", "C2", "https://github.com/18F/C2.git"],
+    ["My R A", "myra", "https://github.com/18F/myra.git"],
+    ["FOIA", "foia", "https://github.com/18F/foia.git"],
+    ["FBOpen", "fbopen", "https://github.com/18F/fbpoen.git"],
+    ["FOIA Hub", "foia-hub", "https://github.com/18F/foia-hub.git"],
+    ["Midas", "midas", "https://github.com/18F/midas.git"],
+    ["openFEC", "openFEC", "https://github.com/18F/openFEC.git"],
+    ["API All The X", "API-All-the-X", "https://github.com/18F/API-All-the-X.git"],
+    ["Answers", "answers", "https://github.com/18F/answers.git"],
+    ["My USA","myusa", "https://github.com/18F/myusa.git"],
+    ["CAP (Communicart)", "C2", "https://github.com/18F/C2.git"],
     ["Agile Assisted Acquisitions", "aaa", "https://github.com/18F/aaa.git"],
     ["Dashboard", "dashboard", "https://github.com/18F/dashboard.git"],
-    ["AAA Experimental Prototype1", "aaa-exp-proto1", "https://github.com/18F/aaa-exp-proto1.git"],
     ["DOI Extractives", "doi-extractives-data", "https://github.com/18F/doi-extractives-data.git"]
   ]
 }
