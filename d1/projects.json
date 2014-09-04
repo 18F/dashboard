@@ -1,7 +1,8 @@
 {
   "projects": [
-    ["Communicart", "https://github.com/18F/C2.git"],
-    ["AAA Experimental Prototype1", "https://github.com/18F/aaa-exp-proto1.git"],
-    ["DOI Extractives", "https://github.com/18F/doi-extractives-data.git"]
+    ["Communicart", "C2", "https://github.com/18F/C2.git"],
+    ["Agile Assisted Acquisitions", "aaa", "https://github.com/18F/aaa.git"],
+    ["AAA Experimental Prototype1", "aaa-exp-proto1", "https://github.com/18F/aaa-exp-proto1.git"],
+    ["DOI Extractives", "doi-extractives-data", "https://github.com/18F/doi-extractives-data.git"]
   ]
 }
