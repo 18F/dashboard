@@ -1,3 +1,7 @@
+---
+layout: page
+title: Dashboard
+---
 <!DOCTYPE html>
 <html>
   <head>
@@ -25,8 +29,20 @@
         </header>
         <hr>
         <section id="main_content">
-          <h3>Dashboard</h3>
+          <h3>{{page.title}}</h3>
             <div id="dashboard">
+            <ul>
+              {% for project in site.data.projects.projects %}
+              <li><strong>{{project[0]}}:</strong> (source: <a href="{{project[2]}}">{{project[2]}}</a>)
+                <ul>
+                  <li id="{{project[1]}}_desc">Description: {{project[3]}}</li>
+                  <li id="{{project[1]}}_client">Client: {{project[4]}}</li>
+                  <li id="{{project[1]}}_status">Status: </li>
+                  <li id="{{project[1]}}_issues">Issues: </li>
+                </ul>
+              </li>
+              {% endfor %}
+            </ul>
             </div>
           <hr />
                   

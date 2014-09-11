@@ -1,6 +1,6 @@
 {
   "projects": [
-    ["My R A", "myra", "https://github.com/18F/myra.git"],
+    ["My R A", "myra", "https://github.com/18F/myra.git", "Individual and employer landing pages for the U.S. Department of the Treasury’s new retirement savings program, myRA (“My Retirement Account”).", "U.S. Department of Treasury"],
     ["FOIA", "foia", "https://github.com/18F/foia.git"],
     ["FBOpen", "fbopen", "https://github.com/18F/fbpoen.git"],
     ["FOIA Hub", "foia-hub", "https://github.com/18F/foia-hub.git"],

@@ -8,10 +8,10 @@ modules[0] = function(repo_name) {
   $.getJSON(GITHUB_API+"repos/"+ORGANIZATION+"/"+repo_name+"/issues", function(data) {
       issues = data;
       var num_issues = issues.length
-      $("#"+repo_name+"_issues").text(""+num_issues);
+      $("#"+repo_name+"_issues").append(""+num_issues);
       
     }).error(function () {
-      $("#"+repo_name+"_issues").text("Not available.");
+      $("#"+repo_name+"_issues").append("Not available.");
 });
 }
 
@@ -26,53 +26,15 @@ modules[1] = function(repo_name) {
 	  $("#"+repo_name+"_status").text("Status.txt file not found in master for repo: "+repo_name);
       }
     }).error(function () {
-	  $("#"+repo_name+"_status").text("Status.txt file not found in master for repo: "+repo_name);
-});
+	   $("#"+repo_name+"_status").text("Status.txt file not found in master for repo: "+repo_name);
+    });
 }
 
 
 $(document).ready(function() {
 //  $('#tab-container').easytabs();
-  render_all();
-});
-
-var li = function(content) {
-  return "<li>" + content + "</li>";
-};
-
-var get_value_from_types = function(key, callback) {
-  var value = "";
-  
-  $.ajax({
-    url: "data/types.json",
-    async: false,
-    success: function(res) {
-      value = res[key];
-    }
-  });
-  
-  return value;
-};
-
-var render_all = function() {
   render_dashboard();
-};
-
-var strong = function(content) {
-  return "<strong>" + content + "</strong>";
-};
-
-var link = function(href, content) {
-  return "<a href=" + href + ">" + content + "</a>"
-};
-
-var span = function(id, content) {
-  return "<span id=" + id + ">" + content + "</span>";
-}
-
-var span_w_class = function(id, css_class, content) {
-  return '<span id=' + id + ' class="'+css_class+ '">' + content + '</span>';
-}
+});
 
 var render_modules = function(projects) {
   _.map(projects,function(project) {
@@ -91,14 +53,11 @@ var render_dashboard = function() {
       var title = p[0];
       var name = p[1];
       var url = p[2];
-      var project = {name: name,title: title, url: url};
+      var desc = p[3];
+      var client = p[4];
+      var project = {name: name,title: title, url: url, description: desc, client: client};
       projects.push(project); 
-       return li(strong(title)+": " + name + " (source: " + link("#", url) + ")" + 
-		 " <br> issues: " + span(name+"_issues","") +
-		 " <br> status: " + strong(span_w_class(name+"_status","status_text",""))
-		);
     }).join("");
-    $("#dashboard").html(content);
     render_modules(projects);
   });
 }
