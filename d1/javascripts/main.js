@@ -1,47 +1,69 @@
 var modules = [];
 var GITHUB_API = "https://api.github.com/";
 var ORGANIZATION = "18f";
-
+var GITHUB_AUTH = $.getJSON("auth.json");
 var issues = "";
 
 modules[0] = function(repo_name) {
-  $.getJSON(GITHUB_API+"repos/"+ORGANIZATION+"/"+repo_name+"/issues", function(data) {
-      issues = data;
-      var num_issues = issues.length
-      $("#"+repo_name+"_issues").append(""+num_issues);
-      
-    }).error(function () {
-      $("#"+repo_name+"_issues").append("Not available.");
-});
+  header = set_headers();
+  var data = $.ajax({type: "GET", url: GITHUB_API+"repos/"+ORGANIZATION+"/"+repo_name+"/issues", dataType: "json", async: false, headers: header});
+  if ( data.status === 200 ) {
+    var num_issues = data.responseJSON.length;
+    $("#"+repo_name+"_issues").append(num_issues);
+  } else if ( data.status == 404 ) {
+    $("#"+repo_name+"_issues").append("Not available.");
+  } else {
+    $("#"+repo_name+"_issues").append("Unauthorized.");
+  }
 }
 
 modules[1] = function(repo_name) {
-  $.getJSON(GITHUB_API+"repos/"+ORGANIZATION+"/"+repo_name+"/contents/status.txt", 
-// { ref: "master" },
- function(data) {
-      status = data.content;
-      if (typeof data.content != 'undefined' ) {
-	  $("#"+repo_name+"_status").text(atob(data.content));
-      } else {
-	  $("#"+repo_name+"_status").text("Status.txt file not found in master for repo: "+repo_name);
-      }
-    }).error(function () {
-	   $("#"+repo_name+"_status").text("Status.txt file not found in master for repo: "+repo_name);
-    });
+  header = set_headers();
+  var data = $.ajax({ type: "GET", url: GITHUB_API+"repos/"+ORGANIZATION+"/"+repo_name+"/contents/status.txt", dataType: "json", async: false, headers: header}).responseJSON;
+  if ( data.status === 200 ) {
+    $("#"+repo_name+"_status").text(atob(data.content));
+  } else {
+    $("#"+repo_name+"_status").text("A status.txt file was not found for this project.");
+  }
 }
 
+modules[2] = function(repo_name) {
+  header = set_headers();
+  var data = $.ajax({type: "GET", url: GITHUB_API+"repos/"+ORGANIZATION+"/"+repo_name+"/stargazers", dataType: "json", async: false, headers: header});
+  if ( data.status === 200 ) {
+    var stargazers = data.responseJSON.length;
+    $("#"+repo_name+"_stars").append(stargazers);
+  } else {
+    console.log(data.responseJSON);
+   $("#"+repo_name+"_stars").append("Not available"); 
+  }
+}
 
 $(document).ready(function() {
 //  $('#tab-container').easytabs();
   render_dashboard();
 });
 
+var set_headers = function() {
+  if (typeof GITHUB_AUTH != 'undefined') {
+    var header = {"Authorization": "BASIC "+btoa(GITHUB_AUTH.responseJSON.user +":"+GITHUB_AUTH.responseJSON.key)};
+  } else {
+    header = null;
+  }
+  return header;
+}
 var render_modules = function(projects) {
+  
   _.map(projects,function(project) {
       modules[0](project.name);
   });
+  
   _.map(projects,function(project) {
       modules[1](project.name);
+  });
+  
+  _.map(projects,function(project) {
+      modules[2](project.name);
   });
 }
 
