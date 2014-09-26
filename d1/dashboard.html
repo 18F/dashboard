@@ -1,0 +1,34 @@
+---
+layout: bare
+title: Dashboard
+permalink: /dashboard/
+---
+
+<section class="dashboard">
+  <h1>{{page.title}}</h1>
+  <p class="lead">We are building digital services for the American people. Follow our progress and get involved here.</p>
+  <section class="dashboard-projects">
+    <header class="dashboard-projects-headings">
+      <div><h1>Project</h1></div>
+      <div><h1>Partners</h1></div>
+      <div><h1>Description</h1></div>
+    </header>
+    {% for project in site.data.projects %}
+      <article class="dashboard-projects-content" id="{{ project.name }}">
+        <div>
+          <h1>{{project.project}}</h1>
+          <p class="status">{{ project.status }}</p>
+          <p class="issues">Issues: </p>
+          <p class="stars">Stars: </p>
+          <p class="forks">Forks: </p>
+        </div>
+        <div><p class="client"></p></div>
+        <div>
+          <p class="description"></p>
+          <p><i class="icon-github2"></i> <a href="{{project.github}}">{{project.github}}</a></p>
+          <p><a href="http://18f.gsa.gov/tags/{{project.name}}">Blog posts about this project</a></p>
+        </div>
+      </article>
+    {% endfor %}
+  </section>
+</section>

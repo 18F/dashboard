@@ -1,0 +1,66 @@
+- project: My R A
+  name: myra
+  github: https://github.com/18F/myra.git
+  description: Individual and employer landing pages for the U.S. Department of the Treasury’s new retirement savings program, myRA (“My Retirement Account”).
+  client: U.S. Department of Treasury
+  status: Hold
+- project: FOIA
+  name: foia
+  github: https://github.com/18F/foia.git
+  description:
+  client:
+- project: FBOpen
+  name: fbopen 
+  github: https://github.com/18F/fbpoen.git
+  description:
+  client:
+- project: FOIA Hub
+  name: foia-hub
+  github: https://github.com/18F/foia-hub.git
+  description:
+  client:
+- project: Midas
+  name: midas 
+  github: https://github.com/18F/midas.git
+  description:
+  client:
+  description:
+  client:
+- project: openFEC
+  name: openFEC 
+  github: https://github.com/18F/openFEC.git
+  description:
+  client:
+- project: API All The X
+  name: API-All-the-X
+  github: https://github.com/18F/API-All-the-X.git
+  description:
+  client:
+- project: Answers"
+  name: answers
+  github: https://github.com/18F/answers.git
+  description:
+  client:
+- project: My USA
+  name: myusa
+  github: https://github.com/18F/myusa.git
+- project: CAP (Communicart)
+  name: C2
+  github: https://github.com/18F/C2.git
+  description:
+  client:
+- project: Agile Assisted Acquisitions
+  name: aaa
+  github: https://github.com/18F/aaa.git
+  description:
+  client:
+- project: Dashboard
+  name: dashboard 
+  github: https://github.com/18F/dashboard.git
+  description:
+  client:
+- project: DOI Extractives
+  name: doi-extractives-data
+  github: https://github.com/18F/doi-extractives-data.git
+  description:
+  client: Department of the Interior

@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Dashboard
 ---
 <!DOCTYPE html>
@@ -32,11 +31,11 @@ title: Dashboard
           <h3>{{page.title}}</h3>
             <div id="dashboard">
             <ul>
-              {% for project in site.data.projects.projects %}
-              <li><strong>{{project[0]}}:</strong> (source: <a href="{{project[2]}}">{{project[2]}}</a>)
+              {% for project in site.data.projects %}
+              <li><strong>{{project.project}}:</strong> (source: <a href="{{project.github}}">{{project.github}}</a>)
                 <ul>
-                  <li id="{{project[1]}}_desc">Description: {{project[3]}}</li>
-                  <li id="{{project[1]}}_client">Client: {{project[4]}}</li>
+                  <li id="{{project[1]}}_desc">Description: {{project.description}}</li>
+                  <li id="{{project[1]}}_client">Client: {{project.client}}</li>
                   <li id="{{project[1]}}_status">Status: </li>
                   <li id="{{project[1]}}_issues">Issues: </li>
                   <li id="{{project[1]}}_stars">Stars: </li>
@@ -78,4 +77,4 @@ title: Dashboard
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="javascripts/jquery.easytabs.min.js"></script>
 <script src="javascripts/underscore.js"></script>
-<script src="javascripts/main.js"></script>
+<!-- <script src="javascripts/main.js"></script> -->
