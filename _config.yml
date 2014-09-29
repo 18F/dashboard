@@ -8,5 +8,5 @@ sass:
 
 gems: [bourbon]
 
-#baseurl: /dashboard
-baseurl: localhost:4000
+baseurl: /dashboard
+#baseurl: localhost:4000
