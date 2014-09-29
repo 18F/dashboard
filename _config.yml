@@ -1,3 +1,12 @@
+markdown: kramdown
+
+title: 18F Digital Services Delivery
+description: "18F builds effective, user-centric digital services focused on the interaction between government and the people and businesses it serves."
+
 sass:
   sass_dir: assets/_sass
+
 gems: [bourbon]
+
+#baseurl: /dashboard
+baseurl: localhost:4000
