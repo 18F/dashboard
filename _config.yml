@@ -1,0 +1,3 @@
+sass:
+  sass_dir: assets/_sass
+gems: [bourbon]
