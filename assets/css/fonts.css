@@ -1,15 +1,12 @@
----
----
-
 @charset "UTF-8";
 
 @font-face {
   font-family: "18f";
-  src:url("{{ site.baseurl }}/assets/fonts/18f-font.eot");
-  src:url("{{ site.baseurl }}/assets/fonts/18f-font.eot?#iefix") format("embedded-opentype"),
-    url("{{ site.baseurl }}/assets/fonts/18f-font.woff") format("woff"),
-    url("{{ site.baseurl }}/assets/fonts/18f-font.ttf") format("truetype"),
-    url("{{ site.baseurl }}/assets/fonts/18f-font.svg#untitled-font-1") format("svg");
+  src:url("http://18f.github.io/dashboard/assets/fonts/18f-font.eot");
+  src:url("http://18f.github.io/dashboard/assets/fonts/18f-font.eot?#iefix") format("embedded-opentype"),
+    url("http://18f.github.io/dashboard/assets/fonts/18f-font.woff") format("woff"),
+    url("http://18f.github.io/dashboard/assets/fonts/18f-font.ttf") format("truetype"),
+    url("http://18f.github.io/dashboard/assets/fonts/18f-font.svg#untitled-font-1") format("svg");
   font-weight: normal;
   font-style: normal;
 
