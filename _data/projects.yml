@@ -28,7 +28,7 @@
   status:
 - project: FBOpen
   name: fbopen 
-  github: https://github.com/18F/fbpoen
+  github: https://github.com/18F/fbopen
   description:
   client:
   partners:
