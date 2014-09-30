@@ -1,40 +1,23 @@
-- project: MyRA
+- project: My R A
   name: myra
-  github: https://github.com/18F/myra.git
-  description: "Landing page design for Treasury’s My Retirement Account program, which will provide a simple, safe, and affordable way for individuals to start saving for retirement."
-  client: "U.S. Department of Treasury"
+  github: https://github.com/18F/myra
+  description: Individual and employer landing pages for the U.S. Department of the Treasury’s new retirement savings program, myRA (“My Retirement Account”).
+  client: U.S. Department of Treasury
   partners:
-  impact:
-  stage: Alpha
-  milestones: "August 2014: Project Started, September 2014: Project moved from Discovery to Alpha"
-  contact: christopher.cairns@gsa.gov
-  stack: "HTML, CSS, JavaScript, Jekyll"
-  team: "chrisc, manger"
-  licenses: "CC0, some libraries MIT"
-  links: http://myra.treasury.gov
-  status:
-- project: PeaceCorps.gov
-  name: peacecorps-site
-  github: https://github.com/18F/peacecorps-site.git
-  description: "A redesign of the Peace Corps’ digital presence, including a new website, country-specific sites, application engine, and single authentication and metrics reporting for volunteers."
-  client: Peace Corps
-  partners:
-  impact:
-  stage: Discovery
-  milestones: "August 2014: Project Started"
-  contact: sean.herron@gsa.gov
+  stage:
+  milestones:
+  contact:
   stack:
-  team: "sean, victor"
+  team:
   licenses:
   links:
-  status:
-- project: FOIA Modernization
+  status: Hold
+- project: FOIA
   name: foia
-  github: https://github.com/18F/foia.git
+  github: https://github.com/18F/foia
   description:
   client:
   partners:
-  impact:
   stage:
   milestones:
   contact:
@@ -43,13 +26,138 @@
   licenses:
   links:
   status:
-- project: OpenFEC
-  name: openFEC
-  github: https://github.com/18F/openFEC.git
+- project: FBOpen
+  name: fbopen 
+  github: https://github.com/18F/fbpoen
   description:
-  client: Federal Election Commission
+  client:
   partners:
-  impact:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: FOIA Hub
+  name: foia-hub
+  github: https://github.com/18F/foia-hub
+  description:
+  client:
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: Midas
+  name: midas 
+  github: https://github.com/18F/midas
+  description:
+  client:
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: openFEC
+  name: openFEC 
+  github: https://github.com/18F/openFEC
+  description:
+  client:
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: "/Developer program"
+  name: API-All-the-X
+  github: https://github.com/18F/API-All-the-X
+  description:
+  client:
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: Answers
+  name: answers
+  github: https://github.com/18F/answers
+  description:
+  client:
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: My USA
+  name: myusa
+  github: https://github.com/18F/myusa
+  description:
+  client:
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: CAP (Communicart)
+  name: C2
+  github: https://github.com/18F/C2
+  description:
+  client:
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: Agile Assisted Acquisitions
+  name: aaa
+  github: https://github.com/18F/aaa
+  description:
+  client:
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: Dashboard
+  name: dashboard 
+  github: https://github.com/18F/dashboard
+  description:
+  client:
+  partners:
   stage:
   milestones:
   contact:
@@ -60,11 +168,10 @@
   status:
 - project: DOI Extractives
   name: doi-extractives-data
-  github: https://github.com/18F/doi-extractives-data.git
+  github: https://github.com/18F/doi-extractives-data
   description:
   client: Department of the Interior
   partners:
-  impact:
   stage:
   milestones:
   contact:
@@ -73,124 +180,18 @@
   licenses:
   links:
   status:
-- project: Common Acquisition Platform Tools
-  name: C2
-  github: https://github.com/18F/C2.git
-  description: "A simplified, email-based purchasing approval tool for purchase card holders authorized to buy office supplies for the government."
-  client: General Services Administration
-  partners:
-  stage: Beta
-  impact:
-  milestones:
-  contact: "raphael.villas@gsa.gov and kelly.robinson@gsa.gov"
-  stack: "Ruby, CSS, JavaScript/Node, Python"
-  team: "raphy, ehlers, robert, sasha, diego"
-  licenses: "CC0, some libraries MIT"
-  links:
-  status:
-- project: FBOpen
-  name: fbopen
-  github: https://github.com/18F/fbpoen.git
-  description: "FBOpen helps small businesses search for opportunities to work with the U.S. government."
-  client:
-  partners:
-  stage: Beta
-  impact:
-  milestones:
-  contact: fbopen@gsa.gov
-  stack: "Python, JavaScript/Node, CSS"
-  team: "alison, leah, mhz, kaitlin, diego"
-  licenses: "CC0, some libraries Apache, MIT/BSD, MIT"
-  links: http://fbopen.gsa.gov, http://18f.github.io/fbopen
-  status:
-- project: Mirage: OASIS Market Research Tool
-  name: mirage
-  github: https://github.com/18F/mirage.git
-  description:
-  client: General Services Administration
-  partners:
-  impact:
-  stage:
-  milestones:
-  contact:
-  stack:
-  team:
-  licenses:
-  links:
-  status:
-- project: "API.data.gov"
-  name: "api.data.gov"
+- project: API.data.gov
+  name: api.data.gov
+  css_id: api-data-gov
   github: http://github.com/18f/api.data.gov
   description: "A hosted, shared-service that is free to agencies that provides an API key, analytics, and proxy solution for government web services."
   client: "Census, FCC, FDA, GSA, NREL, Regulations.gov, USDA"
   partners:
-  stage: Live
-  impact: "2100 API users and 42 million API requests served so far"
-  milestones:
-  contact: api.data.gov@gsa.gov
-  stack: JavaScript, CSS, Ruby
-  team: "gray"
-  licenses: "CC0, some libraries MIT"
-  links: http://api.data.gov, http://api.data.gov/metrics, http://api.data.gov/about
-  status:
-- project: "/Developer Program"
-  name: API-All-the-X
-  github: https://github.com/18F/API-All-the-X.git
-  description: "A suite of tools, resources, and consulting services to assist agencies in the production and management of government APIs.  A two year old program, the /Developer Program was adopted by 18F to scale out its impact and to grow the government’s API portfolio."
-  client: General Services Administration
-  partners:
-  stage: Live
-  impact: "Over 70 agencies served, including each cabinet Department, National Archives, Federal Communications Commission, Consumer Financial Protection Bureau, and the Office of Personnel Management."
-  milestones:
-  contact: gray.brooks@gsa.gov
-  stack:
-  team: "gray"
-  licenses: CC0
-  links: http://18f.github.io/API-All-the-X
-  status:
-- project: Midas
-  name: midas
-  github: https://github.com/18F/midas.git
-  description: "A marketplace for federal employees to share and collaborate on ideas to improve government or citizen experiences."
-  client: "General Services Administration, Department of State, Department of Health and Human Services"
-  partners:
-  stage: Beta
-  impact: "2 million federal employees"
-  milestones:
-  contact:
-  stack: "JavaScript (Node/Sails, Backbone), CSS, Chef"
-  team: "sarah, david"
-  licenses: "CC0, some libraries MIT"
-  links: https://midas.18f.us/
-  status:
-- project: MyUSA
-  name: myusa
-  github: https://github.com/18F/myusa.git
-  description:
-  client:
-  partners:
-  impact:
   stage:
   milestones:
   contact:
   stack:
   team:
   licenses:
-  links:
-  status:
-- project: MyUSCIS
-  name: answers
-  github: https://github.com/18F/answers.git
-  description:
-  client: "U.S. Citizenship and Immigration Service"
-  partners:
-  impact:
-  stage: Alpha
-  milestones:
-  contact:
-  stack:
-  team: "yuda, nienhuis, jen, justin, amos, sasha, nick"
-  contributors:
-  licenses: "MIT, Apache, GPLv2"
   links:
   status:

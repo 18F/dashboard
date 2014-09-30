@@ -14,7 +14,9 @@ permalink: /
       <div><h1>Description</h1></div>
     </header>
     {% for project in site.data.projects %}
-      <article class="dashboard-projects-content" id="{{ project.name }}">
+      {% if project.status != "Hold" %}
+      {% capture css_id %}{% if project.css_id %}{{ project.css_id }}{% else %}{{ project.name }}{% endif %}{% endcapture %}
+      <article class="dashboard-projects-content" id="{{ css_id }}">
         <div>
           <h1>{{project.project}}</h1>
           <p class="status">{{ project.status }}</p>
@@ -22,13 +24,14 @@ permalink: /
           <p class="stars">Stars: </p>
           <p class="forks">Forks: </p>
         </div>
-        <div><p class="client"></p></div>
+        <div><p class="client">{{ project.client }}</p></div>
         <div>
-          <p class="description"></p>
+          <p class="description">{{ project.description }}</p>
           <p><i class="icon-github2"></i> <a href="{{project.github}}">{{project.github}}</a></p>
           <p><a href="http://18f.gsa.gov/tags/{{project.name}}">Blog posts about this project</a></p>
         </div>
       </article>
+      {% endif %}
     {% endfor %}
   </section>
 </section>
