@@ -1,4 +1,19 @@
-- project: My R A
+- project: MyUSCIS
+  name: answers
+  github: https://github.com/18F/answers.git
+  description:
+  client: U.S. Citizenship and Immigration Service
+  partners:
+  stage: alpha
+  milestones:
+  contact:
+  stack:
+  team: yuda, nienhuis, jen, justin, amos,
+  contributors:
+  licenses:
+  links:
+  status: Hold
+- project: MyRA
   name: myra
   github: https://github.com/18F/myra.git
   description: Individual and employer landing pages for the U.S. Department of the Treasury’s new retirement savings program, myRA (“My Retirement Account”).
@@ -11,8 +26,22 @@
   team:
   licenses:
   links:
-  status: Hold
-- project: FOIA
+  status:
+- project: PeaceCorps.gov
+  name: peacecorps-site
+  github: https://github.com/18F/peacecorps-site.git
+  description:
+  client:
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: FOIA Modernization
   name: foia
   github: https://github.com/18F/foia.git
   description:
@@ -26,137 +55,11 @@
   licenses:
   links:
   status:
-- project: FBOpen
-  name: fbopen 
-  github: https://github.com/18F/fbpoen.git
-  description:
-  client:
-  partners:
-  stage:
-  milestones:
-  contact:
-  stack:
-  team:
-  licenses:
-  links:
-  status:
-- project: FOIA Hub
-  name: foia-hub
-  github: https://github.com/18F/foia-hub.git
-  description:
-  client:
-  partners:
-  stage:
-  milestones:
-  contact:
-  stack:
-  team:
-  licenses:
-  links:
-  status:
-- project: Midas
-  name: midas 
-  github: https://github.com/18F/midas.git
-  description:
-  client:
-  partners:
-  stage:
-  milestones:
-  contact:
-  stack:
-  team:
-  licenses:
-  links:
-  status:
-- project: openFEC
-  name: openFEC 
+- project: OpenFEC
+  name: openFEC
   github: https://github.com/18F/openFEC.git
   description:
-  client:
-  partners:
-  stage:
-  milestones:
-  contact:
-  stack:
-  team:
-  licenses:
-  links:
-  status:
-- project: API All The X
-  name: API-All-the-X
-  github: https://github.com/18F/API-All-the-X.git
-  description:
-  client:
-  partners:
-  stage:
-  milestones:
-  contact:
-  stack:
-  team:
-  licenses:
-  links:
-  status:
-- project: Answers"
-  name: answers
-  github: https://github.com/18F/answers.git
-  description:
-  client:
-  partners:
-  stage:
-  milestones:
-  contact:
-  stack:
-  team:
-  licenses:
-  links:
-  status:
-- project: My USA
-  name: myusa
-  github: https://github.com/18F/myusa.git
-  description:
-  client:
-  partners:
-  stage:
-  milestones:
-  contact:
-  stack:
-  team:
-  licenses:
-  links:
-  status:
-- project: CAP (Communicart)
-  name: C2
-  github: https://github.com/18F/C2.git
-  description:
-  client:
-  partners:
-  stage:
-  milestones:
-  contact:
-  stack:
-  team:
-  licenses:
-  links:
-  status:
-- project: Agile Assisted Acquisitions
-  name: aaa
-  github: https://github.com/18F/aaa.git
-  description:
-  client:
-  partners:
-  stage:
-  milestones:
-  contact:
-  stack:
-  team:
-  licenses:
-  links:
-  status:
-- project: Dashboard
-  name: dashboard 
-  github: https://github.com/18F/dashboard.git
-  description:
-  client:
+  client: Federal Election Commission
   partners:
   stage:
   milestones:
@@ -171,6 +74,104 @@
   github: https://github.com/18F/doi-extractives-data.git
   description:
   client: Department of the Interior
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: Common Acquisition Platform Tools
+  name: C2
+  github: https://github.com/18F/C2.git
+  description:
+  client: General Services Administration
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: FBOpen
+  name: fbopen
+  github: https://github.com/18F/fbpoen.git
+  description:
+  client:
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: Mirage: OASIS Market Research Tool
+  name: mirage
+  github: https://github.com/18F/mirage.git
+  description:
+  client: General Services Administration
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: API dot DATA dot gov
+  name:
+  github:
+  description:
+  client:
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: Slash Developer Program
+  name: API-All-the-X
+  github: https://github.com/18F/API-All-the-X.git
+  description:
+  client:
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: Midas
+  name: midas
+  github: https://github.com/18F/midas.git
+  description:
+  client:
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: MyUSA
+  name: myusa
+  github: https://github.com/18F/myusa.git
+  description:
+  client:
   partners:
   stage:
   milestones:
