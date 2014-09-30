@@ -1,6 +1,6 @@
 - project: My R A
   name: myra
-  github: https://github.com/18F/myra.git
+  github: https://github.com/18F/myra
   description: Individual and employer landing pages for the U.S. Department of the Treasury’s new retirement savings program, myRA (“My Retirement Account”).
   client: U.S. Department of Treasury
   partners:
@@ -14,7 +14,7 @@
   status: Hold
 - project: FOIA
   name: foia
-  github: https://github.com/18F/foia.git
+  github: https://github.com/18F/foia
   description:
   client:
   partners:
@@ -28,7 +28,7 @@
   status:
 - project: FBOpen
   name: fbopen 
-  github: https://github.com/18F/fbpoen.git
+  github: https://github.com/18F/fbpoen
   description:
   client:
   partners:
@@ -42,7 +42,7 @@
   status:
 - project: FOIA Hub
   name: foia-hub
-  github: https://github.com/18F/foia-hub.git
+  github: https://github.com/18F/foia-hub
   description:
   client:
   partners:
@@ -56,7 +56,7 @@
   status:
 - project: Midas
   name: midas 
-  github: https://github.com/18F/midas.git
+  github: https://github.com/18F/midas
   description:
   client:
   partners:
@@ -70,7 +70,7 @@
   status:
 - project: openFEC
   name: openFEC 
-  github: https://github.com/18F/openFEC.git
+  github: https://github.com/18F/openFEC
   description:
   client:
   partners:
@@ -82,9 +82,9 @@
   licenses:
   links:
   status:
-- project: API All The X
+- project: "/Developer program"
   name: API-All-the-X
-  github: https://github.com/18F/API-All-the-X.git
+  github: https://github.com/18F/API-All-the-X
   description:
   client:
   partners:
@@ -96,9 +96,9 @@
   licenses:
   links:
   status:
-- project: Answers"
+- project: Answers
   name: answers
-  github: https://github.com/18F/answers.git
+  github: https://github.com/18F/answers
   description:
   client:
   partners:
@@ -112,7 +112,7 @@
   status:
 - project: My USA
   name: myusa
-  github: https://github.com/18F/myusa.git
+  github: https://github.com/18F/myusa
   description:
   client:
   partners:
@@ -126,7 +126,7 @@
   status:
 - project: CAP (Communicart)
   name: C2
-  github: https://github.com/18F/C2.git
+  github: https://github.com/18F/C2
   description:
   client:
   partners:
@@ -140,7 +140,7 @@
   status:
 - project: Agile Assisted Acquisitions
   name: aaa
-  github: https://github.com/18F/aaa.git
+  github: https://github.com/18F/aaa
   description:
   client:
   partners:
@@ -154,7 +154,7 @@
   status:
 - project: Dashboard
   name: dashboard 
-  github: https://github.com/18F/dashboard.git
+  github: https://github.com/18F/dashboard
   description:
   client:
   partners:
@@ -168,9 +168,24 @@
   status:
 - project: DOI Extractives
   name: doi-extractives-data
-  github: https://github.com/18F/doi-extractives-data.git
+  github: https://github.com/18F/doi-extractives-data
   description:
   client: Department of the Interior
+  partners:
+  stage:
+  milestones:
+  contact:
+  stack:
+  team:
+  licenses:
+  links:
+  status:
+- project: API.data.gov
+  name: api.data.gov
+  css_id: api-data-gov
+  github: http://github.com/18f/api.data.gov
+  description: "A hosted, shared-service that is free to agencies that provides an API key, analytics, and proxy solution for government web services."
+  client: "Census, FCC, FDA, GSA, NREL, Regulations.gov, USDA"
   partners:
   stage:
   milestones:
