@@ -19,21 +19,21 @@ modules[0] = function(repo_name) {
 
 modules[1] = function(repo_name) {
   $.getJSON(GITHUB_API+"repos/"+ORGANIZATION+"/"+repo_name+"/contents/status.txt", 
- function(data) {
-      status = data.content;
-      var repo_name = repo_name.replace(/[\. ,:-]+/g, "-");
-      if (typeof data.content != 'undefined' ) {
-    	  $("#"+repo_name+" .status").text(atob(data.content));
-      } else {
-    	  $("#"+repo_name+" .status").text("No status available for this repo yet. Check back soon.");
-      }
-    }).error(function () {
-	   $("#"+repo_name+" .status").text("No status available for this repo yet. Check back soon.");
-  });
+    function(data) {
+        status = data.content;
+        var repo_name = repo_name.replace(/[\. ,:-]+/g, "-");
+        if (typeof data.content != 'undefined' ) {
+      	  $("#"+repo_name+" .status").text(atob(data.content));
+        } else {
+      	  $("#"+repo_name+" .status").text("No status available for this repo yet. Check back soon.");
+        }
+      }).error(function () {
+       $("#"+repo_name+" .status").text("No status available for this repo yet. Check back soon.");
+    }
+  );
 }
 
 $(document).ready(function() {
-//  $('#tab-container').easytabs();
   render_dashboard();
 });
 
@@ -50,7 +50,10 @@ var render_dashboard = function() {
   var elements = $(".dashboard-projects-content");
   var projects = []
   var content = _.map(elements, function(e) {
-    var name = $(e).attr("id");
+    var ghUrl = $(e).find(".github-url").attr("href");
+    var slugIndex = ghUrl.lastIndexOf("/");
+    var name = ghUrl.substr(slugIndex+1);
+    console.log(name);
     var project = {name: name};
     projects.push(project);
   }).join("");
