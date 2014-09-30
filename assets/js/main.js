@@ -70,7 +70,7 @@ var render_modules = function(projects) {
 }
 
 var render_dashboard = function() {
-  $.getJSON("/assets/js/projects.json", function(data) {
+  $.getJSON("projects.json", function(data) {
     var type_pairs = data.projects;
     var projects = [];
     var content = _.map(type_pairs, function(p) {
