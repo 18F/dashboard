@@ -3,11 +3,11 @@
 /* comment out when working locally */
 @font-face {
   font-family: "18f";
-  src:url("http://18f.github.io/dashboard/assets/fonts/18f-font.eot");
-  src:url("http://18f.github.io/dashboard/assets/fonts/18f-font.eot?#iefix") format("embedded-opentype"),
-    url("http://18f.github.io/dashboard/assets/fonts/18f-font.woff") format("woff"),
-    url("http://18f.github.io/dashboard/assets/fonts/18f-font.ttf") format("truetype"),
-    url("http://18f.github.io/dashboard/assets/fonts/18f-font.svg#untitled-font-1") format("svg");
+  src:url("/dashboard/assets/fonts/18f-font.eot");
+  src:url("/dashboard/assets/fonts/18f-font.eot?#iefix") format("embedded-opentype"),
+    url("/dashboard/assets/fonts/18f-font.woff") format("woff"),
+    url("/dashboard/assets/fonts/18f-font.ttf") format("truetype"),
+    url("/dashboard/assets/fonts/18f-font.svg#untitled-font-1") format("svg");
   font-weight: normal;
   font-style: normal;
 
