@@ -14,45 +14,22 @@ modules[0] = function(repo_name) {
       $(".forks").append(""+forks);      
     }).error(function () {
       $(".issues").append("Not available.");
+      $(".stars").append("Not available.");
+      $(".forks").append("Not available.");
 });
-}
-
-modules[1] = function(repo_name) {
-  $.getJSON(GITHUB_API+"repos/"+ORGANIZATION+"/"+repo_name+"/contents/status.txt", 
-    function(data) {
-        status = data.content;
-        var repo_name = repo_name.replace(/[\. ,:-]+/g, "-");
-        if (typeof data.content != 'undefined' ) {
-      	  $(".status").text(atob(data.content));
-        } else {
-      	  $(".status").text("No status available for this repo yet. Check back soon.");
-        }
-      }).error(function () {
-       $(".status").text("No status available for this repo yet. Check back soon.");
-    }
-  );
 }
 
 $(document).ready(function() {
   render_dashboard();
 });
 
-var render_modules = function(projects) {
-  _.map(projects,function(project) {
-      modules[0](project.name);
-  });
+var render_modules = function(name) {
+  modules[0](name);
 }
 
 var render_dashboard = function() {
-  var elements = $(document);
-  var projects = []
-  var content = _.map(elements, function(e) {
-    var ghUrl = $(".github-url").attr("href");
-    var slugIndex = ghUrl.lastIndexOf("/");
-    var name = ghUrl.substr(slugIndex+1);
-    console.log(name);
-    var project = {name: name};
-    projects.push(project);
-  }).join("");
-  render_modules(projects);
+  var ghUrl = $(".github-url").attr("href");
+  var slugIndex = ghUrl.lastIndexOf("/");
+  var name = ghUrl.substr(slugIndex+1);
+  render_modules(name);
 }    
