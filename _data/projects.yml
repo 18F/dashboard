@@ -85,17 +85,18 @@
 - project: "/Developer program"
   name: API-All-the-X
   github: https://github.com/18F/API-All-the-X
-  description:
+  description: "A suite of tools, resources, and consulting services to assist agencies in the production and management of government APIs. A two year old program, the /Developer Program was adopted by 18F to scale out its impact and to grow the government’s API portfolio."
   client:
-  partners:
-  stage:
-  milestones:
-  contact:
+  impact: "Over 70 agencies served, including each cabinet Department, National Archives, Federal Communications Commission, Consumer Financial Protection Bureau, and the Office of Personnel Management."
+  partners: GSA
+  stage: 
+  milestones: "7/19/2014: Lorem ipsum dolor sit amet. 9/15/2014: Sed do eiusmod. 9/22/2014: Ut enim ad minim veniam, quis nostrud exercitation."
+  contact: gray.brooks@gsa.gov
   stack:
-  team:
-  licenses:
+  team: gray
+  licenses: cc0
   links:
-  status:
+  status: live
 - project: Answers
   name: answers
   github: https://github.com/18F/answers
@@ -186,12 +187,13 @@
   github: http://github.com/18f/api.data.gov
   description: "A hosted, shared-service that is free to agencies that provides an API key, analytics, and proxy solution for government web services."
   client: "Census, FCC, FDA, GSA, NREL, Regulations.gov, USDA"
-  partners:
+  impact: "2100 API users and 42 million API requests served so far"
+  partners: Census, FCC, FDA, GSA, NREL, Regulations.gov, USDA
   stage:
   milestones:
-  contact:
-  stack:
-  team:
-  licenses:
+  contact: api.data.gov@gsa.gov
+  stack: JavaScript, CSS, Ruby
+  team: gray, muerdter
+  licenses: cc0
   links:
-  status:
+  status: live

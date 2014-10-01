@@ -1,75 +1,6 @@
 //********************************************************
-// 18F SITE CUSTOM SASS
+// 18F.gsa.gov CUSTOM SASS
 //********************************************************
-
-// Mixins
-//********************************************************
-
-// Slideshow, thanks to http://www.fabriziocalderan.it/css3slideshow/
-@mixin slideshow($settings) {
-    $images     : map-get($settings, images);
-    $duration   : map-get($settings, duration);
-    $transition : map-get($settings, transition);
-    $easing     : map-get($settings, easing);
-    $repeat     : map-get($settings, repeat);
-
-    // total duration (in seconds)
-    $totalDuration      : $images * $duration;
-    $animationSettings  : CSS3slideshow #{$totalDuration} #{$easing} 0s #{$repeat};
-    $vendorsList        : (-webkit-, -moz-, -o-, '');
-
-    position   : relative;
-    list-style : none;
-
-    li {
-        position : absolute;
-        z-index  : $images;
-        top      : 0;
-        left     : 0;
-        width    : 100%;
-        @each $vendor in $vendorsList {
-            #{$vendor}animation: #{$animationSettings};
-        }
-
-        img {
-        	width : 100%
-        }
-
-        @for $i from 2 through $images {
-
-            &:nth-child(#{$i}) {
-                z-index: #{$images - $i + 1};
-                @each $vendor in $vendorsList {
-                    #{$vendor}animation-delay: #{$duration * ($i - 1)};
-                }
-            }
-
-        }
-    }
-
-    @at-root {
-
-        $endEffect: 100% / $images;
-        $timeEffect: round(($transition * 100% / $totalDuration) * 100)/100;
-        $startEffect: $endEffect - $timeEffect;
-
-        @include setKeyframes(CSS3slideshow) {
-          #{$startEffect}, 100% { opacity: 1; }
-          #{$endEffect}, #{100% - $timeEffect} { opacity: 0; }
-        }
-
-    }
-
-}
-
-@mixin setKeyframes($animationName) {
-
-    @-webkit-keyframes #{$animationName} { @content; }
-    @-moz-keyframes #{$animationName}    { @content; }
-    @-o-keyframes #{$animationName}      { @content; }
-    @keyframes #{$animationName}         { @content; }
-
-}
 
 // Breakpoint variables
 //********************************************************
@@ -82,21 +13,20 @@ $tiny: new-breakpoint(max-width 590px);
 $tinier: new-breakpoint(max-width 480px); //only used in hero unit
 $tiniest: new-breakpoint(max-width 390px);
 
-// Media queries - site-wide
+// Site-wide media queries
 //********************************************************
 .mantra, .blog-entry, .team, .footer, .contact-box {
 	@include media($small) {
-    	padding-left: 1%;
-    	padding-right: 1%;
+    	padding-left: 5%;
+    	padding-right: 5%;
 	}
 }
 .bare {
 	@include media($tiny) {
-    	padding-left: 1%;
-    	padding-right: 1%;
+    	padding-left: 5%;
+    	padding-right: 5%;
 	}
 }
-
 
 // Extends
 //********************************************************
@@ -115,7 +45,7 @@ $tiniest: new-breakpoint(max-width 390px);
 	}
 }
 
-// Utility and Site-Wide
+// Utility and site-wide classes
 //********************************************************
 .container {
 	@include outer-container;
@@ -154,6 +84,35 @@ $tiniest: new-breakpoint(max-width 390px);
 		}
 	}
 }
+.rslides { //thanks to http://responsiveslides.com/
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+  	li {
+  		-webkit-backface-visibility: hidden;
+		position: absolute;
+		display: none;
+		width: 100%;
+		left: 0;
+		top: 0;
+		&:first-child {
+			position: relative;
+  			display: block;
+  			float: left;
+		}
+  	}
+  	img {
+  		display: block;
+  		height: auto;
+  		float: left;
+  		width: 100%;
+  		border: 0;
+  	}
+
+  }
 .logo {
 	height: 150px;
 	width: 150px;
@@ -181,19 +140,43 @@ $tiniest: new-breakpoint(max-width 390px);
 }
 .splash {
 	@include span-columns(12);
-	.slideshow {
-    @include slideshow((
-        images     : 3,                 // Amount of images in the slideshow
-        duration   : 7.5s,              // Time of visibility of each image
-        transition : 3s,                // Transition time (with transition < duration)
-        easing     : ease,              // Easing type
-        repeat     : infinite           // 1,2,3, ... , infinite
-    ));
-	    figure {
-	    	margin: 0; padding: 0;
-	    }
+	h1 {
+		position: absolute;
+		top: 370px;
+	  	width: 860px;
+	  	text-align: left;
+  		font-size: 3.6em;
+  		padding: 30px 50px;
+		z-index: 10;
+	  	@include media($small) {
+			top: 295px;
+	  	}
+  		@include media($smaller) {
+			top: 208px;
+	  		width: 100%;
+  			font-size: 3.2em;
+  			padding: 30px 20px;
+  		}
+  		@include media($smallest) {
+			top: 145px;
+  			font-size: 3em;
+  			padding: 20px 20px;
+  		}
+  		@include media($tiny) {
+			top: 40px;
+	  		width: 450px;
+  			font-size: 2em;
+  			padding: 20px 20px 20px 110px;
+  		}
+  		@include media ($tinier) {
+			top: 50px;
+  			width: 100%;
+  			padding: 13px 0px 13px 90px;
+  			font-size: 1.6em;
+  		}
+	  	@extend %heading-text-style;
 	}
-	figcaption {
+	.caption {
 		position: absolute;
 	  	top: 350px;
 	  	z-index: 20;
@@ -205,64 +188,28 @@ $tiniest: new-breakpoint(max-width 390px);
 	  	}
 	  	@include media($smaller) {
 	  		top: 200px;
+			margin-top: 160px;
 	  		font-size: 0.9em;
 	  	}
 	  	@include media($smallest) {
 	  		top: 145px;
+			margin-top: 124px;
 	  		font-size: 0.8em;
 	  	}
 	  	@include media($tiny) {
-	  		top: 40px;
+	  		top: 63px;
+			margin-top: 102px;
 	  		font-size: 0.6em;
 	  	}
-	  	h1 {
-			position: absolute;
-		  	width: 860px;
-		  	text-align: left;
-	  		font-size: 3.6em;
-	  		padding: 30px 50px;
-	  		@include media($smaller) {
-		  		width: 610px;
-	  			font-size: 3.2em;
-	  			padding: 30px 20px;
-	  		}
-	  		@include media($smallest) {
-		  		width: 530px;
-	  			font-size: 3em;
-	  			padding: 20px 20px;
-	  		}
-	  		@include media($tiny) {
-		  		width: 500px;
-	  			font-size: 3em;
-	  			padding: 20px 20px 20px 110px;
-	  		}
-	  		@include media ($tinier) {
-		  		width: 270px;
-	  			font-size: 2em;
-	  			padding: 20px 0px 13px 90px;
-	  		}
-		  	@extend %heading-text-style;
+		@include media($tinier) {
+			margin-top: -63px;
 		}
-		> div {
-			background-color: rgba(0,0,0,.4);
-			margin-top: 186px;
-			@include media($smaller) {
-				margin-top: 160px;
-			}
-			@include media($smallest) {
-				margin-top: 124px;
-			}
-			@include media($tiny) {
-				margin-top: 102px;
-			}
-			@include media($tinier) {
-				margin-top: -40px;
-			}
-		}
+		background-color: rgba(0,0,0,.4);
+		margin-top: 186px;
   		i {
   			vertical-align: middle;
   			padding: 17px 20px 15px 50px;
-	  		@include media($small) {
+	  		@include media($smaller) {
 	  			padding-left: 20px;
 	  		}
 	  		@include media($tinier) {
@@ -293,7 +240,7 @@ $tiniest: new-breakpoint(max-width 390px);
 		  		text-decoration: none;
 			}
 		}
-  	}
+	}
 }
 
 // Mantra
@@ -329,11 +276,6 @@ $tiniest: new-breakpoint(max-width 390px);
   		@include media($tiny) {
   			width: 100%;
   		}
-		@include media($tiniest) {
-			font-size: 0.8em;
-			line-height: 1.6;
-  			padding-top: 13px;
-		}
 	}
 }
 
@@ -392,22 +334,9 @@ $tiniest: new-breakpoint(max-width 390px);
 	p {
 		font-size: 0.9em;
 		padding: 0; margin: 0;
+		line-height: 1.8;
 		+ p {
-			margin-bottom: 0.5em;
-		}
-	}
-	@include media($smaller) {
-		p {
-			font-size: 0.8em;
-			+ p {
-				margin-bottom: 0.35em;
-			}
-		}
-	}
-	@include media($tiniest) {
-		padding-top: 5px;
-		p {
-			line-height: 1.2em;
+			margin-bottom: 0.4em;
 		}
 	}
 }
@@ -436,6 +365,10 @@ $tiniest: new-breakpoint(max-width 390px);
 		font-weight: 700;
 		line-height: 0.9em;
 	}
+	p {
+		margin-bottom: 0.6em;
+		line-height: 1.2em;
+	}
 }
 .tag-index {
 	.blog-title h1 {
@@ -451,7 +384,6 @@ $tiniest: new-breakpoint(max-width 390px);
 	@include omega();
 	@include media($tiniest) {
 		@include span-columns(12);
-		max-height: 12em;
 	}
 	p.authors {
 		margin-bottom: 0.4em;
@@ -472,16 +404,37 @@ $tiniest: new-breakpoint(max-width 390px);
 }
 
 .blog-posting {
-	h1 + p {
-		padding-top: 10px;
+	h1 {
+	    font-weight: normal;
+	    margin-bottom: 20px;
+	    + p {
+			padding-top: 10px;
+		}
+		a {
+		    color: #333;
+		    text-decoration: none;
+		  	&:hover, &:focus {
+		    	color: #0068d0;
+		    }
+		}
+	}
+	.blog-tags a {
+		font-weight: 700;
+		text-decoration: none;
+		&:hover, &:focus {
+			text-decoration: underline;
+			color: $base-link-color;
+		}
 	}
 	ul {
-		list-style: disc inside;
-		padding-bottom: 1.1em;
+	  	list-style: inherit;
+    	padding-bottom: 1.1em;
+    	margin-left: 1em;
 	}
 	ol {
-		list-style: decimal inside;
-		padding-bottom: 1.1em;
+	  	list-style: inherit;
+    	padding-bottom: 1.1em;
+    	margin-left: 1em;
 	}
 }
 .blog-follow-us {
@@ -555,7 +508,7 @@ $tiniest: new-breakpoint(max-width 390px);
 			font-size: 0.75em;
 		}
 		@include media($tiniest) {
-			font-size: 0.6em;
+			font-size: 0.55em;
 		}
 	}
 	a i, .no-decoration {
@@ -568,9 +521,12 @@ $tiniest: new-breakpoint(max-width 390px);
 			float: left;
 			width: 200px;
 			height: 200px;
-        	-webkit-filter: grayscale(100%);
-        	-moz-filter: grayscale(100%);
-        	filter: grayscale(100%);
+
+      -webkit-filter: grayscale(100%);
+    	-moz-filter: grayscale(100%);
+    	filter: grayscale(100%);
+      filter: url(/assets/bw.svg#greyscale);
+
 			@include transition(0.3s linear);
         	@include media($smaller) {
         		height: 225px;
@@ -765,6 +721,7 @@ $tiniest: new-breakpoint(max-width 390px);
 	}
 	i {
 		color: $medium-blue;
+		font-size: 2em;
 	}
 	p {
 		line-height: 1.2em;
@@ -775,14 +732,100 @@ $tiniest: new-breakpoint(max-width 390px);
 		margin-bottom: 20px;
 	}
 }
+.dashboard-icon {
+	a {
+		text-decoration: none;
+	}
+	a:hover, a:focus {
+		i {
+			color: $red;
+		}
+	}
+}
 .status {
 	background-color: lighten($blue, 10%);
 	border: $medium-blue;
-	padding: 5px;
+	padding: 5px 10px 5px 10px;
 	color: white;
 	margin-top: 10px;
 	font-size: .8em;
 	display: inline-block;
+}
+.dash-info-area {
+	@include span-columns(12);
+	> div {
+		@include span-columns(4 of 12);
+		> div {
+			background-color: lighten($blue, 30%);
+			border: 8px solid lighten($blue, 30%);
+			padding: 10px;
+			margin-bottom: 10px;
+			&:hover, &:focus {
+				background-color: lighten($blue, 20%);
+				border: 8px solid $green;
+			}
+		}
+	}
+	h1 {
+		font-size: 1.3em;
+		i {
+			font-size: 1em;
+		}
+	}
+	i {
+		font-size: 3em;
+	}
+	p {
+		margin-bottom: 0;
+		text-align: center;
+		font-size:	3em;
+	}
+}
+.dash-info-long {
+	p {
+		font-size: 1em;
+		padding-top: 5px;
+		text-align: left;
+		font-style: italic;
+		line-height: 1em;
+	}
+}
+
+
+// 404
+//********************************************************
+.fours {
+	background-color: $blue;
+	color: white;
+	padding-top: 130px;
+	padding-bottom: 130px;
+	margin-bottom: 30px;
+}
+.fours-content {
+	@include span-columns(6);
+	@include shift(3);
+	text-align: center;
+	h1 {
+		font-family: $base-font-family;
+		font-weight: 500;
+		font-size: 9em;
+	}
+	h2 {
+		font-size: 1.4em;
+		padding-top: 10px;
+		line-height: 1.3em;
+	}
+	p {
+		margin: 0;
+		font-size: 0.9em;
+	}
+	p+p {
+		margin-bottom: 100px;
+	}
+	@include media($tiny) {
+	@include span-columns(12);
+	@include shift(0);
+	}
 }
 
 // Footer
