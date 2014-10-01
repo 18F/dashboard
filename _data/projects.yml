@@ -25,7 +25,7 @@
   team:
   licenses:
   links:
-  status: Development
+  status: discovery
 - project: FBOpen
   name: fbopen 
   github: https://github.com/18F/fbopen
@@ -39,7 +39,7 @@
   team:
   licenses:
   links:
-  status:
+  status: alpha
 - project: FOIA Hub
   name: foia-hub
   github: https://github.com/18F/foia-hub
@@ -53,7 +53,7 @@
   team:
   licenses:
   links:
-  status:
+  status: beta
 - project: Midas
   name: midas 
   github: https://github.com/18F/midas
@@ -67,7 +67,7 @@
   team:
   licenses:
   links:
-  status:
+  status: alpha
 - project: openFEC
   name: openFEC 
   github: https://github.com/18F/openFEC
@@ -81,7 +81,7 @@
   team:
   licenses:
   links:
-  status:
+  status: discovery
 - project: "/Developer program"
   name: API-All-the-X
   github: https://github.com/18F/API-All-the-X

@@ -743,7 +743,6 @@ $tiniest: new-breakpoint(max-width 390px);
 	}
 }
 .status {
-	background-color: lighten($blue, 10%);
 	border: $medium-blue;
 	padding: 5px 10px 5px 10px;
 	color: white;
@@ -751,6 +750,23 @@ $tiniest: new-breakpoint(max-width 390px);
 	font-size: .8em;
 	display: inline-block;
 }
+
+.discovery {
+	background-color: lighten($red, 10%);
+}
+
+.alpha {
+	background-color: lighten($medium-blue, 10%);	
+}
+
+.beta {
+	background-color: lighten($green, 10%);
+}
+
+.live {
+	background-color: lighten($blue, 10%);
+}
+
 .dash-info-area {
 	@include span-columns(12);
 	> div {
