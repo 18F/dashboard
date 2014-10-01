@@ -9,11 +9,11 @@ modules[0] = function(repo_name) {
       var stars = data['Stargazers'];
       var forks = data['Forks'];
       var name = repo_name.replace(/[\. ,:-]+/g, "-");
-      $("#"+name+" .issues").append(""+issues);
-      $("#"+name+" .stars").append(""+stars);
-      $("#"+name+" .forks").append(""+forks);      
+      $(".issues").append(""+issues);
+      $(".stars").append(""+stars);
+      $(".forks").append(""+forks);      
     }).error(function () {
-      $("#"+name+" .issues").append("Not available.");
+      $(".issues").append("Not available.");
 });
 }
 
@@ -23,12 +23,12 @@ modules[1] = function(repo_name) {
         status = data.content;
         var repo_name = repo_name.replace(/[\. ,:-]+/g, "-");
         if (typeof data.content != 'undefined' ) {
-      	  $("#"+repo_name+" .status").text(atob(data.content));
+      	  $(".status").text(atob(data.content));
         } else {
-      	  $("#"+repo_name+" .status").text("No status available for this repo yet. Check back soon.");
+      	  $(".status").text("No status available for this repo yet. Check back soon.");
         }
       }).error(function () {
-       $("#"+repo_name+" .status").text("No status available for this repo yet. Check back soon.");
+       $(".status").text("No status available for this repo yet. Check back soon.");
     }
   );
 }
@@ -41,16 +41,13 @@ var render_modules = function(projects) {
   _.map(projects,function(project) {
       modules[0](project.name);
   });
-  _.map(projects,function(project) {
-      modules[1](project.name);
-  });
 }
 
 var render_dashboard = function() {
-  var elements = $(".dashboard-projects-content");
+  var elements = $(document);
   var projects = []
   var content = _.map(elements, function(e) {
-    var ghUrl = $(e).find(".github-url").attr("href");
+    var ghUrl = $(".github-url").attr("href");
     var slugIndex = ghUrl.lastIndexOf("/");
     var name = ghUrl.substr(slugIndex+1);
     console.log(name);
