@@ -1,48 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  {% include head.html %}
-</head>
-<body itemscope itemtype="http://schema.org/WebPage">
+---
+layout: bare
+---
 
-<section class="container bare">
-
-  <div class="bare-logo" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-    <a href="/">
-      <i class="icon-18f-logo"></i>
-    </a>
-  </div>
-
-  <div class="bare-content" role="main" itemscope itemprop="mainContentOfPage">
+{% for project in site.data.projects %}
+  {% if project.project == page.title %}
+    {% capture css_id %}{% if project.css_id %}{{ project.css_id }}{% else %}{{ project.name }}{% endif %}{% endcapture %}
+    <!-- 
+      Do the other things here. Basically, we now have to objects inside this loop: 
+      - the page object which has anything in a page's front matter
+      - the project object, which is the project inside _data/projects.yml
+        whose `project` field matches thie page's `title` field.
+      - the css_id variable captured above is either project.name or project.css_id
+        if the latter exists as a field.
+    -->
     <h1>{{ page.title }}</h1>
-    {% for project in site.data.projects %}
-      {% if project.project == page.title %}
-        {% capture css_id %}{% if project.css_id %}{{ project.css_id }}{% else %}{{ project.name }}{% endif %}{% endcapture %}
-        <!-- 
-          Do the other things here. Basically, we now have to objects inside this loop: 
-          - the page object which has anything in a page's front matter
-          - the project object, which is the project inside _data/projects.yml
-            whose `project` field matches thie page's `title` field.
-          - the css_id variable captured above is either project.name or project.css_id
-            if the latter exists as a field.
-        -->
-        <div class="dashboard-project-content" id="{{ css_id}}">
-          <p>GitHub URL: {{ project.github }}</p>
-        
+    <p class="description">{{ project.description }}</p>
+    <section class="dash-info-area">
+      <div>
+        <div>
+          <h1>status</h1>
           <p class="status">{{ project.status }}</p>
-          <p class="issues">Issues: </p>
-          <p class="stars">Stars: </p>
-          <p class="forks">Forks: </p>
         </div>
-      {% endif %}
-    {% endfor %}
-
-  </div>
-
-</section>
-
-  {% include footer.html %}
-  {% include scripts.html %}
-
-</body>
-</html>
+        <div>
+          <h1>issues</h1>
+          <p>138</p>
+        </div>
+        <div class="dash-info-long">
+          <h1>impact</h1>
+          <p>{{ project.impact }}</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <h1>code</h1>
+          <p class="dashboard-icon"><a class="github-url" href="{{project.github}}"><i class="icon-github2"></i></a></p>
+        </div>
+        <div>
+          <h1>partners</h1>
+          <p>{{ project.partners }}</p>
+        </div>
+        <div>
+          <h1>licenses</h1>
+          <p>{{ project.licenses }}</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <h1>stars</h1>
+          <p>342</p>
+        </div>
+        <div>
+          <h1>forks</h1>
+          <p>55</p>
+        </div>
+        <div>
+          <h1>contact</h1>
+          <p class="dashboard-icon"><a class="github-url" href="mailto:{{project.contact}}"><i class="icon-email"></i></a></p>
+        </div>
+      </div>
+    </section>
+  
+  {% endif %}
+{% endfor %}
