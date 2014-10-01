@@ -20,15 +20,12 @@ permalink: /
         <div>
           <h1>{{project.project}}</h1>
           <p class="status">{{ project.status }}</p>
-          <p class="issues">Issues: </p>
-          <p class="stars">Stars: </p>
-          <p class="forks">Forks: </p>
         </div>
         <div><p class="client">{{ project.client }}</p></div>
         <div>
           <p class="description">{{ project.description }}</p>
-          <p><i class="icon-github2"></i> <a class="github-url" href="{{project.github}}">{{project.github}}</a></p>
-          <p><a href="http://18f.gsa.gov/tags/{{project.name}}">Blog posts about this project</a></p>
+          <p class="dashboard-icon"><a class="github-url" href="{{project.github}}"><i class="icon-github2"></i> See our work &#8594;</a></p>
+          <p><a href="http://18f.gsa.gov/tags/{{project.name}}">Read project news &#8594;</a></p>
         </div>
       </article>
       {% endif %}
