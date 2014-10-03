@@ -19,7 +19,7 @@ layout: bare
       <div>
         <div>
           <h1>status</h1>
-          <p class="status {{ project.status }}">{{ project.status }}</p>
+          <p class="status {{ project.stage }}">{{ project.stage }}</p>
         </div>
         <div>
           <h1>issues</h1>
@@ -62,5 +62,5 @@ layout: bare
   
   {% endif %}
 {% endfor %}
-<script src="/assets/js/underscore.js"></script>
-<script src="/assets/js/main.js"></script>
+<script src="{{site.baseurl}}/assets/js/underscore.js"></script>
+<script src="{{site.baseurl}}/assets/js/main.js"></script>
