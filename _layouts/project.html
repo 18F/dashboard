@@ -19,11 +19,11 @@ layout: bare
       <div>
         <div>
           <h1>status</h1>
-          <p class="status">{{ project.status }}</p>
+          <p class="status {{ project.status }}">{{ project.status }}</p>
         </div>
         <div>
           <h1>issues</h1>
-          <p>138</p>
+          <p class="issues"></p>
         </div>
         <div class="dash-info-long">
           <h1>impact</h1>
@@ -47,11 +47,11 @@ layout: bare
       <div>
         <div>
           <h1>stars</h1>
-          <p>342</p>
+          <p class="stars"></p>
         </div>
         <div>
           <h1>forks</h1>
-          <p>55</p>
+          <p class="forks"></p>
         </div>
         <div>
           <h1>contact</h1>
@@ -62,3 +62,5 @@ layout: bare
   
   {% endif %}
 {% endfor %}
+<script src="/assets/js/underscore.js"></script>
+<script src="/assets/js/main.js"></script>

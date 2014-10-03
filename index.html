@@ -15,16 +15,16 @@ permalink: /
     </header>
     {% for project in site.data.projects %}
       {% if project.status != "Hold" %}
-      {% capture css_id %}{% if project.css_id %}{{ project.css_id }}{% else %}{{ project.name }}{% endif %}{% endcapture %}
-      <article class="dashboard-projects-content" id="{{ css_id }}">
+      <article class="dashboard-projects-content">
         <div>
           <h1>{{project.project}}</h1>
-          <p class="status">{{ project.status }}</p>
+            
+            <p class="status">{% if project.status %}{{ project.status }}{% else %}Unknown{% endif %}</p>
         </div>
-        <div><p class="client">{{ project.client }}</p></div>
+        <div><p class="client">{% if project.client %}{{ project.client }}{% else %}Unknown{% endif %}</p></div>
         <div>
-          <p class="description">{{ project.description }}</p>
-          <p class="dashboard-icon"><a class="github-url" href="{{project.github}}"><i class="icon-github2"></i> See our work &#8594;</a></p>
+          <p class="description">{% if project.description %}{{ project.description }}{% else %}Unknown{% endif %}</p>
+          <p class="dashboard-icon"><a class="github-url" href="{{project.github}}"><i class="icon-github2"></i> See our work on {{ project.project }} &#8594;</a></p>
           <p><a href="http://18f.gsa.gov/tags/{{project.name}}">Read project news &#8594;</a></p>
         </div>
       </article>
@@ -32,5 +32,3 @@ permalink: /
     {% endfor %}
   </section>
 </section>
-<script src="assets/js/underscore.js"></script>
-<script src="assets/js/main.js"></script>
