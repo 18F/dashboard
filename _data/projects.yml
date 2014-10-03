@@ -77,11 +77,11 @@
   licenses:
   links:
   status:
-- project: DOI Extractives
+- project: "Natural Resource Revenues from U.S. Federal Lands"
   name: doi-extractives-data
   github: https://github.com/18F/doi-extractives-data.git
   description:
-  client: Department of the Interior
+  client: "Department of the Interior"
   partners:
   impact:
   stage:
@@ -182,7 +182,7 @@
   licenses: "CC0, some libraries MIT"
   links: https://midas.18f.us/
   status:
-- project: MyUSA
+- project: "MyUSA"
   name: myusa
   github: https://github.com/18F/myusa.git
   description:
