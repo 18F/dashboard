@@ -18,8 +18,7 @@ permalink: /
       <article class="dashboard-projects-content">
         <div>
           <h1>{{project.project}}</h1>
-            
-            <p class="status">{% if project.status %}{{ project.status }}{% else %}Unknown{% endif %}</p>
+          <p class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</p>
         </div>
         <div><p class="client">{% if project.client %}{{ project.client }}{% else %}Unknown{% endif %}</p></div>
         <div>

@@ -7,7 +7,7 @@
 # client: "Main partner (who is paying) in quotes"
 # partners: "Other contributing partners in quotes, comma separated, as necessary"
 # impact: "INSERT DESCRIPTION"
-# stage: Choose: Discovery, Alpha, Beta, Live
+# stage: Choose: discovery, alpha, beta, live
 # milestones: "INSERT DESCRIPTION"
 # contact: Email address or url to preferred feedback mechanism
 # stack: "Stack, technologies"
@@ -24,7 +24,7 @@
   client: "U.S. Department of Treasury"
   partners:
   impact:
-  stage: Alpha
+  stage: alpha
   milestones: "August 2014: Project Started, September 2014: Project moved from Discovery to Alpha"
   contact: christopher.cairns@gsa.gov
   stack: "HTML, CSS, JavaScript, Jekyll"
@@ -39,7 +39,7 @@
   client: "Peace Corps"
   partners:
   impact:
-  stage: Discovery
+  stage: discovery
   milestones: "August 2014: Project Started"
   contact: sean.herron@gsa.gov
   stack:
@@ -98,7 +98,7 @@
   description: "A simplified, email-based purchasing approval tool for purchase card holders authorized to buy office supplies for the government."
   client: "General Services Administration"
   partners:
-  stage: Beta
+  stage: beta
   impact:
   milestones:
   contact: "raphael.villas@gsa.gov and kelly.robinson@gsa.gov"
@@ -113,7 +113,7 @@
   description: "FBOpen helps small businesses search for opportunities to work with the U.S. government."
   client:
   partners:
-  stage: Beta
+  stage: beta
   impact:
   milestones:
   contact: fbopen@gsa.gov
@@ -143,7 +143,7 @@
   description: "A hosted, shared-service that is free to agencies that provides an API key, analytics, and proxy solution for government web services."
   client: "Census, FCC, FDA, GSA, NREL, Regulations.gov, USDA"
   partners:
-  stage: Live
+  stage: live
   impact: "2100 API users and 42 million API requests served so far"
   milestones:
   contact: api.data.gov@gsa.gov
@@ -158,7 +158,7 @@
   description: "A suite of tools, resources, and consulting services to assist agencies in the production and management of government APIs.  A two year old program, the /Developer Program was adopted by 18F to scale out its impact and to grow the government’s API portfolio."
   client: "General Services Administration"
   partners:
-  stage: Live
+  stage: live
   impact: "Over 70 agencies served, including each cabinet Department, National Archives, Federal Communications Commission, Consumer Financial Protection Bureau, and the Office of Personnel Management."
   milestones:
   contact: gray.brooks@gsa.gov
@@ -173,7 +173,7 @@
   description: "A marketplace for federal employees to share and collaborate on ideas to improve government or citizen experiences."
   client: "General Services Administration, Department of State, Department of Health and Human Services"
   partners:
-  stage: Beta
+  stage: beta
   impact: "2 million federal employees"
   milestones:
   contact:
@@ -204,7 +204,7 @@
   client: "U.S. Citizenship and Immigration Service"
   partners:
   impact:
-  stage: Alpha
+  stage: alpha
   milestones:
   contact:
   stack:
