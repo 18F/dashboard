@@ -1,20 +1,20 @@
 
 ################### KEY
-# project: "Project Name In Quotes"
+# project: "Project Name"
 # name: Machine-readable slug used in url
 # github: url for project Github repo
-# description: "Short description of project in quotes."
-# client: "Main partner (who is paying) in quotes"
-# partners: "Other contributing partners in quotes, comma separated, as necessary"
-# impact: "INSERT DESCRIPTION"
+# description: "Short description of project"
+# client: "Main partner (who is paying)"
+# partners: "Other contributing partners, comma separated, as necessary"
+# impact: "The number of users potentially impacted by this service"
 # stage: Choose: Discovery, Alpha, Beta, Live
-# milestones: "INSERT DESCRIPTION"
-# contact: Email address or url to preferred feedback mechanism
+# milestones: "The month and year of major project milestones, such as the date a projects started, began a new stage, recruited new partners, overcame significant bureaucratic hurdles, etc."
+# contact: Email address or URL to preferred feedback mechanism
 # stack: "Stack, technologies"
-# team: "18f, team, members, using, 18f, slugs, found, HERE" 
+# team: "List of 18F team members, comma separated, with names pulled from 18F.gsa.gov standard" 
 # licenses: "CC0, some libraries MIT"
-# links: Comma-separated urls to other resources related to project
-# status: INSERT DESCRIPTION
+# links: Comma-separated URLs to other resources related to project
+# status: "Hold" in this field (with no quotes) will hide this project from the site. Otherwise, leave blank.
 ###################
 
 - project: "MyRA"
@@ -23,9 +23,9 @@
   description: "Landing page design for Treasury’s My Retirement Account program, which will provide a simple, safe, and affordable way for individuals to start saving for retirement."
   client: "U.S. Department of Treasury"
   partners:
-  impact:
+  impact: 
   stage: Alpha
-  milestones: "August 2014: Project Started, September 2014: Project moved from Discovery to Alpha"
+  milestones: "August 2014: Project started, September 2014: Project moved from Discovery to Alpha"
   contact: christopher.cairns@gsa.gov
   stack: "HTML, CSS, JavaScript, Jekyll"
   team: "chrisc, manger"
