@@ -65,7 +65,7 @@
   licenses:
   licenselink: https://github.com/18F/foia/blob/master/LICENSE.md
   links: https://trello.com/b/D0r2UOz0/foia-scrum-board
-  status: Hold
+  status: 
 - project: "OpenFEC"
   name: openFEC
   github: https://github.com/18F/openFEC.git
@@ -81,7 +81,7 @@
   licenses:
   licenselink: https://github.com/18F/openFEC/blob/master/LICENSE.md
   links:
-  status: Hold
+  status: 
 - project: "Natural Resource Revenues from U.S. Federal Lands"
   name: doi-extractives-data
   github: https://github.com/18F/doi-extractives-data.git
@@ -113,7 +113,7 @@
   licenses: "CC0, some libraries MIT"
   licenselink: https://github.com/18F/c2/blob/master/LICENSE.md
   links:
-  status: Hold
+  status: 
 - project: "FBOpen"
   name: fbopen
   github: https://github.com/18F/fbpoen.git
@@ -129,7 +129,7 @@
   licenses: "CC0"
   licenselink: https://github.com/18F/fbopen/blob/master/LICENSE.md
   links: http://fbopen.gsa.gov, http://18f.github.io/fbopen
-  status: Hold
+  status: 
 - project: "Mirage: OASIS Market Research Tool"
   name: mirage
   github: https://github.com/18F/mirage.git
