@@ -8,7 +8,26 @@ permalink: /
   <h1>{{page.title}}</h1>
   <p class="lead">We are building digital services for the American people. Follow our progress and get involved here.</p>
   <section class="dashboard-projects">
-    <header class="dashboard-projects-headings">
+    <div>
+      {% for project in site.data.projects %}
+        {% if project.status != "Hold" %}
+        <article class="dashboard-projects-content">
+          <div>
+            <a href="{{ site.baseurl }}/project/{{ project.name }}"><h1>{{project.project}} &#10095;&#10095;<span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</h1></span></a>
+            
+          </div>
+          <div><p class="client">{% if project.client %}{{ project.client }}{% else %}Unknown{% endif %}</p></div>
+          <div>
+            <p class="description">{% if project.description %}{{ project.description }}{% else %}Unknown{% endif %}</p>
+            <p class="dashboard-icon"><a class="github-url" href="{{project.github}}"><i class="icon-github2"></i> See our work on {{ project.project }} &#8594;</a></p>
+            <p><a href="http://18f.gsa.gov/tags/{{project.name}}">Read project news &#8594;</a></p>
+          </div>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- <header class="dashboard-projects-headings">
       <div><h1>Project</h1></div>
       <div><h1>Partners</h1></div>
       <div><h1>Description</h1></div>
@@ -29,5 +48,5 @@ permalink: /
       </article>
       {% endif %}
     {% endfor %}
-  </section>
+  </section> -->
 </section>

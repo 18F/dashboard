@@ -711,13 +711,38 @@ $tiniest: new-breakpoint(max-width 390px);
 		color: $medium-gray;
 	}
 }
+
 .dashboard-projects-content {
-	@extend %dashboard-table-layout;
-	padding-top: 10px;
-	border-top: 1px solid $light-gray;
-	clear:both;
+	// @extend %dashboard-table-layout;
+	> div:nth-of-type(1) {
+		@include span-columns(12);
+		border-top: 1px solid $medium-gray;
+		margin-bottom: 10px;
+		@include transition-property (background-color);
+		@include transition-duration(0.2s);
+		@include transition-timing-function(ease-in);
+		&:hover, &:focus {
+			background-color: lighten($blue, 35%);
+		}
+	}
+	> div:nth-of-type(2) {
+		@include span-columns(6);
+	}
+	> div:nth-of-type(3) {
+		@include span-columns(6);
+	}
+	a {
+		text-decoration: none;
+		h1 {
+			color: $dark-gray;
+		}
+	}
 	h1 {
-		font-size: 1.2em;
+		font-size: 1.5em;
+		padding-top: 5px;
+		&:hover, &:focus {
+			cursor: pointer;
+		}
 	}
 	i {
 		color: $medium-blue;
@@ -732,6 +757,7 @@ $tiniest: new-breakpoint(max-width 390px);
 		margin-bottom: 20px;
 	}
 }
+
 .dashboard-icon {
 	a {
 		text-decoration: none;
@@ -742,15 +768,17 @@ $tiniest: new-breakpoint(max-width 390px);
 		}
 	}
 }
+
 .status {
-	border: $medium-blue;
 	padding: 5px 10px 5px 10px;
+	margin-top: -5px;
 	color: white;
-	margin-top: 10px;
-	font-size: .8em;
+	font-size: .7em;
+	font-family: $base-font-family;
 	display: inline-block;
 	background-color: $medium-gray;
 	font-weight: 600;
+	float: right;
 }
 
 .discovery {
