@@ -26,7 +26,7 @@
   partners:
   impact: "Millions of Americans do not have access to an employee-sponsored retirement plan: more than 50% of full-time and 75% of part-time workers."
   stage: Alpha
-  milestones: "August 2014: Project started, September 2014: Project moved from Discovery to Alpha"
+  milestones: "August 2014: Project Discovery stage started, September 2014: Project moved from Discovery to Alpha"
   contact: christopher.cairns@gsa.gov
   stack: "HTML, CSS, JavaScript, Jekyll"
   team: "chrisc, manger"
@@ -40,9 +40,9 @@
   description: "A redesign of the Peace Corps’ digital presence, including a new website, country-specific sites, application engine, and single authentication and metrics reporting for volunteers."
   client: "Peace Corps"
   partners:
-  impact:
+  impact: "7,000 Peace Corps Volunteers in the field."
   stage: Discovery
-  milestones: "August 2014: Project Started"
+  milestones: "August 2014: Project Discovery stage started"
   contact: sean.herron@gsa.gov
   stack:
   team: "sean, victor"
@@ -52,36 +52,36 @@
   status:
 - project: "FOIA Modernization"
   name: foia
-  github: https://github.com/18F/foia.git
-  description:
+  github: https://github.com/18F/foia.git, https://github.com/18F/foia-search, https://github.com/18F/foia-hub
+  description: "A new portal to search for and submit FOIA requests and scalable infrastructure for agencies."
   client:
   partners:
   impact:
-  stage:
-  milestones:
-  contact:
+  stage: Discovery
+  milestones: "June 2014: Project Discovery stage started"
+  contact: https://github.com/18f/foia/issues
   stack:
   team:
   licenses:
   licenselink: https://github.com/18F/foia/blob/master/LICENSE.md
-  links:
-  status:
+  links: https://trello.com/b/D0r2UOz0/foia-scrum-board
+  status: Hold
 - project: "OpenFEC"
   name: openFEC
   github: https://github.com/18F/openFEC.git
-  description:
+  description: "Revamping how the FEC shares the information they collect and regulations they enforce, both as structured data and in robust, human-readable formats through a redesigned FEC.gov."
   client: "Federal Election Commission"
   partners:
-  impact:
-  stage:
-  milestones:
-  contact:
+  impact: "318 million Americans are affected every 2 years by each election"
+  stage: Discovery
+  milestones: "June 2014: Project Discovery stage started"
+  contact: https://github.com/18F/FEC/issues 
   stack:
   team:
   licenses:
   licenselink: https://github.com/18F/openFEC/blob/master/LICENSE.md
   links:
-  status:
+  status: Hold
 - project: "Natural Resource Revenues from U.S. Federal Lands"
   name: doi-extractives-data
   github: https://github.com/18F/doi-extractives-data.git
