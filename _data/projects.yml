@@ -24,7 +24,7 @@
 - project: "MyRA"
   name: myra
   github: 
-  - https://github.com/18F/myra.git
+  - 18F/myra
   description: "Landing page design for Treasury’s My Retirement Account program, which will provide a simple, safe, and affordable way for individuals to start saving for retirement."
   client: "U.S. Department of Treasury"
   partners:
@@ -35,13 +35,13 @@
   stack: "HTML, CSS, JavaScript, Jekyll"
   team: "chrisc, manger"
   license: "CC0"
-  licenselink: https://github.com/18F/myra/blob/master/LICENSE.md
+  licenselink: 18F/myra/blob/master/LICENSE.md
   links: http://myra.treasury.gov
   status:
 - project: "PeaceCorps.gov"
   name: peacecorps-site
   github: 
-  - https://github.com/18F/peacecorps-site.git
+  - 18F/peacecorps-site
   description: "A redesign of the Peace Corps’ digital presence, including a new website, country-specific sites, application engine, and single authentication and metrics reporting for volunteers."
   client: "Peace Corps"
   partners:
@@ -58,43 +58,43 @@
 - project: "FOIA Modernization"
   name: foia
   github: 
-  - https://github.com/18F/foia
-  - https://github.com/18F/foia-search
-  - https://github.com/18F/foia-hub
+  - 18F/foia
+  - 18F/foia-search
+  - 18F/foia-hub
   description: "A new portal to search for and submit FOIA requests and scalable infrastructure for agencies."
   client:
   partners:
   impact:
   stage: discovery
   milestones: "June 2014: Project Discovery stage started"
-  contact: https://github.com/18f/foia/issues
+  contact: 18f/foia/issues
   stack:
   team:
   licenses:
-  licenselink: https://github.com/18F/foia/blob/master/LICENSE.md
+  licenselink: 18F/foia/blob/master/LICENSE.md
   links: https://trello.com/b/D0r2UOz0/foia-scrum-board
   status: 
 - project: "OpenFEC"
   name: openFEC
   github: 
-  - https://github.com/18F/openFEC.git
+  - 18F/openFEC
   description: "Revamping how the FEC shares the information they collect and regulations they enforce, both as structured data and in robust, human-readable formats through a redesigned FEC.gov."
   client: "Federal Election Commission"
   partners:
   impact: "318 million Americans are affected every 2 years by each election"
   stage: discovery
   milestones: "June 2014: Project Discovery stage started"
-  contact: https://github.com/18F/FEC/issues 
+  contact: 18F/FEC/issues 
   stack:
   team:
   licenses:
-  licenselink: https://github.com/18F/openFEC/blob/master/LICENSE.md
+  licenselink: 18F/openFEC/blob/master/LICENSE.md
   links:
   status: 
 - project: "Natural Resource Revenues from U.S. Federal Lands"
   name: doi-extractives-data
   github: 
-  - https://github.com/18F/doi-extractives-data.git
+  - 18F/doi-extractives-data
   description: "This site and open data portal supports the President’s Open Gov Partnership National Action Plan commitment to the Extractive Industries Transparency Initiative."
   client: "Department of the Interior"
   partners:
@@ -105,13 +105,13 @@
   stack: JavaScript, Jekyll
   team:
   licenses: CC0
-  licenselink: https://github.com/18F/doi-extractives-data/blob/master/LICENSE.md
+  licenselink: 18F/doi-extractives-data/blob/master/LICENSE.md
   links:
   status:
 - project: "Common Acquisition Platform Tools"
   name: C2
   github: 
-  - https://github.com/18F/C2.git
+  - 18F/C2
   description: "A simplified, email-based purchasing approval tool for purchase card holders authorized to buy office supplies for the government."
   client: "General Services Administration"
   partners:
@@ -122,13 +122,13 @@
   stack: "Ruby, CSS, JavaScript/Node, Python"
   team: "raphy, ehlers, robert, sasha, diego"
   licenses: "CC0, some libraries MIT"
-  licenselink: https://github.com/18F/c2/blob/master/LICENSE.md
+  licenselink: 18F/c2/blob/master/LICENSE.md
   links:
   status: 
 - project: "FBOpen"
   name: fbopen
   github: 
-  - https://github.com/18F/fbpoen.git
+  - 18F/fbpoen
   description: "FBOpen helps small businesses search for opportunities to work with the U.S. government."
   client:
   partners:
@@ -139,13 +139,13 @@
   stack: "Python, JavaScript/Node, CSS"
   team: "alison, leah, mhz, kaitlin, diego"
   licenses: "CC0"
-  licenselink: https://github.com/18F/fbopen/blob/master/LICENSE.md
-  links: http://fbopen.gsa.gov, http://18f.github.io/fbopen
+  licenselink: 18F/fbopen/blob/master/LICENSE.md
+  links: http://fbopen.gsa.gov, http://18fhub.io/fbopen
   status: 
 - project: "Mirage: OASIS Market Research Tool"
   name: mirage
   github: 
-  - https://github.com/18F/mirage.git
+  - 18F/mirage
   description:
   client: "General Services Administration"
   partners:
@@ -156,7 +156,7 @@
   stack: "Python, JavaScript"
   team:
   licenses: "CC0"
-  licenselink: https://github.com/18F/mirage/blob/master/LICENSE.md
+  licenselink: 18F/mirage/blob/master/LICENSE.md
   links: http://gsa.gov/oasis
   status:
 - project: "API.data.gov"
@@ -173,13 +173,13 @@
   stack: JavaScript, CSS, Ruby
   team: "gray"
   licenses: "CC0"
-  licenselink: https://github.com/18F/api.data.gov/blob/master/LICENSE.md
+  licenselink: 18F/api.data.gov/blob/master/LICENSE.md
   links: http://api.data.gov, http://api.data.gov/metrics, http://api.data.gov/about
   status:
 - project: "/Developer Program"
   name: API-All-the-X
   github: 
-  - https://github.com/18F/API-All-the-X.git
+  - 18F/API-All-the-X
   description: "A suite of tools, resources, and consulting services to assist agencies in the production and management of government APIs.  A two year old program, the /Developer Program was adopted by 18F to scale out its impact and to grow the government’s API portfolio."
   client: "General Services Administration"
   partners:
@@ -190,13 +190,13 @@
   stack:
   team: "gray"
   licenses: "CC0"
-  licenselink: https://github.com/18F/API-All-the-X/blob/master/LICENSE.md
-  links: http://18f.github.io/API-All-the-X
+  licenselink: 18F/API-All-the-X/blob/master/LICENSE.md
+  links: http://18fhub.io/API-All-the-X
   status:
 - project: "Midas"
   name: midas
   github:
-  - https://github.com/18F/midas
+  - 18F/midas
   description: "A marketplace for federal employees to share and collaborate on ideas to improve government or citizen experiences."
   client: "General Services Administration, Department of State, Department of Health and Human Services"
   partners:
@@ -207,13 +207,13 @@
   stack: "JavaScript (Node/Sails, Backbone), CSS, Chef"
   team: "sarah, david"
   licenses: "CC0"
-  licenselink: https://github.com/18F/midas/blob/master/LICENSE.md
+  licenselink: 18F/midas/blob/master/LICENSE.md
   links: https://midas.18f.us/
   status:
 - project: "MyUSA"
   name: myusa
   github: 
-  - https://github.com/18F/myusa.git
+  - 18F/myusa
   description:
   client:
   partners:
@@ -224,13 +224,13 @@
   stack:
   team:
   licenses:
-  licenselink: https://github.com/18F/myusa/blob/master/LICENSE.md
+  licenselink: 18F/myusa/blob/master/LICENSE.md
   links:
   status:
 - project: "MyUSCIS"
   name: answers
   github: 
-  - https://github.com/18F/answers.git
+  - 18F/answers
   description:
   client: "U.S. Citizenship and Immigration Service"
   partners:
