@@ -14,14 +14,15 @@ permalink: /
         <article class="dashboard-projects-content">
           <div>
             <a href="{{ site.baseurl }}/project/{{ project.name }}"><h1>{{project.project}} &#10095;&#10095;<span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</h1></span></a>
-            
           </div>
-          <div><p class="client">{% if project.client %}{{ project.client }}{% else %}Unknown{% endif %}</p></div>
           <div>
-            <p class="description">{% if project.description %}{{ project.description }}{% else %}Unknown{% endif %}</p>
-            <p class="dashboard-icon"><a class="github-url" href="{{project.github}}"><i class="icon-github2"></i> See our work on {{ project.project }} &#8594;</a></p>
-            <p><a href="http://18f.gsa.gov/tags/{{project.name}}">Read project news &#8594;</a></p>
+            <p>{% if project.description %}{{ project.description }}{% else %}Project description coming soon.{% endif %}</p>
           </div>
+          <div><p>Partner: {% if project.client %}<strong>{{ project.client }}</strong>{% else %}Coming soon{% endif %}</p>
+          <p>Code: <a class="github-url" href="{{project.github}}"> see our work on Github &#8594;</a></p>
+          <p>News: <a href="http://18f.gsa.gov/tags/{{project.name}}">read 18F posts about this project &#8594;</a></p>
+          </div>
+          
         </article>
         {% endif %}
       {% endfor %}

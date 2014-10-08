@@ -54,7 +54,7 @@
   client:
   partners:
   impact:
-  stage:
+  stage: discovery
   milestones:
   contact:
   stack:
@@ -69,7 +69,7 @@
   client: "Federal Election Commission"
   partners:
   impact:
-  stage:
+  stage: discovery
   milestones:
   contact:
   stack:
@@ -80,11 +80,11 @@
 - project: "Natural Resource Revenues from U.S. Federal Lands"
   name: doi-extractives-data
   github: https://github.com/18F/doi-extractives-data.git
-  description:
+  description: "A data portal for information about extractive industries in the United States. It provides engaging communications, data visualizations and raw data to add to public understanding and discussion about this topic."
   client: "Department of the Interior"
   partners:
   impact:
-  stage:
+  stage: alpha
   milestones:
   contact:
   stack:
@@ -129,7 +129,7 @@
   client: "General Services Administration"
   partners:
   impact:
-  stage:
+  stage: discovery
   milestones:
   contact:
   stack:
@@ -189,7 +189,7 @@
   client:
   partners:
   impact:
-  stage:
+  stage: discovery
   milestones:
   contact:
   stack:
