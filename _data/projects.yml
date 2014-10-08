@@ -3,9 +3,9 @@
 # project: "Project Name"
 # name: Machine-readable slug used in url
 # github:
-# - url for each of the projects
+# - org/repo for each of the projects
 # - repos on a new line like this
-# - http://github.com/18f/dashboard
+# - 18f/dashboard
 # description: "Short description of project"
 # client: "Main partner (who is paying)"
 # partners: "Other contributing partners, comma separated, as necessary"
