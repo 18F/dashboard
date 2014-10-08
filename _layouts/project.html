@@ -1,8 +1,6 @@
 ---
 layout: bare
 ---
-          <pre>{{project.github}}</pre>
-
 {% for project in site.data.projects %}
   {% if project.project == page.title %}
     {% capture css_id %}{% if project.css_id %}{{ project.css_id }}{% else %}{{ project.name }}{% endif %}{% endcapture %}
