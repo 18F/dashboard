@@ -13,14 +13,10 @@ layout: bare
       - the css_id variable captured above is either project.name or project.css_id
         if the latter exists as a field.
     -->
-    <h1>{{ page.title }}</h1>
+    <h1>{{ page.title }} <span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1>
     <p class="description">{{ project.description }}</p>
     <section class="dash-info-area">
       <div>
-        <div>
-          <h1>status</h1>
-          <p class="status {{ project.stage }}">{{ project.stage }}</p>
-        </div>
         <div>
           <h1>issues</h1>
           <p class="issues"></p>

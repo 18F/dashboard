@@ -692,19 +692,11 @@ $tiniest: new-breakpoint(max-width 390px);
 
 // Dashboard
 //********************************************************
-
-.dashboard-projects-headings {
-	h1 {
-		font-size: 1.2em;
-		color: $medium-gray;
-	}
-}
-
 .dashboard-projects-content {
 	> div:nth-of-type(1) {
 		@include span-columns(12);
 		border-top: 1px solid $medium-gray;
-		margin-top: 30px;
+		margin-top: 50px;
 		margin-bottom: 10px;
 		@include transition-property (background-color);
 		@include transition-duration(0.2s);
