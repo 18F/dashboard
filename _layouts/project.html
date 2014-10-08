@@ -1,6 +1,7 @@
 ---
 layout: bare
 ---
+          <pre>{{project.github}}</pre>
 
 {% for project in site.data.projects %}
   {% if project.project == page.title %}
@@ -29,7 +30,13 @@ layout: bare
       <div>
         <div>
           <h1>code</h1>
-          <p class="dashboard-icon"><a class="github-url" href="{{project.github}}"><i class="icon-github2"></i></a></p>
+            <p class="dashboard-icon"><a class="github-url" href="{{ project.github | first }}"><i class="icon-github2"></i></a></p>
+          {% if project.github.size > 2 %}
+            <p>Other repos in this project</p>
+            {% for url in project.github  | offset: 1 %}
+              <p class=""><a class="" href="{{url}}">{{url}}</a></p>
+            {% endfor %}
+          {% endif %}
         </div>
         <div>
           <h1>partners</h1>
