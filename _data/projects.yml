@@ -1,20 +1,21 @@
 
 ################### KEY
-# project: "Project Name In Quotes"
+# project: "Project Name"
 # name: Machine-readable slug used in url
 # github: url for project Github repo
-# description: "Short description of project in quotes."
-# client: "Main partner (who is paying) in quotes"
-# partners: "Other contributing partners in quotes, comma separated, as necessary"
-# impact: "INSERT DESCRIPTION"
-# stage: Choose: discovery, alpha, beta, live
-# milestones: "INSERT DESCRIPTION"
-# contact: Email address or url to preferred feedback mechanism
+# description: "Short description of project"
+# client: "Main partner (who is paying)"
+# partners: "Other contributing partners, comma separated, as necessary"
+# impact: "The number of users potentially impacted by this service"
+# stage: Choose: Discovery, Alpha, Beta, Live
+# milestones: "The month and year of major project milestones, such as the date a projects started, began a new stage, recruited new partners, overcame significant bureaucratic hurdles, etc."
+# contact: Email address or URL to preferred feedback mechanism
 # stack: "Stack, technologies"
-# team: "18f, team, members, using, 18f, slugs, found, HERE" 
-# licenses: "CC0, some libraries MIT"
-# links: Comma-separated urls to other resources related to project
-# status: INSERT DESCRIPTION
+# team: "List of 18F team members, comma separated, with names pulled from 18F.gsa.gov standard" 
+# license: "Name of license"
+# licenselink: URL of license
+# links: Comma-separated URLs to other resources related to project
+# status: "Hold" in this field (with no quotes) will hide this project from the site. Otherwise, leave blank.
 ###################
 
 - project: "MyRA"
@@ -23,13 +24,14 @@
   description: "Landing page design for Treasury’s My Retirement Account program, which will provide a simple, safe, and affordable way for individuals to start saving for retirement."
   client: "U.S. Department of Treasury"
   partners:
-  impact:
+  impact: "Millions of Americans do not have access to an employee-sponsored retirement plan: more than 50% of full-time and 75% of part-time workers."
   stage: alpha
-  milestones: "August 2014: Project Started, September 2014: Project moved from Discovery to Alpha"
+  milestones: "August 2014: Project Discovery stage started, September 2014: Project moved from Discovery to Alpha"
   contact: christopher.cairns@gsa.gov
   stack: "HTML, CSS, JavaScript, Jekyll"
   team: "chrisc, manger"
-  licenses: "CC0, some libraries MIT"
+  license: "CC0"
+  licenselink: https://github.com/18F/myra/blob/master/LICENSE.md
   links: http://myra.treasury.gov
   status:
 - project: "PeaceCorps.gov"
@@ -38,58 +40,62 @@
   description: "A redesign of the Peace Corps’ digital presence, including a new website, country-specific sites, application engine, and single authentication and metrics reporting for volunteers."
   client: "Peace Corps"
   partners:
-  impact:
+  impact: "7,000 Peace Corps Volunteers in the field."
   stage: discovery
-  milestones: "August 2014: Project Started"
+  milestones: "August 2014: Project Discovery stage started"
   contact: sean.herron@gsa.gov
   stack:
   team: "sean, victor"
   licenses:
+  licenselink: 
   links:
   status:
 - project: "FOIA Modernization"
   name: foia
-  github: https://github.com/18F/foia.git
-  description:
+  github: https://github.com/18F/foia.git, https://github.com/18F/foia-search, https://github.com/18F/foia-hub
+  description: "A new portal to search for and submit FOIA requests and scalable infrastructure for agencies."
   client:
   partners:
   impact:
   stage: discovery
-  milestones:
-  contact:
+  milestones: "June 2014: Project Discovery stage started"
+  contact: https://github.com/18f/foia/issues
   stack:
   team:
   licenses:
-  links:
-  status:
+  licenselink: https://github.com/18F/foia/blob/master/LICENSE.md
+  links: https://trello.com/b/D0r2UOz0/foia-scrum-board
+  status: 
 - project: "OpenFEC"
   name: openFEC
   github: https://github.com/18F/openFEC.git
-  description:
+  description: "Revamping how the FEC shares the information they collect and regulations they enforce, both as structured data and in robust, human-readable formats through a redesigned FEC.gov."
   client: "Federal Election Commission"
   partners:
-  impact:
+  impact: "318 million Americans are affected every 2 years by each election"
   stage: discovery
-  milestones:
-  contact:
+  milestones: "June 2014: Project Discovery stage started"
+  contact: https://github.com/18F/FEC/issues 
   stack:
   team:
   licenses:
+  licenselink: https://github.com/18F/openFEC/blob/master/LICENSE.md
   links:
-  status:
+  status: 
 - project: "Natural Resource Revenues from U.S. Federal Lands"
   name: doi-extractives-data
   github: https://github.com/18F/doi-extractives-data.git
-  description: "A data portal for information about extractive industries in the United States. It provides engaging communications, data visualizations and raw data to add to public understanding and discussion about this topic."
+  description: "This site and open data portal supports the President’s Open Gov Partnership National Action Plan commitment to the Extractive Industries Transparency Initiative."
   client: "Department of the Interior"
   partners:
-  impact:
+  impact: "Revenue from the sale of natural resources on Federal lands totaled $97.5 billion between 2003 to 2013."
   stage: alpha
-  milestones:
-  contact:
-  stack:
+  milestones: "July 2014: 18F began work on project, September 2014: Alpha site launched"
+  contact: christopher.cairns@gsa.gov
+  stack: JavaScript, Jekyll
   team:
-  licenses:
+  licenses: CC0
+  licenselink: https://github.com/18F/doi-extractives-data/blob/master/LICENSE.md
   links:
   status:
 - project: "Common Acquisition Platform Tools"
@@ -105,8 +111,9 @@
   stack: "Ruby, CSS, JavaScript/Node, Python"
   team: "raphy, ehlers, robert, sasha, diego"
   licenses: "CC0, some libraries MIT"
+  licenselink: https://github.com/18F/c2/blob/master/LICENSE.md
   links:
-  status:
+  status: 
 - project: "FBOpen"
   name: fbopen
   github: https://github.com/18F/fbpoen.git
@@ -119,9 +126,10 @@
   contact: fbopen@gsa.gov
   stack: "Python, JavaScript/Node, CSS"
   team: "alison, leah, mhz, kaitlin, diego"
-  licenses: "CC0, some libraries Apache, MIT/BSD, MIT"
+  licenses: "CC0"
+  licenselink: https://github.com/18F/fbopen/blob/master/LICENSE.md
   links: http://fbopen.gsa.gov, http://18f.github.io/fbopen
-  status:
+  status: 
 - project: "Mirage: OASIS Market Research Tool"
   name: mirage
   github: https://github.com/18F/mirage.git
@@ -130,12 +138,13 @@
   partners:
   impact:
   stage: discovery
-  milestones:
-  contact:
-  stack:
+  milestones: "May 2014: Initial Discovery stage began for task order generator project; June 2014: Project pivoted based on user interviews and Discovery stage began for market research tool; July 2014: Work on Alpha stage began"
+  contact: josh.ruihley@gsa.gov
+  stack: "Python, JavaScript"
   team:
-  licenses:
-  links:
+  licenses: "CC0"
+  licenselink: https://github.com/18F/mirage/blob/master/LICENSE.md
+  links: http://gsa.gov/oasis
   status:
 - project: "API.data.gov"
   name: "api.data.gov"
@@ -149,7 +158,8 @@
   contact: api.data.gov@gsa.gov
   stack: JavaScript, CSS, Ruby
   team: "gray"
-  licenses: "CC0, some libraries MIT"
+  licenses: "CC0"
+  licenselink: https://github.com/18F/api.data.gov/blob/master/LICENSE.md
   links: http://api.data.gov, http://api.data.gov/metrics, http://api.data.gov/about
   status:
 - project: "/Developer Program"
@@ -164,7 +174,8 @@
   contact: gray.brooks@gsa.gov
   stack:
   team: "gray"
-  licenses: CC0
+  licenses: "CC0"
+  licenselink: https://github.com/18F/API-All-the-X/blob/master/LICENSE.md
   links: http://18f.github.io/API-All-the-X
   status:
 - project: "Midas"
@@ -179,7 +190,8 @@
   contact:
   stack: "JavaScript (Node/Sails, Backbone), CSS, Chef"
   team: "sarah, david"
-  licenses: "CC0, some libraries MIT"
+  licenses: "CC0"
+  licenselink: https://github.com/18F/midas/blob/master/LICENSE.md
   links: https://midas.18f.us/
   status:
 - project: "MyUSA"
@@ -195,6 +207,7 @@
   stack:
   team:
   licenses:
+  licenselink: https://github.com/18F/myusa/blob/master/LICENSE.md
   links:
   status:
 - project: "MyUSCIS"
@@ -211,5 +224,6 @@
   team: "yuda, nienhuis, jen, justin, amos, sasha, nick"
   contributors:
   licenses: "MIT, Apache, GPLv2"
+  licenselink: 
   links:
   status:
