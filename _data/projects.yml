@@ -12,12 +12,15 @@
 # impact: "The number of users potentially impacted by this service"
 # stage: Choose: discovery, alpha, beta, live
 # milestones: "The month and year of major project milestones, such as the date a projects started, began a new stage, recruited new partners, overcame significant bureaucratic hurdles, etc."
-# contact: Email address or URL to preferred feedback mechanism
+# contact: 
+# - Email address or 
+# - URL to preferred feedback mechanism
 # stack: "Stack, technologies"
 # team: "List of 18F team members, comma separated, with names pulled from 18F.gsa.gov standard"
-# license: "Name of license"
-# licenselink: URL of license
-# links: Comma-separated URLs to other resources related to project
+# license:
+# - repo: "Name of the license"
+# links: 
+# - link
 # status: "Hold" in this field (with no quotes) will hide this project from the site. Otherwise, leave blank.
 ###################
 
