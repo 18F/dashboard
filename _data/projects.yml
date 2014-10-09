@@ -18,7 +18,7 @@
 # stack: "Stack, technologies"
 # team: "List of 18F team members, comma separated, with names pulled from 18F.gsa.gov standard"
 # license:
-# - repo: "Name of the license"
+# - repo: Name of the license
 # links: 
 # - link
 # status: "Hold" in this field (with no quotes) will hide this project from the site. Otherwise, leave blank.
