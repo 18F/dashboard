@@ -50,7 +50,8 @@
   partners:
   impact: "7,000 Peace Corps Volunteers in the field."
   stage: discovery
-  milestones: "August 2014: Project Discovery stage started"
+  milestones: 
+  - "August 2014: Project Discovery stage started"
   contact: 
   - sean.herron@gsa.gov
   stack:
@@ -69,7 +70,8 @@
   partners: FOIA agency task force
   impact:
   stage: discovery
-  milestones: "June 2014: Project Discovery stage started"
+  milestones: 
+  - "June 2014: Project Discovery stage started"
   contact: 
   - 18f/foia/issues
   stack:
@@ -156,29 +158,37 @@
   stage: beta
   impact:
   milestones:
-  contact: fbopen@gsa.gov
-  stack: "Python, JavaScript/Node, CSS"
+  contact: 
+  - fbopen@gsa.gov
+  stack: "Python, JavaScript/Node"
   team: "alison, leah, mhz, kaitlin, diego"
   licenses: "CC0"
   licenselink: 18F/fbopen/blob/master/LICENSE.md
-  links: http://fbopen.gsa.gov, http://18fhub.io/fbopen
+  links: 
+  - http://fbopen.gsa.gov
+  - http://18fhub.io/fbopen
   status:
 - project: "Mirage: OASIS Market Research Tool"
   name: mirage
   github:
   - 18F/mirage
-  description:
+  description: "Market research tool for the OASIS procurement vehicle, which serves contracting specialists throughout the U.S. Federal Government."
   client: "General Services Administration"
   partners:
   impact:
-  stage: discovery
-  milestones: "May 2014: Initial Discovery stage began for task order generator project; June 2014: Project pivoted based on user interviews and Discovery stage began for market research tool; July 2014: Work on Alpha stage began"
-  contact: josh.ruihley@gsa.gov
+  stage: alpha
+  milestones: 
+  - "May 2014: Initial Discovery stage began for task order generator project"
+  - "June 2014: Project pivoted based on user interviews and Discovery stage began for market research tool"
+  - "July 2014: Work on Alpha stage began"
+  contact: 
+  - josh.ruihley@gsa.gov
   stack: "Python, JavaScript"
   team:
   licenses: "CC0"
   licenselink: 18F/mirage/blob/master/LICENSE.md
-  links: http://gsa.gov/oasis
+  links: 
+  - http://gsa.gov/oasis
   status:
 - project: "API.data.gov"
   name: "api-data-gov"
@@ -190,12 +200,16 @@
   stage: live
   impact: "2100 API users and 42 million API requests served so far"
   milestones:
-  contact: api.data.gov@gsa.gov
-  stack: JavaScript, CSS, Ruby
+  contact: 
+  - api.data.gov@gsa.gov
+  stack: JavaScript, Ruby
   team: "gray"
   licenses: "CC0"
   licenselink: 18F/api.data.gov/blob/master/LICENSE.md
-  links: http://api.data.gov, http://api.data.gov/metrics, http://api.data.gov/about
+  links: 
+  - http://api.data.gov
+  - http://api.data.gov/metrics
+  - http://api.data.gov/about
   status:
 - project: "/Developer Program"
   name: API-All-the-X
@@ -207,12 +221,15 @@
   stage: live
   impact: "Over 70 agencies served, including each cabinet Department, National Archives, Federal Communications Commission, Consumer Financial Protection Bureau, and the Office of Personnel Management."
   milestones:
-  contact: gray.brooks@gsa.gov
+  - "January 2014: 18F began work on project"
+  contact: 
+  - gray.brooks@gsa.gov
   stack:
   team: "gray"
   licenses: "CC0"
   licenselink: 18F/API-All-the-X/blob/master/LICENSE.md
-  links: http://18fhub.io/API-All-the-X
+  links: 
+  - http://18fhub.io/API-All-the-X
   status:
 - project: "Midas"
   name: midas
