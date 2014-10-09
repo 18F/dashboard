@@ -39,7 +39,8 @@ layout: bare
         <div class="dashboard-code">
           <h1 class="dashboard-code-head">code</h1>
           {% for url in project.github %}
-          <div class="{{ url | remove: "18F/" }}">
+          {% capture repo_name %}{{ url | remove: "18F/" }}{% endcapture %}
+          <div class="{{ repo_name }}">
             <pre></pre>
             <h1>
               {% if project.github | first %}
@@ -52,9 +53,10 @@ layout: bare
               <li class="issues"><i class="fa fa-exclamation-circle"></i> Issues: </li>
               <li class="stars"><i class="fa fa-star"></i> Stars: </li>
               <li class="forks"><i class="fa fa-code-fork"></i> Forks: </li>
-              {% if project.licenses != null %}
-                <li><i class="fa fa-legal"></i> License: {{ project.licenses }}</li>
-              {% endif %}
+              {% for license in project.licenses %}{% if license[0] == repo_name %}
+              <li><i class="fa fa-legal {{ license[0] }}"></i> License: <a href="https://github.com/{{ url }}/blob/master/LICENSE.md">{{ license[1] }}</a></li>
+                {% endif %}
+              {% endfor %}
             </ul>
           </div>
           {% endfor %}

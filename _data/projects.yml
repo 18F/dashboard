@@ -14,7 +14,7 @@
 # milestones: "The month and year of major project milestones, such as the date a projects started, began a new stage, recruited new partners, overcame significant bureaucratic hurdles, etc."
 # contact: Email address or URL to preferred feedback mechanism
 # stack: "Stack, technologies"
-# team: "List of 18F team members, comma separated, with names pulled from 18F.gsa.gov standard" 
+# team: "List of 18F team members, comma separated, with names pulled from 18F.gsa.gov standard"
 # license: "Name of license"
 # licenselink: URL of license
 # links: Comma-separated URLs to other resources related to project
@@ -23,14 +23,14 @@
 
 - project: "MyRA"
   name: myra
-  github: 
+  github:
   - 18F/myra
   description: "Landing page design for Treasury’s My Retirement Account program, which will provide a simple, safe, and affordable way for individuals to start saving for retirement."
   client: "U.S. Department of Treasury"
   partners:
   impact: "Millions of Americans do not have access to an employee-sponsored retirement plan: more than 50% of full-time and 75% of part-time workers."
   stage: alpha
-  milestones: 
+  milestones:
   - "August 2014: Project doiscovery stage started"
   - "September 2014: Project moved from discovery to alpha"
   contact: christopher.cairns@gsa.gov
@@ -42,7 +42,7 @@
   status:
 - project: "PeaceCorps.gov"
   name: peacecorps-site
-  github: 
+  github:
   - 18F/peacecorps-site
   description: "A redesign of the Peace Corps’ digital presence, including a new website, country-specific sites, application engine, and single authentication and metrics reporting for volunteers."
   client: "Peace Corps"
@@ -54,12 +54,12 @@
   stack:
   team: "sean, victor"
   licenses:
-  licenselink: 
+  licenselink:
   links:
   status:
 - project: "FOIA Modernization"
   name: foia
-  github: 
+  github:
   - 18F/foia
   - 18F/foia-hub
   description: "A new portal to search for and submit FOIA requests and scalable infrastructure for agencies."
@@ -72,30 +72,32 @@
   stack:
   team:
   licenses:
+    foia: CC0
+    foia-hub: MIT
   licenselink: 18F/foia/blob/master/LICENSE.md
   links: https://trello.com/b/D0r2UOz0/foia-scrum-board
-  status: 
+  status:
 - project: "OpenFEC"
   name: openFEC
-  github: 
+  github:
   - 18F/openFEC
   description: "Revamping how the FEC shares the information they collect and regulations they enforce, both as structured data and in robust, human-readable formats through a redesigned FEC.gov."
   client: "Federal Election Commission"
   partners:
   impact: "318 million Americans are affected every 2 years by each election"
   stage: discovery
-  milestones: 
+  milestones:
   - "June 2014: Project Discovery stage started"
-  contact: 18F/FEC/issues 
+  contact: 18F/FEC/issues
   stack:
   team:
   licenses:
   licenselink: 18F/openFEC/blob/master/LICENSE.md
   links:
-  status: 
+  status:
 - project: "Natural Resource Revenues from U.S. Federal Lands"
   name: doi-extractives-data
-  github: 
+  github:
   - 18F/doi-extractives-data
   description: "This site and open data portal supports the President’s Open Gov Partnership National Action Plan commitment to the Extractive Industries Transparency Initiative."
   client: "Department of the Interior"
@@ -114,7 +116,7 @@
   status:
 - project: "Common Acquisition Platform Tools"
   name: C2
-  github: 
+  github:
   - 18F/C2
   description: "A simplified, email-based purchasing approval tool for purchase card holders authorized to buy office supplies for the government."
   client: "General Services Administration"
@@ -128,10 +130,10 @@
   licenses: "CC0, some libraries MIT"
   licenselink: 18F/c2/blob/master/LICENSE.md
   links:
-  status: 
+  status:
 - project: "FBOpen"
   name: fbopen
-  github: 
+  github:
   - 18F/fbpoen
   description: "FBOpen helps small businesses search for opportunities to work with the U.S. government."
   client:
@@ -145,10 +147,10 @@
   licenses: "CC0"
   licenselink: 18F/fbopen/blob/master/LICENSE.md
   links: http://fbopen.gsa.gov, http://18fhub.io/fbopen
-  status: 
+  status:
 - project: "Mirage: OASIS Market Research Tool"
   name: mirage
-  github: 
+  github:
   - 18F/mirage
   description:
   client: "General Services Administration"
@@ -165,7 +167,7 @@
   status:
 - project: "API.data.gov"
   name: "api-data-gov"
-  github: 
+  github:
   - http://github.com/18f/api.data.gov
   description: "A hosted, shared-service that is free to agencies that provides an API key, analytics, and proxy solution for government web services."
   client: "Census, FCC, FDA, GSA, NREL, Regulations.gov, USDA"
@@ -182,7 +184,7 @@
   status:
 - project: "/Developer Program"
   name: API-All-the-X
-  github: 
+  github:
   - 18F/API-All-the-X
   description: "A suite of tools, resources, and consulting services to assist agencies in the production and management of government APIs.  A two year old program, the /Developer Program was adopted by 18F to scale out its impact and to grow the government’s API portfolio."
   client: "General Services Administration"
@@ -216,7 +218,7 @@
   status:
 - project: "MyUSA"
   name: myusa
-  github: 
+  github:
   - 18F/myusa
   description:
   client:
@@ -233,7 +235,7 @@
   status:
 - project: "MyUSCIS"
   name: answers
-  github: 
+  github:
   - 18F/answers
   description:
   client: "U.S. Citizenship and Immigration Service"
@@ -246,6 +248,6 @@
   team: "yuda, nienhuis, jen, justin, amos, sasha, nick"
   contributors:
   licenses: "MIT, Apache, GPLv2"
-  licenselink: 
+  licenselink:
   links:
   status:
