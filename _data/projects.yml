@@ -62,8 +62,8 @@
   - 18F/foia-search
   - 18F/foia-hub
   description: "A new portal to search for and submit FOIA requests and scalable infrastructure for agencies."
-  client:
-  partners:
+  client: Department of Justice
+  partners: FOIA agency task force
   impact:
   stage: discovery
   milestones: "June 2014: Project Discovery stage started"
@@ -78,6 +78,10 @@
   name: openFEC
   github: 
   - 18F/openFEC
+  - 18F/FEC
+  - 18F/fec-graph-search
+  - 18F/fec-data-chef-config
+  - 18F/fec-infrastructure
   description: "Revamping how the FEC shares the information they collect and regulations they enforce, both as structured data and in robust, human-readable formats through a redesigned FEC.gov."
   client: "Federal Election Commission"
   partners:
