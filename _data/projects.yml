@@ -37,8 +37,8 @@
   - christopher.cairns@gsa.gov
   stack: "HTML, CSS, JavaScript, Jekyll"
   team: "chrisc, manger"
-  license: "CC0"
-  licenselink: 18F/myra/blob/master/LICENSE.md
+  license:
+  - myra: Public Domain (CC0)
   links: http://myra.treasury.gov
   status:
 - project: "PeaceCorps.gov"
@@ -57,7 +57,6 @@
   stack:
   team: "sean, victor"
   licenses:
-  licenselink:
   links:
   status:
 - project: "FOIA Modernization"
@@ -77,7 +76,7 @@
   stack:
   team:
   licenses:
-    foia: CC0
+    foia: Public Domain (CC0)
     foia-hub: MIT
   licenselink: 18F/foia/blob/master/LICENSE.md
   links: 
@@ -103,7 +102,9 @@
   stack:
   team:
   licenses:
-  licenselink: 18F/openFEC/blob/master/LICENSE.md
+  - openFEC: Public Domain (CC0)
+  - FEC: Public Domain (CC0)
+  - fec-graph-search: Public Domain (CC0)
   links:
   status:
 - project: "Natural Resource Revenues from U.S. Federal Lands"
@@ -122,8 +123,8 @@
   - christopher.cairns@gsa.gov
   stack: JavaScript, Jekyll
   team:
-  licenses: CC0
-  licenselink: 18F/doi-extractives-data/blob/master/LICENSE.md
+  licenses:
+  - doi-extractives-data: Public Domain (CC0)
   links:
   - https://github.com/18F/Mario
   - https://github.com/18F/gsa-advantage-scrape
@@ -144,8 +145,8 @@
   - kelly.robinson@gsa.gov
   stack: "Ruby, CSS, JavaScript/Node, Python"
   team: "raphy, ehlers, robert, sasha, diego"
-  licenses: "CC0, some libraries MIT"
-  licenselink: 18F/c2/blob/master/LICENSE.md
+  licenses: 
+  - C2: Public Domain (CC0)
   links:
   status:
 - project: "FBOpen"
@@ -162,8 +163,8 @@
   - fbopen@gsa.gov
   stack: "Python, JavaScript/Node"
   team: "alison, leah, mhz, kaitlin, diego"
-  licenses: "CC0"
-  licenselink: 18F/fbopen/blob/master/LICENSE.md
+  licenses:
+  - fbopen: Public Domain (CC0)
   links: 
   - http://fbopen.gsa.gov
   - http://18fhub.io/fbopen
