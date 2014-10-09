@@ -5,7 +5,7 @@ layout: bare
   {% if project.project == page.title %}
     {% capture css_id %}{% if project.css_id %}{{ project.css_id }}{% else %}{{ project.name }}{% endif %}{% endcapture %}
     <!--
-      Do the other things here. Basically, we now have to objects inside this loop:
+      Do the other things here. Basically, we now have two objects inside this loop:
       - the page object which has anything in a page's front matter
       - the project object, which is the project inside _data/projects.yml
         whose `project` field matches thie page's `title` field.
@@ -41,7 +41,6 @@ layout: bare
           {% for url in project.github %}
           {% capture repo_name %}{{ url | remove: "18F/" }}{% endcapture %}
           <div class="{{ repo_name }}">
-            <pre></pre>
             <h1>
               {% if project.github | first %}
               <i class="fa fa-github"></i> <a class="github-url" href="https://github.com/{{ url }}">{{ url }}</a>
