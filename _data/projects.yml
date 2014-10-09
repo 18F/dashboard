@@ -16,7 +16,7 @@
 # - Email address or 
 # - URL to preferred feedback mechanism
 # stack: "Stack, technologies"
-# team: "List of 18F team members, comma separated, with names pulled from 18F.gsa.gov standard"
+# team: List of 18F team members, comma separated, with names pulled from 18F.gsa.gov standard
 # license:
 # - repo: Name of the license
 # links: 
@@ -38,8 +38,8 @@
   - "September 2014: Project moved from discovery to alpha"
   contact: 
   - christopher.cairns@gsa.gov
-  stack: "HTML, CSS, JavaScript, Jekyll"
-  team: "chrisc, manger"
+  stack: "JavaScript, Jekyll"
+  team: chrisc, manger
   license:
   - myra: Public Domain (CC0)
   links: http://myra.treasury.gov
@@ -58,7 +58,7 @@
   contact: 
   - sean.herron@gsa.gov
   stack:
-  team: "sean, victor"
+  team: sean, victor, ben
   licenses:
   links:
   status:
@@ -70,17 +70,17 @@
   description: "A new portal to search for and submit FOIA requests and scalable infrastructure for agencies."
   client: Department of Justice
   partners: FOIA agency task force
-  impact:
+  impact: "The U.S. Federal Government received over 700,000 FOIA requests in 2013."
   stage: discovery
   milestones: 
   - "June 2014: Project Discovery stage started"
   contact: 
   - 18f/foia/issues
   stack:
-  team:
+  team: majma, victor, eric
   licenses:
-    foia: Public Domain (CC0)
-    foia-hub: MIT
+  - foia: Public Domain (CC0)
+  - foia-hub: MIT
   licenselink: 18F/foia/blob/master/LICENSE.md
   links: 
   - https://trello.com/b/D0r2UOz0/foia-scrum-board
@@ -103,7 +103,7 @@
   contact: 
   - 18F/FEC/issues
   stack:
-  team:
+  team: majma, manger, jen, amos, sean, catherine, theresa
   licenses:
   - openFEC: Public Domain (CC0)
   - FEC: Public Domain (CC0)
@@ -125,7 +125,7 @@
   contact: 
   - christopher.cairns@gsa.gov
   stack: JavaScript, Jekyll
-  team:
+  team: mhz, chrisc, nick
   licenses:
   - doi-extractives-data: Public Domain (CC0)
   links:
@@ -141,13 +141,13 @@
   client: "General Services Administration"
   partners:
   stage: beta
-  impact: "Over 80,000 government Purchase Card holders."
+  impact: "Over 80,000 U.S. Federal Government purchase card holders."
   milestones:
   contact: 
   - raphael.villas@gsa.gov
   - kelly.robinson@gsa.gov
   stack: "Ruby, CSS, JavaScript/Node, Python"
-  team: "raphy, ehlers, robert, sasha, diego"
+  team: raphy, ehlers, robert, sasha, diego
   licenses: 
   - C2: Public Domain (CC0)
   links:
@@ -160,12 +160,13 @@
   client:
   partners:
   stage: beta
-  impact:
+  impact: "There are nearly 40,000 active federal opportunities right now."
   milestones:
+  - "May 2014: 18F took over project maintenance from Presidential Innovation Fellows program"
   contact: 
   - fbopen@gsa.gov
   stack: "Python, JavaScript/Node"
-  team: "alison, leah, mhz, kaitlin, diego"
+  team: alison, leah, mhz, kaitlin, diego
   licenses:
   - fbopen: Public Domain (CC0)
   links: 
@@ -188,7 +189,7 @@
   contact: 
   - josh.ruihley@gsa.gov
   stack: "Python, JavaScript"
-  team:
+  team: josh, kaitlin, brethauer
   licenses:
   - mirage: Public Domain (CC0)
   links: 
@@ -207,7 +208,7 @@
   contact: 
   - api.data.gov@gsa.gov
   stack: JavaScript, Ruby
-  team: "gray"
+  team: gray
   licenses:
   - fbopen: Public Domain (CC0)
   links: 
@@ -229,7 +230,7 @@
   contact: 
   - gray.brooks@gsa.gov
   stack:
-  team: "gray"
+  team: gray
   licenses:
   - API-All-the-X: Public Domain (CC0)  
   links: 
@@ -251,7 +252,7 @@
   contact:
   - midas@gsa.gov
   stack: "JavaScript (Node/Sails, Backbone), CSS, Chef"
-  team: "sarah, david"
+  team: sarah, david
   licenses:
   - midas: Public Domain (CC0)
   links: https://midas.18f.us/
@@ -271,7 +272,7 @@
   contact:
   - myusa@gsa.gov
   stack: "Rails, Bootstrap, JavaScript, Chef"
-  team:
+  team: joe, nienhuis, yoz, papazian, diego
   licenses:
   - myusa: Public Domain (CC0)
   links:
@@ -287,10 +288,10 @@
   impact:
   stage: alpha
   milestones:
-  contact:
+  contact: 
+  - http://github.com/18f/answers/issues
   stack: "Rails, Vagrant/Chef, JavaScript"
-  team: "yuda, nienhuis, jen, justin, amos, sasha, nick"
-  licenses: "MIT, Apache, GPLv2"
-  licenselink:
+  team: yuda, ben, nienhuis, jen, justin, amos, sasha, nick, lindsay
+  licenses:
   links:
   status:
