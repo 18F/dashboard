@@ -284,9 +284,8 @@
   stage: alpha
   milestones:
   contact:
-  stack:
+  stack: "Rails, Vagrant/Chef, JavaScript"
   team: "yuda, nienhuis, jen, justin, amos, sasha, nick"
-  contributors:
   licenses: "MIT, Apache, GPLv2"
   licenselink:
   links:
