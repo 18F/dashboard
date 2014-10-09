@@ -4,8 +4,8 @@ layout: bare
 {% for project in site.data.projects %}
   {% if project.project == page.title %}
     {% capture css_id %}{% if project.css_id %}{{ project.css_id }}{% else %}{{ project.name }}{% endif %}{% endcapture %}
-    <!-- 
-      Do the other things here. Basically, we now have to objects inside this loop: 
+    <!--
+      Do the other things here. Basically, we now have to objects inside this loop:
       - the page object which has anything in a page's front matter
       - the project object, which is the project inside _data/projects.yml
         whose `project` field matches thie page's `title` field.
@@ -16,7 +16,7 @@ layout: bare
       <nav><a href="{{ site.baseurl }}/">&#10094;&#10094; back to main dashboard</a></nav>
       <h1>{{ page.title }} <span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1>
       <p>{{ project.description }}</p>
-      <p>Contact: 
+      <p>Contact:
         {% if project.contact contains '@' %}
           <a href="mailto:{{project.contact}}">{{project.contact}}</a>
         {% else %}
@@ -39,7 +39,8 @@ layout: bare
         <div class="dashboard-code">
           <h1 class="dashboard-code-head">code</h1>
           {% for url in project.github %}
-          <div>
+          <div class="{{ url | remove: "18F/" }}">
+            <pre></pre>
             <h1>
               {% if project.github | first %}
               <i class="fa fa-github"></i> <a class="github-url" href="https://github.com/{{ url }}">{{ url }}</a>

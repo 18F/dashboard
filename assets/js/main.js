@@ -9,13 +9,13 @@ modules[0] = function(repo_name) {
       var stars = data['Stargazers'];
       var forks = data['Forks'];
       var name = repo_name.replace(/[\. ,:-]+/g, "-");
-      $(".issues").append(""+issues);
-      $(".stars").append(""+stars);
-      $(".forks").append(""+forks);      
+      $("."+repo_name + " .issues").append(""+issues);
+      $("."+repo_name + " .stars").append(""+stars);
+      $("."+repo_name + " .forks").append(""+forks);
     }).error(function () {
-      $(".issues").append("Not available.");
-      $(".stars").append("Not available.");
-      $(".forks").append("Not available.");
+      $("."+repo_name + " .issues").append("Not available.");
+      $("."+repo_name + " .stars").append("Not available.");
+      $("."+repo_name + " .forks").append("Not available.");
 });
 }
 
@@ -28,8 +28,11 @@ var render_modules = function(name) {
 }
 
 var render_dashboard = function() {
-  var ghUrl = $(".github-url").attr("href");
-  var slugIndex = ghUrl.lastIndexOf("/");
-  var name = ghUrl.substr(slugIndex+1);
-  render_modules(name);
-}    
+  var ghURLs = $(".github-url");
+  _.each(ghURLs, function(ghURL) {
+    var url = $(ghURL).attr("href");
+    var slugIndex = url.lastIndexOf("/");
+    var name = url.substr(slugIndex+1);
+    render_modules(name);
+  });
+}
