@@ -33,7 +33,8 @@
   milestones:
   - "August 2014: Project doiscovery stage started"
   - "September 2014: Project moved from discovery to alpha"
-  contact: christopher.cairns@gsa.gov
+  contact: 
+  - christopher.cairns@gsa.gov
   stack: "HTML, CSS, JavaScript, Jekyll"
   team: "chrisc, manger"
   license: "CC0"
@@ -50,7 +51,8 @@
   impact: "7,000 Peace Corps Volunteers in the field."
   stage: discovery
   milestones: "August 2014: Project Discovery stage started"
-  contact: sean.herron@gsa.gov
+  contact: 
+  - sean.herron@gsa.gov
   stack:
   team: "sean, victor"
   licenses:
@@ -68,14 +70,16 @@
   impact:
   stage: discovery
   milestones: "June 2014: Project Discovery stage started"
-  contact: 18f/foia/issues
+  contact: 
+  - 18f/foia/issues
   stack:
   team:
   licenses:
     foia: CC0
     foia-hub: MIT
   licenselink: 18F/foia/blob/master/LICENSE.md
-  links: https://trello.com/b/D0r2UOz0/foia-scrum-board
+  links: 
+  - https://trello.com/b/D0r2UOz0/foia-scrum-board
   status:
 - project: "OpenFEC"
   name: openFEC
@@ -92,7 +96,8 @@
   stage: discovery
   milestones:
   - "June 2014: Project Discovery stage started"
-  contact: 18F/FEC/issues
+  contact: 
+  - 18F/FEC/issues
   stack:
   team:
   licenses:
@@ -110,13 +115,17 @@
   stage: alpha
   milestones:
   - "July 2014: 18F began work on project"
-  - "September 2014: alpha site launched"
-  contact: christopher.cairns@gsa.gov
+  - "September 2014: Alpha site launched"
+  contact: 
+  - christopher.cairns@gsa.gov
   stack: JavaScript, Jekyll
   team:
   licenses: CC0
   licenselink: 18F/doi-extractives-data/blob/master/LICENSE.md
   links:
+  - https://github.com/18F/Mario
+  - https://github.com/18F/gsa-advantage-scrape
+  - http://18f.github.io/C2/
   status:
 - project: "Common Acquisition Platform Tools"
   name: C2
@@ -126,9 +135,11 @@
   client: "General Services Administration"
   partners:
   stage: beta
-  impact:
+  impact: "Over 80,000 government Purchase Card holders."
   milestones:
-  contact: "raphael.villas@gsa.gov and kelly.robinson@gsa.gov"
+  contact: 
+  - raphael.villas@gsa.gov
+  - kelly.robinson@gsa.gov
   stack: "Ruby, CSS, JavaScript/Node, Python"
   team: "raphy, ehlers, robert, sasha, diego"
   licenses: "CC0, some libraries MIT"
