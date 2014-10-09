@@ -241,7 +241,11 @@
   stage: beta
   impact: "2 million federal employees"
   milestones:
+  - "June 2013: State Department begins project with Presidential Innovation Fellows"
+  - "January 2014: 18F begins work on project"
+  - "September 2014: GSA becomes paying client of project and Alpha site launches at http://midas.18f.us"
   contact:
+  - midas@gsa.gov
   stack: "JavaScript (Node/Sails, Backbone), CSS, Chef"
   team: "sarah, david"
   licenses: "CC0"
@@ -252,18 +256,22 @@
   name: myusa
   github:
   - 18F/myusa
-  description:
-  client:
-  partners:
-  impact:
-  stage: discovery
+  description: "A digital services platform for Americans to register, sign in, and manage ongoing transactions with U.S. Federal Government services."
+  client: "General Services Administration and Department of Homeland Security"
+  partners: "Early adopters ready for launch include Small Business Administration, Department of Labor, and GSA."
+  impact: "Over 1500 U.S. Federal Government websites require registration or sign in."
+  stage: Alpha
   milestones:
+  - "June 2014: 18F began work on project"
+  - "September 2014: Alpha delivered to clients and user testing started"
   contact:
-  stack:
+  - myusa@gsa.gov
+  stack: "Rails, Bootstrap, JavaScript, Chef"
   team:
   licenses:
   licenselink: 18F/myusa/blob/master/LICENSE.md
   links:
+  - https://myusa.gov -- works now
   status:
 - project: "MyUSCIS"
   name: answers
