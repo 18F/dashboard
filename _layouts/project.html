@@ -12,55 +12,60 @@ layout: bare
       - the css_id variable captured above is either project.name or project.css_id
         if the latter exists as a field.
     -->
-    <h1>{{ page.title }} <span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1>
-    <p class="description">{{ project.description }}</p>
-    <section class="dash-info-area">
+    <section class="dashboard-project">
+      <nav><a href="{{ site.baseurl }}/">&#10094;&#10094; back to main dashboard</a></nav>
+      <h1>{{ page.title }} <span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1>
+      <p>{{ project.description }}</p>
+      <p>Contact: 
+        {% if project.contact contains '@' %}
+          <a href="mailto:{{project.contact}}">{{project.contact}}</a>
+        {% else %}
+          <a href="https://www.github.com/{{project.contact}}">{{project.contact}}</a>
+        {% endif %}
+      </p>
+    </section>
+    <section class="dashboard-info-area">
       <div>
-        <div>
-          <h1>issues</h1>
-          <p class="issues"></p>
-        </div>
         <div class="dash-info-long">
           <h1>impact</h1>
           <p>{{ project.impact }}</p>
         </div>
-      </div>
-      <div>
-        <div>
-          <h1>code</h1>
-            <p class="dashboard-icon"><a class="github-url" href="https://github.com/{{ project.github | first }}"><i class="icon-github2"></i></a></p>
-          {% if project.github.size > 2 %}
-            <p>Other repos in this project</p>
-            {% for url in project.github  | offset: 1 %}
-              <p class=""><a class="" href="https://github.com/{{url}}">{{ url  }}</a></p>
-            {% endfor %}
-          {% endif %}
-        </div>
-        <div>
-          <h1>partners</h1>
-          <p>{{ project.partners }}</p>
-        </div>
-        <div>
-          <h1>licenses</h1>
-          <p>{{ project.licenses }}</p>
+        <div class="dash-info-long">
+          <h1>partner(s)</h1>
+          <p>{{ project.client }}</p>
         </div>
       </div>
       <div>
-        <div>
-          <h1>stars</h1>
-          <p class="stars"></p>
+        <div class="dashboard-code">
+          <h1 class="dashboard-code-head">code</h1>
+          {% for url in project.github %}
+          <div>
+            <h1>
+              {% if project.github | first %}
+              <i class="fa fa-github"></i> <a class="github-url" href="https://github.com/{{ url }}">{{ url }}</a>
+              {% else %}
+              <i class="icon-github2"></i> <a href="https://github.com/{{ url }}">{{ url }}</a>
+              {% endif %}
+            </h1>
+            <ul>
+              <li class="issues"><i class="fa fa-exclamation-circle"></i> Issues: </li>
+              <li class="stars"><i class="fa fa-star"></i> Stars: </li>
+              <li class="forks"><i class="fa fa-code-fork"></i> Forks: </li>
+              {% if project.licenses != null %}
+                <li><i class="fa fa-legal"></i> License: {{ project.licenses }}</li>
+              {% endif %}
+            </ul>
+          </div>
+          {% endfor %}
         </div>
-        <div>
-          <h1>forks</h1>
-          <p class="forks"></p>
-        </div>
-        <div>
-          <h1>contact</h1>
-          <p class="dashboard-icon"><a class="github-url" href="mailto:{{project.contact}}"><i class="icon-email"></i></a></p>
+        <div class="dash-info-long">
+          <h1>milestones</h1>
+          {% for item in project.milestones %}
+          <p>{{ item }}</p>
+          {% endfor %}
         </div>
       </div>
     </section>
-  
   {% endif %}
 {% endfor %}
 <script src="{{site.baseurl}}/assets/js/underscore.js"></script>

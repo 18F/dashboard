@@ -10,7 +10,7 @@
 # client: "Main partner (who is paying)"
 # partners: "Other contributing partners, comma separated, as necessary"
 # impact: "The number of users potentially impacted by this service"
-# stage: Choose: Discovery, Alpha, Beta, Live
+# stage: Choose: discovery, alpha, beta, live
 # milestones: "The month and year of major project milestones, such as the date a projects started, began a new stage, recruited new partners, overcame significant bureaucratic hurdles, etc."
 # contact: Email address or URL to preferred feedback mechanism
 # stack: "Stack, technologies"
@@ -30,7 +30,9 @@
   partners:
   impact: "Millions of Americans do not have access to an employee-sponsored retirement plan: more than 50% of full-time and 75% of part-time workers."
   stage: alpha
-  milestones: "August 2014: Project Discovery stage started, September 2014: Project moved from Discovery to Alpha"
+  milestones: 
+  - "August 2014: Project doiscovery stage started"
+  - "September 2014: Project moved from discovery to alpha"
   contact: christopher.cairns@gsa.gov
   stack: "HTML, CSS, JavaScript, Jekyll"
   team: "chrisc, manger"
@@ -83,7 +85,8 @@
   partners:
   impact: "318 million Americans are affected every 2 years by each election"
   stage: discovery
-  milestones: "June 2014: Project Discovery stage started"
+  milestones: 
+  - "June 2014: Project Discovery stage started"
   contact: 18F/FEC/issues 
   stack:
   team:
@@ -100,7 +103,9 @@
   partners:
   impact: "Revenue from the sale of natural resources on Federal lands totaled $97.5 billion between 2003 to 2013."
   stage: alpha
-  milestones: "July 2014: 18F began work on project, September 2014: Alpha site launched"
+  milestones:
+  - "July 2014: 18F began work on project"
+  - "September 2014: alpha site launched"
   contact: christopher.cairns@gsa.gov
   stack: JavaScript, Jekyll
   team:
@@ -160,7 +165,7 @@
   links: http://gsa.gov/oasis
   status:
 - project: "API.data.gov"
-  name: "api.data.gov"
+  name: "api-data-gov"
   github: 
   - http://github.com/18f/api.data.gov
   description: "A hosted, shared-service that is free to agencies that provides an API key, analytics, and proxy solution for government web services."
