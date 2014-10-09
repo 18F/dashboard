@@ -61,7 +61,6 @@
   name: foia
   github: 
   - 18F/foia
-  - 18F/foia-search
   - 18F/foia-hub
   description: "A new portal to search for and submit FOIA requests and scalable infrastructure for agencies."
   client:
