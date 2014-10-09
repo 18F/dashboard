@@ -186,8 +186,8 @@
   - josh.ruihley@gsa.gov
   stack: "Python, JavaScript"
   team:
-  licenses: "CC0"
-  licenselink: 18F/mirage/blob/master/LICENSE.md
+  licenses:
+  - mirage: Public Domain (CC0)
   links: 
   - http://gsa.gov/oasis
   status:
@@ -205,8 +205,8 @@
   - api.data.gov@gsa.gov
   stack: JavaScript, Ruby
   team: "gray"
-  licenses: "CC0"
-  licenselink: 18F/api.data.gov/blob/master/LICENSE.md
+  licenses:
+  - fbopen: Public Domain (CC0)
   links: 
   - http://api.data.gov
   - http://api.data.gov/metrics
@@ -227,8 +227,8 @@
   - gray.brooks@gsa.gov
   stack:
   team: "gray"
-  licenses: "CC0"
-  licenselink: 18F/API-All-the-X/blob/master/LICENSE.md
+  licenses:
+  - API-All-the-X: Public Domain (CC0)  
   links: 
   - http://18fhub.io/API-All-the-X
   status:
@@ -249,8 +249,8 @@
   - midas@gsa.gov
   stack: "JavaScript (Node/Sails, Backbone), CSS, Chef"
   team: "sarah, david"
-  licenses: "CC0"
-  licenselink: 18F/midas/blob/master/LICENSE.md
+  licenses:
+  - midas: Public Domain (CC0)
   links: https://midas.18f.us/
   status:
 - project: "MyUSA"
@@ -270,7 +270,7 @@
   stack: "Rails, Bootstrap, JavaScript, Chef"
   team:
   licenses:
-  licenselink: 18F/myusa/blob/master/LICENSE.md
+  - myusa: Public Domain (CC0)
   links:
   - https://myusa.gov -- works now
   status:
