@@ -160,8 +160,9 @@
   client:
   partners:
   stage: beta
-  impact:
+  impact: "There are nearly 40,000 active federal opportunities right now."
   milestones:
+  - "May 2014: 18F took over project maintenance from Presidential Innovation Fellows program"
   contact: 
   - fbopen@gsa.gov
   stack: "Python, JavaScript/Node"
@@ -171,7 +172,7 @@
   links: 
   - http://fbopen.gsa.gov
   - http://18fhub.io/fbopen
-  status: Hold
+  status:
 - project: "Mirage: OASIS Market Research Tool"
   name: mirage
   github:
