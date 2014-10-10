@@ -12,14 +12,14 @@
 # impact: "The number of users potentially impacted by this service"
 # stage: Choose: discovery, alpha, beta, live
 # milestones: "The month and year of major project milestones, such as the date a projects started, began a new stage, recruited new partners, overcame significant bureaucratic hurdles, etc."
-# contact: 
-# - Email address or 
+# contact:
+# - Email address or
 # - URL to preferred feedback mechanism
 # stack: "Stack, technologies"
 # team: List of 18F team members, comma separated, with names pulled from 18F.gsa.gov standard
-# license:
-# - repo: Name of the license
-# links: 
+# licenses:
+#   repo: Name of the license
+# links:
 # - link
 # status: "Hold" in this field (with no quotes) will hide this project from the site. Otherwise, leave blank.
 ###################
@@ -36,12 +36,12 @@
   milestones:
   - "August 2014: Project discovery stage started"
   - "September 2014: Project moved from discovery to alpha"
-  contact: 
+  contact:
   - christopher.cairns@gsa.gov
   stack: "JavaScript, Jekyll"
   team: chrisc, manger
-  license:
-  - myra: Public Domain (CC0)
+  licenses:
+    myra: Public Domain (CC0)
   links: http://myra.treasury.gov
   status:
 - project: "PeaceCorps.gov"
@@ -53,9 +53,9 @@
   partners:
   impact: "7,000 Peace Corps Volunteers in the field."
   stage: discovery
-  milestones: 
+  milestones:
   - "August 2014: Project Discovery stage started"
-  contact: 
+  contact:
   - sean.herron@gsa.gov
   stack:
   team: sean, victor, ben
@@ -72,17 +72,17 @@
   partners: FOIA agency task force
   impact: "The U.S. Federal Government received over 700,000 FOIA requests in 2013."
   stage: discovery
-  milestones: 
+  milestones:
   - "June 2014: Project Discovery stage started"
-  contact: 
+  contact:
   - 18f/foia/issues
   stack:
   team: majma, victor, eric
   licenses:
-  - foia: Public Domain (CC0)
-  - foia-hub: MIT
+    foia: Public Domain (CC0)
+    foia-hub: MIT
   licenselink: 18F/foia/blob/master/LICENSE.md
-  links: 
+  links:
   - https://trello.com/b/D0r2UOz0/foia-scrum-board
   status:
 - project: "OpenFEC"
@@ -100,14 +100,14 @@
   stage: discovery
   milestones:
   - "June 2014: Project Discovery stage started"
-  contact: 
+  contact:
   - 18F/FEC/issues
   stack:
   team: majma, manger, jen, amos, sean, catherine, theresa
   licenses:
-  - openFEC: Public Domain (CC0)
-  - FEC: Public Domain (CC0)
-  - fec-graph-search: Public Domain (CC0)
+    openFEC: Public Domain (CC0)
+    FEC: Public Domain (CC0)
+    fec-graph-search: Public Domain (CC0)
   links:
   status:
 - project: "Natural Resource Revenues from U.S. Federal Lands"
@@ -122,12 +122,12 @@
   milestones:
   - "July 2014: 18F began work on project"
   - "September 2014: Alpha site launched"
-  contact: 
+  contact:
   - christopher.cairns@gsa.gov
   stack: JavaScript, Jekyll
   team: mhz, chrisc, nick
   licenses:
-  - doi-extractives-data: Public Domain (CC0)
+    doi-extractives-data: Public Domain (CC0)
   links:
   - https://github.com/18F/Mario
   - https://github.com/18F/gsa-advantage-scrape
@@ -143,13 +143,13 @@
   stage: beta
   impact: "Over 80,000 U.S. Federal Government purchase card holders."
   milestones:
-  contact: 
+  contact:
   - raphael.villas@gsa.gov
   - kelly.robinson@gsa.gov
   stack: "Ruby, CSS, JavaScript/Node, Python"
   team: raphy, ehlers, robert, sasha, diego
-  licenses: 
-  - C2: Public Domain (CC0)
+  licenses:
+    C2: Public Domain (CC0)
   links:
   status:
 - project: "FBOpen"
@@ -163,13 +163,13 @@
   impact: "There are nearly 40,000 active federal opportunities right now."
   milestones:
   - "May 2014: 18F took over project maintenance from Presidential Innovation Fellows program"
-  contact: 
+  contact:
   - fbopen@gsa.gov
   stack: "Python, JavaScript/Node"
   team: alison, leah, mhz, kaitlin, diego
   licenses:
-  - fbopen: Public Domain (CC0)
-  links: 
+    fbopen: Public Domain (CC0)
+  links:
   - http://fbopen.gsa.gov
   - http://18fhub.io/fbopen
   status:
@@ -182,17 +182,17 @@
   partners:
   impact:
   stage: alpha
-  milestones: 
+  milestones:
   - "May 2014: Initial Discovery stage began for task order generator project"
   - "June 2014: Project pivoted based on user interviews and Discovery stage began for market research tool"
   - "July 2014: Work on Alpha stage began"
-  contact: 
+  contact:
   - josh.ruihley@gsa.gov
   stack: "Python, JavaScript"
   team: josh, kaitlin, brethauer
   licenses:
-  - mirage: Public Domain (CC0)
-  links: 
+    mirage: Public Domain (CC0)
+  links:
   - http://gsa.gov/oasis
   status:
 - project: "API.data.gov"
@@ -205,13 +205,13 @@
   stage: live
   impact: "2100 API users and 42 million API requests served so far"
   milestones:
-  contact: 
+  contact:
   - api.data.gov@gsa.gov
   stack: JavaScript, Ruby
   team: gray
   licenses:
-  - fbopen: Public Domain (CC0)
-  links: 
+    fbopen: Public Domain (CC0)
+  links:
   - http://api.data.gov
   - http://api.data.gov/metrics
   - http://api.data.gov/about
@@ -227,13 +227,13 @@
   impact: "Over 70 agencies served, including each cabinet Department, National Archives, Federal Communications Commission, Consumer Financial Protection Bureau, and the Office of Personnel Management."
   milestones:
   - "January 2014: 18F began work on project"
-  contact: 
+  contact:
   - gray.brooks@gsa.gov
   stack:
   team: gray
   licenses:
-  - API-All-the-X: Public Domain (CC0)  
-  links: 
+    API-All-the-X: Public Domain (CC0)
+  links:
   - http://18fhub.io/API-All-the-X
   status:
 - project: "Midas"
@@ -254,7 +254,7 @@
   stack: "JavaScript (Node/Sails, Backbone), CSS, Chef"
   team: sarah, david
   licenses:
-  - midas: Public Domain (CC0)
+    midas: Public Domain (CC0)
   links: https://midas.18f.us/
   status:
 - project: "MyUSA"
@@ -274,7 +274,7 @@
   stack: "Rails, Bootstrap, JavaScript, Chef"
   team: joe, nienhuis, yoz, papazian, diego
   licenses:
-  - myusa: Public Domain (CC0)
+    myusa: Public Domain (CC0)
   links:
   - https://myusa.gov -- works now
   status:
@@ -288,7 +288,7 @@
   impact:
   stage: alpha
   milestones:
-  contact: 
+  contact:
   - http://github.com/18f/answers/issues
   stack: "Rails, Vagrant/Chef, JavaScript"
   team: yuda, ben, nienhuis, jen, justin, amos, sasha, nick, lindsay
