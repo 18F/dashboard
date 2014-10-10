@@ -24,7 +24,7 @@
 # status: "Hold" in this field (with no quotes) will hide this project from the site. Otherwise, leave blank.
 ###################
 
-- project: "MyRA"
+- project: "myRA"
   name: myra
   github:
   - 18F/myra
