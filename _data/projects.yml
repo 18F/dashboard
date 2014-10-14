@@ -96,10 +96,10 @@
   status:
 
 - project: "OpenFEC"
-  name: FEC
+  name: openfec
   github:
-  - 18F/FEC
   - 18F/openFEC
+  - 18F/FEC
   - 18F/fec-graph-search
   - 18F/fec-data-chef-config
   - 18F/fec-infrastructure
