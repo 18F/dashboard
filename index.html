@@ -13,7 +13,7 @@ permalink: /
         {% if project.status != "Hold" %}
         <article class="dashboard-projects-content">
           <div>
-            <a href="{{ site.baseurl }}/project/{{ project.name }}"><h1>{{project.project}} &#10095;&#10095;<span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1></a>
+            <a href="{{ site.baseurl }}/project/{{ project.name }}"><h1>{{project.project}} &#x276f;&#x276f;<span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1></a>
           </div>
           <div>
             <p>{% if project.description %}{{ project.description }}{% else %}Project description coming soon.{% endif %}</p>
