@@ -7,8 +7,10 @@
 # - repos on a new line like this
 # - 18f/dashboard
 # description: "Short description of project"
-# client: "Main partner (who is paying)"
-# partners: "Other contributing partners, comma separated, as necessary"
+# partner: 
+# - "Main partner (who is paying)"
+# partners: 
+# - "Other contributing partners"
 # impact: "The number of users potentially impacted by this service"
 # stage: Choose: discovery, alpha, beta, live
 # milestones: "The month and year of major project milestones, such as the date a projects started, began a new stage, recruited new partners, overcame significant bureaucratic hurdles, etc."
@@ -31,7 +33,7 @@
   github:
   - 18F/myra
   description: "Landing page design for Treasury’s My Retirement Account program, which will provide a simple, safe, and affordable way for individuals to start saving for retirement."
-  client:
+  partner:
   - "U.S. Department of Treasury"
   partners:
   impact: "Millions of Americans do not have access to an employee-sponsored retirement plan: more than 50% of full-time and 75% of part-time workers."
@@ -53,7 +55,7 @@
   github:
   - 18F/peacecorps-site
   description: "A redesign of the Peace Corps’ digital presence, including a new website, country-specific sites, application engine, and single authentication and metrics reporting for volunteers."
-  client:
+  partner:
   - "Peace Corps"
   partners:
   impact: "7,000 Peace Corps Volunteers in the field."
@@ -73,11 +75,11 @@
   github:
   - 18F/foia
   - 18F/foia-hub
-  description: "A new portal to search for and submit FOIA requests and scalable infrastructure for agencies."
-  client:
+  description: "A new portal to search for and submit FOIA requests and a scalable infrastructure for agencies."
+  partner:
   - Department of Justice
   partners: "Also participating: FOIA agency task force."
-  impact: "The U.S. Federal Government received over 700,000 FOIA requests in 2013."
+  impact: "The U.S. Federal Government processed nearly 700,000 FOIA requests in fiscal year 2013."
   stage: discovery
   milestones:
   - "June 2014: Project Discovery stage started"
@@ -87,25 +89,25 @@
   team: majma, victor, eric
   licenses:
     foia: Public Domain (CC0)
-    foia-hub: MIT
+    foia-hub: Public Domain (CC0)
   licenselink: 18F/foia/blob/master/LICENSE.md
   links:
   - https://trello.com/b/D0r2UOz0/foia-scrum-board
   status:
 
 - project: "OpenFEC"
-  name: openFEC
+  name: FEC
   github:
-  - 18F/openFEC
   - 18F/FEC
+  - 18F/openFEC
   - 18F/fec-graph-search
   - 18F/fec-data-chef-config
   - 18F/fec-infrastructure
-  description: "Revamping how the FEC shares the information they collect and regulations they enforce, both as structured data and in robust, human-readable formats through a redesigned FEC.gov."
-  client:
+  description: "Redesigning how the FEC shares the information they collect and the regulations they enforce, both as structured data and in robust, human-readable formats through a new FEC.gov."
+  partner:
   - "Federal Election Commission"
   partners:
-  impact: "318 million Americans are affected every 2 years by each election"
+  impact: "The FEC collects data about elections that affect all 318 million Americans every 2 years."
   stage: discovery
   milestones:
   - "June 2014: Project Discovery stage started"
@@ -125,7 +127,7 @@
   github:
   - 18F/doi-extractives-data
   description: "This site and open data portal supports the President’s Open Gov Partnership National Action Plan commitment to the Extractive Industries Transparency Initiative."
-  client:
+  partner:
   - "Department of the Interior"
   partners:
   impact: "Revenue from the sale of natural resources on Federal lands totaled $97.5 billion between 2003 to 2013."
@@ -142,9 +144,6 @@
   licenseBranch:
     doi-extractives-data: gh-pages
   links:
-  - https://github.com/18F/Mario
-  - https://github.com/18F/gsa-advantage-scrape
-  - http://18f.github.io/C2/
   status:
 
 - project: "Common Acquisition Platform Tools"
@@ -152,7 +151,7 @@
   github:
   - 18F/C2
   description: "A simplified, email-based purchasing approval tool for purchase card holders authorized to buy office supplies for the government."
-  client:
+  partner:
   - "General Services Administration"
   partners:
   stage: beta
@@ -166,14 +165,17 @@
   licenses:
     C2: Public Domain (CC0)
   links:
+  - https://github.com/18F/Mario
+  - https://github.com/18F/gsa-advantage-scrape
+  - http://18f.github.io/C2/
   status:
 
 - project: "FBOpen"
   name: fbopen
   github:
-  - 18F/fbpoen
+  - 18F/fbopen
   description: "FBOpen helps small businesses search for opportunities to work with the U.S. government."
-  client:
+  partner:
   partners:
   stage: beta
   impact: "There are nearly 40,000 active federal opportunities right now."
@@ -195,7 +197,7 @@
   github:
   - 18F/mirage
   description: "Market research tool for the OASIS procurement vehicle, which serves contracting specialists throughout the U.S. Federal Government."
-  client:
+  partner:
   - "General Services Administration"
   partners:
   impact:
@@ -203,7 +205,7 @@
   milestones:
   - "May 2014: Initial Discovery stage began for task order generator project"
   - "June 2014: Project pivoted based on user interviews and Discovery stage began for market research tool"
-  - "July 2014: Work on Alpha stage began"
+  - "July 2014: Work on Alpha stage began for market research tool"
   contact:
   - josh.ruihley@gsa.gov
   stack: "Python, JavaScript"
