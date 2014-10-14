@@ -25,16 +25,33 @@ layout: bare
         {% endif %}
       </p>
     </section>
+
     <section class="dashboard-info-area">
+
       <div>
+        {% if project.impact !=  null %}
+          <div class="dash-info-long">
+            <h1>impact</h1>
+            <p>{{ project.impact }}</p>
+          </div>
+        {% endif %}
+
+        {% if project.client !=  null %}
         <div class="dash-info-long">
-          <h1>impact</h1>
-          <p>{{ project.impact }}</p>
+          {% if project.client.size > 1 %}
+            <h1>partners</h1>
+          {% else %}
+            <h1>partner</h1>
+          {% endif %}
+          <ul>
+          {% for agency in project.client %}
+            <li>{{ agency }}</li>
+          {% endfor %}
+        </ul>
+          <p>{{ project.partners | join ', ' }}</p>
         </div>
-        <div class="dash-info-long">
-          <h1>partner(s)</h1>
-          <p>{{ project.client }}</p>
-        </div>
+        {% endif %}
+
       </div>
       <div>
         <div class="dashboard-code">

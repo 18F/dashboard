@@ -834,6 +834,7 @@ $tiniest: new-breakpoint(max-width 390px);
 		font-size:	3em;
 	}
 }
+
 .dash-info-long {
 	p {
 		font-size: 1em;
@@ -842,7 +843,17 @@ $tiniest: new-breakpoint(max-width 390px);
 		font-style: italic;
 		line-height: 1em;
 	}
+	ul {
+		list-style-type: square;
+		padding-left: 20px;
+		padding-top: 7px;
+		padding-bottom: 7px;
+		li {
+			line-height: 1em;
+		}
+	}
 }
+
 .dashboard-code {
 	.dashboard-code-head{
 		padding-bottom: 15px;
