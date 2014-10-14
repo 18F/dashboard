@@ -71,7 +71,7 @@
   - 18F/foia-hub
   description: "A new portal to search for and submit FOIA requests and scalable infrastructure for agencies."
   client: Department of Justice
-  partners: FOIA agency task force
+  partners: "Also participating: FOIA agency task force."
   impact: "The U.S. Federal Government received over 700,000 FOIA requests in 2013."
   stage: discovery
   milestones:
