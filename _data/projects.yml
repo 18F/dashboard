@@ -289,7 +289,7 @@
   contact:
   - midas@gsa.gov
   stack: "JavaScript (Node/Sails, Backbone), CSS, Chef"
-  team: sarah, david
+  team: sarah, david, joe
   licenses:
     midas: Public Domain (CC0)
   links: https://midas.18f.us/
