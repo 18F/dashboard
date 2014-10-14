@@ -313,7 +313,7 @@
   stage: alpha
   milestones:
   contact:
-  - http://github.com/18f/answers/issues
+  - 18f/answers/issues
   stack: "Rails, Vagrant/Chef, JavaScript"
   team: yuda, ben, nienhuis, jen, justin, amos, sasha, nick, lindsay
   licenses:
