@@ -285,7 +285,9 @@
   milestones:
   - "June 2013: State Department begins project Discovery stage with Presidential Innovation Fellows"
   - "January 2014: 18F begins work on project"
-  - "September 2014: GSA becomes paying client of project and Alpha site launches at http://midas.18f.us"
+  - "May 2014: HHS launches Alpha prototype FairTrade"
+  - "June 2014: State Department launches Alpha prototype Crowdwork"
+  - "September 2014: GSA becomes paying client of project and 18F launches Alpha prototype at http://midas.18f.us"
   contact:
   - midas@gsa.gov
   stack: "JavaScript (Node/Sails, Backbone), CSS, Chef"
