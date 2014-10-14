@@ -708,9 +708,15 @@ $tiniest: new-breakpoint(max-width 390px);
 	}
 	> div:nth-of-type(2) {
 		@include span-columns(6);
+		@include media($tiny) {
+			@include span-columns(12);
+		}
 	}
 	> div:nth-of-type(3) {
 		@include span-columns(6);
+		@include media($tiny) {
+			@include span-columns(12);
+		}
 	}
 	a {
 		text-decoration: none;
@@ -744,6 +750,9 @@ $tiniest: new-breakpoint(max-width 390px);
 	background-color: $medium-gray;
 	font-weight: 600;
 	float: right;
+	@include media($smallest) {
+		margin-top: 30px;
+	}
 }
 
 .discovery {
@@ -815,6 +824,9 @@ $tiniest: new-breakpoint(max-width 390px);
 	@include span-columns(9 of 9);
 	> div:nth-of-type(1) {
 		@include span-columns(3 of 9);
+		@include media($tiny) {
+			@include span-columns(9 of 9);
+		}
 		> div {
 			background-color: lighten($blue, 30%);
 			border: 8px solid lighten($blue, 30%);
@@ -828,6 +840,9 @@ $tiniest: new-breakpoint(max-width 390px);
 	}
 	> div:nth-of-type(2) {
 		@include span-columns(6 of 9);
+		@include media($tiny) {
+			@include span-columns(9 of 9);
+		}
 		> div {
 			background-color: lighten($blue, 30%);
 			border: 8px solid lighten($blue, 30%);
