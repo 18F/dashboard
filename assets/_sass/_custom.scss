@@ -22,7 +22,7 @@ $tiniest: new-breakpoint(max-width 390px);
 	}
 }
 .bare {
-	@include media($tiny) {
+	@include media($smallest) {
     	padding-left: 5%;
     	padding-right: 5%;
 	}
