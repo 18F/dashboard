@@ -17,7 +17,8 @@ layout: bare
       <h1>{{ page.title }} <span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1>
       <p>{{ project.description }}</p>
       <p>Contact:
-        {% if project.contact contains '@' %}
+        {% capture contact %}{{ project.contact }}{% endcapture %}
+        {% if contact contains '@' %}
           <a href="mailto:{{project.contact}}">{{project.contact}}</a>
         {% else %}
           <a href="https://www.github.com/{{project.contact}}">{{project.contact}}</a>
