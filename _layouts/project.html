@@ -18,11 +18,14 @@ layout: bare
       <p>{{ project.description }}</p>
       <p>Contact:
         {% capture contact %}{{ project.contact }}{% endcapture %}
-        {% if contact contains '@' %}
-          <a href="mailto:{{project.contact}}">{{project.contact}}</a>
-        {% else %}
-          <a href="https://www.github.com/{{project.contact}}">{{project.contact}}</a>
-        {% endif %}
+        {% assign contact = contact | split: ',' %}
+        {% for c in contact %}
+          {% if c contains '@' %}
+            <a href="mailto:{{c}}">{{c}}</a>
+          {% else %}
+            <a href="https://www.github.com/{{c}}">{{c}}</a>
+          {% endif %}
+        {% endfor %}
       </p>
     </section>
 
@@ -88,7 +91,7 @@ layout: bare
           {% endfor %}
         </div>
         {% endif %}
-        
+
       </div>
     </section>
   {% endif %}

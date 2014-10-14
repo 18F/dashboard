@@ -7,9 +7,9 @@
 # - repos on a new line like this
 # - 18f/dashboard
 # description: "Short description of project"
-# partner: 
+# partner:
 # - "Main partner (who is paying)"
-# partners: 
+# partners:
 # - "Other contributing partners"
 # impact: "The number of users potentially impacted by this service"
 # stage: Choose: discovery, alpha, beta, live
@@ -157,9 +157,7 @@
   stage: beta
   impact: "Over 80,000 U.S. Federal Government purchase card holders."
   milestones:
-  contact:
-  - raphael.villas@gsa.gov
-  - kelly.robinson@gsa.gov
+  contact: raphael.villas@gsa.gov, kelly.robinson@gsa.gov
   stack: "Ruby, CSS, JavaScript/Node, Python"
   team: raphy, ehlers, robert, sasha, diego
   licenses:
@@ -305,7 +303,7 @@
   partner:
   - "General Services Administration"
   - "Department of Homeland Security"
-  partners: 
+  partners:
   - "Early adopters ready for launch include Small Business Administration, Department of Labor, and GSA."
   impact: "The millions of Americans who conduct online transactions with U.S. government."
   stage: Alpha
