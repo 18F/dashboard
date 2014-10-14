@@ -208,7 +208,14 @@
   github:
   - http://github.com/18f/api.data.gov
   description: "A hosted, shared-service that is free to agencies that provides an API key, analytics, and proxy solution for government web services."
-  client: "Census, FCC, FDA, GSA, NREL, Regulations.gov, USDA"
+  client:
+  - Census
+  - FCC
+  - FDA
+  - GSA
+  - NREL
+  - Regulations.gov
+  - USDA
   partners:
   stage: live
   impact: "2100 API users and 42 million API requests served so far"
@@ -251,7 +258,10 @@
   github:
   - 18F/midas
   description: "A marketplace for federal employees to share and collaborate on ideas to improve government or citizen experiences."
-  client: "General Services Administration, Department of State, Department of Health and Human Services"
+  client: 
+  - General Services Administration
+  - Department of State
+  - Department of Health and Human Services
   partners:
   stage: beta
   impact: "2 million federal employees"
@@ -273,7 +283,9 @@
   github:
   - 18F/myusa
   description: "A digital services platform for Americans to register, sign in, and manage ongoing transactions with U.S. Federal Government services."
-  client: "General Services Administration and Department of Homeland Security"
+  client:
+  - "General Services Administration"
+  - "Department of Homeland Security"
   partners: "Early adopters ready for launch include Small Business Administration, Department of Labor, and GSA."
   impact: "Over 1500 U.S. Federal Government websites require registration or sign in."
   stage: Alpha
