@@ -19,7 +19,7 @@ permalink: /
             <p>{% if project.description %}{{ project.description }}{% else %}Project description coming soon.{% endif %}</p>
           </div>
           <div>
-           <p>{% if project.client.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.client %}<strong>{{ project.client | join: ', ' }}</strong>{% else %}Coming soon{% endif %}</p>
+           <p>{% if project.partner.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partner %}<strong>{{ project.partner | join: ', ' }}</strong>{% else %}Coming soon{% endif %}</p>
           <p>Code: <a class="github-url" href="https://github.com/{{project.github}}"> see our work on Github &#8594;</a></p>
           <p>News: <a href="http://18f.gsa.gov/tags/{{project.name}}">read 18F posts about this project &#8594;</a></p>
           <p>Details: <a href="{{ site.baseurl }}/project/{{ project.name }}">all the metrics we track on this project &#8594;</a></p>
