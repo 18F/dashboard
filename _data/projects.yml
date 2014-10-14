@@ -29,7 +29,8 @@
   github:
   - 18F/myra
   description: "Landing page design for Treasury’s My Retirement Account program, which will provide a simple, safe, and affordable way for individuals to start saving for retirement."
-  client: "U.S. Department of Treasury"
+  client:
+  - "U.S. Department of Treasury"
   partners:
   impact: "Millions of Americans do not have access to an employee-sponsored retirement plan: more than 50% of full-time and 75% of part-time workers."
   stage: alpha
@@ -50,7 +51,8 @@
   github:
   - 18F/peacecorps-site
   description: "A redesign of the Peace Corps’ digital presence, including a new website, country-specific sites, application engine, and single authentication and metrics reporting for volunteers."
-  client: "Peace Corps"
+  client:
+  - "Peace Corps"
   partners:
   impact: "7,000 Peace Corps Volunteers in the field."
   stage: discovery
@@ -70,7 +72,8 @@
   - 18F/foia
   - 18F/foia-hub
   description: "A new portal to search for and submit FOIA requests and scalable infrastructure for agencies."
-  client: Department of Justice
+  client:
+  - Department of Justice
   partners: "Also participating: FOIA agency task force."
   impact: "The U.S. Federal Government received over 700,000 FOIA requests in 2013."
   stage: discovery
@@ -97,7 +100,8 @@
   - 18F/fec-data-chef-config
   - 18F/fec-infrastructure
   description: "Revamping how the FEC shares the information they collect and regulations they enforce, both as structured data and in robust, human-readable formats through a redesigned FEC.gov."
-  client: "Federal Election Commission"
+  client:
+  - "Federal Election Commission"
   partners:
   impact: "318 million Americans are affected every 2 years by each election"
   stage: discovery
@@ -119,7 +123,8 @@
   github:
   - 18F/doi-extractives-data
   description: "This site and open data portal supports the President’s Open Gov Partnership National Action Plan commitment to the Extractive Industries Transparency Initiative."
-  client: "Department of the Interior"
+  client:
+  - "Department of the Interior"
   partners:
   impact: "Revenue from the sale of natural resources on Federal lands totaled $97.5 billion between 2003 to 2013."
   stage: alpha
@@ -143,7 +148,8 @@
   github:
   - 18F/C2
   description: "A simplified, email-based purchasing approval tool for purchase card holders authorized to buy office supplies for the government."
-  client: "General Services Administration"
+  client:
+  - "General Services Administration"
   partners:
   stage: beta
   impact: "Over 80,000 U.S. Federal Government purchase card holders."
@@ -185,7 +191,8 @@
   github:
   - 18F/mirage
   description: "Market research tool for the OASIS procurement vehicle, which serves contracting specialists throughout the U.S. Federal Government."
-  client: "General Services Administration"
+  client:
+  - "General Services Administration"
   partners:
   impact:
   stage: alpha
@@ -237,7 +244,8 @@
   github:
   - 18F/API-All-the-X
   description: "A suite of tools, resources, and consulting services to assist agencies in the production and management of government APIs.  A two year old program, the /Developer Program was adopted by 18F to scale out its impact and to grow the government’s API portfolio."
-  client: "General Services Administration"
+  client:
+  - "General Services Administration"
   partners:
   stage: live
   impact: "Over 70 agencies served, including each cabinet Department, National Archives, Federal Communications Commission, Consumer Financial Protection Bureau, and the Office of Personnel Management."
@@ -258,7 +266,7 @@
   github:
   - 18F/midas
   description: "A marketplace for federal employees to share and collaborate on ideas to improve government or citizen experiences."
-  client: 
+  client:
   - General Services Administration
   - Department of State
   - Department of Health and Human Services
@@ -307,7 +315,8 @@
   github:
   - 18F/answers
   description:
-  client: "U.S. Citizenship and Immigration Service"
+  client:
+  - "U.S. Citizenship and Immigration Service"
   partners:
   impact:
   stage: alpha
