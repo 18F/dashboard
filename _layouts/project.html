@@ -29,14 +29,14 @@ layout: bare
     <section class="dashboard-info-area">
 
       <div>
-        {% if project.impact !=  null %}
+        {% if project.impact %}
           <div class="dash-info-long">
             <h1>impact</h1>
             <p>{{ project.impact }}</p>
           </div>
         {% endif %}
 
-        {% if project.client !=  null %}
+        {% if project.client %}
         <div class="dash-info-long">
           {% if project.client.size > 1 %}
             <h1>partners</h1>
@@ -48,7 +48,7 @@ layout: bare
             <li>{{ agency }}</li>
           {% endfor %}
         </ul>
-          <p>{{ project.partners | join ', ' }}</p>
+          <p>{{ project.partners | join: ', ' }}</p>
         </div>
         {% endif %}
 
