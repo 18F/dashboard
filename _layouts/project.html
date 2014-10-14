@@ -79,12 +79,16 @@ layout: bare
           </div>
           {% endfor %}
         </div>
+
+        {% if project.milestones %}
         <div class="dash-info-long">
           <h1>milestones</h1>
           {% for item in project.milestones %}
           <p>{{ item }}</p>
           {% endfor %}
         </div>
+        {% endif %}
+        
       </div>
     </section>
   {% endif %}
