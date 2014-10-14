@@ -692,7 +692,8 @@ $tiniest: new-breakpoint(max-width 390px);
 
 // Dashboard
 //********************************************************
-.dashboard-projects-content {
+.dashboard-projects-content,
+.dashboard-status-definitions {
 	> div:nth-of-type(1) {
 		@include span-columns(12);
 		border-top: 1px solid $medium-gray;
@@ -759,6 +760,22 @@ $tiniest: new-breakpoint(max-width 390px);
 
 .live {
 	background-color: $red;
+}
+
+.dashboard-status-definitions {
+	> div:nth-of-type(1) {
+		&:hover, &:focus {
+			background-color: white;
+		}
+	}
+	h1 {
+		&:hover, &:focus {
+			cursor: default;
+		}
+	}
+	.status {
+		float: left;
+	}
 }
 
 .dashboard-project {
