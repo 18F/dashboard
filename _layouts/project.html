@@ -36,15 +36,15 @@ layout: bare
           </div>
         {% endif %}
 
-        {% if project.client %}
+        {% if project.partner %}
         <div class="dash-info-long">
-          {% if project.client.size > 1 %}
+          {% if project.partner.size > 1 %}
             <h1>partners</h1>
           {% else %}
             <h1>partner</h1>
           {% endif %}
           <ul>
-          {% for agency in project.client %}
+          {% for agency in project.partner %}
             <li>{{ agency }}</li>
           {% endfor %}
         </ul>
