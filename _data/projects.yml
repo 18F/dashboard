@@ -19,6 +19,8 @@
 # team: List of 18F team members, comma separated, with names pulled from 18F.gsa.gov standard
 # licenses:
 #   repo: Name of the license
+# licenseBranch:
+#   repo: Branch the license is on (default's to master)
 # links:
 # - link
 # status: "Hold" in this field (with no quotes) will hide this project from the site. Otherwise, leave blank.
@@ -29,7 +31,8 @@
   github:
   - 18F/myra
   description: "Landing page design for Treasury’s My Retirement Account program, which will provide a simple, safe, and affordable way for individuals to start saving for retirement."
-  client: "U.S. Department of Treasury"
+  client:
+  - "U.S. Department of Treasury"
   partners:
   impact: "Millions of Americans do not have access to an employee-sponsored retirement plan: more than 50% of full-time and 75% of part-time workers."
   stage: alpha
@@ -44,12 +47,14 @@
     myra: Public Domain (CC0)
   links: http://myra.treasury.gov
   status:
+
 - project: "PeaceCorps.gov"
   name: peacecorps-site
   github:
   - 18F/peacecorps-site
   description: "A redesign of the Peace Corps’ digital presence, including a new website, country-specific sites, application engine, and single authentication and metrics reporting for volunteers."
-  client: "Peace Corps"
+  client:
+  - "Peace Corps"
   partners:
   impact: "7,000 Peace Corps Volunteers in the field."
   stage: discovery
@@ -62,14 +67,16 @@
   licenses:
   links:
   status:
+
 - project: "FOIA Modernization"
   name: foia
   github:
   - 18F/foia
   - 18F/foia-hub
   description: "A new portal to search for and submit FOIA requests and scalable infrastructure for agencies."
-  client: Department of Justice
-  partners: FOIA agency task force
+  client:
+  - Department of Justice
+  partners: "Also participating: FOIA agency task force."
   impact: "The U.S. Federal Government received over 700,000 FOIA requests in 2013."
   stage: discovery
   milestones:
@@ -85,6 +92,7 @@
   links:
   - https://trello.com/b/D0r2UOz0/foia-scrum-board
   status:
+
 - project: "OpenFEC"
   name: openFEC
   github:
@@ -94,7 +102,8 @@
   - 18F/fec-data-chef-config
   - 18F/fec-infrastructure
   description: "Revamping how the FEC shares the information they collect and regulations they enforce, both as structured data and in robust, human-readable formats through a redesigned FEC.gov."
-  client: "Federal Election Commission"
+  client:
+  - "Federal Election Commission"
   partners:
   impact: "318 million Americans are affected every 2 years by each election"
   stage: discovery
@@ -110,12 +119,14 @@
     fec-graph-search: Public Domain (CC0)
   links:
   status:
+
 - project: "Natural Resource Revenues from U.S. Federal Lands"
   name: doi-extractives-data
   github:
   - 18F/doi-extractives-data
   description: "This site and open data portal supports the President’s Open Gov Partnership National Action Plan commitment to the Extractive Industries Transparency Initiative."
-  client: "Department of the Interior"
+  client:
+  - "Department of the Interior"
   partners:
   impact: "Revenue from the sale of natural resources on Federal lands totaled $97.5 billion between 2003 to 2013."
   stage: alpha
@@ -128,17 +139,21 @@
   team: mhz, chrisc, nick
   licenses:
     doi-extractives-data: Public Domain (CC0)
+  licenseBranch:
+    doi-extractives-data: gh-pages
   links:
   - https://github.com/18F/Mario
   - https://github.com/18F/gsa-advantage-scrape
   - http://18f.github.io/C2/
   status:
+
 - project: "Common Acquisition Platform Tools"
   name: C2
   github:
   - 18F/C2
   description: "A simplified, email-based purchasing approval tool for purchase card holders authorized to buy office supplies for the government."
-  client: "General Services Administration"
+  client:
+  - "General Services Administration"
   partners:
   stage: beta
   impact: "Over 80,000 U.S. Federal Government purchase card holders."
@@ -152,6 +167,7 @@
     C2: Public Domain (CC0)
   links:
   status:
+
 - project: "FBOpen"
   name: fbopen
   github:
@@ -173,12 +189,14 @@
   - http://fbopen.gsa.gov
   - http://18fhub.io/fbopen
   status:
+
 - project: "Mirage: OASIS Market Research Tool"
   name: mirage
   github:
   - 18F/mirage
   description: "Market research tool for the OASIS procurement vehicle, which serves contracting specialists throughout the U.S. Federal Government."
-  client: "General Services Administration"
+  client:
+  - "General Services Administration"
   partners:
   impact:
   stage: alpha
@@ -195,12 +213,20 @@
   links:
   - http://gsa.gov/oasis
   status:
+
 - project: "API.data.gov"
   name: "api-data-gov"
   github:
   - http://github.com/18f/api.data.gov
   description: "A hosted, shared-service that is free to agencies that provides an API key, analytics, and proxy solution for government web services."
-  client: "Census, FCC, FDA, GSA, NREL, Regulations.gov, USDA"
+  client:
+  - Census
+  - FCC
+  - FDA
+  - GSA
+  - NREL
+  - Regulations.gov
+  - USDA
   partners:
   stage: live
   impact: "2100 API users and 42 million API requests served so far"
@@ -216,12 +242,14 @@
   - http://api.data.gov/metrics
   - http://api.data.gov/about
   status:
+
 - project: "/Developer Program"
   name: API-All-the-X
   github:
   - 18F/API-All-the-X
   description: "A suite of tools, resources, and consulting services to assist agencies in the production and management of government APIs.  A two year old program, the /Developer Program was adopted by 18F to scale out its impact and to grow the government’s API portfolio."
-  client: "General Services Administration"
+  client:
+  - "General Services Administration"
   partners:
   stage: live
   impact: "Over 70 agencies served, including each cabinet Department, National Archives, Federal Communications Commission, Consumer Financial Protection Bureau, and the Office of Personnel Management."
@@ -233,15 +261,21 @@
   team: gray
   licenses:
     API-All-the-X: Public Domain (CC0)
+  licenseBranch:
+    API-All-the-X: gh-pages
   links:
   - http://18fhub.io/API-All-the-X
   status:
+
 - project: "Midas"
   name: midas
   github:
   - 18F/midas
   description: "A marketplace for federal employees to share and collaborate on ideas to improve government or citizen experiences."
-  client: "General Services Administration, Department of State, Department of Health and Human Services"
+  client:
+  - General Services Administration
+  - Department of State
+  - Department of Health and Human Services
   partners:
   stage: beta
   impact: "2 million federal employees"
@@ -257,12 +291,15 @@
     midas: Public Domain (CC0)
   links: https://midas.18f.us/
   status:
+
 - project: "MyUSA"
   name: myusa
   github:
   - 18F/myusa
   description: "A digital services platform for Americans to register, sign in, and manage ongoing transactions with U.S. Federal Government services."
-  client: "General Services Administration and Department of Homeland Security"
+  client:
+  - "General Services Administration"
+  - "Department of Homeland Security"
   partners: "Early adopters ready for launch include Small Business Administration, Department of Labor, and GSA."
   impact: "Over 1500 U.S. Federal Government websites require registration or sign in."
   stage: Alpha
@@ -278,18 +315,20 @@
   links:
   - https://myusa.gov -- works now
   status:
+
 - project: "MyUSCIS"
   name: answers
   github:
   - 18F/answers
   description:
-  client: "U.S. Citizenship and Immigration Service"
+  client:
+  - "U.S. Citizenship and Immigration Service"
   partners:
   impact:
   stage: alpha
   milestones:
   contact:
-  - http://github.com/18f/answers/issues
+  - 18f/answers/issues
   stack: "Rails, Vagrant/Chef, JavaScript"
   team: yuda, ben, nienhuis, jen, justin, amos, sasha, nick, lindsay
   licenses:

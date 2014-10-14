@@ -54,7 +54,8 @@ layout: bare
               <li class="stars"><i class="fa fa-star"></i> Stars: </li>
               <li class="forks"><i class="fa fa-code-fork"></i> Forks: </li>
               {% for license in project.licenses %}{% if license[0] == repo_name %}
-              <li><i class="fa fa-legal {{ license[0] }}"></i> License: <a href="https://github.com/{{ url }}/blob/master/LICENSE.md">{{ license[1] }}</a></li>
+              {% capture branch %}{% if project.licenseBranch %}{{ project.licenseBranch | map: repo_name }}{% else %}master{%endif%}{% endcapture %}
+              <li><i class="fa fa-legal {{ license[0] }}"></i> License: <a href="https://github.com/{{ url }}/blob/{{ branch }}/LICENSE.md">{{ license[1] }}</a></li>
                 {% endif %}
               {% endfor %}
             </ul>
