@@ -54,18 +54,18 @@
   name: peacecorps-site
   github:
   - 18F/peacecorps-site
-  description: "A redesign of the Peace Corps’ digital presence, including a new website, country-specific sites, application engine, and single authentication and metrics reporting for volunteers."
+  description: "A redesign of the peacecorps.gov, offering a new, user-focused experience for users."
   partner:
   - "Peace Corps"
   partners:
-  impact: "7,000 Peace Corps Volunteers in the field."
+  impact: "7,000 Peace Corps Volunteers in the field, hundreds of thousands Prospective/Returned Volunteers, friends, and family."
   stage: discovery
   milestones:
   - "August 2014: Project Discovery stage started"
   contact:
   - sean.herron@gsa.gov
   stack:
-  team: sean, victor, ben
+  team: sean, victor, ben, cm, shashank, annalee, jeremy
   licenses:
   links:
   status:
@@ -98,11 +98,7 @@
 - project: "OpenFEC"
   name: openfec
   github:
-  - 18F/openFEC
   - 18F/FEC
-  - 18F/fec-graph-search
-  - 18F/fec-data-chef-config
-  - 18F/fec-infrastructure
   description: "Redesigning how the FEC shares the information they collect and the regulations they enforce, both as structured data and in robust, human-readable formats through a new FEC.gov."
   partner:
   - "Federal Election Commission"
