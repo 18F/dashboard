@@ -6,7 +6,25 @@ permalink: /
 
 <section class="dashboard">
   <h1>{{page.title}}</h1>
-  <p class="lead">We are building digital services for the American people. Follow our progress and get involved here.</p>
+  <p class="lead">We are building digital services for the American people. Follow our progress and get involved here. Learn about our project development stages <a href="{{ site.baseurl }}/stages/">here</a>.</p>
+  <ul class="dashboard-overview">
+    <li class="discovery"><span class="status">discovery</span>
+      <p class="status-description">User needs are researched and identified.</p>
+    </li>
+    <li class="alpha"><span class="status alpha">alpha</span>
+      <p class="status-description">A core service is built to meet the main user needs.</p>
+    </li>
+    <li class="beta"><span class="status beta">beta</span>
+      <p class="status-description">The service is improved, then tested in public.</p></li>
+    <li class="live"><span class="status live">live</span>
+      <p class="status-description">The service is public and works well.</p></li>
+  </ul>
+  <ul class="dashboard-overview-numbers">
+    <li>3</li>
+    <li>4</li>
+    <li>3</li>
+    <li>2</li>
+  </ul>
   <section class="dashboard-projects">
     <div>
       {% for project in site.data.projects %}

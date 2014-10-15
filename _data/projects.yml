@@ -306,7 +306,7 @@
   partners:
   - "Early adopters ready for launch include Small Business Administration, Department of Labor, and GSA."
   impact: "The millions of Americans who conduct online transactions with U.S. government."
-  stage: Alpha
+  stage: alpha
   milestones:
   - "June 2014: 18F began work on project"
   - "September 2014: Alpha delivered to clients and user testing started"
