@@ -284,7 +284,8 @@
   - "January 2014: 18F begins work on project"
   - "May 2014: HHS launches Alpha as FairTrade"
   - "June 2014: State Department launches Alpha as Crowdwork"
-  - "September 2014: "18F launches http://midas.18f.us for real-world testing by federal employees"
+  - "September 2014: 18F launches http://midas.18f.us for use by early adopters"
+  - "September 2014: GSA OCSIT signs MOU for Open Opportunities to move to Midas platform"
   contact:
   - midas@gsa.gov
   stack: "JavaScript (Node/Sails, Backbone), CSS, Chef"
