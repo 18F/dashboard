@@ -1,4 +1,3 @@
-
 ################### KEY
 # project: "Project Name"
 # name: Machine-readable slug used in url
@@ -278,14 +277,15 @@
   - Department of State
   - Department of Health and Human Services
   partners:
-  stage: beta
+  stage: alpha
   impact: "2 million federal employees"
   milestones:
   - "June 2013: State Department begins project Discovery stage with Presidential Innovation Fellows"
   - "January 2014: 18F begins work on project"
-  - "May 2014: HHS launches Alpha prototype FairTrade"
-  - "June 2014: State Department launches Alpha prototype Crowdwork"
-  - "September 2014: GSA becomes paying client of project and 18F launches Alpha prototype at http://midas.18f.us"
+  - "May 2014: HHS launches Alpha as FairTrade"
+  - "June 2014: State Department launches Alpha as Crowdwork"
+  - "September 2014: 18F launches http://midas.18f.us for use by early adopters"
+  - "September 2014: GSA OCSIT signs MOU for Open Opportunities to move to Midas platform"
   contact:
   - midas@gsa.gov
   stack: "JavaScript (Node/Sails, Backbone), CSS, Chef"
