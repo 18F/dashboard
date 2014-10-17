@@ -25,19 +25,14 @@ permalink: /
       <p class="dashboard-overview-numbers">3</p>
     </li>
   </ul>
-  <!-- <ul class="dashboard-overview-numbers">
-    <li>3</li>
-    <li>4</li>
-    <li>3</li>
-    <li>2</li>
-  </ul> -->
+  
   <section class="dashboard-projects">
     <div>
       {% for project in site.data.projects %}
         {% if project.status != "Hold" %}
         <article class="dashboard-projects-content">
           <div>
-            <a href="{{ site.baseurl }}/project/{{ project.name }}"><h1>{{project.project}} &#x276f;&#x276f;<span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1></a>
+            <a href="{{ site.baseurl }}/project/{{ project.name }}"><h1>{{project.project}} <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i><span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1></a>
           </div>
           <div>
             <p>{% if project.description %}{{ project.description }}{% else %}Project description coming soon.{% endif %}</p>
