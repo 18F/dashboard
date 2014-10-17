@@ -2,17 +2,6 @@
 // 18F.gsa.gov CUSTOM SASS
 //********************************************************
 
-// Breakpoint variables
-//********************************************************
-//$biggest: new-breakpoint(min-width 1430px); //untested
- //////BASE SIZE HERE//////
-$small: new-breakpoint(max-width 1130px);
-$smaller: new-breakpoint(max-width 995px);
-$smallest: new-breakpoint(max-width 785px);
-$tiny: new-breakpoint(max-width 590px);
-$tinier: new-breakpoint(max-width 480px); //only used in hero unit
-$tiniest: new-breakpoint(max-width 390px);
-
 // Site-wide media queries
 //********************************************************
 .mantra, .blog-entry, .team, .footer, .contact-box {
@@ -771,6 +760,14 @@ $tiniest: new-breakpoint(max-width 390px);
 	background-color: $red;
 }
 
+.dashboard-overview {
+	@include span-columns(12);
+	margin-bottom: 4em;
+	li {
+		height: 4.2em;
+	}
+}
+
 .dashboard-overview,
 .dashboard-overview-numbers {
 	text-align: center;
@@ -787,22 +784,90 @@ $tiniest: new-breakpoint(max-width 390px);
 	}
 	.status {
 		float: none;
-		margin-right: 10px;
 	}
 }
 
 .dashboard-overview-numbers {
-	li {
-		font-family: $base-font-family;
-		font-weight: 600;
-		font-size: 4em;
-		margin-top: -55px;
-  		-webkit-text-stroke: 1px white;
-	  	text-shadow:
-	   -1px -1px 0 white,  
-	    1px -1px 0 white,
-	   -1px  1px 0 white,
-	    1px  1px 0 white;
+	font-family: $base-font-family;
+	font-weight: 600;
+	font-size: 2.2em;
+	margin-top: -40px;
+	margin-bottom: 40px;
+	-webkit-text-stroke: 1px white;
+  	text-shadow:
+   -1px -1px 0 white,  
+    1px -1px 0 white,
+   -1px  1px 0 white,
+    1px  1px 0 white;
+}
+
+@include media($smaller) {
+	.dashboard-overview,
+	.dashboard-overview-numbers {
+		li {
+			font-size: 2em;
+			padding: 8px;
+			.status-description {
+				color: white;
+				line-height: 1.1em;
+				font-size: 0.52em;
+			}
+		}
+	}
+	.dashboard-overview-numbers {
+		font-size: 2em;
+		margin-top: -28px;
+	}
+}
+
+@media (max-width: 850px) {
+	.dashboard-overview {
+		li {
+			.status-description {
+				font-size: 0.47em;
+			}
+		}
+	}
+}
+
+@include media($smallest) {
+	.dashboard-overview {
+		li {
+			@include span-columns(9 of 12);
+			height: 3em;
+			margin-bottom: 10px;
+			.status-description {
+				font-size: 0.52em;
+			}
+		}
+		p {
+			float: right;
+			text-align: left;
+			width: 55%;
+			padding-right: 10px;
+		}
+		.status {
+			float: left;
+			margin-top: 0;
+		}
+	}
+	.dashboard-overview-numbers {
+		position: absolute;
+		font-size: 2em;
+		right: -30%;
+	}
+}
+
+@include media($tiny) {
+	.dashboard-overview {
+		li {
+			@include span-columns(10 of 12);
+			font-size: 1.5em;
+			padding: 5px;
+		}
+	}
+	.dashboard-overview-numbers {
+		right: -33%;
 	}
 }
 
