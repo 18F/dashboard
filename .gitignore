@@ -2,3 +2,4 @@
 .DS_Store
 *.log
 /.sass-cache/
+_config.yml
