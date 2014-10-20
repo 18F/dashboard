@@ -2,6 +2,7 @@ var modules = [];
 var GITHUB_API = "https://api.github.com/";
 var GOVCODE_API = "http://api.govcode.org/"
 var ORGANIZATION = "18f";
+var TEAM = "http://localhost:8080/api/data/team.json"
 
 modules[0] = function(repo_name) {
   $.getJSON(GOVCODE_API+"repos/"+repo_name, function(data) {
@@ -16,7 +17,19 @@ modules[0] = function(repo_name) {
       $("."+repo_name + " .issues").append("Not available.");
       $("."+repo_name + " .stars").append("Not available.");
       $("."+repo_name + " .forks").append("Not available.");
-});
+  });
+}
+
+modules[1] = function() {
+  $.getJSON(TEAM, function(data) {
+    var staffers = $(".staff > li");
+    _.each(staffers, function(staffer) {
+      console.log(staffer);
+      var name = $(staffer).attr('class');
+      var obj = _.where(data, {"name":name})[0];
+      $(staffer).text(obj.full_name);
+    });
+  });
 }
 
 $(document).ready(function() {
@@ -25,6 +38,7 @@ $(document).ready(function() {
 
 var render_modules = function(name) {
   modules[0](name);
+  modules[1]();
 }
 
 var render_dashboard = function() {
