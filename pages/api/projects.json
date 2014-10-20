@@ -1,4 +1,0 @@
----
-permalink: /api/projects/
----
-{{ site.data.projects | jsonify }}
