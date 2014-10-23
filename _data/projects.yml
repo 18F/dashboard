@@ -209,7 +209,7 @@
   - http://gsa.gov/oasis
   status:
 
-- project: "API.data.gov"
+- project: "api.data.gov"
   name: "api-data-gov"
   github:
   - http://github.com/18f/api-all-the-x
