@@ -209,10 +209,10 @@
   - http://gsa.gov/oasis
   status:
 
-- project: "API.data.gov"
+- project: "api.data.gov"
   name: "api-data-gov"
   github:
-  - http://github.com/18f/api-all-the-x
+  - /18f/api.data.gov
   description: "A hosted, shared-service that is free to agencies and provides an API key, analytics, and proxy solution for government web services."
   partner:
   - Census
@@ -260,7 +260,7 @@
   licenseBranch:
     API-All-the-X: gh-pages
   links:
-  - http://18fhub.io/API-All-the-X
+  - http://18f.github.io/API-All-the-X
   status:
 
 - project: "Midas"
