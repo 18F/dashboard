@@ -53,7 +53,7 @@
   name: peacecorps-site
   github:
   - 18F/peacecorps-site
-  description: "A redesign of the peacecorps.gov, offering a new, user-focused experience for users."
+  description: "A redesign of peacecorps.gov, offering a new, user-focused experience for users."
   partner:
   - "Peace Corps"
   partners:
@@ -232,7 +232,7 @@
   - "Regulations.gov"
   - USDA
   partners:
-  stage: live
+  stage: beta
   impact: "2,100 API users and 42 million API requests served so far"
   milestones:
   contact:

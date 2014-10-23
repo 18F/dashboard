@@ -28,7 +28,7 @@ layout: bare
       {% assign tags = blog | split: ',' %}
       {% if tags.size > 0 %}
         <p>
-          Blog posts tagged /
+          <i class="fa fa-tags"></i>  /
           <span class="blog-tags" itemprop="keywords">
             {% for t in tags %}
               <a href="http://18f.gsa.gov/tags/{{ t }}">{{ t }}</a>
@@ -86,9 +86,9 @@ layout: bare
           <div class="{{ repo_name | replace: ".", "-" }} repo">
             <h1>
               {% if project.github | first %}
-              <i class="fa fa-github"></i> <a class="github-url" href="https://github.com/{{ url }}">{{ url }}</a>
+              <i class="fa fa-github-alt"></i> <a class="github-url" href="https://github.com/{{ url }}">{{ url }}</a>
               {% else %}
-              <i class="icon-github2"></i> <a href="https://github.com/{{ url }}">{{ url }}</a>
+              <i class="fa fa-github-alt"></i> <a href="https://github.com/{{ url }}">{{ url }}</a>
               {% endif %}
             </h1>
             <ul>

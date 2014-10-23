@@ -17,19 +17,19 @@ permalink: /
     <a href="{{ site.baseurl }}/stages/">
       <li class="alpha"><span class="status alpha">alpha</span>
         <p class="status-description">A core service is built to meet the main user needs.</p>
-        <p class="dashboard-overview-numbers">4</p>
+        <p class="dashboard-overview-numbers">5</p>
       </li>
     </a>
     <a href="{{ site.baseurl }}/stages/">
       <li class="beta"><span class="status beta">beta</span>
         <p class="status-description">The service is improved, then tested in public.</p>
-        <p class="dashboard-overview-numbers">2</p>
+        <p class="dashboard-overview-numbers">3</p>
       </li>
     </a>
     <a href="{{ site.baseurl }}/stages/">
       <li class="live"><span class="status live">live</span>
         <p class="status-description">The service is public and works well.</p>
-        <p class="dashboard-overview-numbers">3</p>
+        <p class="dashboard-overview-numbers">1</p>
       </li>
     </a>
   </ul>
@@ -45,23 +45,29 @@ permalink: /
           <div>
             <p>{% if project.description %}{{ project.description }}{% else %}Project description coming soon.{% endif %}</p>
           </div>
+
           <div>
-           <p>{% if project.partner.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partner %}<strong>{{ project.partner | join: ', ' }}</strong>{% else %}Coming soon{% endif %}</p>
-          <p>Code: <a class="github-url" href="https://github.com/{{project.github.first}}"> see our work on Github &#8594;</a></p>
-          {% capture blog %}{{ project.blog }}{% endcapture %}
-          {% assign tags = blog | split: ',' %}
-          {% if tags.size > 0 %}
-            <p>
-              Blog posts tagged /
-              <span class="blog-tags" itemprop="keywords">
-                {% for t in tags %}
-                  <a href="http://18f.gsa.gov/tags/{{ t }}">{{ t }}</a>
-                  /
-                {% endfor %}
-              </span>
-            </p>
-          {% endif %}
-          <p>Details: <a href="{{ site.baseurl }}/project/{{ project.name }}">all the metrics we track on this project &#8594;</a></p>
+
+            <p>{% if project.partner.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partner %}<strong>{{ project.partner | join: ', ' }}</strong>{% else %}Coming soon{% endif %}</p>
+
+            <p><i class="fa fa-github-alt"></i> / <a class="github-url" href="https://github.com/{{project.github.first}}">Our work on Github</a> / </p>
+            
+            <p><i class="fa fa-bar-chart"></i> / <a href="{{ site.baseurl }}/project/{{ project.name }}">All project metrics</a> / </p>
+
+            {% capture blog %}{{ project.blog }}{% endcapture %}
+            {% assign tags = blog | split: ',' %}
+            {% if tags.size > 0 %}
+              <p>
+                <i class="fa fa-tags"></i> /
+                <span class="blog-tags" itemprop="keywords">
+                  {% for t in tags %}
+                    <a href="http://18f.gsa.gov/tags/{{ t }}">{{ t }}</a>
+                    /
+                  {% endfor %}
+                </span>
+              </p>
+            {% endif %}
+
           </div>
         </article>
         {% endif %}

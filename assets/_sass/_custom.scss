@@ -729,7 +729,6 @@
 		}
 	}
 	p {
-		line-height: 1.2em;
 		margin-bottom: 8px;
 		a:hover, a:focus {
 			text-decoration: underline;
@@ -939,7 +938,8 @@
 		line-height: 1.4em;
 		margin-top: 15px;
 		margin-bottom: 0;
-		a:hover, a:focus {
+		a:hover,
+		a:focus {
 			text-decoration: underline;
 		}
 	}
