@@ -771,8 +771,16 @@
 .dashboard-overview,
 .dashboard-overview-numbers {
 	text-align: center;
-	li {
+	a {
 		@include span-columns(3 of 12);
+		text-decoration: none;
+		color: $dark-gray;
+		&:hover,
+		&:focus {
+			color: $red;
+		}
+	}
+	li {
 		font-family: $header-font-family;
 		font-size: 2.5em;
 		padding: 10px;
