@@ -33,7 +33,7 @@ permalink: /
       </li>
     </a>
   </ul>
-  
+
   <section class="dashboard-projects">
     <div>
       {% for project in site.data.projects %}
@@ -48,17 +48,6 @@ permalink: /
           <div>
            <p>{% if project.partner.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partner %}<strong>{{ project.partner | join: ', ' }}</strong>{% else %}Coming soon{% endif %}</p>
           <p>Code: <a class="github-url" href="https://github.com/{{project.github.first}}"> see our work on Github &#8594;</a></p>
-          {% capture blog %}{{ project.blog }}{% endcapture %}
-          {% assign tags = blog | split: ',' %}
-          {% if tags.size > 0 %}
-            <p>Blog posts related to this project:
-              <ul>
-                {% for t in tags %}
-                  <li><a href="http://18f.gsa.gov/tags/{{ t }}">{{ t }} &#8594;</a></li>
-                {% endfor %}
-              </ul>
-            </p>
-          {% endif %}
           <p>Details: <a href="{{ site.baseurl }}/project/{{ project.name }}">all the metrics we track on this project &#8594;</a></p>
           </div>
         </article>
