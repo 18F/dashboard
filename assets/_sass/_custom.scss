@@ -737,6 +737,15 @@
 	}
 }
 
+.dashboard-status-definitions {
+	> div:nth-of-type(2) {
+		@include span-columns(8);
+		@include media($tiny) {
+			@include span-columns(12);
+		}
+	}
+}
+
 .status {
 	padding: 5px 10px 5px 10px;
 	margin-top: -5px;
@@ -903,6 +912,7 @@
 	}
 }
 
+.dashboard-stages,
 .dashboard-project {
 	nav {
 		font-size: 0.8em;
@@ -916,6 +926,10 @@
 			}
 		}
 	}
+
+}
+
+.dashboard-project {
 	h1 {
 		padding-top: 5px;
 		border-top: 1px solid $medium-gray;
