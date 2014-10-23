@@ -926,7 +926,6 @@
 			}
 		}
 	}
-
 }
 
 .dashboard-project {
@@ -946,6 +945,9 @@
 	}
 	p + p {
 		font-size: 0.9em;
+	}
+	p:last-of-type {
+		margin-top: 6px;
 		margin-bottom: 50px;
 	}
 }
@@ -953,35 +955,12 @@
 .dashboard-info-area {
 	@include span-columns(9 of 9);
 	> div:nth-of-type(1) {
-		@include span-columns(3 of 9);
-		@include media($tiny) {
-			@include span-columns(9 of 9);
-		}
-		> div {
-			background-color: lighten($blue, 30%);
-			border: 8px solid lighten($blue, 30%);
-			padding: 10px;
-			margin-bottom: 23px;
-			&:hover, &:focus {
-				background-color: lighten($blue, 20%);
-				border: 8px solid $green;
-			}
-		}
-	}
-	> div:nth-of-type(2) {
 		@include span-columns(6 of 9);
 		@include media($tiny) {
 			@include span-columns(9 of 9);
 		}
 		> div {
-			background-color: lighten($blue, 30%);
-			border: 8px solid lighten($blue, 30%);
-			padding: 10px;
 			margin-bottom: 23px;
-			&:hover, &:focus {
-				background-color: lighten($blue, 20%);
-				border: 8px solid $green;
-			}
 		}
 	}
 	h1 {
@@ -992,48 +971,43 @@
 	}
 	p {
 		margin-bottom: 0;
-		text-align: center;
-		font-size:	3em;
-	}
-}
-
-.dash-info-long {
-	p {
-		font-size: 1em;
-		padding-top: 5px;
-		text-align: left;
-		font-style: italic;
-		line-height: 1em;
+		padding-top: 7px;
+		padding-left: 20px;
 	}
 	ul {
 		list-style-type: square;
-		padding-left: 20px;
+		padding-left: 40px;
 		padding-top: 7px;
 		padding-bottom: 7px;
-		li {
-			line-height: 1em;
-		}
+	}
+	ul + p {
+		padding-top: 0;
+		font-style: italic;
+		color: $medium-gray;
 	}
 }
 
 .dashboard-code {
-	.dashboard-code-head{
-		padding-bottom: 15px;
-	}
-	ul {
-		margin-top: 7px;
-		margin-bottom: 16px;
-		li {
-			display: inline-block;
-			font-size: 1em;
-			margin-left: 15px;
-			i {
-				font-size: 1em;
-			}
-		}
+	> h1:first-of-type {
+		padding-bottom: 13px;
 	}
 }
 
+.repo {
+	padding-left: 20px;
+	h1 {
+		font-family: $base-font-family;
+		font-size: 1.1em;
+	}
+	ul {
+		padding-left: 0;
+	  margin-bottom: 7px;
+	}
+	li {
+		display: inline-block;
+		margin-left: 20px;
+	}
+}
 
 // 404
 //********************************************************
