@@ -118,7 +118,7 @@
     fec-graph-search: Public Domain (CC0)
   links:
   blog:
-  - fec
+  - FEC
   status:
 
 - project: "Extractive Industries Transparency Initiative"
@@ -247,7 +247,7 @@
   - http://api.data.gov/about
   - http://nrel.github.io/api-umbrella/
   blog:
-  - api
+  - API
   status:
 
 - project: "/Developer Program"
