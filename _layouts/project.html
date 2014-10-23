@@ -73,7 +73,7 @@ layout: bare
           <h1 class="dashboard-code-head">code</h1>
           {% for url in project.github %}
           {% capture repo_name %}{{ url | remove: "18F/" }}{% endcapture %}
-          <div class="{{ repo_name }}">
+          <div class="{{ repo_name | replace: ".", "-" }}">
             <h1>
               {% if project.github | first %}
               <i class="fa fa-github"></i> <a class="github-url" href="https://github.com/{{ url }}">{{ url }}</a>

@@ -10,13 +10,13 @@ modules[0] = function(repo_name) {
       var stars = data['Stargazers'];
       var forks = data['Forks'];
       var name = repo_name.replace(/[\. ,:-]+/g, "-");
-      $("."+repo_name + " .issues").append(""+issues);
-      $("."+repo_name + " .stars").append(""+stars);
-      $("."+repo_name + " .forks").append(""+forks);
+      $("."+name + " .issues").append(""+issues);
+      $("."+name + " .stars").append(""+stars);
+      $("."+name + " .forks").append(""+forks);
     }).error(function () {
-      $("."+repo_name + " .issues").append("Not available.");
-      $("."+repo_name + " .stars").append("Not available.");
-      $("."+repo_name + " .forks").append("Not available.");
+      $("."+name + " .issues").append("Not available.");
+      $("."+name + " .stars").append("Not available.");
+      $("."+name + " .forks").append("Not available.");
   });
 }
 
