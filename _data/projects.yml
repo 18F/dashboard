@@ -213,6 +213,7 @@
   name: "api-data-gov"
   github:
   - 18F/api.data.gov
+  - NREL/api-umbrella
   description: "A hosted, shared-service that is free to agencies and provides an API key, analytics, and proxy solution for government web services."
   partner:
   - Census
@@ -224,7 +225,7 @@
   - USDA
   partners:
   stage: live
-  impact: "2100 API users and 42 million API requests served so far"
+  impact: "2,100 API users and 42 million API requests served so far"
   milestones:
   contact:
   - api.data.gov@gsa.gov
