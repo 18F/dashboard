@@ -53,7 +53,7 @@ layout: bare
           <p>{{ project.partners | join: ', '}}</p>
         </div>
         {% endif %}
-<!--        
+<!--
         {% if project.team.size > 0 %}
         <div class="dash-info-long">
            <h1>Team:</h1>
@@ -103,7 +103,22 @@ layout: bare
           {% endfor %}
         </div>
         {% endif %}
-
+        {% if project.blog %}
+        <div class="dash-blog-links">
+          <h1 class="dashboard-code-head">blog</h1>
+          {% capture blog %}{{ project.blog }}{% endcapture %}
+          {% assign tags = blog | split: ',' %}
+          {% if tags.size > 0 %}
+            <p>Blog posts related to this project:
+              <ul>
+                {% for t in tags %}
+                  <li><a href="http://18f.gsa.gov/tags/{{ t }}">{{ t }} &#8594;</a></li>
+                {% endfor %}
+              </ul>
+            </p>
+          {% endif %}
+        </div>
+        {% endif %}
       </div>
     </section>
   {% endif %}
