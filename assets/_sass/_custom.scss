@@ -426,6 +426,14 @@
     	margin-left: 1em;
 	}
 }
+.blog-tags a {
+	font-weight: 700;
+	text-decoration: none;
+	&:hover, &:focus {
+		text-decoration: underline;
+		color: $base-link-color;
+	}
+}
 .blog-follow-us {
 	@include span-columns(12);
 	padding-top: 15px;
