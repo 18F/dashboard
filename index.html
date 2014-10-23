@@ -48,6 +48,19 @@ permalink: /
           <div>
            <p>{% if project.partner.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partner %}<strong>{{ project.partner | join: ', ' }}</strong>{% else %}Coming soon{% endif %}</p>
           <p>Code: <a class="github-url" href="https://github.com/{{project.github.first}}"> see our work on Github &#8594;</a></p>
+          {% capture blog %}{{ project.blog }}{% endcapture %}
+          {% assign tags = blog | split: ',' %}
+          {% if tags.size > 0 %}
+            <p>
+              Blog posts tagged /
+              <span class="blog-tags" itemprop="keywords">
+                {% for t in tags %}
+                  <a href="http://18f.gsa.gov/tags/{{ t }}">{{ t }}</a>
+                  /
+                {% endfor %}
+              </span>
+            </p>
+          {% endif %}
           <p>Details: <a href="{{ site.baseurl }}/project/{{ project.name }}">all the metrics we track on this project &#8594;</a></p>
           </div>
         </article>
