@@ -38,7 +38,7 @@ permalink: /
     <div>
       {% for project in site.data.projects %}
         {% if project.status != "Hold" %}
-        <article class="dashboard-projects-content">
+        <div class="dashboard-projects-content">
           <div>
             <a href="{{ site.baseurl }}/project/{{ project.name }}"><h1>{{project.project}} <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i><span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1></a>
           </div>
@@ -69,9 +69,12 @@ permalink: /
             {% endif %}
 
           </div>
-        </article>
+        </div>
         {% endif %}
       {% endfor %}
     </div>
   </section>
+
+  {% include dashboard-contact.html %}
+
 </section>

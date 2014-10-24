@@ -4,17 +4,29 @@
 
 // Site-wide media queries
 //********************************************************
+
 .mantra, .blog-entry, .team, .footer, .contact-box {
 	@include media($small) {
     	padding-left: 5%;
     	padding-right: 5%;
 	}
 }
+
 .bare {
 	@include media($smallest) {
     	padding-left: 5%;
     	padding-right: 5%;
 	}
+}
+
+.stage-bug {
+	display: block;
+  background: #f3f3f3;
+  color: #333;
+  border: 1px solid #d9d9d9;
+  border-top: none;
+  text-align: center;
+  padding: .5em 0;
 }
 
 // Extends
@@ -942,6 +954,12 @@
 		margin-top: 6px;
 		margin-bottom: 50px;
 	}
+}
+
+.dashboard-contact {
+	@include span-columns(9 of 9);
+	margin-top: 50px;
+	font-weight: 700;
 }
 
 .dashboard-info-area {
