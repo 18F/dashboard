@@ -28,10 +28,10 @@ layout: bare
       {% assign tags = blog | split: ',' %}
       {% if tags.size > 0 %}
         <p>
-          <i class="fa fa-tags"></i>  /
+          <i class="fa fa-newspaper-o"></i>  /
           <span class="blog-tags" itemprop="keywords">
             {% for t in tags %}
-              <a href="http://18f.gsa.gov/tags/{{ t }}">{{ t }}</a>
+              <a href="http://18f.gsa.gov/tags/{{ t }}">News</a>
               /
             {% endfor %}
           </span>
