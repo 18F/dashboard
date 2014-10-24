@@ -4,17 +4,29 @@
 
 // Site-wide media queries
 //********************************************************
+
 .mantra, .blog-entry, .team, .footer, .contact-box {
 	@include media($small) {
     	padding-left: 5%;
     	padding-right: 5%;
 	}
 }
+
 .bare {
 	@include media($smallest) {
     	padding-left: 5%;
     	padding-right: 5%;
 	}
+}
+
+.stage-bug {
+	display: block;
+  background: #f3f3f3;
+  color: #333;
+  border: 1px solid #d9d9d9;
+  border-top: none;
+  text-align: center;
+  padding: .5em 0;
 }
 
 // Extends
