@@ -222,7 +222,7 @@
   github:
   - 18F/api.data.gov
   - NREL/api-umbrella
-  description: "A hosted, shared-service that is free to agencies and provides an API key, analytics, and proxy solution for government web services."
+  description: "A hosted, shared-service that provides an API key, analytics, and proxy solution for government web services. We are currently accepting clients for this free service: contact us to learn more."
   partner:
   - Census
   - FCC
