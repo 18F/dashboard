@@ -8,6 +8,6 @@ sass:
 
 gems: [bourbon]
 
-destination: /home/site/staging/dashboard
+destination: _site/dashboard
 baseurl: /dashboard
 #baseurl: localhost:4000

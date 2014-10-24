@@ -31,8 +31,8 @@ env.use_ssh_config = True
 env.hosts = ["18f-site"]
 
 home = "/home/site"
-log = "%s/hookshot.log" % home
-current = "%s/%s/current" % (home, environment)
+log = "%s/dashboard.log" % home
+current = "%s/%s/dashboard" % (home, environment)
 
 # principal command to run upon update
 command = "cd %s && git pull && jekyll build >> %s" % (current, log)
