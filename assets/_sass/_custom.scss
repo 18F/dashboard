@@ -944,6 +944,12 @@
 	}
 }
 
+.dashboard-contact {
+	@include span-columns(9 of 9);
+	margin-top: 50px;
+	font-weight: 700;
+}
+
 .dashboard-info-area {
 	@include span-columns(9 of 9);
 	> div:nth-of-type(1) {
