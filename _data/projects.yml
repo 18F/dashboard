@@ -53,7 +53,7 @@
   name: peacecorps-site
   github:
   - 18F/peacecorps-site
-  description: "A redesign of the peacecorps.gov, offering a new, user-focused experience for users."
+  description: "A redesign of peacecorps.gov, offering a new, user-focused experience for users."
   partner:
   - "Peace Corps"
   partners:
@@ -118,7 +118,7 @@
     fec-graph-search: Public Domain (CC0)
   links:
   blog:
-  - fec
+  - FEC
   status:
 
 - project: "Extractive Industries Transparency Initiative"
@@ -222,7 +222,7 @@
   github:
   - 18F/api.data.gov
   - NREL/api-umbrella
-  description: "A hosted, shared-service that is free to agencies and provides an API key, analytics, and proxy solution for government web services."
+  description: "A hosted, shared-service that provides an API key, analytics, and proxy solution for government web services. We are currently accepting clients for this free service: contact us to learn more."
   partner:
   - Census
   - FCC
@@ -232,7 +232,7 @@
   - "Regulations.gov"
   - USDA
   partners:
-  stage: live
+  stage: beta
   impact: "2,100 API users and 42 million API requests served so far"
   milestones:
   contact:
@@ -247,7 +247,7 @@
   - http://api.data.gov/about
   - http://nrel.github.io/api-umbrella/
   blog:
-  - api
+  - API
   status:
 
 - project: "/Developer Program"

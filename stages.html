@@ -4,44 +4,46 @@ title: Project Stage Definitions
 permalink: /stages/
 ---
 
-<section class="dashboard">
-  <h1>{{page.title}}</h1>
-  <p class="lead">Right now, this text is borrowed from <a href="https://www.gov.uk/transformation">gov.uk's excellent work in this area</a>. 18F is working on its own version now, and will update soon!</p>
+<section class="dashboard dashboard-stages">
   <nav><a href="{{ site.baseurl }}/">&#10094;&#10094; back to main dashboard</a></nav>
+  <h1>{{page.title}}</h1>
+  <p class="lead">These are the agile development and human-centered design stages that we use at 18F to build products and services. We are still drafting our definitions and guidelines, so if you want to learn more, we recommend <a href="https://www.gov.uk/service-manual">GOV.UK's excellent work in this area</a>.</p>
+
   <section class="dashboard-projects">
     <div>
-      <article class="dashboard-status-definitions">
+      <div class="dashboard-status-definitions">
         <div>
           <h1><span class="status discovery">discovery</span></h1>
         </div>
         <div>
-          <p>Who are your users and what are their true needs? In this phase, you will start to answer those questions so that you can plan to build a useful product. Conducting primary research (interviewing and observing the actual users) is ideal. In addition to the users’ needs, you will explore other stakeholders’ needs, such as specific client or policy requirements. <a href="https://www.gov.uk/service-manual/phases/discovery.html">Learn more.</a></p>
+          <p><strong>Who are your users and what are their true needs?</strong> In this phase, you will start to answer those questions so that you can plan to build a useful product. Conducting primary research (interviewing and observing the actual users) is ideal. In addition to the users’ needs, you will explore other stakeholders’ needs, such as specific client or policy requirements. <a href="https://www.gov.uk/service-manual/phases/discovery.html">Learn more.</a></p>
         </div>
-      </article>
-      <article class="dashboard-status-definitions">
+      </div>
+      <div class="dashboard-status-definitions">
         <div>
           <h1><span class="status alpha">alpha</span></h1>
         </div>
         <div>
-          <p>Build one or more prototypes based on the research from the Discovery phase. Test the prototypes with small groups of actual users. Work closely with designers and developers to implement changes based on user feedback. Frequently release iterations to a small group of testers. Discover technical and design needs during this process (e.g., choose and test initial tech stack). <a href="https://www.gov.uk/service-manual/phases/alpha.html">Learn more.</a></p>
+          <p><strong>Build one or more prototypes based on the research from the Discovery phase.</strong> Test the prototypes with small groups of actual users. Work closely with designers and developers to implement changes based on user feedback. Frequently release iterations to a small group of testers. Discover technical and design needs during this process (e.g., choose and test initial tech stack). <a href="https://www.gov.uk/service-manual/phases/alpha.html">Learn more.</a></p>
         </div>
-      </article>
-      <article class="dashboard-status-definitions">
+      </div>
+      <div class="dashboard-status-definitions">
         <div>
           <h1><span class="status beta">beta</span></h1>
         </div>
         <div>
-          <p>Stage and test a live, robust demo on the public web for use by a subset of the target audience. Implement changes based on user behavior and feedback. Resolve policy compliance or technical integration issues. Define and then validate statistically significant metrics for improvement. <a href="https://www.gov.uk/service-manual/phases/beta.html">Learn more.</a></p>
+          <p><strong>Stage and test a live, robust demo on the public web for use by a subset of the target audience.</strong> Implement changes based on user behavior and feedback. Resolve policy compliance or technical integration issues. Define and then validate statistically significant metrics for improvement. <a href="https://www.gov.uk/service-manual/phases/beta.html">Learn more.</a></p>
         </div>
-      </article>
-      <article class="dashboard-status-definitions">
+      </div>
+      <div class="dashboard-status-definitions">
         <div>
           <h1><span class="status live">live</span></h1>
         </div>
         <div>
-          <p>Open the site to all users. Necessary security, performance, and policy requirements have been met, including Authority to Operate (ATO). Continue to iteratively improve the service based on analytics and user feedback. <a href="https://www.gov.uk/service-manual/phases/live.html">Learn more.</a></p>
+          <p><strong>Open the site to all users.</strong> Necessary security, performance, and policy requirements have been met, including Authority to Operate (ATO). Continue to iteratively improve the service based on analytics and user feedback. <a href="https://www.gov.uk/service-manual/phases/live.html">Learn more.</a></p>
         </div>
-      </article>
+      </div>
     </div>
   </section>
+  {% include dashboard-contact.html %}
 </section>
