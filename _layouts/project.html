@@ -10,7 +10,7 @@ layout: bare
         whose `project` field matches thie page's `title` field.
     -->
     <section class="dashboard-project">
-      <nav><a href="{{ site.baseurl }}/">&#10094;&#10094; back to main dashboard</a></nav>
+      <nav><a href="{{ site.baseurl }}/"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i> back to main dashboard</a></nav>
       <h1>{{ page.title }} <span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1>
       <p>{{ project.description }}</p>
       <p>Contact:
