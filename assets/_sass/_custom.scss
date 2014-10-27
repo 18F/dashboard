@@ -4,17 +4,29 @@
 
 // Site-wide media queries
 //********************************************************
+
 .mantra, .blog-entry, .team, .footer, .contact-box {
 	@include media($small) {
     	padding-left: 5%;
     	padding-right: 5%;
 	}
 }
+
 .bare {
 	@include media($smallest) {
     	padding-left: 5%;
     	padding-right: 5%;
 	}
+}
+
+.stage-bug {
+	display: block;
+  background: #f3f3f3;
+  color: #333;
+  border: 1px solid #d9d9d9;
+  border-top: none;
+  text-align: center;
+  padding: .5em 0;
 }
 
 // Extends
@@ -426,14 +438,6 @@
     	margin-left: 1em;
 	}
 }
-.blog-tags a {
-	font-weight: 700;
-	text-decoration: none;
-	&:hover, &:focus {
-		text-decoration: underline;
-		color: $base-link-color;
-	}
-}
 .blog-follow-us {
 	@include span-columns(12);
 	padding-top: 15px;
@@ -729,10 +733,18 @@
 		}
 	}
 	p {
-		line-height: 1.2em;
 		margin-bottom: 8px;
 		a:hover, a:focus {
 			text-decoration: underline;
+		}
+	}
+}
+
+.dashboard-status-definitions {
+	> div:nth-of-type(2) {
+		@include span-columns(8);
+		@include media($tiny) {
+			@include span-columns(12);
 		}
 	}
 }
@@ -780,7 +792,6 @@
 .dashboard-overview-numbers {
 	text-align: center;
 	a {
-		@include span-columns(3 of 12);
 		text-decoration: none;
 		color: $dark-gray;
 		&:hover,
@@ -789,9 +800,11 @@
 		}
 	}
 	li {
+		@include span-columns(3 of 12);
 		font-family: $header-font-family;
 		font-size: 2.5em;
 		padding: 10px;
+		margin-right: 1.75% !important;
 		.status-description {
 			color: white;
 			line-height: 1.1em;
@@ -903,6 +916,7 @@
 	}
 }
 
+.dashboard-stages,
 .dashboard-project {
 	nav {
 		font-size: 0.8em;
@@ -916,6 +930,9 @@
 			}
 		}
 	}
+}
+
+.dashboard-project {
 	h1 {
 		padding-top: 5px;
 		border-top: 1px solid $medium-gray;
@@ -926,48 +943,35 @@
 		line-height: 1.4em;
 		margin-top: 15px;
 		margin-bottom: 0;
-		a:hover, a:focus {
+		a:hover,
+		a:focus {
 			text-decoration: underline;
 		}
 	}
 	p + p {
 		font-size: 0.9em;
+	}
+	p:last-of-type {
+		margin-top: 6px;
 		margin-bottom: 50px;
 	}
+}
+
+.dashboard-contact {
+	@include span-columns(9 of 9);
+	margin-top: 50px;
+	font-weight: 700;
 }
 
 .dashboard-info-area {
 	@include span-columns(9 of 9);
 	> div:nth-of-type(1) {
-		@include span-columns(3 of 9);
-		@include media($tiny) {
-			@include span-columns(9 of 9);
-		}
-		> div {
-			background-color: lighten($blue, 30%);
-			border: 8px solid lighten($blue, 30%);
-			padding: 10px;
-			margin-bottom: 23px;
-			&:hover, &:focus {
-				background-color: lighten($blue, 20%);
-				border: 8px solid $green;
-			}
-		}
-	}
-	> div:nth-of-type(2) {
 		@include span-columns(6 of 9);
 		@include media($tiny) {
 			@include span-columns(9 of 9);
 		}
 		> div {
-			background-color: lighten($blue, 30%);
-			border: 8px solid lighten($blue, 30%);
-			padding: 10px;
 			margin-bottom: 23px;
-			&:hover, &:focus {
-				background-color: lighten($blue, 20%);
-				border: 8px solid $green;
-			}
 		}
 	}
 	h1 {
@@ -978,48 +982,43 @@
 	}
 	p {
 		margin-bottom: 0;
-		text-align: center;
-		font-size:	3em;
-	}
-}
-
-.dash-info-long {
-	p {
-		font-size: 1em;
-		padding-top: 5px;
-		text-align: left;
-		font-style: italic;
-		line-height: 1em;
+		padding-top: 7px;
+		padding-left: 20px;
 	}
 	ul {
 		list-style-type: square;
-		padding-left: 20px;
+		padding-left: 40px;
 		padding-top: 7px;
 		padding-bottom: 7px;
-		li {
-			line-height: 1em;
-		}
+	}
+	ul + p {
+		padding-top: 0;
+		font-style: italic;
+		color: $medium-gray;
 	}
 }
 
 .dashboard-code {
-	.dashboard-code-head{
-		padding-bottom: 15px;
-	}
-	ul {
-		margin-top: 7px;
-		margin-bottom: 16px;
-		li {
-			display: inline-block;
-			font-size: 1em;
-			margin-left: 15px;
-			i {
-				font-size: 1em;
-			}
-		}
+	> h1:first-of-type {
+		padding-bottom: 13px;
 	}
 }
 
+.repo {
+	padding-left: 20px;
+	h1 {
+		font-family: $base-font-family;
+		font-size: 1.1em;
+	}
+	ul {
+		padding-left: 0;
+	  margin-bottom: 7px;
+	}
+	li {
+		display: inline-block;
+		margin-left: 20px;
+	}
+}
 
 // 404
 //********************************************************

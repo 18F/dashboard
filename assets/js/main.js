@@ -1,8 +1,13 @@
 var modules = [];
 var GITHUB_API = "https://api.github.com/";
-var GOVCODE_API = "http://api.govcode.org/"
+var GOVCODE_API = "https://api.govcode.org/"
 var ORGANIZATION = "18f";
-var TEAM = "http://localhost:8080/api/data/team.json"
+// team api will always be at the same server the dashboard is running on, this
+// makes it flexible for local dev environments by sniffing out the beginning of
+// url and lopping any subdirectories off the browser's current document
+var urlRootIndex = document.URL.substr(7).indexOf('/');
+var urlRoot = document.URL.substr(0,urlRootIndex+7);
+var TEAM = urlRoot+"/api/data/team.json"
 
 modules[0] = function(repo_name) {
   $.getJSON(GOVCODE_API+"repos/"+repo_name, function(data) {

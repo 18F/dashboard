@@ -6,7 +6,7 @@ permalink: /
 
 <section class="dashboard">
   <h1>{{page.title}}</h1>
-  <p class="lead">We are building digital services for the American people. Follow our progress and get involved here. Learn about our project development stages <a href="{{ site.baseurl }}/stages/">here</a>.</p>
+  <p class="lead">We are building digital services for the American people. Follow our progress and get involved here.</p>
   <ul class="dashboard-overview">
     <a href="{{ site.baseurl }}/stages/">
       <li class="discovery"><span class="status">discovery</span>
@@ -16,20 +16,20 @@ permalink: /
     </a>
     <a href="{{ site.baseurl }}/stages/">
       <li class="alpha"><span class="status alpha">alpha</span>
-        <p class="status-description">A core service is built to meet the main user needs.</p>
-        <p class="dashboard-overview-numbers">4</p>
+        <p class="status-description">A prototype is built to meet the main user needs.</p>
+        <p class="dashboard-overview-numbers">5</p>
       </li>
     </a>
     <a href="{{ site.baseurl }}/stages/">
       <li class="beta"><span class="status beta">beta</span>
         <p class="status-description">The service is improved, then tested in public.</p>
-        <p class="dashboard-overview-numbers">2</p>
+        <p class="dashboard-overview-numbers">3</p>
       </li>
     </a>
     <a href="{{ site.baseurl }}/stages/">
       <li class="live"><span class="status live">live</span>
         <p class="status-description">The service is public and works well.</p>
-        <p class="dashboard-overview-numbers">3</p>
+        <p class="dashboard-overview-numbers">1</p>
       </li>
     </a>
   </ul>
@@ -38,34 +38,43 @@ permalink: /
     <div>
       {% for project in site.data.projects %}
         {% if project.status != "Hold" %}
-        <article class="dashboard-projects-content">
+        <div class="dashboard-projects-content">
           <div>
             <a href="{{ site.baseurl }}/project/{{ project.name }}"><h1>{{project.project}} <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i><span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1></a>
           </div>
           <div>
             <p>{% if project.description %}{{ project.description }}{% else %}Project description coming soon.{% endif %}</p>
           </div>
+
           <div>
-           <p>{% if project.partner.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partner %}<strong>{{ project.partner | join: ', ' }}</strong>{% else %}Coming soon{% endif %}</p>
-          <p>Code: <a class="github-url" href="https://github.com/{{project.github.first}}"> see our work on Github &#8594;</a></p>
-          {% capture blog %}{{ project.blog }}{% endcapture %}
-          {% assign tags = blog | split: ',' %}
-          {% if tags.size > 0 %}
-            <p>
-              Blog posts tagged /
-              <span class="blog-tags" itemprop="keywords">
-                {% for t in tags %}
-                  <a href="http://18f.gsa.gov/tags/{{ t }}">{{ t }}</a>
-                  /
-                {% endfor %}
-              </span>
-            </p>
-          {% endif %}
-          <p>Details: <a href="{{ site.baseurl }}/project/{{ project.name }}">all the metrics we track on this project &#8594;</a></p>
+
+            <p>{% if project.partner.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partner %}<strong>{{ project.partner | join: ', ' }}</strong>{% else %}Coming soon{% endif %}</p>
+
+            <p><i class="fa fa-github-alt"></i> / <a class="github-url" href="https://github.com/{{project.github.first}}">Code</a> / </p>
+            
+            <p><i class="fa fa-bar-chart"></i> / <a href="{{ site.baseurl }}/project/{{ project.name }}">Metrics</a> / </p>
+
+            {% capture blog %}{{ project.blog }}{% endcapture %}
+            {% assign tags = blog | split: ',' %}
+            {% if tags.size > 0 %}
+              <p>
+                <i class="fa fa-newspaper-o"></i> /
+                <span class="blog-tags" itemprop="keywords">
+                  {% for t in tags %}
+                    <a href="http://18f.gsa.gov/tags/{{ t }}">News</a>
+                    /
+                  {% endfor %}
+                </span>
+              </p>
+            {% endif %}
+
           </div>
-        </article>
+        </div>
         {% endif %}
       {% endfor %}
     </div>
   </section>
+
+  {% include dashboard-contact.html %}
+
 </section>
