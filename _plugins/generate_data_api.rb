@@ -1,3 +1,4 @@
+require 'fileutils'
 module Jekyll
 
   class JSONFile < Jekyll::StaticFile
@@ -13,9 +14,7 @@ module Jekyll
 
     def generate(site)
       dir = site.config['api_dir'] || '/api/'
-      Dir.mkdir(site.dest) unless Dir.exists?(site.dest)
-      Dir.mkdir(site.dest+dir) unless Dir.exists?(site.dest+dir)
-      Dir.mkdir(site.dest+dir+'/data') unless Dir.exists?(site.dest+dir+'/data')
+      FileUtils::mkdir_p site.dest+dir+'data';
       dir = dir+'/data/'
       site.data.keys.each do |datum|
         write_data_api(site, dir, datum)
