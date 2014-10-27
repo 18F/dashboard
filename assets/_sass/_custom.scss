@@ -792,7 +792,6 @@
 .dashboard-overview-numbers {
 	text-align: center;
 	a {
-		@include span-columns(3 of 12);
 		text-decoration: none;
 		color: $dark-gray;
 		&:hover,
@@ -801,9 +800,11 @@
 		}
 	}
 	li {
+		@include span-columns(3 of 12);
 		font-family: $header-font-family;
 		font-size: 2.5em;
 		padding: 10px;
+		margin-right: 1.75% !important;
 		.status-description {
 			color: white;
 			line-height: 1.1em;
