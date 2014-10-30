@@ -35,7 +35,7 @@
   partner:
   - "U.S. Department of Treasury"
   partners:
-  impact: "Millions of Americans do not have access to an employee-sponsored retirement plan: more than 50% of full-time and 75% of part-time workers."
+  impact: "Millions of Americans do not have access to an employer-sponsored retirement plan, which includes more than 50% of full-time and 75% of part-time workers."
   stage: alpha
   milestones:
   - "August 2014: Project discovery stage started"
@@ -79,7 +79,7 @@
   - Department of Justice
   partners: "Also participating: FOIA agency task force."
   impact: "The U.S. Federal Government processed nearly 700,000 FOIA requests in fiscal year 2013."
-  stage: discovery
+  stage: alpha
   milestones:
   - "June 2014: Project Discovery stage started"
   contact:
