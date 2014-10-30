@@ -233,7 +233,7 @@
   - USDA
   partners:
   stage: beta
-  impact: "2,100 API users and 42 million API requests served so far"
+  impact: "2,800 API users and 66 million API requests served since July 2013"
   milestones:
   contact:
   - api.data.gov@gsa.gov
