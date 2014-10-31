@@ -118,6 +118,18 @@ layout: bare
          </div>
         {% endif %}
 -->
+      <!-- additional links -->
+      {% if project.links %}
+        <div>
+          <h1><i class="fa fa-chevron-right"></i> related links</h1>
+          <ul>
+            {% for item in project.links %}
+            <li><a href="{{ item }}">{{ item }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+
       </div>
     </section>
   {% endif %}

@@ -166,7 +166,7 @@
   links:
   - https://github.com/18F/Mario
   - https://github.com/18F/gsa-advantage-scrape
-  - http://18f.github.io/C2/
+  - https://18f.github.io/C2/
   status:
 
 - project: "FBOpen"
@@ -187,8 +187,8 @@
   licenses:
     fbopen: Public Domain (CC0)
   links:
-  - http://fbopen.gsa.gov
-  - http://18fhub.io/fbopen
+  - https://fbopen.gsa.gov
+  - https://18f.github.io/fbopen
   blog:
   - fbopen
   status:
@@ -242,10 +242,10 @@
   licenses:
     fbopen: Public Domain (CC0)
   links:
-  - http://api.data.gov
-  - http://api.data.gov/metrics
-  - http://api.data.gov/about
-  - http://nrel.github.io/api-umbrella/
+  - https://api.data.gov
+  - https://api.data.gov/metrics
+  - https://api.data.gov/about
+  - https://nrel.github.io/api-umbrella/
   blog:
   - API
   status:
@@ -274,7 +274,7 @@
   licenseBranch:
     API-All-the-X: gh-pages
   links:
-  - http://18f.github.io/API-All-the-X
+  - https://18f.github.io/API-All-the-X
   blog:
   - /developer
   status:
@@ -296,7 +296,7 @@
   - "January 2014: 18F begins work on project"
   - "May 2014: HHS launches Alpha as FairTrade"
   - "June 2014: State Department launches Alpha as Crowdwork"
-  - "September 2014: 18F launches http://midas.18f.us for use by early adopters"
+  - "September 2014: 18F launches https://midas.18f.us for use by early adopters"
   - "September 2014: GSA OCSIT signs MOU for Open Opportunities to move to Midas platform"
   contact:
   - midas@gsa.gov
@@ -331,7 +331,7 @@
   licenses:
     myusa: Public Domain (CC0)
   links:
-  - https://myusa.gov -- works now
+  - http://myusa.gov
   status:
 
 - project: "MyUSCIS"
