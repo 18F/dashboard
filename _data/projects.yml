@@ -17,7 +17,7 @@
 # - Email address or
 # - URL to preferred feedback mechanism
 # stack: "Stack, technologies"
-# team: List of 18F team members, comma separated, with names pulled from 18F.gsa.gov standard
+# team: List of 18F team members, comma separated, with names pulled from 18F.gsa.gov team file (https://github.com/18F/18f.gsa.gov/blob/staging/_data/team.yml)
 # licenses:
 #   repo: Name of the license
 # licenseBranch:
