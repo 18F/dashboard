@@ -12,9 +12,3 @@ notifications:
       - gregory.boone@gsa.gov
     on_success: change
     on_failure: change
-
-branches:
-  only:
-    - gh-pages
-    - production
-    - staging
