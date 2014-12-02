@@ -3,8 +3,7 @@
 ```bash
 git clone https://github.com/18F/dashboard.git
 cd dashboard
-git submodule update --init
-bundle
+./script/bootstrap
 bundle exec jekyll serve -w
 open http://localhost:3000/dashboard/
 ```

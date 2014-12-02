@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+set -x
+
+git submodule update --init
+
+# http://docs.travis-ci.com/user/caching/#Bundler
+if [ ! "$CI" = "true" ]; then
+  bundle
+fi
+
+echo "DONE"
