@@ -1,6 +1,17 @@
-Please create a branch and submit changes as a pull request.
+## Running the site locally
 
-If you are adding or editing _data/projects.yml file, PLEASE review the data guidelines at the top of the YAML file.
+```bash
+git clone https://github.com/18F/dashboard.git
+cd dashboard
+git submodule update --init
+gem install jekyll
+jekyll serve -w
+open http://localhost:3000/dashboard/
+```
+
+## Making changes
+
+Please create a branch and submit changes as a pull request. To modify project information, do a pull request against the [data-public repository](https://github.com/18F/data-public).
 
 ## Public domain
 
