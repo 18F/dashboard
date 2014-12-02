@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+
+echo "+ Updating gems..."
+bundle update
+echo "+ ...done."
+
+echo "+ Updating submodule..."
+cd _data
+git checkout master
+git pull
+cd -
+echo "+ ...done."

@@ -1,8 +1,6 @@
 ## Running the site locally
 
 ```bash
-git clone https://github.com/18F/dashboard.git
-cd dashboard
 ./script/bootstrap
 bundle exec jekyll serve -w
 open http://localhost:3000/dashboard/
@@ -10,7 +8,11 @@ open http://localhost:3000/dashboard/
 
 ## Making changes
 
-Please create a branch and submit changes as a pull request. To modify project information, do a pull request against the [data-public repository](https://github.com/18F/data-public).
+Please create a branch and submit changes as a pull request.
+
+### Data
+
+To modify project information, do a pull request against the [data-public repository](https://github.com/18F/data-public). To pull in changes to the data, run `./script/update`, then commit.
 
 ## Public domain
 
