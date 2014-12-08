@@ -12,7 +12,7 @@ Please create a branch and submit changes as a pull request.
 
 ### Data
 
-To modify project information, do a pull request against the [data-public repository](https://github.com/18F/data-public). To pull in changes to the data, run `./script/update`, then commit.
+To modify project information, see the instructions in [data-public](https://github.com/18F/data-public).
 
 ## Public domain
 
