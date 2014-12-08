@@ -8,8 +8,5 @@ bundle update
 echo "+ ...done."
 
 echo "+ Updating submodule..."
-cd _data
-git checkout master
-git pull
-cd -
+git submodule update --remote
 echo "+ ...done."
