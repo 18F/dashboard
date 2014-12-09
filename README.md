@@ -157,3 +157,7 @@ If you want to make that data accessible on GitHub pages, you could consider
 converting projects.yml to a JSON file and following [the directions on this
 IRC
 transcript.](https://botbot.me/freenode/jekyll/2014-10-17/?msg=23655667&page=1 ).
+
+## Feedback
+
+Give us your feedback! We'd love to hear it. [Open an issue and tell us what you think.](https://github.com/18f/dashboard/issues/new)
