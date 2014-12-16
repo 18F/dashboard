@@ -46,7 +46,7 @@
   team: chrisc, manger
   licenses:
     myra: Public Domain (CC0)
-  links: http://myra.treasury.gov
+  links: https://myra.treasury.gov
   status:
 
 - project: "PeaceCorps.gov"
@@ -331,7 +331,7 @@
   licenses:
     myusa: Public Domain (CC0)
   links:
-  - http://myusa.gov
+  - https://my.usa.gov
   status:
 
 - project: "MyUSCIS"
