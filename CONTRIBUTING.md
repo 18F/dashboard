@@ -1,3 +1,7 @@
+Please create a branch and submit changes as a pull request.
+
+If you are adding or editing _data/projects.yml file, PLEASE review the data guidelines at the top of the YAML file.
+
 ## Public domain
 
 This project is in the public domain within the United States, and
