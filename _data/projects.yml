@@ -17,7 +17,7 @@
 # - Email address or
 # - URL to preferred feedback mechanism
 # stack: "Stack, technologies"
-# team: List of 18F team members, comma separated, with names pulled from 18F.gsa.gov standard
+# team: List of 18F team members, comma separated, with names pulled from 18F.gsa.gov team file (https://github.com/18F/18f.gsa.gov/blob/staging/_data/team.yml)
 # licenses:
 #   repo: Name of the license
 # licenseBranch:
@@ -64,7 +64,7 @@
   contact:
   - sean.herron@gsa.gov
   stack:
-  team: sean, victor, ben, cm, shashank, annalee, jeremy
+  team: sean, victor, ben, cm, khandelwal, annalee, jeremy
   licenses:
   links:
   status:
@@ -85,7 +85,7 @@
   contact:
   - 18f/foia/issues
   stack:
-  team: majma, victor, eric
+  team: jackie, khandelwal, majma, eric, gramirez, jtag, victor
   licenses:
     foia: Public Domain (CC0)
     foia-hub: Public Domain (CC0)
@@ -125,24 +125,28 @@
   name: doi-extractives-data
   github:
   - 18F/doi-extractives-data
-  description: "This site and open data portal supports the President’s Open Gov Partnership National Action Plan commitment to the Extractive Industries Transparency Initiative."
+  description: "This site and open data portal supports the President’s Open Gov Partnership National Action Plan commitment to the Extractive Industries Transparency Initiative. <a href=\"https://useiti.doi.gov/\">https://useiti.doi.gov/</a>"
   partner:
   - "Department of the Interior"
   partners:
   impact: "Revenue from the sale of natural resources on Federal lands totaled $97.5 billion between 2003 to 2013."
-  stage: alpha
+  stage: beta
   milestones:
   - "July 2014: 18F began work on project"
   - "September 2014: Alpha site launched"
+  - "December 2015: Beta site launched"
   contact:
-  - christopher.cairns@gsa.gov
+  - michelle.hertzfeld@gsa.gov
   stack: JavaScript, Jekyll
-  team: mhz, chrisc, nick
+  team: mhz, nick
   licenses:
     doi-extractives-data: Public Domain (CC0)
   licenseBranch:
     doi-extractives-data: gh-pages
   links:
+  - https://useiti.doi.gov/
+  - http://fedscoop.com/interior-launches-new-natural-resources-revenue-data-portal/
+  - http://fedscoop.com/inside-interior-departments-latest-open-data-efforts/
   blog:
   - eiti
   status:
