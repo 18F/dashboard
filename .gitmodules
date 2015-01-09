@@ -1,4 +1,0 @@
-[submodule "_data"]
-	path = _data
-	url = https://github.com/18F/data-public.git
-	branch = master
