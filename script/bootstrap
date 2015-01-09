@@ -3,7 +3,8 @@
 set -e
 set -x
 
-git submodule update --init
+git submodule update --remote
 bundle
+cd _data && ./import-public.rb && cd ..
 
 echo "DONE"
