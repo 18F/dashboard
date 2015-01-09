@@ -4,6 +4,10 @@ rvm:
 
 #script: "LANG=\"en_US.UTF-8\" LC_ALL=\"en_US.UTF-8\" jekyll build"
 script: "LANG=\"en_US.UTF-8\" LC_ALL=\"en_US.UTF-8\" script/ci"
+
+git:
+  submodules: false
+
 notifications:
   email:
     recipients:
