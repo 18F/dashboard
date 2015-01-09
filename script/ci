@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+set -x
+
+bundle
+test -e _data/projects.yml
+
+jekyll build
