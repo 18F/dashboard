@@ -86,7 +86,7 @@ end
 COMMANDS = {
   :init => 'Set up the Hub dev environment',
   :update_gems => 'Execute Bundler to update gem set',
-  :update_data => 'Updates data files from hub',
+  :update_data => 'Updates data files from data-private',
   :serve => 'Serves the site at localhost:4000',
   :build => 'Builds the site',
   :ci_build => 'Builds the site for a CI system',
