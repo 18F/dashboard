@@ -30,22 +30,24 @@ incorporate a data point.
 Is there data that you'd like to see about our projects that's not listed
 here? Create an issue! We value feedback.  
 
-## How it works
+## Installing
 
-At it's most basic this is a jekyll site. You should be able to clone the
-repo and run `jekyll serve` with no problems. You may need to edit the
-`_config.yml` file and  comment out line 12 (the `baseurl` field).
+First clone this repo. Then, install the project and all its dependencies by 
+running `./go init` in your terminal. After that, run `./go serve` and visit 
+http://localhost:4000 in your web browser.
 
-### Installing
+By default you get all of our projects, and the information about them should
+refresh itself whenever you run `git pull`. Which is pretty cool, we think. 
 
-See the [Jekyll documentation](https://jekyllrb.com/) for information about installing requirements
-for this project. In addition, you should install [Bourbon.io](https://bourbon.io).
+If you're a developer and want to experiment with the data you can do so by 
+running `./go submodule` and `./go update_data`. This will update the git 
+submodule running behind the scenes. This is essentiall the same thing we
+do to automatically keep these files up to date for you.
 
-By default you get all of our projects. Which is pretty cool, we think. But
-you might want to make your own. Each project is defined in the
-`_data/projects.yml` file. Fill in all the fields for your project and then
-create an html file in `pages/projects` and give it a name matching the
-`name` field in the YAML file.
+If you're looking to make your own dashboard using this as an example, you can. 
+Each project is defined in the `_data/projects.yml` file. Fill in all the 
+fields for your project and then create an html file in `pages/projects` and 
+give it a name matching the `name` field in the YAML file.
 
 ### Structure of a project
 
