@@ -64,13 +64,6 @@ def update_gems
   exec_cmd 'bundle'
 end
 
-def submodules(init = false)
-  if init
-    exec_cmd 'git submodule update --init'
-  end
-  exec_cmd 'git submodule update --remote _data/private'
-end
-
 def update_data
   exec_cmd 'cd _data && ./import-public.rb'
 end
@@ -88,7 +81,6 @@ end
 COMMANDS = {
   :init => 'Set up the Hub dev environment',
   :update_gems => 'Execute Bundler to update gem set',
-  :submodules => 'Update git submodules',
   :update_data => 'Updates data files from hub',
   :serve => 'Serves the site at localhost:4000',
   :build => 'Builds the site',

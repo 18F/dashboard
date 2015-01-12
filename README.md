@@ -36,13 +36,17 @@ First clone this repo. Then, install the project and all its dependencies by
 running `./go init` in your terminal. After that, run `./go serve` and visit 
 http://localhost:4000 in your web browser.
 
-By default you get all of our projects, and the information about them should
-refresh itself whenever you run `git pull`. Which is pretty cool, we think. 
+## For 18F Team Members
 
 If you're a developer and want to experiment with the data you can do so by 
-running `./go submodule` and `./go update_data`. This will update the git 
-submodule running behind the scenes. This is essentiall the same thing we
-do to automatically keep these files up to date for you.
+running `git submodule init` and `git submodule update --remote`. This will
+fetch the latest yaml files out of the `data-private` repo, the same one 
+driving data for other 18F projects like the Hub.
+
+## For everyone else
+
+By default you get all of our projects, and the information about them should
+refresh itself whenever you run `git pull`. Which is pretty cool, we think. 
 
 If you're looking to make your own dashboard using this as an example, you can. 
 Each project is defined in the `_data/projects.yml` file. Fill in all the 
