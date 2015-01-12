@@ -1,9 +1,9 @@
 ## Running the site locally
 
 ```bash
-./script/bootstrap
-bundle exec jekyll serve -w
-open http://localhost:3000/dashboard/
+./go init
+./go serve
+open http://localhost:4000/dashboard/
 ```
 
 ## Making changes
