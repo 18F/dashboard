@@ -56,7 +56,6 @@ def init
     puts "Bundler installed; installing gems"
   end
   update_gems
-  submodules(init = true)
   update_data
 end
 
