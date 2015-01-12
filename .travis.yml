@@ -1,13 +1,10 @@
 language: ruby
 rvm:
-  - 2.1.2
+  - 2.1.5
 
-install:
-  - gem install jekyll
-  - gem install jekyll-sitemap
-  - gem install bourbon
-
-script: "LANG=\"en_US.UTF-8\" LC_ALL=\"en_US.UTF-8\" jekyll build"
+script: "./go ci_build"
+git:
+  submodules: false
 
 notifications:
   email:
@@ -17,9 +14,3 @@ notifications:
       - gregory.boone@gsa.gov
     on_success: change
     on_failure: change
-
-branches:
-  only:
-    - gh-pages
-    - production
-    - staging

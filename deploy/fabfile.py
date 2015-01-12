@@ -4,17 +4,17 @@ from fabric.api import run, execute, env
 """
 Manage auto-deploy webhooks remotely.
 
-Staging hook:
+Staging hooks:
 
-  forever start -l $HOME/hookshot.log -a deploy/hookshot.js -p 3001 -b staging -c "cd $HOME/staging/current && git pull && jekyll build >> $HOME/hookshot.log"
-  forever restart deploy/hookshot.js -p 3001 -b staging -c "cd $HOME/staging/current && git pull && jekyll build >> $HOME/hookshot.log"
-  forever stop deploy/hookshot.js -p 3001 -b staging -c "cd $HOME/staging/current && git pull && jekyll build >> $HOME/hookshot.log"
+  forever start -l $HOME/hookshot.log -a deploy/hookshot.js -p 3001 -b staging -c "cd $HOME/staging/current && git pull && git submodule update && jekyll build >> $HOME/hookshot.log"
+  forever restart deploy/hookshot.js -p 3001 -b staging -c "cd $HOME/staging/current && git pull && git submodule update && jekyll build >> $HOME/hookshot.log"
+  forever stop deploy/hookshot.js -p 3001 -b staging -c "cd $HOME/staging/current && git pull && git submodule update && jekyll build >> $HOME/hookshot.log"
 
 Production hook:
 
-  forever start -l $HOME/hookshot.log -a deploy/hookshot.js -p 4001 -b production -c "cd $HOME/production/current && git pull && jekyll build >> $HOME/hookshot.log"
-  forever restart deploy/hookshot.js -p 4001 -b production -c "cd $HOME/production/current && git pull && jekyll build >> $HOME/hookshot.log"
-  forever stop deploy/hookshot.js -p 4001 -b production -c "cd $HOME/production/current && git pull && jekyll build >> $HOME/hookshot.log"
+  forever start -l $HOME/hookshot.log -a deploy/hookshot.js -p 4001 -b production -c "cd $HOME/production/current && git pull && git submodule update && jekyll build >> $HOME/hookshot.log"
+  forever restart deploy/hookshot.js -p 4001 -b production -c "cd $HOME/production/current && git pull && git submodule update && jekyll build >> $HOME/hookshot.log"
+  forever stop deploy/hookshot.js -p 4001 -b production -c "cd $HOME/production/current && git pull && git submodule update && jekyll build >> $HOME/hookshot.log"
 """
 
 # which hook to restart. defaults to staging, override with:
@@ -35,7 +35,7 @@ log = "%s/dashboard.log" % home
 current = "%s/%s/dashboard" % (home, environment)
 
 # principal command to run upon update
-command = "cd %s && git pull && jekyll build >> %s" % (current, log)
+command = "cd %s && git pull && git submodule update && jekyll build >> %s" % (current, log)
 
 ## can be run on their own
 
