@@ -2,7 +2,7 @@ language: ruby
 rvm:
   - 2.1.5
 
-script: "./go init && ./go build"
+script: "./go ci_build"
 git:
   submodules: false
 

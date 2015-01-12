@@ -76,12 +76,20 @@ def build
   puts 'Site built successfully.'
 end
 
+def ci_build
+  puts 'Building the site...'
+  init
+  build
+  puts 'Done!'
+end
+
 COMMANDS = {
   :init => 'Set up the Hub dev environment',
   :update_gems => 'Execute Bundler to update gem set',
   :update_data => 'Updates data files from hub',
   :serve => 'Serves the site at localhost:4000',
   :build => 'Builds the site',
+  :ci_build => 'Builds the site for a CI system',
 }
 
 def usage(exitstatus: 0)
