@@ -12,7 +12,7 @@ Please create a branch and submit changes as a pull request.
 
 ### Data
 
-To modify project information, see the instructions in [data-private](https://github.com/18F/data-public).
+To modify project information, see the instructions in [data-private](https://github.com/18F/data-private).
 
 ## Public domain
 

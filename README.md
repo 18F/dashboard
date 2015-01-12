@@ -41,7 +41,7 @@ http://localhost:4000 in your web browser.
 If you're a developer and want to experiment with the data you can do so by 
 running `git submodule init` and `git submodule update --remote`. This will
 fetch the latest yaml files out of the `data-private` repo, the same one 
-driving data for other 18F projects like the Hub.
+driving data for other 18F projects like the [Hub](https://github.com/18F/hub).
 
 ## For everyone else
 
