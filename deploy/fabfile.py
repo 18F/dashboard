@@ -35,7 +35,7 @@ current = "%s/%s/dashboard" % (home, environment)
 now = time.strftime("%Y-%m-%d", time.localtime())
 
 # principal command to run upon update
-staging = "cd %s && git pull && git submodule update --remote && ./_data/import-public.rb && git add _data/projects.yml && git commit -m 'Update data for %s' && git push && ./go build >> %s" % (current, now, log)
+staging = "cd %s && git pull && bundle && git submodule update --remote && ./_data/import-public.rb && git add _data/projects.yml && git commit -m 'Update data for %s' && git push && ./go build >> %s" % (current, now, log)
 production = "cd %s && git pull && ./go build >> %s" % (current, log)
 
 ## can be run on their own
