@@ -11,3 +11,5 @@ gems: [bourbon]
 destination: _site/dashboard
 baseurl: /dashboard
 #baseurl: localhost:4000
+exclude:
+- vendor
