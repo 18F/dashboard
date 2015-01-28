@@ -35,8 +35,16 @@ current = "%s/%s/dashboard" % (home, environment)
 now = time.strftime("%Y-%m-%d", time.localtime())
 
 # principal command to run upon update
-staging = "cd %s && git pull && bundle && git submodule update --remote && ./_data/import-public.rb && git add _data/projects.yml && git commit -m 'Update data for %s' && git push && ./go build >> %s" % (current, now, log)
-production = "cd %s && git pull && ./go build >> %s" % (current, log)
+
+if environment == 'staging':
+  deploy_cmd = ("cd %s && git pull && bundle && "
+    "git submodule update --remote && ./_data/import-public.rb && "
+    "git add _data/projects.yml && git commit -m 'Update data for %s' && "
+    "git push && ./go build >> %s" % (current, now, log))
+elif environment == 'production':
+  deploy_cmd = "cd %s && git pull && ./go build >> %s" % (current, log)
+else:
+  exit(1)
 
 ## can be run on their own
 
@@ -45,45 +53,21 @@ def start():
     exit(1)
 
   with cd(current):
-    if environment == 'staging':
-      run(
-        "forever start -l %s -a deploy/hookshot.js -p %i -b %s -c \"%s\""
-        % (log, port, environment, staging)
-      )
-    elif environment == 'production':
-      run(
-        "forever start -l %s -a deploy/hookshot.js -p %i -b %s -c \"%s\"" % (
-          log, port, environment, production)
-      )
-    else:
-      exit(1)
+    run(
+      "forever start -l %s -a deploy/hookshot.js -p %i -b %s -c \"%s\""
+      % (log, port, environment, deploy_cmd)
+    )
 
 def stop():
   with cd(current):
-    if environment == 'staging':
-      run(
-        "forever stop deploy/hookshot.js -p %i -b %s -c \"%s\""
-        % (port, environment, staging)
-      )
-    elif environment == 'production':
-      run(
-        "forever stop deploy/hookshot.js -p %i -b %s -c \"%s\""
-        % (port, environment, production)
-      )
-    else:
-      exit(1)
+    run(
+      "forever stop deploy/hookshot.js -p %i -b %s -c \"%s\""
+      % (port, environment, deploy_cmd)
+    )
 
 def restart():
   with cd(current):
-    if environment == 'staging':
-      run(
-        "forever start -l %s -a deploy/hookshot.js -p %i -b %s -c \"%s\""
-        % (log, port, environment, staging)
-      )
-    elif environment == 'production':
-      run(
-        "forever start -l %s -a deploy/hookshot.js -p %i -b %s -c \"%s\"" % (
-          log, port, environment, production)
-      )
-    else:
-      exit(1)
+    run(
+      "forever start -l %s -a deploy/hookshot.js -p %i -b %s -c \"%s\""
+      % (log, port, environment, deploy_cmd)
+    )
