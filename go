@@ -56,6 +56,7 @@ def init
     puts "Bundler installed; installing gems"
   end
   update_gems
+  build
 end
 
 def update_gems
