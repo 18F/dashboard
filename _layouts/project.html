@@ -79,6 +79,7 @@ layout: bare
         {% endif %}
 
         <!-- code -->
+        {% if project.github %}
         <div class="dashboard-code">
           <h1><i class="fa fa-chevron-right"></i> code</h1>
           {% for url in project.github %}
@@ -104,6 +105,7 @@ layout: bare
           </div>
           {% endfor %}
         </div>
+        {% endif %}
 <!--
         {% if project.team.size > 0 %}
         <div>
