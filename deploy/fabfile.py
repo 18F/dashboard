@@ -38,11 +38,12 @@ now = time.strftime("%Y-%m-%d", time.localtime())
 
 if environment == 'staging':
   deploy_cmd = ("cd %s && git pull && bundle && "
-    "git submodule update --remote && ./_data/import-public.rb && "
+    "git submodule update --remote && "
+    "/opt/install/rbenv/shims/ruby ./_data/import-public.rb && "
     "git add _data/projects.yml && git commit -m 'Update data for %s' && "
-    "git push && ./go build >> %s" % (current, now, log))
+    "git push && ./go deploy_build >> %s" % (current, now, log))
 elif environment == 'production':
-  deploy_cmd = "cd %s && git pull && ./go build >> %s" % (current, log)
+  deploy_cmd = "cd %s && git pull && ./go deploy_build >> %s" % (current, log)
 else:
   exit(1)
 
