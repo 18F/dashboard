@@ -84,6 +84,12 @@ def ci_build
   puts 'Done!'
 end
 
+def deploy_build
+  puts 'Building the site...'
+  exec_cmd('/opt/install/rbenv/shims/bundle exec jekyll b --trace')
+  puts 'Site built successfully.'
+end
+
 COMMANDS = {
   :init => 'Set up the Hub dev environment',
   :update_gems => 'Execute Bundler to update gem set',
@@ -91,6 +97,7 @@ COMMANDS = {
   :serve => 'Serves the site at localhost:4000',
   :build => 'Builds the site',
   :ci_build => 'Builds the site for a CI system',
+  :deploy_build => 'Builds the site for staging or production',
 }
 
 def usage(exitstatus: 0)
