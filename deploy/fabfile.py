@@ -37,15 +37,13 @@ now = time.strftime("%Y-%m-%d", time.localtime())
 # principal command to run upon update
 
 if environment == 'staging':
-  deploy_cmd = ("cd %s && git pull && bundle && "
-    "git submodule update --remote && "
-    "/opt/install/rbenv/shims/ruby ./_data/import-public.rb && "
-    "git add _data/projects.yml && git commit -m 'Update data for %s' && "
-    "git push && ./go deploy_build >> %s" % (current, now, log))
+  deploy_cmd = 'deploy_staging'
 elif environment == 'production':
-  deploy_cmd = "cd %s && git pull && ./go deploy_build >> %s" % (current, log)
+  deploy_cmd = 'deploy_prod'
 else:
   exit(1)
+
+deploy_cmd = "/opt/install/rbenv/shims/ruby ./go %s >> %s" % (deploy_cmd, log)
 
 ## can be run on their own
 
