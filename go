@@ -99,7 +99,7 @@ def deploy_staging
     'cd _data',
     '/opt/install/rbenv/shims/ruby ./import-public.rb',
     'cd ..',
-    'git add _data/projects.yml',
+    'git add _data',
     "if git commit -m 'Update data for #{timestamp}'; then git push; fi",
   ])
 end
