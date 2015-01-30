@@ -84,10 +84,28 @@ def ci_build
   puts 'Done!'
 end
 
-def deploy_build
+def deploy(deploy_commands)
   puts 'Building the site...'
+  exec_cmd(['git pull'].concat(deploy_commands).join(' && '))
   exec_cmd('/opt/install/rbenv/shims/bundle exec jekyll b --trace')
   puts 'Site built successfully.'
+end
+
+def deploy_staging
+  timestamp = Time.new.strftime("%Y-%m-%d")
+  deploy([
+    'git submodule update --remote',
+    '/opt/install/rbenv/shims/bundle install',
+    'cd _data',
+    '/opt/install/rbenv/shims/ruby ./import-public.rb',
+    'cd ..',
+    'git add _data/projects.yml',
+    "if git commit -m 'Update data for #{timestamp}'; then git push; fi",
+  ])
+end
+
+def deploy_prod
+  deploy []
 end
 
 COMMANDS = {
@@ -97,7 +115,8 @@ COMMANDS = {
   :serve => 'Serves the site at localhost:4000',
   :build => 'Builds the site',
   :ci_build => 'Builds the site for a CI system',
-  :deploy_build => 'Builds the site for staging or production',
+  :deploy_staging => 'Builds the staging instance of the site',
+  :deploy_prod => 'Builds the production instance of the site',
 }
 
 def usage(exitstatus: 0)
