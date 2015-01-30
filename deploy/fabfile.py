@@ -1,20 +1,20 @@
 import time
-from fabric.api import run, execute, env
+from fabric.api import run, execute, env, cd
 
 """
 Manage auto-deploy webhooks remotely.
 
-Staging hook:
+Staging hooks:
 
-  forever start -l $HOME/hookshot.log -a deploy/hookshot.js -p 3001 -b staging -c "cd $HOME/staging/current && git pull && jekyll build >> $HOME/hookshot.log"
-  forever restart deploy/hookshot.js -p 3001 -b staging -c "cd $HOME/staging/current && git pull && jekyll build >> $HOME/hookshot.log"
-  forever stop deploy/hookshot.js -p 3001 -b staging -c "cd $HOME/staging/current && git pull && jekyll build >> $HOME/hookshot.log"
+  forever start -l $HOME/hookshot.log -a deploy/hookshot.js -p 3001 -b staging -c "cd $HOME/staging/current && git pull && git submodule update && jekyll build >> $HOME/hookshot.log"
+  forever restart deploy/hookshot.js -p 3001 -b staging -c "cd $HOME/staging/current && git pull && git submodule update && jekyll build >> $HOME/hookshot.log"
+  forever stop deploy/hookshot.js -p 3001 -b staging -c "cd $HOME/staging/current && git pull && git submodule update && jekyll build >> $HOME/hookshot.log"
 
 Production hook:
 
-  forever start -l $HOME/hookshot.log -a deploy/hookshot.js -p 4001 -b production -c "cd $HOME/production/current && git pull && jekyll build >> $HOME/hookshot.log"
-  forever restart deploy/hookshot.js -p 4001 -b production -c "cd $HOME/production/current && git pull && jekyll build >> $HOME/hookshot.log"
-  forever stop deploy/hookshot.js -p 4001 -b production -c "cd $HOME/production/current && git pull && jekyll build >> $HOME/hookshot.log"
+  forever start -l $HOME/hookshot.log -a deploy/hookshot.js -p 4001 -b production -c "cd $HOME/production/current && git pull && git submodule update && jekyll build >> $HOME/hookshot.log"
+  forever restart deploy/hookshot.js -p 4001 -b production -c "cd $HOME/production/current && git pull && git submodule update && jekyll build >> $HOME/hookshot.log"
+  forever stop deploy/hookshot.js -p 4001 -b production -c "cd $HOME/production/current && git pull && git submodule update && jekyll build >> $HOME/hookshot.log"
 """
 
 # which hook to restart. defaults to staging, override with:
@@ -25,7 +25,6 @@ port = {
   "staging": 3001,
   "production": 4001
 }[environment]
-
 # expects an SSH entry named '18f-site', rather than hardcoded server details
 env.use_ssh_config = True
 env.hosts = ["18f-site"]
@@ -33,26 +32,41 @@ env.hosts = ["18f-site"]
 home = "/home/site"
 log = "%s/dashboard.log" % home
 current = "%s/%s/dashboard" % (home, environment)
+now = time.strftime("%Y-%m-%d", time.localtime())
 
 # principal command to run upon update
-command = "cd %s && git pull && jekyll build >> %s" % (current, log)
+
+if environment == 'staging':
+  deploy_cmd = 'deploy_staging'
+elif environment == 'production':
+  deploy_cmd = 'deploy_prod'
+else:
+  exit(1)
+
+deploy_cmd = "/opt/install/rbenv/shims/ruby ./go %s >> %s" % (deploy_cmd, log)
 
 ## can be run on their own
 
 def start():
-  run(
-    "cd %s && forever start -l %s -a deploy/hookshot.js -p %i -b %s -c \"%s\""
-    % (current, log, port, environment, command)
-  )
+  if type(port) != int:
+    exit(1)
+
+  with cd(current):
+    run(
+      "forever start -l %s -a deploy/hookshot.js -p %i -b %s -c \"%s\""
+      % (log, port, environment, deploy_cmd)
+    )
 
 def stop():
-  run(
-    "cd %s && forever stop deploy/hookshot.js -p %i -b %s -c \"%s\""
-    % (current, port, environment, command)
-  )
+  with cd(current):
+    run(
+      "forever stop deploy/hookshot.js -p %i -b %s -c \"%s\""
+      % (port, environment, deploy_cmd)
+    )
 
 def restart():
-  run(
-    "cd %s && forever restart deploy/hookshot.js -p %i -b %s -c \"%s\""
-    % (current, port, environment, command)
-  )
+  with cd(current):
+    run(
+      "forever start -l %s -a deploy/hookshot.js -p %i -b %s -c \"%s\""
+      % (log, port, environment, deploy_cmd)
+    )

@@ -1,6 +1,18 @@
+## Running the site locally
+
+```bash
+./go init
+./go serve
+open http://localhost:4000/dashboard/
+```
+
+## Making changes
+
 Please create a branch and submit changes as a pull request.
 
-If you are adding or editing _data/projects.yml file, PLEASE review the data guidelines at the top of the YAML file.
+### Data
+
+To modify project information, see the instructions in [data-private](https://github.com/18F/data-private).
 
 ## Public domain
 
