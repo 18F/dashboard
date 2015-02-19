@@ -55,8 +55,7 @@ def init
     exec_cmd 'gem install bundler'
     puts "Bundler installed; installing gems"
   end
-  update_gems
-  build
+  exec_cmd 'bundle_install'
 end
 
 def update_gems
@@ -80,7 +79,6 @@ end
 
 def ci_build
   puts 'Building the site...'
-  init
   build
   puts 'Done!'
 end
