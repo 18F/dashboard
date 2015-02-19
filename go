@@ -60,7 +60,8 @@ def init
 end
 
 def update_gems
-  exec_cmd 'bundle'
+  exec_cmd 'bundle update'
+  exec_cmd 'git add Gemfile.lock'
 end
 
 def update_data
