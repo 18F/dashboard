@@ -31,13 +31,26 @@
   <meta property="og:title" content="{{ site.title | xml_escape }}" />
 {% endif %}
 
-{% if page.description %}
-  <meta name="description" content="{{ page.description | xml_escape }}">
-  <meta property="og:description" content="{{ page.description | xml_escape }}" />
-{% else %}
-  <meta name="description" content="{{ site.description | xml_escape }}">
-  <meta property="og:description" content="{{ site.description | xml_escape }}" />
+{% for project in site.data.projects %}
+  {% if project.project == page.title %}
+    {% assign isproject = true %}
+    {% if project.description %}
+      <meta name="description" content="{{ project.description | xml_escape }}">
+      <meta property="og:description" content="{{ project.description | xml_escape }}" />
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if isproject != true %}
+  {% if page.description %}
+    <meta name="description" content="{{ page.description | xml_escape }}">
+    <meta property="og:description" content="{{ page.description | xml_escape }}" />
+  {% else %}
+    <meta name="description" content="{{ site.description | xml_escape }}">
+    <meta property="og:description" content="{{ site.description | xml_escape }}" />
+  {% endif %}
 {% endif %}
+
 
 <!-- use large summary card for posts with images, normal summary otherwise -->
 {% if page.image %}
