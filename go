@@ -55,12 +55,12 @@ def init
     exec_cmd 'gem install bundler'
     puts "Bundler installed; installing gems"
   end
-  update_gems
-  build
+  exec_cmd 'bundle_install'
 end
 
 def update_gems
-  exec_cmd 'bundle'
+  exec_cmd 'bundle update'
+  exec_cmd 'git add Gemfile.lock'
 end
 
 def update_data
@@ -79,7 +79,6 @@ end
 
 def ci_build
   puts 'Building the site...'
-  init
   build
   puts 'Done!'
 end
