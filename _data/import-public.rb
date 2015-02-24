@@ -1,10 +1,6 @@
 #! /usr/bin/env ruby
 #
-# Imports data from _data/private into _data/public.
-#
-# Expects to be run directly within the _data directory with the _data/private
-# submodule present. All 'private:' data is stripped from the _data/private
-# files before it is dumped into _data/public.
+# Imports project data from the 18F Public Hub API.
 #
 # Author: Mike Bland (michael.bland@gsa.gov)
 # Date:   2014-12-22
