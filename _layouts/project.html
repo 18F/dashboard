@@ -1,7 +1,8 @@
 ---
 layout: bare
 ---
-{% for project in site.data.projects %}
+{% for p in site.data.projects %}
+  {% assign project = p[1] %}
   {% if project.project == page.title %}
     <!--
       Do the other things here. Basically, we now have two objects inside this loop:

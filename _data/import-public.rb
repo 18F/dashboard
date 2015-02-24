@@ -9,8 +9,11 @@
 # Author: Mike Bland (michael.bland@gsa.gov)
 # Date:   2014-12-22
 
+require 'open-uri'
+
 DATA_DIR = File.dirname __FILE__
-pattern = File.join DATA_DIR, 'private', 'projects', '*.yml'
-files = Dir.glob(pattern)
-exit $?.exitstatus unless system(
-  "bundle exec consolidate-yaml-files #{files.join ' '} > projects.yml")
+PROJECT_DATA_URL = 'https://18f.gsa.gov/hub/api/projects/'
+
+open(PROJECT_DATA_URL) do |projects|
+  open(File.join(DATA_DIR, 'projects.json'), 'w') {|f| f.write(projects.read)}
+end
