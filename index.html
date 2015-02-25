@@ -36,11 +36,12 @@ permalink: /
 
   <section class="dashboard-projects">
     <div>
-      {% for project in site.data.projects %}
+      {% for p in site.data.projects %}
+        {% assign project_name = p[0] %}{% assign project = p[1] %}
         {% if project.status != "Hold" %}
         <div class="dashboard-projects-content">
           <div>
-            <a href="{{ site.baseurl }}/project/{{ project.name }}"><h1>{{project.project}} <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i><span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1></a>
+            <a href="{{ site.baseurl }}/project/{{ project_name }}"><h1>{{project.project}} <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i><span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1></a>
           </div>
           <div>
             <p>{% if project.description %}{{ project.description }}{% else %}Project description coming soon.{% endif %}</p>
