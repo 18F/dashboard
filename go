@@ -93,11 +93,8 @@ end
 def deploy_staging
   timestamp = Time.new.strftime("%Y-%m-%d")
   deploy([
-    'git submodule update --remote',
     '/opt/install/rbenv/shims/bundle install',
-    'cd _data',
     '/opt/install/rbenv/shims/ruby ./import-public.rb',
-    'cd ..',
     'git add _data',
     "if git commit -m 'Update data for #{timestamp}'; then git push; fi",
   ])

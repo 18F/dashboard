@@ -20,66 +20,68 @@ the the data points listed under Milestones
 [3](https://github.com/18F/dashboard/milestones/3rd%20Sprint) on individual
 project pages. The [Backlog
 Milestone](https://github.com/18F/dashboard/milestones/Backlog) includes
-data points that need further research or are currently not a priority.  
+data points that need further research or are currently not a priority.
 
 Data was prioritized based on our initial interviews, research, and guesses
 about how many of the audiences listed above would be interested in a data
 point, and then balanced against level of effort required to obtain or
-incorporate a data point.  
+incorporate a data point.
 
 Is there data that you'd like to see about our projects that's not listed
-here? Create an issue! We value feedback.  
+here? Create an issue! We value feedback.
 
 ## Installing
 
-First clone this repo. Then, install the project and all its dependencies by 
-running `./go init` in your terminal. After that, run `./go serve` and visit 
+First clone this repo. Then, install the project and all its dependencies by
+running `./go init` in your terminal. After that, run `./go serve` and visit
 http://localhost:4000 in your web browser.
 
-## For 18F Team Members
+By default you get all of our projects, and you can refresh their information
+by running the `_data/import-public.rb` script. Which is pretty cool, we
+think.
 
-If you're a developer and want to experiment with the data you can do so by 
-running `git submodule init` and `git submodule update --remote`. This will
-fetch the latest yaml files out of the `data-private` repo, the same one 
-driving data for other 18F projects like the [Hub](https://github.com/18F/hub).
-
-## For everyone else
-
-By default you get all of our projects, and the information about them should
-refresh itself whenever you run `git pull`. Which is pretty cool, we think. 
-
-If you're looking to make your own dashboard using this as an example, you can. 
-Each project is defined in the `_data/projects.yml` file. Fill in all the 
-fields for your project and then create an html file in `pages/projects` and 
-give it a name matching the `name` field in the YAML file.
+If you're looking to make your own dashboard using this as an example, you can.
+Update the `_data/projects.json` file by adding a new object (labeled with a
+slugified version of your project name) with and filling in all the fields for
+your project. Then create an html file in `pages/projects` and give it a name
+matching the slugified object name in the JSON file.
 
 ### Structure of a project
 
-Each project is represented in YAML as a set of fields, some are required,
+Each project is represented in JSON as a set of fields. Some are required,
 some optional, and some require a specific kind of formatting. Here is an
 example of a project in our dashboard.
 
-```yaml
-- project: myRA
-  name: myra
-  github:
-  - 18F/myra
-  description: "Landing page design for Treasury’s My Retirement Account program, which will provide a simple, safe, and affordable way for individuals to start saving for retirement."
-  partner:
-  - "U.S. Department of Treasury"
-  impact: "Millions of Americans do not have access to an employee-sponsored retirement plan: more than 50% of full-time and 75% of part-time workers."
-  stage: alpha
-  milestones:
-  - "August 2014: Project discovery stage started"
-  - "September 2014: Project moved from discovery to alpha"
-  contact:
-  - christopher.cairns@gsa.gov
-  stack: "JavaScript, Jekyll"
-  team: chrisc, manger
-  licenses:
-    myra: Public Domain (CC0)
-  links: http://myra.treasury.gov
-  status:
+```json
+{
+  "myra": {
+    "project": "myRA",
+    "github": [
+      "18F/myra"
+    ],
+    "partner": [
+      "U.S. Department of Treasury"
+    ],
+    "impact": "Millions of Americans do not have access to an employer-sponsored retirement plan, which includes more than 50% of full-time and 75% of part-time workers.",
+    "stage": "live",
+    "milestones": [
+      "August 2014: Project discovery stage started",
+      "September 2014: Project moved from discovery to alpha"
+    ],
+    "contact": [
+      "christopher.cairns@gsa.gov"
+    ],
+    "stack": "JavaScript, Jekyll",
+    "licenses": {
+      "myra": "Public Domain (CC0)"
+    },
+    "links": "https://myra.treasury.gov",
+    "team": [
+      "chrisc",
+      "manger"
+    ]
+  },
+}
 ```
 
 #### Fields
@@ -105,7 +107,7 @@ fail if they're missing but the project's page will look a bit thin.
 ### JavaScript
 
 There are three variables at the beginning of the `assets/js/main.js` file
-that you'll want to set in order to grab data about your projects.  
+that you'll want to set in order to grab data about your projects.
 
 ```javascript
 var GITHUB_API = "https://api.github.com/";
@@ -132,7 +134,7 @@ case for your server.
 
 ### HTML
 
-Once you have the YAML in place, create an html file in the `pages/project`
+Once you have the JSON in place, create an html file in the `pages/project`
 directory that shares its name with the `name` field. For example,
 `pages/project/myra.html`.
 
@@ -160,8 +162,7 @@ This site will also generate a publicly accessible `json` file at
 `api/data/projects.json` if it is run on a non-GitHub pages server. Because
 GitHub Pages runs Jekyll in safe mode, it will not generate on GitHub pages.
 If you want to make that data accessible on GitHub pages, you could consider
-converting projects.yml to a JSON file and following [the directions on this
-IRC
+following [the directions on this IRC
 transcript.](https://botbot.me/freenode/jekyll/2014-10-17/?msg=23655667&page=1 ).
 
 ## Feedback
