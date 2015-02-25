@@ -90,20 +90,6 @@ def deploy(deploy_commands)
   puts 'Site built successfully.'
 end
 
-def deploy_staging
-  timestamp = Time.new.strftime("%Y-%m-%d")
-  deploy([
-    '/opt/install/rbenv/shims/bundle install',
-    '/opt/install/rbenv/shims/ruby ./import-public.rb',
-    'git add _data',
-    "if git commit -m 'Update data for #{timestamp}'; then git push; fi",
-  ])
-end
-
-def deploy_prod
-  deploy []
-end
-
 COMMANDS = {
   :init => 'Set up the Hub dev environment',
   :update_gems => 'Execute Bundler to update gem set',

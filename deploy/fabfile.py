@@ -36,14 +36,7 @@ now = time.strftime("%Y-%m-%d", time.localtime())
 
 # principal command to run upon update
 
-if environment == 'staging':
-  deploy_cmd = 'deploy_staging'
-elif environment == 'production':
-  deploy_cmd = 'deploy_prod'
-else:
-  exit(1)
-
-deploy_cmd = "/opt/install/rbenv/shims/ruby ./go %s >> %s" % (deploy_cmd, log)
+deploy_cmd = "/opt/install/rbenv/shims/ruby ./go build >> %s" % (log)
 
 ## can be run on their own
 
