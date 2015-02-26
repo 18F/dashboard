@@ -97,9 +97,7 @@ COMMANDS = {
   :serve => 'Serves the site at localhost:4000',
   :build => 'Builds the site',
   :ci_build => 'Builds the site for a CI system',
-  :deploy_staging => 'Builds the staging instance of the site',
-  :deploy_prod => 'Builds the production instance of the site',
-}
+  }
 
 def usage(exitstatus: 0)
   puts <<EOF
