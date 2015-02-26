@@ -55,12 +55,12 @@ def init
     exec_cmd 'gem install bundler'
     puts "Bundler installed; installing gems"
   end
-  update_gems
-  build
+  exec_cmd 'bundle_install'
 end
 
 def update_gems
-  exec_cmd 'bundle'
+  exec_cmd 'bundle update'
+  exec_cmd 'git add Gemfile.lock'
 end
 
 def update_data
@@ -79,7 +79,6 @@ end
 
 def ci_build
   puts 'Building the site...'
-  init
   build
   puts 'Done!'
 end
@@ -91,23 +90,6 @@ def deploy(deploy_commands)
   puts 'Site built successfully.'
 end
 
-def deploy_staging
-  timestamp = Time.new.strftime("%Y-%m-%d")
-  deploy([
-    'git submodule update --remote',
-    '/opt/install/rbenv/shims/bundle install',
-    'cd _data',
-    '/opt/install/rbenv/shims/ruby ./import-public.rb',
-    'cd ..',
-    'git add _data',
-    "if git commit -m 'Update data for #{timestamp}'; then git push; fi",
-  ])
-end
-
-def deploy_prod
-  deploy []
-end
-
 COMMANDS = {
   :init => 'Set up the Hub dev environment',
   :update_gems => 'Execute Bundler to update gem set',
@@ -115,9 +97,7 @@ COMMANDS = {
   :serve => 'Serves the site at localhost:4000',
   :build => 'Builds the site',
   :ci_build => 'Builds the site for a CI system',
-  :deploy_staging => 'Builds the staging instance of the site',
-  :deploy_prod => 'Builds the production instance of the site',
-}
+  }
 
 def usage(exitstatus: 0)
   puts <<EOF
