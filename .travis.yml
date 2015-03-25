@@ -1,17 +1,15 @@
 sudo: false
-
 language: ruby
 rvm:
-  - 2.1.5
-
+- 2.1.5
 script: "./go ci_build"
 git:
   submodules: false
-
 notifications:
   email:
     recipients:
-      - michelle.hertzfeld@gsa.gov
-      - gregory.boone@gsa.gov
+    - michelle.hertzfeld@gsa.gov
+    - gregory.boone@gsa.gov
     on_success: change
     on_failure: change
+  webhooks: http://project-monitor.cf.18f.us/projects/dashboard/status
