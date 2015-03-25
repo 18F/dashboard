@@ -1131,6 +1131,9 @@
 
 // Accessibility Helpers
 //********************************************************
+
+// Visually hides element while allowing access by screen readers
 .accessible-not-visible {
-	display: none;
+	position: absolute;
+	left: -999999px;
 }
