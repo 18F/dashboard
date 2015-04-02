@@ -30,6 +30,10 @@ incorporate a data point.
 Is there data that you'd like to see about our projects that's not listed
 here? Create an issue! We value feedback.
 
+## Editing the Dashboard
+
+To edit project details on `18f.gsa.gov/dashboard`, find it's respective file in `18F/data-private` and submit a pull request.  Once merged, this will update it on the Hub and Dashboard.
+
 ## Installing
 
 First clone this repo. Then, install the project and all its dependencies by
