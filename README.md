@@ -102,7 +102,7 @@ example of a project in our dashboard.
 - `stack` What tech are you using here?
 - `team` Who is on the project? Requires an api endpoint configured on your main site
 - `licenses` A list of key-value pairs where the key is the github repo and the value is the license (e.g., myra: Public Domain (CC0))
-- `links` A relevant links you wnat to include (despite the name we currently only support one here)
+- `links` A relevant links you want to include (despite the name we currently only support one here)
 - `status` For now, set this to hidden to hide the project from the dashboard (you might want to do this if you have incomplete data, for example)
 
 Except for `project` and `github` none of these will cause your dashboard to
