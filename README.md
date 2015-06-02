@@ -32,7 +32,7 @@ here? Create an issue! We value feedback.
 
 ## Editing the Dashboard
 
-To edit project details on `18f.gsa.gov/dashboard`, find it's respective file in `18F/data-private` and submit a pull request.  Once merged, this will update it on the Hub and Dashboard.
+To edit project details on `18f.gsa.gov/dashboard`, find it's respective file in `18F/data-private` and submit a pull request.  Once merged, a couple things need to happen then it will update on the Hub and Dashboard.  This should take just a few hours, but if there's any urgency, reach out to the Outreach team on Slack. 
 
 ## Installing
 
