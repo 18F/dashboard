@@ -8,7 +8,7 @@
 require 'open-uri'
 
 DATA_DIR = File.dirname __FILE__
-PROJECT_DATA_URL = 'https://18f.gsa.gov/hub/api/projects/'
+PROJECT_DATA_URL = 'https://hub.18f.gov/hub/api/projects/'
 
 open(PROJECT_DATA_URL) do |projects|
   open(File.join(DATA_DIR, 'projects.json'), 'w') {|f| f.write(projects.read)}
