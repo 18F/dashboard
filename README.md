@@ -30,6 +30,10 @@ incorporate a data point.
 Is there data that you'd like to see about our projects that's not listed
 here? Create an issue! We value feedback.
 
+## Editing the Dashboard
+
+To edit project details on `18f.gsa.gov/dashboard`, find it's respective file in `18F/data-private` and submit a pull request.  Once merged, a couple things need to happen then it will update on the Hub and Dashboard.  This mayt take a few days, so if there's any urgency, reach out to the Outreach team on Slack. 
+
 ## Installing
 
 First clone this repo. Then, install the project and all its dependencies by
@@ -98,7 +102,7 @@ example of a project in our dashboard.
 - `stack` What tech are you using here?
 - `team` Who is on the project? Requires an api endpoint configured on your main site
 - `licenses` A list of key-value pairs where the key is the github repo and the value is the license (e.g., myra: Public Domain (CC0))
-- `links` A relevant links you wnat to include (despite the name we currently only support one here)
+- `links` A relevant links you want to include (despite the name we currently only support one here)
 - `status` For now, set this to hidden to hide the project from the dashboard (you might want to do this if you have incomplete data, for example)
 
 Except for `project` and `github` none of these will cause your dashboard to
