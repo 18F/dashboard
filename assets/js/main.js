@@ -5,8 +5,10 @@ var ORGANIZATION = "18f";
 // team api will always be at the same server the dashboard is running on, this
 // makes it flexible for local dev environments by sniffing out the beginning of
 // url and lopping any subdirectories off the browser's current document
-var urlRootIndex = document.URL.substr(7).indexOf('/');
-var urlRoot = document.URL.substr(0,urlRootIndex+7);
+var docUrl = document.URL;
+var substrBegin = docUrl.startsWith('https://') ? 8 : 7;
+var urlRootIndex = docUrl.substr(substrBegin).indexOf('/');
+var urlRoot = docUrl.substr(0,urlRootIndex+substrBegin);
 var TEAM = urlRoot+"/api/data/team.json"
 
 modules[0] = function(repo_name) {
