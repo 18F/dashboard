@@ -36,7 +36,7 @@ now = time.strftime("%Y-%m-%d", time.localtime())
 
 # principal command to run upon update
 
-deploy_cmd = "/opt/install/rbenv/shims/ruby ./go build >> %s" % (log)
+deploy_cmd = "/opt/install/rbenv/shims/ruby ./go deploy >> %s" % (log)
 
 ## can be run on their own
 
