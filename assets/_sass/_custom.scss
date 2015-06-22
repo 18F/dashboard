@@ -764,19 +764,23 @@
 	}
 }
 
-.discovery {
+.dashboard-overview .discovery,
+.status.discovery {
 	background-color: $medium-gray;
 }
 
-.alpha {
-	background-color: $medium-blue;	
+.dashboard-overview .alpha,
+.status.alpha {
+	background-color: $medium-blue;
 }
 
-.beta {
+.dashboard-overview .beta,
+.status.beta {
 	background-color: $green;
 }
 
-.live {
+.dashboard-overview .live,
+.status.live {
 	background-color: $red;
 }
 
@@ -824,7 +828,7 @@
 	margin-bottom: 40px;
 	-webkit-text-stroke: 1px white;
   	text-shadow:
-   -1px -1px 0 white,  
+   -1px -1px 0 white,
     1px -1px 0 white,
    -1px  1px 0 white,
     1px  1px 0 white;
