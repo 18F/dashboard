@@ -273,9 +273,8 @@
       "18F/calc"
     ],
     "description": "CALC is a tool to help contracting personnel estimate their per-hour labor costs for a contract, based on historical pricing information.",
-    "partner": [
-      "General Services Administration"
-    ],
+    "partner": "General Services Administration",
+    "impact": "All federal acquisition personnel involved in buying professional services",
     "stage": "beta",
     "milestones": [
       "November 2014: Initial discovery stage begins",
@@ -284,9 +283,9 @@
       "May 2015: Public beta launched"
     ],
     "contact": [
-      "nick.brethauer@gsa.gov"
+      "nicholas.brethauer@gsa.gov"
     ],
-    "stack": "Python, JavaScript",
+    "stack": "Python, Django, JavaScript, Postgres",
     "licenses": {
       "mirage": "Public Domain (CC0)"
     },
@@ -298,6 +297,7 @@
       "shawn",
       "maya",
       "brethauer",
+      "christine",
       "kaitlin",
       "alison",
       "josh",
@@ -307,7 +307,8 @@
   "pulse": {
     "project": "Pulse",
     "github": [
-      "18F/pulse"
+      "18F/pulse",
+      "18F/domain-scan"
     ],
     "description": "A lightweight dashboard that uses the official .gov domain list to measure HTTPS integration and participation in the Digital Analytics Program.",
     "partner": [
@@ -423,7 +424,7 @@
       "C2": "Public Domain (CC0)"
     },
     "links": [
-      "https://cap.18f.us"
+      "https://cap.18f.gov"
     ],
     "team": [
       "nick",
@@ -435,7 +436,8 @@
   "dap": {
     "project": "Analytics.USA.gov",
     "github": [
-      "gsa/analytics.usa.gov"
+      "gsa/analytics.usa.gov",
+      "18f/analytics-reporter"
     ],
     "description": "A lightweight dashboard that shows web traffic across the .gov domain.",
     "partner": [
