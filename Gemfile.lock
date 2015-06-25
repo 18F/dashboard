@@ -79,3 +79,6 @@ DEPENDENCIES
   jekyll (~> 2.0)
   jekyll-sitemap
   safe_yaml
+
+BUNDLED WITH
+   1.10.5
