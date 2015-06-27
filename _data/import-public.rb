@@ -5,11 +5,21 @@
 # Author: Mike Bland (michael.bland@gsa.gov)
 # Date:   2014-12-22
 
+require 'json'
 require 'open-uri'
 
 DATA_DIR = File.dirname __FILE__
 PROJECT_DATA_URL = 'https://hub.18f.gov/hub/api/projects/'
 
+def pretty_format_json(input)
+  json = JSON.parse(input)
+  JSON.pretty_generate(json)
+end
+
 open(PROJECT_DATA_URL) do |projects|
-  open(File.join(DATA_DIR, 'projects.json'), 'w') {|f| f.write(projects.read)}
+  open(File.join(DATA_DIR, 'projects.json'), 'w') do |f|
+    input = projects.read
+    output = pretty_format_json(input)
+    f.write(output)
+  end
 end
