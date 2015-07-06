@@ -3,7 +3,11 @@ layout: bare
 title: Dashboard
 permalink: /
 ---
-
+{% assign discovery = (site.data.projects | where:"stage","discovery")%}
+{% assign alpha = (site.data.projects | where:"stage","alpha")%}
+{% assign beta = (site.data.projects | where:"stage","beta")%}
+{% assign live = (site.data.projects | where:"stage","live")%}
+{% assign projects = [discovery, alpha, beta, live] %}
 <section class="dashboard">
   <h1>{{page.title}}</h1>
   <p class="lead">We are building digital services for the American people. Follow our progress and get involved here.</p>
@@ -11,7 +15,7 @@ permalink: /
     <a href="{{ site.baseurl }}/stages/#discovery">
       <li class="discovery"><span class="status">discovery</span>
         <p class="status-description">User needs are researched and identified.</p>
-        <p class="dashboard-overview-numbers">1</p>
+        <p class="dashboard-overview-numbers">{{ discovery.size }}</p>
       </li>
     </a>
     <a href="{{ site.baseurl }}/stages/#alpha">
