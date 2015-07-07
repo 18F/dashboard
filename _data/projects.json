@@ -39,14 +39,21 @@
     "github": [
       "18F/FEC"
     ],
-    "description": "Redesigning how the Federal Election Commission shares campaign finance information and regulations.",
+    "description": "Redesigning how the Federal Election Commission shares campaign finance information and regulations.
+
+      This effort involves:
+      - The [FEC’s first API](https://api.open.fec.gov/developers)
+      - A new campaign finance portal (Coming soon!)
+      - An eventual redesign of the agency’s website.",
     "partner": [
       "Federal Election Commission"
     ],
     "impact": "The FEC collects data about how campaigns are financed that affect all 318 million Americans every 2 years.",
-    "stage": "discovery",
+    "stage": "beta",
     "milestones": [
-      "June 2014: Project Discovery stage started"
+      "June 2014: Project Discovery stage started",
+      "May 2015: Alpha testing of API and website",
+      "July 2015: Beta testing of the API",
     ],
     "contact": [
       "18F/FEC/issues"
@@ -59,15 +66,24 @@
     "blog": [
       "FEC"
     ],
+    "links": [
+        "https://api.open.fec.gov/developers",
+        "https://github.com/18F/openFEC",
+        "https://github.com/18F/openFEC-web-app",
+        "https://github.com/18F/fec-alpha",
+    ],
     "team": [
-      "leah",
-      "joshcarp",
-      "sean",
-      "manger",
       "alison",
+      "cm",
+      "emileigh",
+      "jeremy",
+      "joshcarp",
+      "jthibault",
+      "manger",
+      "leah",
+      "lindsay",
       "marco",
-      "lindsay"
-    ]
+    ],
   },
   "myra": {
     "project": "myRA",
