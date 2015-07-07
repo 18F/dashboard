@@ -49,7 +49,7 @@ permalink: /
 
           <div>
 
-            <p>{% if project.partner.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partner %}<strong>{% include list-partners.html style="strong" %}</strong>{% else %}Coming soon{% endif %}</p>
+            <p>{% if project.partner.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partner %}{% include list-partners.html style="strong" %}{% else %}Coming soon{% endif %}</p>
 
             <p><i class="fa fa-github-alt"></i> / <a class="github-url" href="https://github.com/{{project.github.first}}">Code</a> / </p>
 
