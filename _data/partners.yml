@@ -1,0 +1,45 @@
+u-s-department-of-treasury:
+  url: http://treasury.gov
+gsa:
+  url: http://gsa.gov
+  full_name: General Services Administration
+general-services-administration:
+  url: http://gsa.gov
+federal-election-commission:
+  url: http://fec.gov
+  acronym: FEC
+air-force:
+  url: http://af.mil
+  acronym: USAF
+department-of-homeland-security:
+  url: http://dhs.gov
+  acronym: DHS
+u-s-citizen-and-immigration-services:
+  url: http://uscis.gov
+  acronym: USCIS
+peace-corps:
+  url: http://peacecorps.gov
+census:
+  url: http://census.gov
+fcc:
+  url: http://fcc.gov
+  full_name: Federal Communications Commission
+fda:
+  url: http://fda.gov
+  full_name: U.S. Food and Drug Administration
+nrel:
+  url: http://nrel.gov
+  full_name: National Renewable Energy Laboratory
+usda:
+  url: http://usda.gov
+  full_name: U.S. Department of Agriculture
+regulations-gov:
+  url: http://regulations.gov
+department-of-the-interior:
+  url: http://interior.gov
+  acronym: DOI
+department-of-state:
+  url: http://www.state.gov
+department-of-health-and-human-services:
+  url: http://dhs.gov
+  acronym: DHS

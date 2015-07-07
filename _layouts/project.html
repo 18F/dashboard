@@ -59,11 +59,8 @@ layout: bare
               <h1><i class="fa fa-chevron-right"></i> partner</h1>
             {% endif %}
             <ul>
-              {% for agency in project.partner %}
-                <li>{{ agency }}</li>
-              {% endfor %}
+              {% include list-partners.html style="list" %}
             </ul>
-            <p>{{ project.partners | join: ', '}}</p>
           </div>
         {% endif %}
 
