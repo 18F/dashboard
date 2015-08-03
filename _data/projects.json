@@ -129,11 +129,11 @@
     ],
     "description": "A new tool to search for the correct agency or office to make a FOIA request.",
     "partner": [
-      "Department of Justice"
+      "General Services Administration"
     ],
     "partners": "Also participating: FOIA agency task force.",
     "impact": "The U.S. Federal Government processed nearly 700,000 FOIA requests in fiscal year 2013.",
-    "stage": "alpha",
+    "stage": "beta",
     "milestones": [
       "June 2014: Project Discovery stage started"
     ],
