@@ -13,3 +13,11 @@ baseurl: /dashboard
 #baseurl: localhost:4000
 exclude:
 - vendor
+
+# To disable fetching from the Team API and to build from local data, prefix
+# the following field with an underscore.
+_team_api:
+  #baseurl: http://localhost:4001/public/api/
+  #suffix: api.json
+  baseurl: https://team-api.18f.gov/public/api/
+  host: team-api.18f.gov
