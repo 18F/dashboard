@@ -119,10 +119,8 @@ layout: bare
   {% if project.links %}
     <div>
       <h1><i class="fa fa-chevron-right"></i> related links</h1>
-      <ul>
-        {% for item in project.links %}
-        <li><a href="{{ item }}">{{ item }}</a></li>
-        {% endfor %}
+      <ul>{% for item in project.links %}
+        <li>{% if item.url %}<a href="{{ item.url }}">{{ item.text }}</a></li>{% else %}<a href="{{ item }}">{{ item }}</a>{% endif %}</li>{% endfor %}
       </ul>
     </div>
   {% endif %}
