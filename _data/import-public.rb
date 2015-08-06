@@ -9,7 +9,7 @@ require 'json'
 require 'open-uri'
 
 DATA_DIR = File.dirname __FILE__
-PROJECT_DATA_URL = 'https://hub.18f.gov/hub/api/projects/'
+PROJECT_DATA_URL = 'https://team-api.18f.gov/public/api/projects/'
 
 def pretty_format_json(input)
   json = JSON.parse(input)
