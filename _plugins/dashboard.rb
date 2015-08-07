@@ -3,6 +3,7 @@ require 'json'
 require 'open-uri'
 
 module Dashboard
+  # Generates an individual project page from project data.
   class ProjectPage < Jekyll::Page
     private_class_method :new
 
@@ -12,14 +13,14 @@ module Dashboard
       @dir = File.join 'project', project_id
       @name = 'index.html'
 
-      self.process @name
-      self.read_yaml File.join(@base, '_layouts'), 'project.html'
+      process @name
+      read_yaml File.join(@base, '_layouts'), 'project.html'
     end
 
     # TODO(mbland): Remove this once the Team API is standardized.
     FIELDS_TO_TRANSLATE = {
       'project' => 'full_name',
-      'mission' => 'description',
+      'mission' => 'description'
     }
 
     def self.munge_project_data(project_data)
