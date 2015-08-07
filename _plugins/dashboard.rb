@@ -46,7 +46,18 @@ module Dashboard
     # Executes all of the data processing and artifact/page generation phases
     # for the Hub.
     def generate(site)
+      import_team_api_data site
       generate_project_pages site
+    end
+
+    def import_team_api_data(site)
+      team_api = site.config['team_api']
+      return if team_api.nil?
+      suffix = team_api['suffix'] || ''
+      endpoint = File.join team_api['baseurl'], 'projects', suffix
+      open(endpoint, 'Host' => team_api['host']) do |endpoint_data|
+        site.data['projects'] = JSON.parse endpoint_data.read
+      end
     end
 
     def generate_project_pages(site)
