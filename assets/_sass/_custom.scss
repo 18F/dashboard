@@ -738,6 +738,10 @@
 			text-decoration: underline;
 		}
 	}
+	strong > a {
+		color: $dark-gray;
+		text-decoration: underline;
+	}
 }
 
 .dashboard-status-definitions {
