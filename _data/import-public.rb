@@ -11,15 +11,9 @@ require 'open-uri'
 DATA_DIR = File.dirname __FILE__
 PROJECT_DATA_URL = 'https://team-api.18f.gov/public/api/projects/'
 
-def pretty_format_json(input)
-  json = JSON.parse(input)
-  JSON.pretty_generate(json)
-end
-
 open(PROJECT_DATA_URL) do |projects|
   open(File.join(DATA_DIR, 'projects.json'), 'w') do |f|
-    input = projects.read
-    output = pretty_format_json(input)
-    f.write(output)
+    f.write JSON.pretty_generate(
+      JSON.parse(projects.read)['results'].map { |p| [p['name'], p] }.to_h)
   end
 end

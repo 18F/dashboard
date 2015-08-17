@@ -56,7 +56,8 @@ module Dashboard
       suffix = team_api['suffix'] || ''
       endpoint = File.join team_api['baseurl'], 'projects', suffix
       open(endpoint, 'Host' => team_api['host']) do |endpoint_data|
-        site.data['projects'] = JSON.parse endpoint_data.read
+        projects = JSON.parse(endpoint_data.read)['results']
+        site.data['projects'] = projects.map { |p| [p['name'], p] }.to_h
       end
     end
 
