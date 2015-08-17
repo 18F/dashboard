@@ -738,6 +738,12 @@
 			text-decoration: underline;
 		}
 	}
+	strong > a {
+		color: $dark-gray;
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
 }
 
 .dashboard-status-definitions {
