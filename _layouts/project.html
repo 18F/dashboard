@@ -1,142 +1,132 @@
 ---
 layout: bare
 ---
-{% for p in site.data.projects %}
-  {% assign project = p[1] %}
-  {% if project.project == page.title %}
-    <!--
-      Do the other things here. Basically, we now have two objects inside this loop:
-      - the page object which has anything in a page's front matter
-      - the project object, which is the project inside _data/projects.yml
-        whose `project` field matches thie page's `title` field.
-    -->
-    <section class="dashboard-project">
-      <nav><a href="{{ site.baseurl }}/"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i> back to main dashboard</a></nav>
-      <h1>{{ page.title }} <span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1>
-      <p>{{ project.description }}</p>
-      <p>Contact:
-        {% capture contact %}{{ project.contact }}{% endcapture %}
-        {% assign contact = contact | split: ',' %}
-        {% for c in contact %}
-          {% if c contains '@' %}
-            <a href="mailto:{{c}}">{{c}}</a>
-          {% else %}
-            <a href="https://www.github.com/{{c}}">{{c}}</a>
-          {% endif %}
-        {% endfor %}
-      </p>
-      {% capture blog %}{{ project.blog }}{% endcapture %}
-      {% assign tags = blog | split: ',' %}
-      {% if tags.size > 0 %}
-        <p>
-          <i class="fa fa-newspaper-o"></i>  /
-          <span class="blog-tags" itemprop="keywords">
-            {% for t in tags %}
-              <a href="https://18f.gsa.gov/tags/{{ t }}">News</a>
-              /
-            {% endfor %}
-          </span>
-        </p>
-      {% endif %}
-    </section>
-
-    <section class="dashboard-info-area">
-      <div>
-        <!-- impact -->
-        {% if project.impact %}
-          <div>
-            <h1><i class="fa fa-chevron-right"></i> impact</h1>
-            <p>{{ project.impact }}</p>
-          </div>
-        {% endif %}
-
-        <!-- partners -->
-        {% if project.partner %}
-          <div>
-            {% if project.partner.size > 1 %}
-              <h1><i class="fa fa-chevron-right"></i> partners</h1>
-            {% else %}
-              <h1><i class="fa fa-chevron-right"></i> partner</h1>
-            {% endif %}
-            <ul>
-              {% for agency in project.partner %}
-                <li>{{ agency }}</li>
-              {% endfor %}
-            </ul>
-            <p>{{ project.partners | join: ', '}}</p>
-          </div>
-        {% endif %}
-
-        <!-- milestones -->
-        {% if project.milestones %}
-          <div>
-            <h1><i class="fa fa-chevron-right"></i> milestones</h1>
-            <ul>
-              {% for item in project.milestones %}
-              <li>{{ item }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-        {% endif %}
-
-        <!-- code -->
-        {% if project.github %}
-        <div class="dashboard-code">
-          <h1><i class="fa fa-chevron-right"></i> code</h1>
-          {% for url in project.github %}
-          {% capture repo_name %}{{ url | split: "/" | last }}{% endcapture %}
-          <div class="{{ repo_name | replace: ".", "-" }} repo">
-            <h1>
-              {% if project.github | first %}
-              <i class="fa fa-github-alt"></i> <a class="github-url" href="https://github.com/{{ url }}">{{ url }}</a>
-              {% else %}
-              <i class="fa fa-github-alt"></i> <a href="https://github.com/{{ url }}">{{ url }}</a>
-              {% endif %}
-            </h1>
-            <ul>
-              <li class="issues"><i class="fa fa-exclamation-circle"></i> Issues: </li>
-              <li class="stars"><i class="fa fa-star"></i> Stars: </li>
-              <li class="forks"><i class="fa fa-code-fork"></i> Forks: </li>
-              {% for license in project.licenses %}{% if license[0] == repo_name %}
-              {% capture branch %}{% if project.licenseBranch %}{{ project.licenseBranch | map: repo_name }}{% else %}master{%endif%}{% endcapture %}
-              <li><i class="fa fa-legal {{ license[0] }}"></i> License: <a href="https://github.com/{{ url }}/blob/{{ branch }}/LICENSE.md">{{ license[1] }}</a></li>
-                {% endif %}
-              {% endfor %}
-            </ul>
-          </div>
-          {% endfor %}
-        </div>
-        {% endif %}
 <!--
-        {% if project.team.size > 0 %}
-        <div>
-           <h1>Team:</h1>
-           <ul class="staff">
-             {% capture team %}{{ project.team }}{% endcapture %}
-             {% assign team = team | split: ',' %}
-             {% for name in team %}
-              <li class="{{ name | replace: ' ', '' }}"></li>
-             {% endfor %}
-           </ul>
-         </div>
-        {% endif %}
+  Do the other things here. Basically, we now have two objects inside this loop:
+  - the page object which has anything in a page's front matter
+  - the project object, which is the project inside _data/projects.yml
+    whose `project` field matches thie page's `title` field.
 -->
-      <!-- additional links -->
-      {% if project.links %}
-        <div>
-          <h1><i class="fa fa-chevron-right"></i> related links</h1>
-          <ul>
-            {% for item in project.links %}
-            <li><a href="{{ item }}">{{ item }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
+{% assign project = page.project %}<section class="dashboard-project">
+  <nav><a href="{{ site.baseurl }}/"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i> back to main dashboard</a></nav>
+  <h1>{{ project.full_name }} <span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1>
+  <p>{% if project.description %}{{ project.description }}{% else %}Project description coming soon.{% endif %}</p>
+  <p>Contact:
+    {% capture contact %}{{ project.contact }}{% endcapture %}
+    {% assign contact = contact | split: ',' %}
+    {% for c in contact %}
+      {% if c contains '@' %}
+        <a href="mailto:{{c}}">{{c}}</a>
+      {% else %}
+        <a href="https://www.github.com/{{c}}">{{c}}</a>
       {% endif %}
-
-      </div>
-    </section>
+    {% endfor %}
+  </p>
+  {% capture blog %}{{ project.blog }}{% endcapture %}
+  {% assign tags = blog | split: ',' %}
+  {% if tags.size > 0 %}
+    <p>
+      <i class="fa fa-newspaper-o"></i>  /
+      <span class="blog-tags" itemprop="keywords">
+        {% for t in tags %}
+          <a href="https://18f.gsa.gov/tags/{{ t }}">News</a>
+          /
+        {% endfor %}
+      </span>
+    </p>
   {% endif %}
-{% endfor %}
+</section>
+
+<section class="dashboard-info-area">
+  <div>
+    <!-- impact -->
+    {% if project.impact %}
+      <div>
+        <h1><i class="fa fa-chevron-right"></i> impact</h1>
+        <p>{{ project.impact }}</p>
+      </div>
+    {% endif %}
+
+    <!-- partners -->
+    {% if project.partner %}
+      <div>
+        {% if project.partner.size > 1 %}
+          <h1><i class="fa fa-chevron-right"></i> partners</h1>
+        {% else %}
+          <h1><i class="fa fa-chevron-right"></i> partner</h1>
+        {% endif %}
+        <ul>
+          {% include list-partners.html style="list" %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <!-- milestones -->
+    {% if project.milestones %}
+      <div>
+        <h1><i class="fa fa-chevron-right"></i> milestones</h1>
+        <ul>
+          {% for item in project.milestones %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <!-- code -->
+    {% if project.github %}
+    <div class="dashboard-code">
+      <h1><i class="fa fa-chevron-right"></i> code</h1>
+      {% for url in project.github %}
+      {% capture repo_name %}{{ url | split: "/" | last }}{% endcapture %}
+      <div class="{{ repo_name | replace: ".", "-" }} repo">
+        <h1>
+          {% if project.github | first %}
+          <i class="fa fa-github-alt"></i> <a class="github-url" href="https://github.com/{{ url }}">{{ url }}</a>
+          {% else %}
+          <i class="fa fa-github-alt"></i> <a href="https://github.com/{{ url }}">{{ url }}</a>
+          {% endif %}
+        </h1>
+        <ul>
+          <li class="issues"><i class="fa fa-exclamation-circle"></i> Issues: </li>
+          <li class="stars"><i class="fa fa-star"></i> Stars: </li>
+          <li class="forks"><i class="fa fa-code-fork"></i> Forks: </li>
+          {% for license in project.licenses %}{% if license[0] == repo_name %}
+          {% capture branch %}{% if project.licenseBranch %}{{ project.licenseBranch | map: repo_name }}{% else %}master{%endif%}{% endcapture %}
+          <li><i class="fa fa-legal {{ license[0] }}"></i> License: <a href="https://github.com/{{ url }}/blob/{{ branch }}/LICENSE.md">{{ license[1] }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+<!--
+    {% if project.team.size > 0 %}
+    <div>
+       <h1>Team:</h1>
+       <ul class="staff">
+         {% capture team %}{{ project.team }}{% endcapture %}
+         {% assign team = team | split: ',' %}
+         {% for name in team %}
+          <li class="{{ name | replace: ' ', '' }}"></li>
+         {% endfor %}
+       </ul>
+     </div>
+    {% endif %}
+-->
+  <!-- additional links -->
+  {% if project.links %}
+    <div>
+      <h1><i class="fa fa-chevron-right"></i> related links</h1>
+      <ul>{% for item in project.links %}
+        <li>{% if item.url %}<a href="{{ item.url }}">{{ item.text }}</a></li>{% else %}<a href="{{ item }}">{{ item }}</a>{% endif %}</li>{% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  </div>
+</section>
 
 {% include dashboard-contact.html %}
 

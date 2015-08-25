@@ -3,7 +3,11 @@ layout: bare
 title: Dashboard
 permalink: /
 ---
-
+{% assign discovery = (site.data.projects | where:"stage","discovery")%}
+{% assign alpha = (site.data.projects | where:"stage","alpha")%}
+{% assign beta = (site.data.projects | where:"stage","beta")%}
+{% assign live = (site.data.projects | where:"stage","live")%}
+{% assign projects = [discovery, alpha, beta, live] %}
 <section class="dashboard">
   <h1>{{page.title}}</h1>
   <p class="lead">We are building digital services for the American people. Follow our progress and get involved here.</p>
@@ -11,25 +15,25 @@ permalink: /
     <a href="{{ site.baseurl }}/stages/#discovery">
       <li class="discovery"><span class="status">discovery</span>
         <p class="status-description">User needs are researched and identified.</p>
-        <p class="dashboard-overview-numbers">1</p>
+        <p class="dashboard-overview-numbers">{{ discovery.size }}</p>
       </li>
     </a>
     <a href="{{ site.baseurl }}/stages/#alpha">
       <li class="alpha"><span class="status alpha">alpha</span>
         <p class="status-description">A prototype is built to meet the main user needs.</p>
-        <p class="dashboard-overview-numbers">5</p>
+        <p class="dashboard-overview-numbers">{{alpha.size}}</p>
       </li>
     </a>
     <a href="{{ site.baseurl }}/stages/#beta">
       <li class="beta"><span class="status beta">beta</span>
         <p class="status-description">The service is improved, then tested in public.</p>
-        <p class="dashboard-overview-numbers">10</p>
+        <p class="dashboard-overview-numbers">{{beta.size}}</p>
       </li>
     </a>
     <a href="{{ site.baseurl }}/stages/#live">
       <li class="live"><span class="status live">live</span>
         <p class="status-description">The service is public and works well.</p>
-        <p class="dashboard-overview-numbers">2</p>
+        <p class="dashboard-overview-numbers">{{live.size}}</p>
       </li>
     </a>
   </ul>
@@ -41,7 +45,7 @@ permalink: /
         {% if project.status != "Hold" %}
         <div class="dashboard-projects-content">
           <div>
-            <a href="{{ site.baseurl }}/project/{{ project_name }}"><h1>{{project.project}} <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i><span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1></a>
+            <a href="{{ site.baseurl }}/project/{{ project_name }}"><h1>{{project.full_name}} <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i><span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1></a>
           </div>
           <div>
             <p>{% if project.description %}{{ project.description }}{% else %}Project description coming soon.{% endif %}</p>
@@ -49,7 +53,7 @@ permalink: /
 
           <div>
 
-            <p>{% if project.partner.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partner %}<strong>{{ project.partner | join: ', ' }}</strong>{% else %}Coming soon{% endif %}</p>
+            <p>{% if project.partner.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partner %}{% include list-partners.html style="strong" %}{% else %}Coming soon{% endif %}</p>
 
             <p><i class="fa fa-github-alt"></i> / <a class="github-url" href="https://github.com/{{project.github.first}}">Code</a> / </p>
 
