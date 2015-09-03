@@ -44,6 +44,10 @@ function runUpdateScript() {
   return spawn('run update script', config.updateScript, []);
 }
 
+function gitAdd() {
+  return spawn('add update', config.git, ['add', '_data']);
+}
+
 function gitCommit() {
   return spawn('commit update', config.git,
     ['commit', '-m', config.commitMessage]);
@@ -83,6 +87,7 @@ webhook.on('refs/heads/' + config.teamApiBranch, function(info) {
     .then(function() { gitPull(); })
     .then(function() { gitCheckoutNewBranch(); })
     .then(function() { runUpdateScript(); })
+    .then(function() { gitAdd(); })
     .then(function() { gitCommit(); })
     .then(function() { gitPush(); })
     .then(function() { createPullRequest(); })

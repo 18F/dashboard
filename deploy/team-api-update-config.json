@@ -1,6 +1,6 @@
 {
   "port":                5000,
-  "home":                "/home/site/team-api/dashboard",
+  "repoDir":             "/home/site/team-api/dashboard",
   "githubRepo":          "18F/dashboard",
   "defaultBranch":       "staging",
   "teamApiBranch":       "team-api",
