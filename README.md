@@ -14,6 +14,100 @@ To edit project details on `18f.gsa.gov/dashboard`, update the `.about.yml` file
 in your team's repo. Updates may take a few days to post to the public site, so
 reach out to the `#outreach` team on Slack if there's any urgency.
 
+## Project Details in Your .about.yml
+
+```
+---
+# .about.yml project metadata
+#
+# Short name that acts as the project identifier (required)
+name:
+
+# Full proper name of the project (required)
+full_name:
+
+# The type of content in the repo
+# values: app, docs, policy
+type:
+
+# Describes whether a project team, working group/guild, etc. owns the repo (required)
+# values: guild, working-group, project
+owner_type:
+
+# Name of the main project repo if this is a sub-repo; name of the working group/guild repo if this is a working group/guild subproject
+parent:
+
+# Maturity stage of the project (required)
+# values: discovery, alpha, beta, live
+stage:
+
+# Whether or not the project is actively maintained (required)
+# values: active, deprecated
+status:
+
+# Description of the project
+description:
+
+# Should be 'true' if the project has a continuous build (required)
+# values: true, false
+testable:
+
+# Team members contributing to the project (required)
+# Items:
+# - github: GitHub user name
+#   id: Internal team identifier/user name
+#   role: Team member's role; leads should be designated as 'lead'
+team:
+- 
+
+# Partners for whom the project is developed
+partners:
+- 
+
+# Brief descriptions of significant project developments
+milestones:
+- 
+
+# Technologies used to build the project
+stack:
+- 
+
+# Brief description of the project's outcomes
+impact:
+
+# Services used to supply project status information
+# Items:
+# - name: Name of the service
+#   category: Type of the service
+#   url: URL for detailed information
+#   badge: URL for the status badge
+services:
+- 
+
+# Licenses that apply to the project and/or its components (required)
+# Items by property name pattern:
+#   .*:
+#     name: Name of the license from the Software Package Data Exchange (SPDX): https://spdx.org/licenses/
+#     url: URL for the text of the license
+licenses:
+  placeholder_label:
+
+# Blogs or websites associated with project development
+blog:
+- 
+
+# Links to project artifacts
+# Items:
+# - url: URL for the link
+#   text: Anchor text for the link
+links:
+- 
+
+# Email addresses of points-of-contact
+contact:
+- 
+```
+
 ## Installing
 
 First clone this repo. Then, install the project and all its dependencies by
