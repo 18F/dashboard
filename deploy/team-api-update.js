@@ -21,54 +21,17 @@ function spawn(action_description, path, args) {
   });
 }
 
+function bundleInstall() {
+  return spawn('bundle install', config.bundler, ['install']);
+}
+
+function jekyllBuild() {
+  return spawn('jekyll build', config.jekyll, ['build', '--trace']);
+}
+
 function isValidUpdate(info) {
   return info.ref !== undefined &&
     info.repository.full_name === config.teamApiRepo;
-}
-
-function gitCheckoutDefault() {
-  return spawn('checkout ' + config.defaultBranch, config.git,
-    ['checkout', config.defaultBranch]);
-}
-
-function gitPull() {
-  return spawn('pull ' + config.defaultBranch, config.git, ['pull']);
-}
-
-function gitCheckoutNewBranch() {
-  return spawn('checkout ' + config.teamApiBranch, config.git,
-    ['checkout', '-b', config.teamApiBranch]);
-}
-
-function runUpdateScript() {
-  return spawn('run update script', config.updateScript, []);
-}
-
-function gitAdd() {
-  return spawn('add update', config.git, ['add', '_data']);
-}
-
-function gitCommit() {
-  return spawn('commit update', config.git,
-    ['commit', '-m', config.commitMessage]);
-}
-
-function gitPush() {
-  return spawn('push to repo', config.git, ['push']);
-}
-
-function createPullRequest() {
-  return new Promise(function(resolve, reject) {
-    var request = https.request(config.gitHubApiOptions, function(response) {
-      response.on('data', function(data) { resolve(data); });
-    });
-    request.on('error', function(error) { reject(error); });
-  });
-}
-
-function gitDeleteBranch() {
-  return spawn('delete ' + config.teamApiBranch, config.git,
-    ['branch', '-d', config.teamApiBranch]);
 }
 
 function finish(err) {
@@ -83,16 +46,8 @@ webhook.on('refs/heads/' + config.teamApiBranch, function(info) {
   if (!isValidUpdate(info)) {
     return;
   }
-  gitCheckoutDefault()
-    .then(function() { gitPull(); })
-    .then(function() { gitCheckoutNewBranch(); })
-    .then(function() { runUpdateScript(); })
-    .then(function() { gitAdd(); })
-    .then(function() { gitCommit(); })
-    .then(function() { gitPush(); })
-    .then(function() { createPullRequest(); })
-    .then(function() { gitCheckoutDefault(); })
-    .then(function() { gitDeleteBranch(); })
+  bundleInstall()
+    .then(function() { jekyllBuild(); })
     .then(finish, finish);
 });
 
