@@ -15,6 +15,9 @@ in the project's repo. If a project has multiple repos, create an
 `.about.yml` in each one of them, and note the project's main repo in the
 `parent:` field.
 
+The info below under "Installing" is *not* required to update a repo's
+`.about.yml` file.
+
 Updates may take a few days to post to the public site, so reach out to the
 `#outreach` team on Slack if there's any urgency.
 
