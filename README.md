@@ -24,7 +24,8 @@ Updates may take a few days to post to the public site, so reach out to the
 ## Data Fields for the Dashboard
 
 For each piece of content about your project in the 18F Dashboard, there is a
-different *data field* followed by a `:` in the list below.
+different data field, such as name or description, followed by a `:` in the
+list below.
 
 In the list below, lines that start with `#` are there to explain the data field
 below them and the specific way the data field's content must appear (when applicable).
