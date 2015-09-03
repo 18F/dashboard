@@ -26,8 +26,8 @@ Updates may take a few days to post to the public site, so reach out to the
 Your `.about.yml` file must start with `---` on the first line. 
 
 Lines that start with `#` are commented out (i.e. not part of the necessary code).
-They are there to explain the content field below them and the specific
-way the field's content must appear (when applicable). Some fields require content
+They are there to explain the data field below them and the specific
+way the data field's content must appear (when applicable). Some fields require data
 to be described in lists with `-` marks, and those fields have a `-` mark after
 the field's name.
 
