@@ -11,15 +11,21 @@ journalists, prospective 18Fers
 ## Editing the Dashboard
 
 To edit project details on `18f.gsa.gov/dashboard`, update the `.about.yml` file
-in your team's repo. Updates may take a few days to post to the public site, so
-reach out to the `#outreach` team on Slack if there's any urgency.
+in the project's repo. If a project has multiple repos, create an
+`.about.yml` in each one of them, and note the project's main repo in the
+`parent` field.
+
+Updates may take a few days to post to the public site, so reach out to the
+`#outreach` team on Slack if there's any urgency.
 
 ## Project Details in Your .about.yml
 
+Your `.about.yml` file must start with `---` on the first line. Lines that start
+with `#` in the file below explain the content field below them. Please note that
+some fields are required.
+
 ```
 ---
-# .about.yml project metadata
-#
 # Short name that acts as the project identifier (required)
 name:
 
