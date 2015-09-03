@@ -20,13 +20,16 @@ Updates may take a few days to post to the public site, so reach out to the
 
 ## Project Details in Your .about.yml
 
-Your `.about.yml` file must start with `---` on the first line. Lines that start
-with `#` in the file below explain the content field below them. Please note that
-some fields are required.
+Your `.about.yml` file must start with `---` on the first line. 
 
-Some fields require specific types of content, which is described above the field
-after a `#` mark. Some fields require content to be described in lists with `-` 
-marks, and those fields have a `-` mark after the field's name.
+Lines that start with `#` explain the content field below them and the specific
+way the field's content must appear (when applicable). Some fields require content
+to be described in lists with `-` marks, and those fields have a `-` mark after
+the field's name.
+
+Please note that some fields are required.
+
+
 
 ```
 ---
