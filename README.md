@@ -29,7 +29,7 @@ below.
 
 Also in the list below, lines that start with `#` are there to explain the data field
 below them and the specific way the data field's content must appear (when applicable).
-(They are commented out, i.e., not part of the actual code). Some fields require data
+(They are commented out, i.e., not part of the actual code.) Some fields require data
 to be described in lists with `-` marks, and those fields have a `-` mark after
 the field's name.
 
