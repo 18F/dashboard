@@ -13,7 +13,7 @@ journalists, prospective 18Fers
 To edit project details on `18f.gsa.gov/dashboard`, update the `.about.yml` file
 in the project's repo. If a project has multiple repos, create an
 `.about.yml` in each one of them, and note the project's main repo in the
-`parent` field.
+`parent:` field.
 
 Updates may take a few days to post to the public site, so reach out to the
 `#outreach` team on Slack if there's any urgency.
@@ -23,6 +23,10 @@ Updates may take a few days to post to the public site, so reach out to the
 Your `.about.yml` file must start with `---` on the first line. Lines that start
 with `#` in the file below explain the content field below them. Please note that
 some fields are required.
+
+Some fields require specific types of content, which is described above the field
+after a `#` mark. Some fields require content to be described in lists with `-` 
+marks, and those fields have a `-` mark after the field's name.
 
 ```
 ---
