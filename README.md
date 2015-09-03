@@ -21,18 +21,17 @@ The info below under "Installing" is *not* required to update a repo's
 Updates may take a few days to post to the public site, so reach out to the
 `#outreach` team on Slack if there's any urgency.
 
-## Project Details in Your .about.yml
+## Data Fields for Project Details
 
 Your `.about.yml` file must start with `---` on the first line. 
 
-Lines that start with `#` explain the content field below them and the specific
+Lines that start with `#` are commented out (i.e. not part of the necessary code).
+They are there to explain the content field below them and the specific
 way the field's content must appear (when applicable). Some fields require content
 to be described in lists with `-` marks, and those fields have a `-` mark after
 the field's name.
 
 Please note that some fields are required.
-
-
 
 ```
 ---
