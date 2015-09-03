@@ -21,15 +21,18 @@ The info below under "Installing" is *not* required to update a repo's
 Updates may take a few days to post to the public site, so reach out to the
 `#outreach` team on Slack if there's any urgency.
 
-## Data Fields for Project Details
+## Data Fields for the Dashboard
 
-Your `.about.yml` file must start with `---` on the first line. 
+For each piece of content about your project in the 18F Dashboard, there is a
+different *data field* followed by a `:` in the list below.
 
-Lines that start with `#` are commented out (i.e. not part of the necessary code).
-They are there to explain the data field below them and the specific
-way the data field's content must appear (when applicable). Some fields require data
+In the list below, lines that start with `#` are there to explain the data field
+below them and the specific way the data field's content must appear (when applicable).
+(They are commented out, i.e., not part of the actual code). Some fields require data
 to be described in lists with `-` marks, and those fields have a `-` mark after
 the field's name.
+
+Your `.about.yml` file must start with `---` on the first line. 
 
 Please note that some fields are required.
 
