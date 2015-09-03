@@ -10,7 +10,9 @@ journalists, prospective 18Fers
 
 ## Editing the Dashboard
 
-To edit project details on `18f.gsa.gov/dashboard`, find it's respective file in `18F/data-private` and submit a pull request.  Once merged, a couple things need to happen then it will update on the Hub and Dashboard.  This mayt take a few days, so if there's any urgency, reach out to the Outreach team on Slack. 
+To edit project details on `18f.gsa.gov/dashboard`, update the `.about.yml` file
+in your team's repo. Updates may take a few days to post to the public site, so
+reach out to the `#outreach` team on Slack if there's any urgency.
 
 ## Installing
 
