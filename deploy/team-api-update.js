@@ -67,10 +67,12 @@ webhook.on('refs/heads/' + config.teamApiBranch, function(info) {
     return;
   }
 
-  var updatePromise = null;
+  var repoDirs = config.repoDirs.slice(0);
+  var updatePromise = createUpdaterPromise(repoDirs.shift());
 
-  config.repoDirs.map(function (repoDir) {
-    updatePromise = createUpdaterPromise(repoDir);
+  repoDirs.map(function (repoDir) {
+    updatePromise = updatePromise.then(
+      function() { return createUpdaterPromise(repoDir) });
   });
 
   updatePromise.then(finish, finish);
