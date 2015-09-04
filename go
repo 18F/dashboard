@@ -80,8 +80,8 @@ end
 def ci_build
   puts 'Fetching from Team API...'
   update_data
-  puts 'Building the site...'
   build
+  test_build
   puts 'Done!'
 end
 
@@ -93,6 +93,11 @@ def deploy
   puts 'Site built successfully.'
 end
 
+def test_build
+  puts 'Testing the build generated the correct number of project pages'
+  exec_cmd 'ruby tests/test.rb'
+end
+
 COMMANDS = {
   :init => 'Set up the Hub dev environment',
   :update_gems => 'Execute Bundler to update gem set',
@@ -101,6 +106,7 @@ COMMANDS = {
   :build => 'Builds the site',
   :ci_build => 'Builds the site for a CI system',
   :deploy => 'Pulls the latest changes and rebuilds the site',
+  :test_build => 'Tests the build generated the correct number of project pages.'
   }
 
 def usage(exitstatus: 0)
