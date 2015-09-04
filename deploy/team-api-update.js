@@ -19,7 +19,7 @@ function TeamApiUpdater(repoDir) {
   this.repoDir = repoDir;
 }
 
-TeamApiUpdater.prototype.spawn = function spawn(actionDescription, path, args) {
+TeamApiUpdater.prototype.spawn = function (actionDescription, path, args) {
   var that = this;
   return new Promise(function(resolve, reject) {
     var spawnOpts = { cwd: that.repoDir, stdio: 'inherit' };
@@ -34,11 +34,11 @@ TeamApiUpdater.prototype.spawn = function spawn(actionDescription, path, args) {
   });
 };
 
-TeamApiUpdater.prototype.bundleInstall = function bundleInstall() {
+TeamApiUpdater.prototype.bundleInstall = function () {
   return this.spawn('bundle install', config.bundler, ['install']);
 };
 
-TeamApiUpdater.prototype.jekyllBuild = function jekyllBuild() {
+TeamApiUpdater.prototype.jekyllBuild = function () {
   return this.spawn('jekyll build', config.bundler,
     ['exec', 'jekyll', 'build', '--trace']);
 };
@@ -56,16 +56,23 @@ function finish(err) {
   }
 }
 
+function createUpdaterPromise(repoDir) {
+  var updater = new TeamApiUpdater(repoDir);
+  return updater.bundleInstall()
+    .then(function() { return updater.jekyllBuild(); });
+}
+
 webhook.on('refs/heads/' + config.teamApiBranch, function(info) {
   if (!isValidUpdate(info)) {
     return;
   }
 
-  var updatePromise = new Promise(function(resolve) { resolve(); });
-  config.repoDirs.map(function (repoDir) {
-    var updater = new TeamApiUpdater(config.repoDir);
-    updatePromise.then(function() { return updater.bundleInstall(); })
-      .then(function() { return updater.jekyllBuild(); });
+  var repoDirs = config.repoDirs.slice(0);
+  var updatePromise = createUpdaterPromise(repoDirs.shift());
+
+  repoDirs.map(function (repoDir) {
+    updatePromise = updatePromise.then(
+      function() { return createUpdaterPromise(repoDir) });
   });
 
   updatePromise.then(finish, finish);
