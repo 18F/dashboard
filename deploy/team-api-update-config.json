@@ -1,7 +1,10 @@
 {
-  "port":                5000,
-  "repoDir":             "/home/site/staging/dashboard",
-  "bundler":             "/opt/install/rbenv/shims/bundle",
-  "teamApiRepo":         "18F/team-api",
-  "teamApiBranch":       "master"
+  "port":          5000,
+  "bundler":       "/opt/install/rbenv/shims/bundle",
+  "teamApiRepo":   "18F/team-api",
+  "teamApiBranch": "master",
+  "repoDirs": [
+    "/home/site/staging/dashboard",
+    "/home/site/production/dashboard"
+  ]
 }

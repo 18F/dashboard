@@ -1,4 +1,12 @@
-#!/usr/bin/env node
+#! /usr/bin/env node
+/* jshint node: true */
+/* jshint bitwise: false */
+//
+// Webhook listener triggering 18F Dashboard rebuilds upon Team API updates
+//
+// Author: Mike Bland (michael.bland@gsa.gov)
+// Date:   2015-09-03
+'use strict';
 
 var hookshot = require('hookshot');
 var childProcess = require('child_process');
@@ -7,13 +15,18 @@ var https = require('https');
 
 var webhook = hookshot();
 
-function spawn(action_description, path, args) {
+function TeamApiUpdater(repoDir) {
+  this.repoDir = repoDir;
+}
+
+TeamApiUpdater.prototype.spawn = function spawn(actionDescription, path, args) {
+  var that = this;
   return new Promise(function(resolve, reject) {
-    var spawnOpts = { cwd: config.repoDir, stdio: 'inherit' };
+    var spawnOpts = { cwd: that.repoDir, stdio: 'inherit' };
     var childProc = childProcess.spawn(path, args, spawnOpts);
     childProc.on('close', function onProcessClose(exitStatus) {
       if (exitStatus !== 0) {
-        reject(new Error(action_description));
+        reject(new Error(actionDescription));
       } else {
         resolve();
       }
@@ -21,11 +34,11 @@ function spawn(action_description, path, args) {
   });
 }
 
-function bundleInstall() {
+TeamApiUpdater.prototype.bundleInstall = function bundleInstall() {
   return spawn('bundle install', config.bundler, ['install']);
 }
 
-function jekyllBuild() {
+TeamApiUpdater.prototype.jekyllBuild = function jekyllBuild() {
   return spawn('jekyll build', config.bundler,
     ['exec', 'jekyll', 'build', '--trace']);
 }
@@ -47,9 +60,17 @@ webhook.on('refs/heads/' + config.teamApiBranch, function(info) {
   if (!isValidUpdate(info)) {
     return;
   }
-  bundleInstall()
-    .then(function() { return jekyllBuild(); })
-    .then(finish, finish);
+
+  var updatePromise = new Promise(function(resolve) { resolve(); });
+  var numRepoDirs = config.repoDirs.length;
+
+  for (var i = 0; i != numRepoDirs; i++) {
+    var updater = new TeamApiUpdater(config.repoDirs[i]);
+    updatePromise.then(function() { return updater.bundleInstall(); })
+      .then(function() { return updater.jekyllBuild(); })
+  }
+
+  updatePromise.then(finish, finish);
 });
 
 webhook.listen(config.port);
