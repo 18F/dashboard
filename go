@@ -18,7 +18,7 @@
 #
 # ----
 #
-# ./go script: unified development environment interface 
+# ./go script: unified development environment interface
 #
 # Inspired by:
 # http://www.thoughtworks.com/insights/blog/praise-go-script-part-i
@@ -78,6 +78,8 @@ def build
 end
 
 def ci_build
+  puts 'Fetching from Team API...'
+  update_data
   puts 'Building the site...'
   build
   puts 'Done!'
