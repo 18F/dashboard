@@ -73,7 +73,7 @@ description:
 testable:
 
 # Team members contributing to the project (required)
-# Items:
+# Items (use new '-' mark for each person):
 # - github: GitHub user name
 #   id: Internal team identifier/user name
 #   role: Team member's role; leads should be designated as 'lead'
