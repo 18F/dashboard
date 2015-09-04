@@ -13,7 +13,7 @@ journalists, prospective 18Fers
 To edit project details on `18f.gsa.gov/dashboard`, update the `.about.yml` file
 in the project's repo. If a project has multiple repos, create an
 `.about.yml` in each one of them, and note the project's main repo in the
-`parent:` field.
+`parent:` field (in this case, this is the only required field).
 
 The info below under "Installing" is *not* required to update a repo's
 `.about.yml` file.
