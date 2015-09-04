@@ -26,7 +26,8 @@ function bundleInstall() {
 }
 
 function jekyllBuild() {
-  return spawn('jekyll build', config.jekyll, ['build', '--trace']);
+  return spawn('jekyll build', config.bundler,
+    ['exec', 'jekyll', 'build', '--trace']);
 }
 
 function isValidUpdate(info) {
@@ -47,7 +48,7 @@ webhook.on('refs/heads/' + config.teamApiBranch, function(info) {
     return;
   }
   bundleInstall()
-    .then(function() { jekyllBuild(); })
+    .then(function() { return jekyllBuild(); })
     .then(finish, finish);
 });
 
