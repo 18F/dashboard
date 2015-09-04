@@ -16,7 +16,7 @@ exclude:
 
 # To disable fetching from the Team API and to build from local data, prefix
 # the following field with an underscore.
-_team_api:
+team_api:
   #baseurl: http://localhost:4001/public/api/
   #suffix: api.json
   baseurl: https://team-api.18f.gov/public/api/
