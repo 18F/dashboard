@@ -27,6 +27,15 @@ module Dashboard
       FIELDS_TO_TRANSLATE.each do |from, to|
         project_data[to] = project_data[from] unless project_data[to]
       end
+
+      contact = project_data['contact']
+      project_data['contact'] = contact.join ',' if contact.instance_of? Array
+
+      licenses = project_data['licenses']
+      return if licenses.nil?
+      project_data['licenses'] = licenses.map do |key, value|
+        [key, (value.instance_of?(Hash) ? value['name'] : value)]
+      end.to_h
     end
 
     def self.create(site, project_id, project_data)
