@@ -4,3 +4,4 @@
 /.sass-cache/
 _config.yml
 *.pyc
+_data/projects.json
