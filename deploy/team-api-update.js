@@ -11,7 +11,6 @@
 var hookshot = require('hookshot');
 var childProcess = require('child_process');
 var config = require('./team-api-update-config.json');
-var https = require('https');
 
 var webhook = hookshot();
 
@@ -45,7 +44,7 @@ TeamApiUpdater.prototype.jekyllBuild = function () {
 
 function isValidUpdate(info) {
   return info.ref !== undefined &&
-    info.repository.full_name === config.teamApiRepo;
+    info.repository.full_name === config.teamApiRepo;  // jshint ignore:line
 }
 
 function finish(err) {
@@ -72,7 +71,7 @@ webhook.on('refs/heads/' + config.teamApiBranch, function(info) {
 
   repoDirs.map(function (repoDir) {
     updatePromise = updatePromise.then(
-      function() { return createUpdaterPromise(repoDir) });
+      function() { return createUpdaterPromise(repoDir); });
   });
 
   updatePromise.then(finish, finish);
