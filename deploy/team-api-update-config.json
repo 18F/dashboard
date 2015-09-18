@@ -1,7 +1,7 @@
 {
   "port":          5000,
   "bundler":       "/opt/install/rbenv/shims/bundle",
-  "teamApiRepo":   "18F/team-api",
+  "teamApiRepo":   "18F/team-api.18f.gov",
   "teamApiBranch": "master",
   "repoDirs": [
     "/home/site/staging/dashboard",
