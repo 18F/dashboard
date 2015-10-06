@@ -13,12 +13,18 @@ layout: bare
   <p>{% if project.description %}{{ project.description }}{% else %}Project description coming soon.{% endif %}</p>
   <p>Contact:
     {% capture contact %}{{ project.contact }}{% endcapture %}
-    {% assign contact = contact | split: ',' %}
+    {% assign contact = project.contact %}
     {% for c in contact %}
-      {% if c contains '@' %}
-        <a href="mailto:{{c}}">{{c}}</a>
+      {% if c.url && c.text %}
+        <a href="{{ c.url }}">{{ c.text }}</a>
       {% else %}
-        <a href="https://www.github.com/{{c}}">{{c}}</a>
+        {% if c contains '@' %}
+          {% assign mail = c | remove_first: 'mailto:' %}
+          <a href="mailto:{{mail}}">{{mail}}</a>
+        {% else %}
+          {% assign url = c | remove_first: 'https://www.github.com/' | remove_first: 'https://github.com/' %}
+          <a href="https://www.github.com/{{url}}">{{url}}</a>
+        {% endif %}
       {% endif %}
     {% endfor %}
   </p>
