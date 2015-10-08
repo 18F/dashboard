@@ -18,7 +18,10 @@
       "September 2014: 20th API Usability Participant"
     ],
     "contact": [
-      "gray.brooks@gsa.gov"
+      {
+        "url": "mailto:gray.brooks@gsa.gov",
+        "text": "Gray Brooks"
+      }
     ],
     "stack": null,
     "team": [
@@ -93,7 +96,10 @@
       "March 2015: Analytics.USA.gov announced"
     ],
     "contact": [
-      "dap@gsa.gov"
+      {
+        "url": "mailto:dap@gsa.gov",
+        "text": "dap@gsa.gov"
+      }
     ],
     "stack": [
       "jekyll",
@@ -165,7 +171,10 @@
     "impact": "2,800 API users and 66 million API requests served since July 2013",
     "milestones": null,
     "contact": [
-      "api.data.gov@gsa.gov"
+      {
+        "url": "mailto:api.data.gov@gsa.gov",
+        "text": "api.data.gov@gsa.gov"
+      }
     ],
     "stack": [
       "JavaScript (Node and Ember)",
@@ -219,7 +228,10 @@
       "July 2015: Second release with price analysis tools, status changed to live"
     ],
     "contact": [
-      "nicholas.brethauer@gsa.gov"
+      {
+        "url": "mailto:nicholas.brethauer@gsa.gov",
+        "text": "Nicholas Brethauer"
+      }
     ],
     "stack": [
       "Python",
@@ -309,7 +321,16 @@
     "stage": "live",
     "impact": "For the GSA use cases alone, Communicart could be used by over 80,000 U.S. Federal Government purchase card holders.",
     "milestones": null,
-    "contact": "raphael.villas@gsa.gov, john.felleman@gsa.gov",
+    "contact": [
+      {
+        "url": "mailto:raphael.villas@gsa.gov",
+        "text": "Raphael Villas"
+      },
+      {
+        "url": "mailto:john.felleman@gsa.gov",
+        "text": "John Felleman"
+      }
+    ],
     "stack": [
       "Ruby on Rails",
       "Cloud Foundry"
@@ -370,7 +391,10 @@
       "January 2015: 18F began work on project"
     ],
     "contact": [
-      "kaitlin.devine@gsa.gov"
+      {
+        "url": "mailto:kaitlin.devine@gsa.gov",
+        "text": "Kaitlin Devine"
+      }
     ],
     "stack": [
       "JavaScript",
@@ -430,7 +454,10 @@
       "August 2015: Launched online, beta version of the methods at methods.18f.gov, including files and instructions for printed cards."
     ],
     "contact": [
-      "https://github.com/18f/methods/issues"
+      {
+        "url": "https://github.com/18f/methods/issues",
+        "text": "18F/methods issues"
+      }
     ],
     "team": [
       {
@@ -528,7 +555,10 @@
       "February 2015: Name changed from \"Mirage\" to \"Discovery\""
     ],
     "contact": [
-      "josh.ruihley@gsa.gov"
+      {
+        "url": "mailto:josh.ruihley@gsa.gov",
+        "text": "Josh Ruihley"
+      }
     ],
     "stack": [
       "Python",
@@ -593,7 +623,10 @@
       "December 2014: Beta site launched"
     ],
     "contact": [
-      "michelle.hertzfeld@gsa.gov"
+      {
+        "url": "mailto:michelle.hertzfeld@gsa.gov",
+        "text": "Michelle Hertzfeld"
+      }
     ],
     "stack": [
       "JavaScript",
@@ -653,7 +686,10 @@
       "May 2014: 18F took over project maintenance from Presidential Innovation Fellows program"
     ],
     "contact": [
-      "fbopen@gsa.gov"
+      {
+        "url": "mailto:fbopen@gsa.gov",
+        "text": "fbopen@gsa.gov"
+      }
     ],
     "stack": [
       "Python",
@@ -730,7 +766,10 @@
       }
     ],
     "contact": [
-      "18f/foia/issues"
+      {
+        "url": "https://github.com/18f/foia/issues",
+        "text": "18F/foia issues"
+      }
     ],
     "stack": [
       "python",
@@ -834,7 +873,10 @@
       "June 2013: State Department begins project Discovery stage with Presidential Innovation Fellows"
     ],
     "contact": [
-      "midas@gsa.gov"
+      {
+        "url": "mailto:midas@gsa.gov",
+        "text": "midas@gsa.gov"
+      }
     ],
     "stack": [
       "JavaScript (Node/Sails",
@@ -890,7 +932,10 @@
       "June 2015: Project handed off to partner"
     ],
     "contact": [
-      "christopher.cairns@gsa.gov"
+      {
+        "url": "mailto:christopher.cairns@gsa.gov",
+        "text": "Christopher Cairns"
+      }
     ],
     "stack": [
       "JavaScript",
@@ -942,7 +987,10 @@
       "September 2014: Alpha delivered to clients and user testing started"
     ],
     "contact": [
-      "myusa@gsa.gov"
+      {
+        "url": "mailto:myusa@gsa.gov",
+        "text": "myusa@gsa.gov"
+      }
     ],
     "stack": [
       "Rails",
@@ -1024,7 +1072,10 @@
       "July 2015: Beta testing of the API"
     ],
     "contact": [
-      "18F/FEC/issues"
+      {
+        "url": "https://github.com/18f/fec/issues",
+        "text": "18F/FEC issues"
+      }
     ],
     "stack": null,
     "team": [
@@ -1127,7 +1178,10 @@
     "impact": "7,000 Peace Corps Volunteers in the field, hundreds of thousands Prospective/Returned Volunteers, friends, and family.",
     "stage": "beta",
     "contact": [
-      "sean.herron@gsa.gov"
+      {
+        "url": "mailto:sean.herron@gsa.gov",
+        "text": "Sean Herron"
+      }
     ],
     "stack": null,
     "team": [
@@ -1191,7 +1245,10 @@
       "June 2015: Pulse.CIO.gov announced"
     ],
     "contact": [
-      "pulse@cio.gov"
+      {
+        "url": "mailto:pulse@cio.gov",
+        "text": "pulse@cio.gov"
+      }
     ],
     "stack": [
       "jeykll",
@@ -1247,7 +1304,10 @@
       "May 2014: 18F began work on project"
     ],
     "contact": [
-      "david.best@gsa.gov"
+      {
+        "url": "mailto:david.best@gsa.gov",
+        "text": "David Best"
+      }
     ],
     "stack": [
       "JavaScript",
@@ -1264,7 +1324,12 @@
     "partner": [
       "U.S. Citizenship and Immigration Services"
     ],
-    "contact": "18f-uscis-projects@gsa.gov",
+    "contact": [
+      {
+        "url": "mailto:18f-uscis-projects@gsa.gov",
+        "text": "18f-uscis-projects@gsa.gov"
+      }
+    ],
     "stage": "alpha",
     "description": "We are helping to reimage and modernize immigration and visa processes: building tools that improve the applicant process, providing clear and simple information to the public, and creating new tools that make the processing of immigration forms faster and more efficient.",
     "impact": "Every year, hundreds of thousands of individuals travel to the United States in pursuit of work, education, leisure, or with the hope of becoming a US resident or citizen.",

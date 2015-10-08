@@ -30,9 +30,9 @@ incorporate a data point.
 Is there data that you'd like to see about our projects that's not listed
 here? Create an issue! We value feedback.
 
-## Editing the Dashboard
+## Editing the Dashboard (for 18F team members)
 
-To edit project details on `18f.gsa.gov/dashboard`, find it's respective file in `18F/data-private` and submit a pull request.  Once merged, a couple things need to happen then it will update on the Hub and Dashboard.  This mayt take a few days, so if there's any urgency, reach out to the Outreach team on Slack. 
+To edit project details on `18f.gsa.gov/dashboard`, add an [`.about.yml` file](https://github.com/18F/about_yml) to the root directory of your project's GitHub repository. This will trigger an update to https://team-api.18f.gov/public/api/projects/, which will in turn trigger an update to the Dashboard. If there's any problem whereby updates appear neither on the Team API server or on the Dashboard, reach out to the #team-api or #dashboard teams on Slack. 
 
 ## Installing
 
@@ -45,10 +45,11 @@ by running the `_data/import-public.rb` script. Which is pretty cool, we
 think.
 
 If you're looking to make your own dashboard using this as an example, you can.
-Update the `_data/projects.json` file by adding a new object (labeled with a
-slugified version of your project name) with and filling in all the fields for
-your project. Then create an html file in `pages/projects` and give it a name
-matching the slugified object name in the JSON file.
+Copy the `_data/projects.json.example` file to `_data/projects.json` and update
+it by adding a new object (labeled with a
+slugified version of your project name) and filling in all the fields for
+your project. Then, in the `_config.yml` file, change the `team_api:` property
+to `_team_api:` to disable fetching from the Team API server.
 
 ### Structure of a project
 

@@ -12,6 +12,17 @@ destination: _site/dashboard
 baseurl: /dashboard
 #baseurl: localhost:4000
 exclude:
+- CONTRIBUTING.md
+- Gemfile
+- Gemfile.lock
+- LICENSE.md
+- README.md
+- deploy
+- go
+- gulpfile.js
+- node_modules
+- package.json
+- tests
 - vendor
 
 # To disable fetching from the Team API and to build from local data, prefix
