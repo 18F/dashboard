@@ -21,6 +21,8 @@ that you like the direction and think it is a good idea, if you have reviewed th
 
 When a pull request is merged to staging it is automatically deployed to: [https://staging.18f.gov/dashboard/](https://staging.18f.gov/dashboard/)
 
+Whoever merged the staging pull request, should look at staging and then if all looks good, open a pull request to production which anyone else on the team can merge.
+
 ## Public domain
 
 This project is in the public domain within the United States, and
