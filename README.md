@@ -8,6 +8,42 @@ Goal: Provide transparency and insight into 18F work and values.
 Audience: 18F team, GSA, other government agencies, transparency community,
 journalists, prospective 18Fers
 
+## Dashboard Content
+
+The data points for this project are listed as GitHub
+[issues](http://github.com/18f/dashboard/issues). Milestone
+[1](https://github.com/18F/dashboard/milestones/Sprint%201%20-%20MVP) issues
+are the most basic info that we intend to display in the initial list view
+of the dashboard. When users click on a project in that list, they will see
+the the data points listed under Milestones
+[2](https://github.com/18F/dashboard/milestones/2nd%20Sprint) and
+[3](https://github.com/18F/dashboard/milestones/3rd%20Sprint) on individual
+project pages. The [Backlog
+Milestone](https://github.com/18F/dashboard/milestones/Backlog) includes
+data points that need further research or are currently not a priority.
+
+Data was prioritized based on our initial interviews, research, and guesses
+about how many of the audiences listed above would be interested in a data
+point, and then balanced against level of effort required to obtain or
+incorporate a data point.
+
+Is there data that you'd like to see about our projects that's not listed
+here? Create an issue! We value feedback.
+
+## Installing
+
+First clone this repo. Then, install all its dependencies by running `./go init` in your terminal. After that, run `./go update` and `./go serve` and visit http://localhost:4000/dashboard/ in your web browser.
+
+By default you get all of our projects, and you can refresh their information by running the `_data/import-public.rb` script. Which is pretty cool, we think.
+
+**If you're looking to make your own dashboard using this as an example, you can.**
+
+Copy the `_data/projects.json.example` file to `_data/projects.json` and update
+it by adding a new object (labeled with a
+slugified version of your project name) and filling in all the fields for
+your project. Then, in the `_config.yml` file, change the `team_api:` property
+to `_team_api:` to disable fetching from the Team API server.
+
 ## Editing the Dashboard
 
 To edit project details on `18f.gsa.gov/dashboard`, update the `.about.yml` file
@@ -26,133 +62,9 @@ Updates _should be automatic_. Shortly after your repo's `.about.yml` file is up
 
 For each piece of content about your project on the 18F Dashboard, there is a different data field (such as `name` or `description`) followed by a `:` to fill in the `.about.yml` file.
 
-Your `.about.yml` file must start with `---` on the first line. Below is an example `about.yml` but you can also see [The Dashboard's](.about.yml) for a working example. In the example below, lines that start with `#` are there to explain the data field on the next line and specific way the data field's content must appear (when applicable). (They are "commented out," i.e., not part of the actual code, so you can copy and paste the whole thing into the `.about.yml` file in your repo.) Some fields require data to be described in lists with `-` marks, and those fields have a `-` mark after the field's name.
+Your `.about.yml` file must start with `---` on the first line. [The Dashboard's](.about.yml) for a working example. Lines that start with `#` are there to explain the data field on the next line and specific way the data field's content must appear (when applicable). (They are "commented out," i.e., not part of the actual code, so you can copy and paste the whole thing into the `.about.yml` file in your repo.) Some fields require data to be described in lists with `-` marks, and those fields have a `-` mark after the field's name.
 
 Please note that some fields are required.
-
-```
----
-# Short name that acts as the project identifier (required)
-name:
-
-# Full proper name of the project (required)
-full_name:
-
-# The type of content in the repo
-# values: app, docs, policy
-type:
-
-# Describes whether a project team, working group/guild, etc. owns the repo (required)
-# values: guild, working-group, project
-owner_type:
-
-# Name of the main project repo if this is a sub-repo; name of the working group/guild repo if this is a working group/guild subproject
-parent:
-
-# Maturity stage of the project (required)
-# values: discovery, alpha, beta, live
-stage:
-
-# Whether or not the project is actively maintained (required)
-# values: active, deprecated
-status:
-
-# Description of the project
-description:
-
-# Should be 'true' if the project has a continuous build (required)
-# values: true, false
-testable:
-
-# Team members contributing to the project (required)
-# Items (use new '-' mark for each person):
-# - github: GitHub user name
-#   id: Internal team identifier/user name
-#   role: Team member's role; leads should be designated as 'lead'
-team:
--
-
-# Partners for whom the project is developed
-partners:
--
-
-# Brief descriptions of significant project developments
-milestones:
--
-
-# Technologies used to build the project
-stack:
--
-
-# Brief description of the project's outcomes
-impact:
-
-# Services used to supply project status information
-# Items:
-# - name: Name of the service
-#   category: Type of the service
-#   url: URL for detailed information
-#   badge: URL for the status badge
-services:
--
-
-# Licenses that apply to the project and/or its components (required)
-# Items by property name pattern:
-#   .*:
-#     name: Name of the license from the Software Package Data Exchange (SPDX): https://spdx.org/licenses/
-#     url: URL for the text of the license
-licenses:
-  placeholder_label:
-
-# Blogs or websites associated with project development
-blog:
--
-
-# Links to project artifacts
-# Items:
-# - url: URL for the link
-#   text: Anchor text for the link
-links:
--
-
-# Email addresses of points-of-contact
-contact:
--
-```
-
-## Installing
-
-First clone this repo. Then, install all its dependencies by running `./go init` in your terminal. After that, run `./go update` and `./go serve` and visit http://localhost:4000/dashboard/ in your web browser.
-
-By default you get all of our projects, and you can refresh their information by running the `_data/import-public.rb` script. Which is pretty cool, we think.
-
-**If you're looking to make your own dashboard using this as an example, you can.** Update the `_data/projects.json` file by adding a new object (labeled with a slugified version of your project name) with and filling in all the fields for your project. Then create an html file in `pages/projects` and give it a name matching the slugified object name in the JSON file.
-
-### Structure of a project
-
-Each project is represented in JSON as a set of fields. Some are required, some optional, and some require a specific structure. See `_data/projects.json.example` for some sample data. Rename it `_data/projects.json` to make a working Dashboard.
-
-#### Fields
-
-In the JSON file there are a few fields that are recommended for a robust Dashboard experience.
-
-- `project` The non-slugified name of the project
-- `name` The project's handle (slugified version of project)
-- `github` The organization and repo name for the project's code (e.g., 18F/myra)
-- `description` A brief description of the work involved in this project
-- `partner` A dashed list of the partners (or clients) this project serves
-- `impact` A brief description of the project's outcomes
-- `stage` Alpha? Beta? Discovery? See https://18f.gsa.gov/dashboard/stages for more definitions of these stages
-- `milestones` Free format dashed list of important accomplishments during the project
-- `contact` An email address or GitHub-relative URI for the project (e.g., 18F/myra/issues)
-- `stack` What tech are you using here?
-- `team` Who is on the project? Requires an api endpoint configured on your main site
-- `licenses` A list of key-value pairs where the key is the github repo and the value is the license (e.g., myra: Public Domain (CC0))
-- `links` A relevant links you want to include (despite the name we currently only support one here)
-- `status` For now, set this to hidden to hide the project from the dashboard (you might want to do this if you have incomplete data, for example)
-
-Except for `project` and `github` none of these will cause your dashboard to
-fail if they're missing but the project's page will look a bit thin.
 
 ### JavaScript
 
