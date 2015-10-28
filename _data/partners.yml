@@ -7,7 +7,7 @@ general-services-administration:
   url: http://gsa.gov
 federal-election-commission:
   url: http://fec.gov
-  acronym: FEC
+  full_name: Federal Election Commission
 air-force:
   url: http://af.mil
   acronym: USAF
