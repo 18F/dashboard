@@ -94,4 +94,6 @@ links:
 
 # Email addresses of points-of-contact
 contact:
-- gregory.boone@gsa.gov
+- url: mailto:gregory.boone@gsa.gov
+  text: Greg Boone
+
