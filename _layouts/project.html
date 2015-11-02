@@ -131,6 +131,16 @@ layout: bare
     </div>
   {% endif %}
 
+  <!-- errors -->
+  {% if project.errors %}
+    <div>
+      <h1><i class="fa fa-chevron-right"></i> .about.yml errors</h1>
+      <ul>{% for item in project.errors %}
+        <li>{{ item }}</li>{% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
   </div>
 </section>
 
