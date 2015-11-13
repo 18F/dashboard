@@ -53,6 +53,7 @@ module Dashboard
     # for the Hub.
     def generate(site)
       import_team_api_data site
+      filter_projects site
       generate_project_pages site
     end
 
@@ -65,6 +66,11 @@ module Dashboard
         projects = JSON.parse(endpoint_data.read)['results']
         site.data['projects'] = projects.map { |p| [p['name'], p] }.to_h
       end
+    end
+
+    def filter_projects(site)
+      project_filter = site.data['project_filter'].map { |id| [id, true] }.to_h
+      site.data['projects'].select! { |id, _| project_filter[id] }
     end
 
     def generate_project_pages(site)
