@@ -1,5 +1,7 @@
-require 'json'
-data = JSON.load(open('_data/projects.json').read())
+#! /usr/bin/env ruby
+require 'safe_yaml'
+
+data = SafeYAML.load_file '_data/project_filter.yml', safe: true
 expect_size = data.size
 projectdir = Dir.new('_site/dashboard/project')
 actual_size = projectdir.count-2
