@@ -95,7 +95,7 @@ end
 
 def test_build
   puts 'Testing the build generated the correct number of project pages'
-  exec_cmd 'ruby tests/test.rb'
+  exec_cmd 'bundle exec tests/test.rb'
 end
 
 COMMANDS = {
