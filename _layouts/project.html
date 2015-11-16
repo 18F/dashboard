@@ -121,6 +121,17 @@ layout: bare
      </div>
     {% endif %}
 -->
+
+  <!-- api links -->
+  {% if project.api_links %}
+    <div>
+      <h1><i class="fa fa-chevron-right"></i> api links</h1>
+      <ul>{% for item in project.api_links %}
+        <li>{% if item.url %}<a href="{{ item.url }}">{{ item.text }}</a></li>{% else %}<a href="{{ item }}">{{ item }}</a>{% endif %}</li>{% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
   <!-- additional links -->
   {% if project.links %}
     <div>
