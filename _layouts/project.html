@@ -122,24 +122,37 @@ layout: bare
     {% endif %}
 -->
 
+  {% if project.links %}
+
+    {% assign has_api = false %}
+    {% for item in project.links %}
+      {% if item.category == 'api' %}
+        {% assign has_api = true %}
+      {% endif %}
+    {% endfor %}
+
   <!-- api links -->
-  {% if project.api_links %}
+    {% if has_api == true %}
     <div>
       <h1><i class="fa fa-chevron-right"></i> api links</h1>
-      <ul>{% for item in project.api_links %}
-        <li>{% if item.url %}<a href="{{ item.url }}">{{ item.text }}</a></li>{% else %}<a href="{{ item }}">{{ item }}</a>{% endif %}</li>{% endfor %}
+      <ul>{% for item in project.links %}
+      {% if item.category == 'api' %}
+        <li><a href="{{ item.url }}">{{ item.text }}</a></li>{% endif %}{% endfor %}
       </ul>
     </div>
-  {% endif %}
+    {% endif %}
 
   <!-- additional links -->
-  {% if project.links %}
     <div>
       <h1><i class="fa fa-chevron-right"></i> related links</h1>
       <ul>{% for item in project.links %}
-        <li>{% if item.url %}<a href="{{ item.url }}">{{ item.text }}</a></li>{% else %}<a href="{{ item }}">{{ item }}</a>{% endif %}</li>{% endfor %}
+        {% if item.category != 'api' and item.category != 'process' %}
+        <li>{% if item.url %}<a href="{{ item.url }}">{{ item.text }}</a></li>{% else %}<a href="{{ item }}">{{ item }}</a>{% endif %}</li>
+        {% endif %}{% endfor %}
       </ul>
     </div>
+
+  <!-- end of project links section -->
   {% endif %}
 
   <!-- errors -->
