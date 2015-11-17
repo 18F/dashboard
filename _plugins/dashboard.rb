@@ -23,16 +23,28 @@ module Dashboard
       'mission' => 'description'
     }
 
+    def self.munge_licenses(project_data)
+      licenses = project_data['licenses']
+      unless licenses.nil?
+        project_data['licenses'] = licenses.map do |key, value|
+          [key, (value.instance_of?(Hash) ? value['name'] : value)]
+        end.to_h
+      end
+    end
+
+    def self.munge_github(project_data)
+      github = project_data['github']
+      unless github.is_a?(Array) || github.nil?
+        project_data['github'] = [github]
+      end
+    end
+
     def self.munge_project_data(project_data)
       FIELDS_TO_TRANSLATE.each do |from, to|
         project_data[to] = project_data[from] unless project_data[to]
       end
-
-      licenses = project_data['licenses']
-      return if licenses.nil?
-      project_data['licenses'] = licenses.map do |key, value|
-        [key, (value.instance_of?(Hash) ? value['name'] : value)]
-      end.to_h
+      munge_licenses project_data
+      munge_github project_data
     end
 
     def self.create(site, project_id, project_data)
