@@ -58,3 +58,7 @@ department-of-health-and-human-services:
   url: http://dhs.gov
   full_name: Department of Health and Human Services
   acronym: DHS
+department-of-justice:
+  url: http://www.justice.gov/
+  full_name: Justice Department
+  acronym: DOJ
