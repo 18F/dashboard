@@ -50,6 +50,7 @@ regulations-gov:
 department-of-the-interior:
   url: http://interior.gov
   acronym: DOI
+  full_name: U.S. Department of the Interior
 department-of-state:
   url: http://www.state.gov
   full_name: State Department
