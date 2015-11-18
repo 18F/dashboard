@@ -1,5 +1,6 @@
 u-s-department-of-treasury:
   url: http://treasury.gov
+  full_name: U.S. Department of Treasury
 gsa:
   url: http://gsa.gov
   full_name: General Services Administration
