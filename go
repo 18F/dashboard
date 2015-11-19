@@ -59,7 +59,7 @@ def init
 end
 
 def update_gems
-  exec_cmd 'bundle update'
+  exec_cmd 'bundle install'
   exec_cmd 'git add Gemfile.lock'
 end
 
@@ -68,10 +68,13 @@ def update_data
 end
 
 def serve
+  puts 'Updating from the team API'
+  update_data
   exec 'bundle exec jekyll serve --trace'
 end
 
 def build
+  update_data
   puts 'Building the site...'
   exec_cmd('bundle exec jekyll b --trace')
   puts 'Site built successfully.'
