@@ -26,23 +26,6 @@
 #
 # Author: Mike Bland (michael.bland@gsa.gov)
 # Date:   2015-01-10
-
-MIN_VERSION = "2.1.5"
-
-unless RUBY_VERSION >= MIN_VERSION
-  puts <<EOF
-
-*** ABORTING: Unsupported Ruby version ***
-
-Ruby version #{MIN_VERSION} or greater is required to work with the Hub, but
-this Ruby is version #{RUBY_VERSION}. Consider using a version manager such as
-rbenv (https://github.com/sstephenson/rbenv) or rvm (https://rvm.io/)
-to install a Ruby version specifically for Hub development.
-
-EOF
-  exit 1
-end
-
 def exec_cmd(cmd)
   exit $?.exitstatus unless system(cmd)
 end
@@ -89,11 +72,15 @@ def ci_build
 end
 
 def deploy
+  puts 'Updating data from Team-API'
+  update_data
   puts 'Pulling the latest changes...'
   exec_cmd('git pull')
   puts 'Building the site...'
   exec_cmd('/opt/install/rbenv/shims/bundle exec jekyll b --trace')
   puts 'Site built successfully.'
+  require 'time'
+  puts Time.now()
 end
 
 def test_build
