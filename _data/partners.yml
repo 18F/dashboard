@@ -7,6 +7,10 @@ gsa:
   acronym: GSA
 general-services-administration:
   url: http://gsa.gov
+department-of-education:
+  url: http://ed.gov
+  full_name: Department of Education
+  acronym: ED
 federal-election-commission:
   url: http://fec.gov
   full_name: Federal Election Commission
