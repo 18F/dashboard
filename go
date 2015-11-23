@@ -41,11 +41,7 @@ def init
   exec_cmd 'bundle_install'
 end
 
-<<<<<<< HEAD
 def install_gems
-=======
-def update_gems
->>>>>>> origin/staging
   exec_cmd 'bundle install'
   exec_cmd 'git add Gemfile.lock'
 end
