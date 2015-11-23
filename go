@@ -39,6 +39,30 @@ def init
     puts "Bundler installed; installing gems"
   end
   exec_cmd 'bundle_install'
+  puts "Gems installed, are you setting up Dashboard for an organization other than 18F?"
+  setup = gets
+  if setup == "yes"
+    setup(with_init=false)
+  end
+end
+
+def setup(with_init=true)
+  if with_init
+    init
+  end
+  puts "Are you working on 18F's dashboard?"
+  yepnope = gets
+  if yepnope == "yes"
+    puts "You're all set then, run ./go serve to see the Dashboard!"
+    exit 0
+  end
+  puts "Preparing projects.json"
+  FileUtils.copy('_data/projects.json.exmaple', '_data/projects.json')
+  puts "Preparing jekyll configuration"
+  FileUtils.rm('_config.yml')
+  FileUtils.copy('_config.yml.sample', '_config.yml')
+  puts "All done, run ./go serve to see your Dashboard."
+  exit 0
 end
 
 def install_gems
