@@ -6,8 +6,6 @@ description: "18F builds effective, user-centric digital services focused on the
 sass:
   sass_dir: assets/_sass
 
-gems: [bourbon]
-
 destination: _site/dashboard
 baseurl: /dashboard
 #baseurl: localhost:4000
