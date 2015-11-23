@@ -23,8 +23,7 @@ exclude:
 - tests
 - vendor
 
-# To disable fetching from the Team API and to build from local data, prefix
-# the following field with an underscore.
+# To disable fetching from the Team API and to build from local data, remove this section
 team_api:
   #baseurl: http://localhost:4001/public/api/
   #suffix: api.json
