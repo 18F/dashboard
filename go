@@ -47,7 +47,7 @@ def update_gems
 end
 
 def update_data
-  exec_cmd 'cd _data && ./import-public.rb'
+  exec_cmd 'bundle exec ruby _data/import-public.rb'
 end
 
 def serve
