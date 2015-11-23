@@ -1,11 +1,16 @@
 u-s-department-of-treasury:
   url: http://treasury.gov
+  full_name: U.S. Department of Treasury
 gsa:
   url: http://gsa.gov
   full_name: General Services Administration
   acronym: GSA
 general-services-administration:
   url: http://gsa.gov
+department-of-education:
+  url: http://ed.gov
+  full_name: Department of Education
+  acronym: ED
 federal-election-commission:
   url: http://fec.gov
   full_name: Federal Election Commission
@@ -49,6 +54,7 @@ regulations-gov:
 department-of-the-interior:
   url: http://interior.gov
   acronym: DOI
+  full_name: U.S. Department of the Interior
 department-of-state:
   url: http://www.state.gov
   full_name: State Department
@@ -56,3 +62,7 @@ department-of-health-and-human-services:
   url: http://dhs.gov
   full_name: Department of Health and Human Services
   acronym: DHS
+department-of-justice:
+  url: http://www.justice.gov/
+  full_name: Justice Department
+  acronym: DOJ
