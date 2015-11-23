@@ -52,8 +52,7 @@ permalink: /
           </div>
 
           <div>
-
-            <p>{% if project.partner.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partner %}{% include list-partners.html style="strong" %}{% else %}Coming soon{% endif %}</p>
+            <p>{% if project.partners.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partners %}{% include list-partners.html style="strong" %}{% else %}Coming soon{% endif %}</p>
             {% if project.github.first.name %}
               {% assign repo_name = project.github.first.name %}
             {% else %}
