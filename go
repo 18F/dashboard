@@ -41,7 +41,7 @@ def init
   exec_cmd 'bundle_install'
 end
 
-def update_gems
+def install_gems
   exec_cmd 'bundle install'
   exec_cmd 'git add Gemfile.lock'
 end
@@ -90,7 +90,7 @@ end
 
 COMMANDS = {
   :init => 'Set up the Hub dev environment',
-  :update_gems => 'Execute Bundler to update gem set',
+  :install_gems => 'Execute Bundler to update gem set',
   :update_data => 'Updates data files from data-private',
   :serve => 'Serves the site at localhost:4000',
   :build => 'Builds the site',
