@@ -6,7 +6,24 @@ description: "18F builds effective, user-centric digital services focused on the
 sass:
   sass_dir: assets/_sass
 
-gems: [bourbon]
-
+destination: _site/dashboard
 baseurl: /dashboard
 #baseurl: localhost:4000
+exclude:
+- CONTRIBUTING.md
+- Gemfile
+- Gemfile.lock
+- LICENSE.md
+- README.md
+- deploy
+- go
+- gulpfile.js
+- node_modules
+- package.json
+- tests
+- vendor
+
+# If you would like to pull projects from an api, make sure your API is well structured to match the dashboard and has a `projects` endpoint. Then, use `baseurl` and `host` below with the relevan information about your API and run `./go update_data` This will overwrite your local `projects.json` file.
+team_api:
+  #baseurl: http://localhost:4001/public/api/
+  #suffix: api.json

@@ -6,8 +6,6 @@ description: "18F builds effective, user-centric digital services focused on the
 sass:
   sass_dir: assets/_sass
 
-gems: [bourbon]
-
 destination: _site/dashboard
 baseurl: /dashboard
 #baseurl: localhost:4000
@@ -25,8 +23,7 @@ exclude:
 - tests
 - vendor
 
-# To disable fetching from the Team API and to build from local data, prefix
-# the following field with an underscore.
+# To disable fetching from the Team API and to build from local data, remove this section
 team_api:
   #baseurl: http://localhost:4001/public/api/
   #suffix: api.json

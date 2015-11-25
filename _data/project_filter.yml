@@ -1,0 +1,25 @@
+# This file should contain only the identifiers of projects that should be
+# published to the Dashboard from the Team API.
+- developer-program
+- dap
+- api-data-gov
+- betaFEC
+- C2
+- calc
+- cloud.gov
+- collegescorecard
+- dashboard
+- dataact
+- discovery
+- ekip-api
+- fbopen
+- federalist
+- foia
+- midas
+- myra
+- myusa
+- peacecorps-site
+- pulse
+- sbirez
+- uscis
+- useiti-report

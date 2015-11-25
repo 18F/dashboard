@@ -4,7 +4,6 @@
   "teamApiRepo":   "18F/team-api.18f.gov",
   "teamApiBranch": "master",
   "repoDirs": [
-    "/home/site/staging/dashboard",
-    "/home/site/production/dashboard"
+    "/home/site/staging/dashboard"
   ]
 }

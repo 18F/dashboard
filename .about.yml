@@ -45,12 +45,12 @@ team:
   role: lead
 
 # Partners for whom the project is developed
-#partners:
-#- 
+partners:
+- 18F
 
 # Brief descriptions of significant project developments
 #milestones:
-#- 
+#-
 
 # Technologies used to build the project
 stack:
@@ -68,7 +68,7 @@ stack:
 #   url: URL for detailed information
 #   badge: URL for the status badge
 #services:
-#- 
+#-
 
 # Licenses that apply to the project and/or its components (required)
 # Items by property name pattern:
@@ -82,7 +82,7 @@ licenses:
 
 # Blogs or websites associated with project development
 #blog:
-#- 
+#-
 
 # Links to project artifacts
 # Items:
@@ -94,4 +94,5 @@ links:
 
 # Email addresses of points-of-contact
 contact:
-- gregory.boone@gsa.gov
+- url: mailto:gregory.boone@gsa.gov
+  text: Greg Boone

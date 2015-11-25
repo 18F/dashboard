@@ -52,10 +52,13 @@ permalink: /
           </div>
 
           <div>
-
-            <p>{% if project.partner.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partner %}{% include list-partners.html style="strong" %}{% else %}Coming soon{% endif %}</p>
-
-            <p><i class="fa fa-github-alt"></i> / <a class="github-url" href="https://github.com/{{project.github.first}}">Code</a> / </p>
+            <p>{% if project.partners.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partners %}{% include list-partners.html style="strong" %}{% else %}Coming soon{% endif %}</p>
+            {% if project.github.first.name %}
+              {% assign repo_name = project.github.first.name %}
+            {% else %}
+              {% assign repo_name = project.github.first %}
+            {% endif %}
+            <p><i class="fa fa-github-alt"></i> / <a class="github-url" href="https://github.com/{{repo_name}}">Code</a> / </p>
 
             <p><i class="fa fa-bar-chart"></i> / <a href="{{ site.baseurl }}/project/{{ project_name }}">Metrics</a> / </p>
 
