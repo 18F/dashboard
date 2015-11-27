@@ -43,6 +43,13 @@ module Dashboard
       FIELDS_TO_TRANSLATE.each do |from, to|
         project_data[to] = project_data[from] unless project_data[to]
       end
+      original_name = project_data['name']
+      if original_name.scan(/[A-Z]/).size > 0
+        project_data['redirect_from'] = Array.new
+        project_data['redirect_from'].push("project/#{original_name}")
+      end
+      project_data['name'] = original_name.downcase
+
       munge_licenses project_data
       munge_github project_data
     end
@@ -50,6 +57,7 @@ module Dashboard
     def self.create(site, project_id, project_data)
       page = new site, project_id
       munge_project_data project_data
+
       page.data['project'] = project_data
       page.data['title'] = project_data['full_name']
       site.pages << page

@@ -2,8 +2,9 @@
 require 'safe_yaml'
 
 data = SafeYAML.load_file '_data/project_filter.yml', safe: true
-expect_size = data.size
-projectdir = Dir.new('_site/dashboard/project')
+redirects = Dir.open('pages/project').count-2
+expect_size = data.size + redirects
+projectdir = Dir.open('_site/dashboard/project')
 actual_size = projectdir.count-2
 if expect_size == actual_size
   puts "Dashboard pages generated correctly. There are #{actual_size} projects."
