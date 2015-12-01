@@ -5,3 +5,11 @@ gem 'jekyll-sitemap'
 gem 'jekyll', '3.0.1'
 gem 'hash-joiner'
 gem 'safe_yaml'
+
+group :tests do
+  gem 'capybara'
+  gem 'rspec'
+  gem 'capybara-mechanize'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
+end
