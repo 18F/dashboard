@@ -84,8 +84,8 @@ def deploy
 end
 
 def test_build
-  puts 'Testing the build generated the correct number of project pages'
-  exec_cmd 'bundle exec tests/test.rb'
+  puts 'Running Capybara, a chromedriver window should launch shortly...'
+  exec_cmd 'rspec'
 end
 
 COMMANDS = {
