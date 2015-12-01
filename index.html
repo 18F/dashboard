@@ -45,7 +45,7 @@ permalink: /
         {% if project.status != "Hold" %}
         <div class="dashboard-projects-content">
           <div>
-            <a href="{{ site.baseurl }}/project/{{ project_name }}"><h1>{{project.full_name}} <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i><span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1></a>
+            <a href="{{ site.baseurl }}/project/{{ project_name | slugify }}"><h1>{{project.full_name}} <i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i><span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1></a>
           </div>
           <div>
             <p>{% if project.description %}{{ project.description }}{% else %}Project description coming soon.{% endif %}</p>

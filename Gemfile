@@ -13,3 +13,7 @@ group :tests do
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
 end
+
+group :jekyll_plugins do
+    gem 'jekyll-redirect-from', '~> 0.9'
+end
