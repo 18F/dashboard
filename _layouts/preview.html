@@ -1,0 +1,153 @@
+---
+layout: bare
+---
+<!--
+  Do the other things here. Basically, we now have two objects inside this loop:
+  - the page object which has anything in a page's front matter
+  - the project object, which is the project inside _data/projects.yml
+    whose `project` field matches thie page's `title` field.
+-->
+{% assign project = page.project %}<section class="dashboard-project">
+  <nav><a href="{{ site.baseurl }}/"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i> back to main dashboard</a></nav>
+  <h1 id="project-full-name"></h1>
+  <p id="project-description">Project description coming soon.</p>
+  <p id="project-contact">Contact:</p>
+  {% capture blog %}{{ project.blog }}{% endcapture %}
+  {% assign tags = blog | split: ',' %}
+  {% if tags.size > 0 %}
+    <p>
+      <i class="fa fa-newspaper-o"></i>  /
+      <span class="blog-tags" itemprop="keywords">
+        {% for t in tags %}
+          <a href="https://18f.gsa.gov/tags/{{ t }}">News</a>
+          /
+        {% endfor %}
+      </span>
+    </p>
+  {% endif %}
+</section>
+
+<section class="dashboard-info-area">
+  <div>
+    <!-- impact -->
+    <div id="project-impact" style="display: none;">
+      <h1><i class="fa fa-chevron-right"></i> impact</h1>
+      <p></p>
+    </div>
+
+    <!-- partners -->
+    <div id="project-partners" style="display: none;">
+      <h1><i class="fa fa-chevron-right"></i></h1>
+      <ul>
+        {% include list-partners.html style="list" %}
+      </ul>
+    </div>
+
+    <!-- milestones -->
+    <div id="project-milestones" style="display: none;">
+      <h1><i class="fa fa-chevron-right"></i> milestones</h1>
+      <ul></ul>
+    </div>
+
+    <!-- code -->
+    {% if project.github %}
+    <div class="dashboard-code">
+      <h1><i class="fa fa-chevron-right"></i> code</h1>
+      {% for url in project.github %}
+        {% if url.name && url.description %}
+          {% assign full_repo_name = url.name %}
+          {% assign repo_name = url.name | split: "/" | last %}
+          {% assign repo_desc = url.description %}
+        {% else %}
+          {% assign full_repo_name = url %}
+          {% assign repo_name = url | split: "/" | last %}
+        {% endif %}
+      <div class="{{ repo_name | replace: ".", "-" }} repo">
+        <h1>
+          {% if project.github | first %}
+          <i class="fa fa-github-alt"></i> <a class="github-url" href="https://github.com/{{ full_repo_name }}">{{ full_repo_name }}</a>
+          {% else %}
+          <i class="fa fa-github-alt"></i> <a href="https://github.com/{{ full_repo_name }}">{{ full_repo_name }}</a>
+          {% endif %}
+        </h1>
+        {% if repo_desc %}
+          <p>{{ repo_desc }}</p>
+        {% endif %}
+        <ul>
+          <li class="issues"><i class="fa fa-exclamation-circle"></i> Issues: </li>
+          <li class="stars"><i class="fa fa-star"></i> Stars: </li>
+          <li class="forks"><i class="fa fa-code-fork"></i> Forks: </li>
+          {% for license in project.licenses %}{% if license[0] == repo_name %}
+          {% capture branch %}{% if project.licenseBranch %}{{ project.licenseBranch | map: repo_name }}{% else %}master{%endif%}{% endcapture %}
+          <li><i class="fa fa-legal {{ license[0] }}"></i> License: <a href="https://github.com/{{ full_repo_name }}/blob/{{ branch }}/LICENSE.md">{{ license[1] }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+<!--
+    {% if project.team.size > 0 %}
+    <div>
+       <h1>Team:</h1>
+       <ul class="staff">
+         {% capture team %}{{ project.team }}{% endcapture %}
+         {% assign team = team | split: ',' %}
+         {% for name in team %}
+          <li class="{{ name | replace: ' ', '' }}"></li>
+         {% endfor %}
+       </ul>
+     </div>
+    {% endif %}
+-->
+
+  {% if project.links %}
+
+    {% assign has_api = false %}
+    {% for item in project.links %}
+      {% if item.category == 'api' %}
+        {% assign has_api = true %}
+      {% endif %}
+    {% endfor %}
+
+  <!-- api links -->
+    {% if has_api == true %}
+    <div>
+      <h1><i class="fa fa-chevron-right"></i> api links</h1>
+      <ul>{% for item in project.links %}
+      {% if item.category == 'api' %}
+        <li><a href="{{ item.url }}">{{ item.text }}</a></li>{% endif %}{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+  <!-- additional links -->
+    <div>
+      <h1><i class="fa fa-chevron-right"></i> related links</h1>
+      <ul>{% for item in project.links %}
+        {% if item.category != 'api' and item.category != 'process' %}
+        <li>{% if item.url %}<a href="{{ item.url }}">{{ item.text }}</a></li>{% else %}<a href="{{ item }}">{{ item }}</a>{% endif %}</li>
+        {% endif %}{% endfor %}
+      </ul>
+    </div>
+
+  <!-- end of project links section -->
+  {% endif %}
+
+  <!-- errors -->
+  <div id="project-errors" style="display: none;">
+    <h1><i class="fa fa-chevron-right"></i> .about.yml errors</h1>
+    <ul></ul>
+  </div>
+
+  </div>
+</section>
+
+{% include dashboard-contact.html %}
+
+<script src="{{site.baseurl}}/assets/js/underscore.js"></script>
+<script src="{{site.baseurl}}/assets/js/js-yaml.min.js"></script>
+
+<script src="{{site.baseurl}}/assets/js/main.js"></script>
+<script src="{{site.baseurl}}/assets/js/preview.js"></script>
