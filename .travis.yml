@@ -4,6 +4,12 @@ language: ruby
 rvm:
   - 2.2.3
 
+
+before_script:
+  - bundle exec jekyll clean
+  - bundle exec jekyll serve --detach
+  - sleep 3
+  
 script: "./go ci_build"
 git:
   submodules: false
