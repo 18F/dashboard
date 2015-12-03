@@ -62,7 +62,7 @@ layout: bare
           <h1><i class="fa fa-chevron-right"></i> partner</h1>
         {% endif %}
         <ul>
-          {% include list-partners.html style="list" %}
+
         </ul>
       </div>
     {% endif %}
@@ -178,7 +178,10 @@ layout: bare
   </div>
 </section>
 
-{% include dashboard-contact.html %}
+
 
 <script src="{{site.baseurl}}/assets/js/underscore.js"></script>
+<script src="{{site.baseurl}}/assets/js/js-yaml.min.js"></script>
 <script src="{{site.baseurl}}/assets/js/main.js"></script>
+
+{{ content }}
