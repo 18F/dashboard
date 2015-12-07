@@ -9,7 +9,7 @@ before_script:
   - bundle exec jekyll clean
   - bundle exec jekyll serve --detach
   - sleep 3
-  
+
 script: "./go ci_build"
 git:
   submodules: false
@@ -17,7 +17,12 @@ git:
 notifications:
   email:
     recipients:
-      - michelle.hertzfeld@gsa.gov
       - gregory.boone@gsa.gov
     on_success: change
     on_failure: change
+
+addons:
+  sauce_connect:
+    username: "Your Sauce Labs username"
+    access_key:
+      secure: "SmXjj2L2lu1O5YB7JAVRHBV7cpZSzIJXsVQVaLeE3jYI1F18+GQYJj/OEs2N1BQMjWtcKNR32G5TNHXddLAn0pM9JrrGdVLmgQdq5+65pihiN8nG4UkpyNT+ckK4NMT8WB40wBhFHXmLf0RO/gSCEGP/qNiXBNtbspTy9TNt4SE="

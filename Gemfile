@@ -9,9 +9,9 @@ gem 'safe_yaml'
 group :tests do
   gem 'capybara'
   gem 'rspec'
-  gem 'capybara-mechanize'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
+  gem 'travis'
 end
 
 group :jekyll_plugins do

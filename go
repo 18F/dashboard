@@ -68,6 +68,7 @@ def ci_build
   update_data
   build
   test_build
+  exec_cmd 'rspec'
   puts 'Done!'
 end
 
