@@ -8,7 +8,7 @@
   },
   "license": "CC0-1.0",
   "devDependencies": {
-    "about-yml-npm": "git+https://github.com/18F/about-yml-npm.git#package-restructuring",
+    "about-yml-validator": "git+https://github.com/18F/about-yml-npm.git#js-yaml-to-yamljs-%233",
     "browserify": "^12.0.1",
     "chai": "^3.2.0",
     "chai-as-promised": "^5.1.0",
@@ -23,5 +23,8 @@
     "sinon-chai": "^2.8.0",
     "watchify": "^3.6.1",
     "yamljs": "^0.2.4"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
   }
 }

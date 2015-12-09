@@ -1,40 +1,61 @@
-var yaml = require('yamljs');
-
-// override global objects for validator
-window.jsYaml = window.jsyaml = {};
-window.jsYaml.safeLoad = yaml.parse;
-
-var aboutYmlValidator = require('about-yml-npm');
-var validator = new aboutYmlValidator();
-
 var fs = require('fs');
 
-var liquid = window.l = modifyLiquidIncludes(require('liquid.js'));
+var _ = require('underscore');
+var yaml = require('yamljs');
+var liquid = require('liquid.js');
 
-var url = cleanUrl(window.location.search);
+liquid.readTemplateFile = function(path) {
+  console.log('path', path);
+  if (includes[path]) return includes[path];
+  return '';
+}
+
+var aboutYmlValidator = require('about-yml-validator');
+var validator = new aboutYmlValidator();
+
+var includes = window.zz = {
+  'list-partners.html': fs.readFileSync(__dirname + '/../../_includes/list-partners.html', 'utf8')
+};
+
+var url = cleanGithubUrl(window.location.search);
 var xhr = new XMLHttpRequest();
-xhr.addEventListener("load", insertAboutYml);
+xhr.addEventListener("load", handleAboutYml);
 
 xhr.open('GET', url);
 xhr.send();
 
-function insertAboutYml (e) {
+function handleAboutYml (e) {
   var res = e.target;
   if (res.status !== 200) return;
 
-  var yml = yaml.parse(res.responseText);
+  var aboutYml = yaml.parse(res.responseText);
+  var name = aboutYml.name;
+  fetchTeamApi(name, function (r) {
+    if (r.status !== 200) return;
+
+    var teamApi = yaml.parse(r.responseText);
+    var together = _.extend({}, teamApi, aboutYml);
+    insertYmlInHtml(together);
+  });
+}
+
+function fetchTeamApi (name, cb) {
+  var base = 'https://team-api.18f.gov/public/api/projects',
+      url = [base, name.toLowerCase() + '/'].join('/'),
+      xhr = new XMLHttpRequest();
+
+  xhr.addEventListener("load", function (e) {
+    if (cb) cb(e.target);
+  });
+
+  xhr.open('GET', url);
+  xhr.send();
+}
+
+function insertYmlInHtml (yml) {
   var template = compileLiquidTemplate();
   var html = template.render({ page: { project: yml }});
   document.querySelector('[role=main]').innerHTML = html;
-
-  var validationErrors = validator.validate(res.responseText);
-  console.log('validationErrors', validationErrors);
-}
-
-function cleanUrl (url) {
-  return url.replace('?url=', '')
-    .replace('https://github.com','https://raw.githubusercontent.com')
-    .replace('blob/', '');
 }
 
 function compileLiquidTemplate () {
@@ -45,27 +66,8 @@ function compileLiquidTemplate () {
   return liquid.parse(templateSrc);
 }
 
-function modifyLiquidIncludes (liquid) {
-  liquid.readTemplateFile = function(path) {
-    console.log('path', path);
-    var elem = $(path);
-    if(elem) {
-      return elem.innerHTML;
-    } else {
-      return path +" can't be found.";
-      // Or throw and error, or whatever you want...
-    }
-  }
-
-  return liquid;
-}
-
-function getIncludeFiles () {
-  var includes = {};
-  var basePath = __dirname + '/../../_includes';
-  console.log('basePath', basePath);
-  var files = fs.readFileSync(basePath);
-  // console.log('files', files);
-  console.log('includes', includes);
-
+function cleanGithubUrl (url) {
+  return url.replace('?url=', '')
+    .replace('https://github.com','https://raw.githubusercontent.com')
+    .replace('blob/', '');
 }
