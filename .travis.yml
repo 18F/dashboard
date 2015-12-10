@@ -8,9 +8,10 @@ rvm:
 before_script:
   - bundle exec jekyll clean
   - bundle exec jekyll serve --detach
-  - sleep 3
+  - sleep 1
+  - rspec
 
-script: "./go ci_build"
+script: "pkill -f jekyll"
 git:
   submodules: false
 
@@ -20,3 +21,5 @@ notifications:
       - gregory.boone@gsa.gov
     on_success: change
     on_failure: change
+
+cache: bundler
