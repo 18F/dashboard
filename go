@@ -64,11 +64,8 @@ def build
 end
 
 def ci_build
-  puts 'Fetching from Team API...'
-  update_data
-  build
+  puts 'Testing the build'
   test_build
-  exec_cmd 'rspec'
   puts 'Done!'
 end
 
@@ -85,7 +82,6 @@ def deploy
 end
 
 def test_build
-  puts 'Running Capybara, a chromedriver window should launch shortly...'
   exec_cmd 'rspec'
 end
 
