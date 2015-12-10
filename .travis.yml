@@ -6,12 +6,9 @@ rvm:
 
 
 before_script:
-  - bundle exec jekyll clean
   - bundle exec jekyll serve --detach
-  - sleep 1
-  - rspec
 
-script: "pkill -f jekyll"
+script: "rspec && pkill -f jekyll"
 git:
   submodules: false
 
