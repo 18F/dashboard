@@ -9,8 +9,7 @@ gem 'safe_yaml'
 group :tests do
   gem 'capybara'
   gem 'rspec'
-  gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
+  gem 'poltergeist'
   gem 'travis'
 end
 

@@ -3,7 +3,7 @@ RSpec.describe "project page", :type => :feature do
   projects.each_with_index do |project, index|
     it "#{project} should not have errors" do
       visit_url(project)
-      expect(page).not_to have_content(" .about.yml errors")
+      expect(page).not_to have_selector(".project-errors")
     end
     skip "#{project} should have the basic project header" do
       visit_url(project)
