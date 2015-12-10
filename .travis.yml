@@ -8,7 +8,10 @@ rvm:
 before_script:
   - bundle exec jekyll serve --detach
 
-script: "rspec && pkill -f jekyll"
+script: "rspec"
+
+after_script: "pkill -f jekyll"
+
 git:
   submodules: false
 
