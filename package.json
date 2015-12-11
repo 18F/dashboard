@@ -22,9 +22,11 @@
     "sinon": "^1.15.4",
     "sinon-chai": "^2.8.0",
     "watchify": "^3.6.1",
+    "brfs": "^3.6.1",
     "yamljs": "^0.2.4"
   },
   "dependencies": {
+    "brfs": "^1.4.1",
     "marked": "^0.3.5",
     "underscore": "^1.8.3"
   }
