@@ -14,7 +14,7 @@ liquid.readTemplateFile = function(path) {
 var aboutYmlValidator = require('about-yml-validator');
 var validator = new aboutYmlValidator();
 
-var includes = window.zz = {
+var includes = {
   'list-partners.html': "{% for agency in project.partners %}{% capture agencyname %}{{ agency | slugify }}{% endcapture %}{% capture partnerurl %}{% for partner in site.data.partners %}{% if partner[0] == agencyname %}{{ partner[1].url }}{% else %} {% endif %}{% endfor %}{% endcapture %}{% if include.style == \"list\" %}{% unless partnerurl == \" \" %}<li><a href=\"{{ partnerurl }}\">{{ agency }}</a></li>{% else %}<li>{{agency}}</li>{% endunless %}{% elsif include.style == \"strong\" %}{% unless partnerurl == \" \" %}<strong><a href=\"{{partnerurl}}\">{{agency}}{% unless forloop.rindex == 1 %}, {% endunless%}</a></strong>{% else %}<strong>{{ agency }}</strong>{% endunless %}{% endif %}{% endfor %}\n"
 };
 
@@ -26,31 +26,33 @@ xhr.open('GET', url);
 xhr.send();
 
 function handleAboutYml (e) {
-  var res = e.target;
+  var res = e.target,
+      aboutYml, errors, yml;
   if (res.status !== 200) return;
 
-  var aboutYml = yaml.parse(res.responseText);
-  var name = aboutYml.name;
-  fetchTeamApi(name, function (r) {
-    if (r.status !== 200) return;
+  aboutYml = yaml.parse(res.responseText);
+  errors = validator.validate(res.responseText);
 
-    var teamApi = yaml.parse(r.responseText);
-    var together = _.extend({}, teamApi, aboutYml);
-    insertYmlInHtml(together);
-  });
+  if (errors) aboutYml['errors'] = errors;
+
+  yml = addMissingNotices(aboutYml);
+  insertYmlInHtml(yml);
 }
 
-function fetchTeamApi (name, cb) {
-  var base = 'https://team-api.18f.gov/public/api/projects',
-      url = [base, name.toLowerCase() + '/'].join('/'),
-      xhr = new XMLHttpRequest();
+function addMissingNotices (yml) {
+  var whitelist = {
+      'full_name': 'Missing full_name',
+      'description': 'Missing description',
+      'contact': 'Missing contact',
+      'blog': 'Missing blog',
+      'impact': 'Missing impact',
+      'partners': ['Missing partners'],
+      'milestones': ['Missing milestones'],
+      'github': ['Missing github'],
+      'links': ['Missing links']
+    };
 
-  xhr.addEventListener("load", function (e) {
-    if (cb) cb(e.target);
-  });
-
-  xhr.open('GET', url);
-  xhr.send();
+  return _.defaults({}, whitelist, yml);
 }
 
 function insertYmlInHtml (yml) {
