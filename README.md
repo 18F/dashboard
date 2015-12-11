@@ -32,7 +32,7 @@ here? Create an issue! We value feedback.
 
 ## Installing
 
-First clone this repo. Then, install all its dependencies by running `./go init` in your terminal. After that, run `./go update` and `./go serve` and visit http://localhost:4000/dashboard/ in your web browser.
+First clone this repo. Then, install all its dependencies by running `./go init` in your terminal. After that, run `./go update` and `./go serve` and visit [http://localhost:4000/dashboard/](http://localhost:4000/dashboard/) in your web browser.
 
 By default you get all of our projects, and you can refresh their information by running the `_data/import-public.rb` script. Which is pretty cool, we think.
 
