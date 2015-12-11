@@ -25,6 +25,7 @@
     "yamljs": "^0.2.4"
   },
   "dependencies": {
+    "marked": "^0.3.5",
     "underscore": "^1.8.3"
   }
 }

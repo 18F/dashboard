@@ -1,8 +1,14 @@
 var fs = require('fs');
 
 var _ = require('underscore');
+var marked = require('marked');
 var yaml = require('yamljs');
 var liquid = require('liquid.js');
+
+marked.setOptions({
+  gfm: true,
+  break: true
+});
 
 liquid.readTemplateFile = function(path) {
   console.log('path', path);
@@ -30,16 +36,22 @@ function handleAboutYml (e) {
   if (res.status !== 200) return;
 
   aboutYml = window.a = yaml.parse(res.responseText);
-  console.log('aboutYml', aboutYml);
-
   errors = validator.validate(res.responseText);
-  console.log('errors', errors);
 
   if (errors) aboutYml['errors'] = errors;
 
   yml = addMissingNotices(aboutYml);
-  console.log('yml', yml);
+
+  yml['description'] = parseMarkdown(yml['description']);
+  yml['impact'] = parseMarkdown(yml['impact']);
+
   insertYmlInHtml(yml);
+}
+
+function parseMarkdown (field) {
+  var md = marked(field);
+  console.log('md', md);
+  return md;
 }
 
 function addMissingNotices (yml) {
