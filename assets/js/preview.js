@@ -29,17 +29,21 @@ function handleAboutYml (e) {
       aboutYml, errors, yml;
   if (res.status !== 200) return;
 
-  aboutYml = yaml.parse(res.responseText);
+  aboutYml = window.a = yaml.parse(res.responseText);
+  console.log('aboutYml', aboutYml);
+
   errors = validator.validate(res.responseText);
+  console.log('errors', errors);
 
   if (errors) aboutYml['errors'] = errors;
 
   yml = addMissingNotices(aboutYml);
+  console.log('yml', yml);
   insertYmlInHtml(yml);
 }
 
 function addMissingNotices (yml) {
-  var whitelist = {
+  var whitelist = window.w = {
       'full_name': 'Missing full_name',
       'description': 'Missing description',
       'contact': 'Missing contact',
@@ -51,7 +55,7 @@ function addMissingNotices (yml) {
       'links': ['Missing links']
     };
 
-  return _.defaults({}, whitelist, yml);
+  return _.defaults({}, yml, whitelist);
 }
 
 function insertYmlInHtml (yml) {
