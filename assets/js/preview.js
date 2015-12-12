@@ -6,8 +6,7 @@ var yaml = require('yamljs');
 var liquid = require('liquid.js');
 
 marked.setOptions({
-  gfm: true,
-  break: true
+  gfm: true
 });
 
 liquid.readTemplateFile = function(path) {
@@ -35,22 +34,22 @@ function handleAboutYml (e) {
       aboutYml, errors, yml;
   if (res.status !== 200) return;
 
-  aboutYml = window.a = yaml.parse(res.responseText);
+  aboutYml = yaml.parse(res.responseText);
   errors = validator.validate(res.responseText);
 
   if (errors) aboutYml['errors'] = errors;
 
   yml = addMissingNotices(aboutYml);
-
   yml['description'] = parseMarkdown(yml['description']);
   yml['impact'] = parseMarkdown(yml['impact']);
 
   insertYmlInHtml(yml);
+
 }
 
 function parseMarkdown (field) {
+  field = field.replace(/\\n/g, '\n');  // escaped in yaml parser?
   var md = marked(field);
-  console.log('md', md);
   return md;
 }
 
