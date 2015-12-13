@@ -8,7 +8,7 @@ rvm:
 before_script:
   - bundle exec jekyll serve --detach
 
-script: "bundle exec rspec"
+script: "bundle exec rspec --tag'~type:missing'"
 
 after_script: "pkill -f jekyll"
 

@@ -5,22 +5,22 @@ RSpec.describe "project page", :type => :feature do
       visit_url(project)
       expect(page).not_to have_selector(".project-errors")
     end
-    skip "#{project} should have the basic project header" do
+    it "#{project} should have the basic project header", :type => 'missing' do
       visit_url(project)
       page.should have_css(".dashboard-project")
     end
 
-    skip "#{project} should have a status" do
+    it "#{project} should have a status", :type => 'missing' do
       visit_url(project)
       page.should have_css(".dashboard-project .status")
     end
 
-    skip "#{project} should have a contact" do
+    it "#{project} should have a contact", :type => 'missing' do
       visit_url(project)
       page.should have_css(".project-contact") # add css for "contact"
     end
 
-    skip "#{project} should have an impact statement" do
+    it "#{project} should have an impact statement", :type => 'missing' do
       visit_url(project)
       page.should have_css(".project-impact")
     end
