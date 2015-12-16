@@ -1,16 +1,16 @@
 # This file should contain only the identifiers of projects that should be
 # published to the Dashboard from the Team API.
 projects:
-- developer-program
-- dap
 - api-data-gov
 - betaFEC
 - C2
 - calc
 - cloud.gov
 - collegescorecard
+- dap
 - dashboard
 - dataact
+- developer-program
 - discovery
 - ekip-api
 - fbopen
