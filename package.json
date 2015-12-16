@@ -1,18 +1,33 @@
 {
+  "scripts": {
+    "browserify": "browserify assets/js/preview.js -o assets/js/preview-bundle.js -t brfs",
+    "watchify": "watchify assets/js/preview.js -o assets/js/preview-bundle.js -t brfs"
+  },
   "engines": {
     "node": ">=0.12.7"
   },
   "license": "CC0-1.0",
   "devDependencies": {
+    "about-yml-validator": "git+https://github.com/18F/about-yml-npm.git#js-yaml-to-yamljs-%233",
+    "browserify": "^12.0.1",
     "chai": "^3.2.0",
     "chai-as-promised": "^5.1.0",
     "gulp": "^3.9.0",
     "gulp-jshint": "^1.11.2",
     "gulp-mocha": "^2.1.3",
     "jshint": "^2.8.0",
+    "liquid.js": "^1.3.2",
     "mocha": "^2.2.5",
     "mock-spawn": "^0.2.6",
     "sinon": "^1.15.4",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "watchify": "^3.6.1",
+    "brfs": "^3.6.1",
+    "yamljs": "^0.2.4"
+  },
+  "dependencies": {
+    "brfs": "^1.4.1",
+    "marked": "^0.3.5",
+    "underscore": "^1.8.3"
   }
 }
