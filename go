@@ -51,13 +51,10 @@ def update_data
 end
 
 def serve
-  puts 'Updating from the team API'
-  update_data
   exec 'bundle exec jekyll serve --trace'
 end
 
 def build
-  update_data
   puts 'Building the site...'
   exec_cmd('bundle exec jekyll b --trace')
   puts 'Site built successfully.'
@@ -72,8 +69,6 @@ def ci_build
 end
 
 def deploy
-  puts 'Updating data from Team-API'
-  update_data
   puts 'Pulling the latest changes...'
   exec_cmd('git pull')
   puts 'Building the site...'

@@ -55,12 +55,14 @@ module Dashboard
     end
 
     def self.create(site, project_id, project_data)
-      page = new site, project_id
-      munge_project_data project_data
+      unless project_id == "all"
+        page = new site, project_id
+        munge_project_data project_data
 
-      page.data['project'] = project_data
-      page.data['title'] = project_data['full_name']
-      site.pages << page
+        page.data['project'] = project_data
+        page.data['title'] = project_data['full_name']
+        site.pages << page
+      end
     end
   end
 
@@ -76,10 +78,9 @@ module Dashboard
     end
 
     def generate_project_pages(site)
+      site.data['projects'].delete('all')
       site.data['projects'].each do |project_id, project|
-        unless project_id == "all"
-          ProjectPage.create site, project_id, project
-        end
+        ProjectPage.create site, project_id, project
       end
     end
   end
