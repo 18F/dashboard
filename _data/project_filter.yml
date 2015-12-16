@@ -1,5 +1,6 @@
 # This file should contain only the identifiers of projects that should be
 # published to the Dashboard from the Team API.
+projects:
 - developer-program
 - dap
 - api-data-gov
@@ -23,3 +24,17 @@
 - sbirez
 - uscis
 - useiti-report
+fields:
+- full_name
+- stage
+- description
+- contact
+- blog
+- impact
+- partners
+- milestones
+- github
+- licenses
+- links
+- errors
+- name
