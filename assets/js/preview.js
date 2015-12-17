@@ -19,7 +19,7 @@ var aboutYmlValidator = require('about-yml-validator');
 var validator = new aboutYmlValidator();
 
 var includes = {
-  'list-partners.html': fs.readFileSync(__dirname + '/../../_includes/list-partners.html', 'utf8')
+  'list-partners.html': fs.readFileSync(__dirname + '/../../_includes/list-partners-preview.html', 'utf8')
 };
 
 var url = cleanGithubUrl(window.location.search);
