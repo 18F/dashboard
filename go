@@ -57,7 +57,8 @@ end
 def serve
   puts 'Updating from the team API'
   update_data
-  exec 'npm run watchify & bundle exec jekyll serve --trace'
+  exec_cmd 'npm run watchify &'
+  exec_cmd 'bundle exec jekyll serve --trace'
 end
 
 def build
