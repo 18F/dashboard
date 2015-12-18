@@ -83,6 +83,7 @@ def deploy
   puts 'Pulling the latest changes...'
   exec_cmd('git pull')
   puts 'Building the site...'
+  exec_cmd('npm install && npm run browserify')
   exec_cmd('/opt/install/rbenv/shims/bundle exec jekyll b --trace')
   puts 'Site built successfully.'
   require 'time'
