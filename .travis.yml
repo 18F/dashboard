@@ -4,6 +4,8 @@ language: ruby
 rvm:
   - 2.2.3
 
+before_install: npm install
+
 script: "./go ci_build"
 git:
   submodules: false
