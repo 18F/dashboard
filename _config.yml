@@ -22,6 +22,7 @@ exclude:
 - package.json
 - tests
 - vendor
+- assets/js/preview.js
 
 gems:
   - jekyll-redirect-from
