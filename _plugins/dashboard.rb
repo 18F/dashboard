@@ -54,7 +54,7 @@ module Dashboard
 
     def self.append_repo_links(project_data, projects)
       links = project_data['links']
-      if links
+      if links && project_data['github']
         repo_links = links.map do |link|
           get_repo_name_from_url(link, projects) if link['category'] == 'repo'
         end.compact
