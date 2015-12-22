@@ -46,7 +46,7 @@ Steps:
 
 2. Coming Soon: *Preview your dashboard page.*  You can see what your page will look like before starting the review process.  The dashboard preview feature allows the display of a page based on external data hosted on github.  
 
-  The easiest way to preview is to first submit a pull request to your own project or data-private with new about.yml content for your own team members to review.  You can also drop your project description into the #writing_lab slack channel or ask those folks to review your PR as well. Using a link to that file on github, you can preview how it will look on the dashboard.  Using the Project Preview link `https://18f.gsa.gov/dashboard/project/preview?url=<link to about.yml file>`. Note that this requires an URL parameter which is expected to point at a github URL.
+  The easiest way to preview is to first submit a pull request to your own project or data-private with new about.yml content for your own team members to review.  You can also drop your project description into the #writing-lab slack channel or ask those folks to review your PR as well. Using a link to that file on github, you can preview how it will look on the dashboard.  Using the Project Preview link `https://18f.gsa.gov/dashboard/project/preview?url=<link to about.yml file>`. Note that this requires an URL parameter which is expected to point at a github URL.
 
   For example, the [Open Opps about.yml](https://github.com/18F/openopps-platform/blob/dev/.about.yml) can be previewed at: [https://18f.gsa.gov/dashboard/project/preview?url=https://github.com/18F/openopps-platform/blob/dev/.about.yml](https://18f.gsa.gov/dashboard/project/preview?url=https://github.com/18F/openopps-platform/blob/dev/.about.yml)
 
