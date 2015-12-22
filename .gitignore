@@ -5,6 +5,3 @@
 *.pyc
 _data/projects.json
 node_modules/
-
-# generated: npm run browserify
-assets/js/preview-bundle.js
