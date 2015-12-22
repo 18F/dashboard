@@ -30,7 +30,7 @@ The [18F dashboard](https://18f.gsa.gov/dashboard) content is curated by the 18F
 
 Putting your information on the dashboard is a three step process. First, you'll create the content for your entry. Next, you'll preview this material. And finally, the material will be added to the dashboard. The process is detailed below.
 
-## Creating an entry in the dashboard
+## Creating content for your dashboard entry
 
 1. *Provide your project's basic information.*
 
@@ -40,15 +40,15 @@ Putting your information on the dashboard is a three step process. First, you'll
 
 2. Coming Soon: *Preview your dashboard page.*  You will be able to see what your page will look like before starting the review process.  The dashboard preview feature allows the display of a page based on external data hosted on GitHub.
 
-## Previewing your submission
+Right now, the easiest way to preview is to first submit a pull request to your own project or data-private with new about.yml content for your own team members to review.  You can also drop your project's about.yml details into the #writing-lab Slack channel or ask those folks to review your PR as well. 
 
-_Right now, the easiest way to preview is to first submit a pull request to your own project or data-private with new about.yml content for your own team members to review.  You can also drop your project's about.yml details into the #writing-lab Slack channel or ask those folks to review your PR as well. 
+Once the preview functionality is released, you will also able to preview your project in the dashboard using the example URL below. Just replace the GitHub link after the '?url=' part of the URL with a link to your about.yml file. Then paste the entire URL into your browser. (Make sure you delete the extra apostrophe at the end.) If you have any questions about this, please drop by the #dashboard channel in Slack. `https://18f.gsa.gov/dashboard/project/preview?url=YOUR_ABOUT_YML`. 
 
-We provide a preview link for you to use with your about.yml file. Copy the link to the about.yml file in GitHub and drop it in this link. Make sure you delete the extra apostrophe at the end. If you have any questions about this, please drop by the #Dashboard channel in Slack. `https://18f.gsa.gov/dashboard/project/preview?url=YOUR_ABOUT_YML`. 
-
-### Example preview
+### Example preview link
 
 The [Open Opps about.yml](https://github.com/18F/openopps-platform/blob/dev/.about.yml) can be previewed at: [https://18f.gsa.gov/dashboard/project/preview?url=https://github.com/18F/openopps-platform/blob/dev/.about.yml](https://18f.gsa.gov/dashboard/project/preview?url=https://github.com/18F/openopps-platform/blob/dev/.about.yml)
+
+Follow the #dashboard channel for updates on the preview functionality.
 
 ## Add your project to the dashboard
 
