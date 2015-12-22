@@ -38,7 +38,8 @@ def init
     exec_cmd 'gem install bundler'
     puts "Bundler installed; installing gems"
   end
-  exec_cmd 'bundle_install'
+  exec_cmd 'bundle install'
+  install_node_modules
 end
 
 def install_gems
