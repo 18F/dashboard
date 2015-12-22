@@ -10,25 +10,11 @@ journalists, prospective 18Fers
 
 ## Dashboard Content
 
-The data points for this project are listed as GitHub
-[issues](http://github.com/18f/dashboard/issues). Milestone
-[1](https://github.com/18F/dashboard/milestones/Sprint%201%20-%20MVP) issues
-are the most basic info that we intend to display in the initial list view
-of the dashboard. When users click on a project in that list, they will see
-the the data points listed under Milestones
-[2](https://github.com/18F/dashboard/milestones/2nd%20Sprint) and
-[3](https://github.com/18F/dashboard/milestones/3rd%20Sprint) on individual
-project pages. The [Backlog
-Milestone](https://github.com/18F/dashboard/milestones/Backlog) includes
-data points that need further research or are currently not a priority.
+The Dashboard was initially created in late 2014. The data that is displayed was prioritized based on  initial interviews, research, and guesses
+about how many of the audiences listed above would be interested in specific information, and then balanced against level of effort required to obtain or
+incorporate that data.
 
-Data was prioritized based on our initial interviews, research, and guesses
-about how many of the audiences listed above would be interested in a data
-point, and then balanced against level of effort required to obtain or
-incorporate a data point.
-
-Is there data that you'd like to see about our projects that's not listed
-here? Create an issue! We value feedback.
+Is there data that you'd like to see about our projects that's not listed here? Create an [issue](https://github.com/18F/dashboard/issues/new)! We value feedback.
 
 ## Installing
 
@@ -46,15 +32,36 @@ to `_team_api:` to disable fetching from the Team API server.
 
 ## Editing the Dashboard
 
-To edit project details on `18f.gsa.gov/dashboard`, update the `.about.yml` file
-in the project's repo. If a project has multiple repos, create an
-`.about.yml` in each one of them, and note the project's main repo in the
-`parent:` field (in this case, this is the only required field).
+The [18F dashboard](https://18f.gsa.gov/dashboard) content is curated by the 18F Communications team.  Our editorial staff is available to review your text to help explain and promote your project.  We strive for a fast and leight-weight review process and still ensure that the dashboard makes sense and looks good to its thousands of monthly visitors.
+
+18F Product Leads are responsible for their Dashboard page.  It should be created at the start of your project and reviewed monthly with regular updates of milestones achieved, news and other information.
+
+Steps:
+
+1. *Provide your project information.*
+
+   A. If a project has a github repository, create or edit an `.about.yml` file in the main repo.  For more information about this format, check out the [team-api README](https://github.com/18F/team-api.18f.gov/blob/master/README.md).
+
+   B. If your project does not have a github repository, you may add a file to [data-private/projects](https://github.com/18F/data-private/tree/master/projects) that conforms to the same format as `about.yml`.
+
+2. Coming Soon: *Preview your dashboard page.*  You can see what your page will look like before starting the review process.  The dashboard preview feature allows the display of a page based on external data hosted on github.  
+
+  The easiest way to preview is to first submit a pull request to your own project or data-private with new about.yml content for your own team members to review.  You can also drop your project description into the #writing_lab slack channel or ask those folks to review your PR as well. Using a link to that file on github, you can preview how it will look on the dashboard.  Using the Project Preview link `https://18f.gsa.gov/dashboard/project/preview?url=<link to about.yml file>`. Note that this requires an URL parameter which is expected to point at a github URL.
+
+  For example, the [Open Opps about.yml](https://github.com/18F/openopps-platform/blob/dev/.about.yml) can be previewed at: [https://18f.gsa.gov/dashboard/project/preview?url=https://github.com/18F/openopps-platform/blob/dev/.about.yml](https://18f.gsa.gov/dashboard/project/preview?url=https://github.com/18F/openopps-platform/blob/dev/.about.yml)
+
+3. *For new projects: Add to the Dashboard.* When the content looks good to you and your team, it is time to propose to 18F Comms that your project be showcased on the dashboard.  You can do this by:
+
+  A. Edit the [project_filter.yml](https://github.com/18F/dashboard/blob/staging/_data/project_filter.yml) to add your project to the list and submit as a pull request.  
+
+  B. File an [issue](https://github.com/18F/dashboard/issues/new) with a link to your about.yml github URL, and we'll queue it up for the next sprint.  
+
+4. New content is reviewed at least once a week and the website is updated subsequently. Keep an eye on your pull-requests, editorial folk will make comments there with suggested improvements.  
+
+If you are eager for a quick response on any of these steps or have questions, please don't hesitate to shout out on the #dashboard channel.
 
 The info below under "Installing" is *not* required to update a repo's
 `.about.yml` file.
-
-Updates _should be automatic_. Shortly after your repo's `.about.yml` file is updated the changes should show up on the live site. Reach out to the `#outreach` team on Slack if this doesn't happen.
 
 ## Data for the Dashboard
 
