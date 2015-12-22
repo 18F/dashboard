@@ -651,33 +651,13 @@
   },
   "C2": {
     "name": "C2",
-    "github": {
-      "name": "18F/C2",
-      "description": "an approval process automation tool"
-    },
-    "description": "an approval process automation tool",
-    "partners": [
-      "GSA National Capital Region",
-      "18F",
-      "GSA Common Acquisition Platform"
-    ],
+    "full_name": "C2",
+    "type": "app",
+    "owner_type": "project",
     "stage": "live",
-    "impact": "For the GSA use cases alone, Communicart could be used by over 80,000 U.S. Federal Government purchase card holders.",
-    "milestones": null,
-    "contact": [
-      {
-        "url": "mailto:gatewaycommunicator@gsa.gov",
-        "text": "C2 support"
-      },
-      {
-        "url": "https://github.com/18F/C2/issues",
-        "text": "C2 GitHub issues"
-      }
-    ],
-    "stack": [
-      "Ruby",
-      "Rails"
-    ],
+    "status": "active",
+    "description": "an approval process automation tool",
+    "testable": true,
     "team": [
       {
         "name": "afeld",
@@ -692,13 +672,6 @@
         "first_name": "Annalee",
         "last_name": "Flower Horne",
         "self": "https://team-api.18f.gov/public/api/team/annalee"
-      },
-      {
-        "name": "anthony.garvan",
-        "full_name": "Tony Garvan",
-        "first_name": "Tony",
-        "last_name": "Garvan",
-        "self": "https://team-api.18f.gov/public/api/team/anthony.garvan"
       },
       {
         "name": "yoz",
@@ -720,25 +693,24 @@
         "first_name": "Raphael",
         "last_name": "Villas",
         "self": "https://team-api.18f.gov/public/api/team/raphy"
-      }
-    ],
-    "licenses": {
-      "C2": {
-        "name": "CC0-1.0",
-        "url": "https://github.com/18F/C2/blob/master/LICENSE.md"
-      }
-    },
-    "links": [
+      },
       {
-        "url": "https://c2.18f.gov/",
-        "text": "C2 website"
+        "name": "jessie",
+        "full_name": "Jessie Young",
+        "first_name": "Jessie",
+        "last_name": "Young",
+        "self": "https://team-api.18f.gov/public/api/team/jessie"
       }
     ],
-    "status": "active",
-    "full_name": "C2",
-    "type": "app",
-    "owner_type": "project",
-    "testable": true,
+    "partners": [
+      "GSA National Capital Region",
+      "18F",
+      "GSA Common Acquisition Platform"
+    ],
+    "stack": [
+      "Ruby",
+      "Rails"
+    ],
     "services": [
       {
         "name": "CircleCI",
@@ -757,6 +729,28 @@
         "category": "dependency status",
         "url": "https://gemnasium.com/18F/C2",
         "badge": "https://gemnasium.com/18F/C2.svg"
+      }
+    ],
+    "licenses": {
+      "C2": {
+        "name": "CC0-1.0",
+        "url": "https://github.com/18F/C2/blob/master/LICENSE.md"
+      }
+    },
+    "links": [
+      {
+        "url": "https://cap.18f.gov/",
+        "text": "C2 website"
+      }
+    ],
+    "contact": [
+      {
+        "url": "https://cap.18f.gov/feedback",
+        "text": "C2 support"
+      },
+      {
+        "url": "https://github.com/18F/C2/issues",
+        "text": "C2 GitHub issues"
       }
     ],
     "self": "https://team-api.18f.gov/public/api/projects/c2"

@@ -3,7 +3,6 @@ full_name: Open Opportunities
 name: openopps
 github:
 - 18F/openopps-platform
-- 18F/midas
 description: |
   Open Opportunities is creating a network of federal employees that will lead to a more effective, efficient, responsive government by sharing skills and collaborating on projects that support the mission of an agency or the government as a whole. Only 37% of federal employees surveyed believe that creativity & innovation are rewarded. From a total audience of 2.7 million federal employees, the initial target audience are motivate, mission-driven individuals who identify and solve problems for our nation.
 partners:
@@ -41,3 +40,6 @@ licenses:
   dashboard:
     name: CC0-1.0
     url: https://github.com/18F/openopps-platform/blob/master/LICENSE.md
+errors:
+- The property '#/' did not contain a required property of 'testable' in schema 153c6056-e293-5b85-aaf3-894bae47b9fb#
+- 'Unknown Team Member: rogeruiz'

@@ -13,7 +13,7 @@ impact: For the GSA use cases alone, Communicart could be used by over 80,000 U.
   Federal Government purchase card holders.
 milestones: 
 contact:
-- url: mailto:gatewaycommunicator@gsa.gov
+- url: https://cap.18f.gov/feedback
   text: C2 support
 - url: https://github.com/18F/C2/issues
   text: C2 GitHub issues
@@ -22,6 +22,6 @@ licenses:
     name: CC0-1.0
     url: https://github.com/18F/C2/blob/master/LICENSE.md
 links:
-- url: https://c2.18f.gov/
+- url: https://cap.18f.gov/
   text: C2 website
 full_name: C2

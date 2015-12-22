@@ -25,3 +25,5 @@ links:
 contact:
 - url: mailto:michelle.herzfeld@gsa.gov
   text: Michelle Hertzfeld
+errors:
+- 'Unknown Team Member: corey.mahoney'
