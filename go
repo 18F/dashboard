@@ -70,10 +70,14 @@ def build
 end
 
 def ci_build
-  puts 'Fetching from Team API...'
-  update_data
-  build
-  test_build
+  puts 'Building the site...'
+  exec_cmd('npm run browserify')
+  exec_cmd('bundle exec jekyll b --trace')
+  exec_cmd('bundle exec jekyll serve --detach')
+  puts 'Testing the build'
+  ci_test 
+  puts 'Killing Jekyll'
+  exec_cmd('pkill -f jekyll')
   puts 'Done!'
 end
 
@@ -91,8 +95,11 @@ def deploy
 end
 
 def test_build
-  puts 'Testing the build generated the correct number of project pages'
-  exec_cmd 'bundle exec tests/test.rb'
+  exec_cmd 'rspec'
+end
+
+def ci_test
+  exec_cmd 'bundle exec rspec --tag "~type:missing"'
 end
 
 COMMANDS = {
