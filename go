@@ -38,7 +38,8 @@ def init
     exec_cmd 'gem install bundler'
     puts "Bundler installed; installing gems"
   end
-  exec_cmd 'bundle_install'
+  exec_cmd 'bundle install'
+  install_node_modules
 end
 
 def install_gems
@@ -62,7 +63,6 @@ def serve
 end
 
 def build
-  update_data
   puts 'Building the site...'
   exec_cmd('npm run browserify')
   exec_cmd('bundle exec jekyll b --trace')
@@ -78,8 +78,6 @@ def ci_build
 end
 
 def deploy
-  puts 'Updating data from Team-API'
-  update_data
   puts 'Pulling the latest changes...'
   exec_cmd('git pull')
   puts 'Building the site...'
