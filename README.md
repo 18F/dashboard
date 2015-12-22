@@ -1,71 +1,83 @@
 Dashboard
 =========
 
-A site to track our projects' status and much, much more...
+The 18F dashboard provides data and information about our projects, including their current status.
 
-Goal: Provide transparency and insight into 18F work and values.
+Our goal is to provide transparency and insight into 18F work for anyone who is curious about what we do. We see the audience as including, but not limited to, members of the 18F team, GSA and other government agencies, journalists, and people who are interested in working both for and with 18F.
 
-Audience: 18F team, GSA, other government agencies, transparency community,
-journalists, prospective 18Fers
 
 ## Dashboard Content
 
-The Dashboard was initially created in late 2014. The data that is displayed was prioritized based on  initial interviews, research, and guesses
-about how many of the audiences listed above would be interested in specific information, and then balanced against level of effort required to obtain or
-incorporate that data.
+The Dashboard, first created in 2014, shows data that was prioritized based on user research and interviews. We balanced what the audiences listed above would need with level of effort required to obtain or incorporate that data.
 
-Is there data that you'd like to see about our projects that's not listed here? Create an [issue](https://github.com/18F/dashboard/issues/new)! We value feedback.
+Is there data that you'd like to see about our projects that's not listed in [the Dashboard](https://18f.gsa.gov/dashboard/)? Create an [issue](https://github.com/18F/dashboard/issues/new)! The Dashboard is a living project and we incorporate feedback as we receive it.
 
 ## Installing
 
-First clone this repo. Then, install all its dependencies by running `./go init` in your terminal. After that, run `./go update` and `./go serve` and visit http://localhost:4000/dashboard/ in your web browser.
+1. Clone the dashboard repo. 
+1. Install all its dependencies by running `./go init` in your terminal. 
+1. Run `./go update` and `./go serve` to serve the site locally in your browser.
+1. visit http://localhost:4000/dashboard/ in your web browser to see the local site.
 
-By default you get all of our projects, and you can refresh their information by running the `_data/import-public.rb` script. Which is pretty cool, we think.
+By default you get all of our projects. You can refresh their information by running the `_data/import-public.rb` script.
 
-**If you're looking to make your own dashboard using this as an example, you can.**
 
-Copy the `_data/projects.json.example` file to `_data/projects.json` and update
-it by adding a new object (labeled with a
-slugified version of your project name) and filling in all the fields for
-your project. Then, in the `_config.yml` file, change the `team_api:` property
-to `_team_api:` to disable fetching from the Team API server.
+## Editing the 18F Dashboard
 
-## Editing the Dashboard
+The [18F dashboard](https://18f.gsa.gov/dashboard) content is curated by the 18F Outreach team.  Our editorial staff is available to review text to help explain and promote your project.  We strive for a fast and light-weight review process to ensure that the dashboard makes sense and looks good to its thousands of monthly visitors.
 
-The [18F dashboard](https://18f.gsa.gov/dashboard) content is curated by the 18F Communications team.  Our editorial staff is available to review your text to help explain and promote your project.  We strive for a fast and leight-weight review process and still ensure that the dashboard makes sense and looks good to its thousands of monthly visitors.
+18F Product Leads are responsible for maintaining and updating their Dashboard page. The Dashboard page should be created at the start of your project and reviewed monthly with regular updates of milestones achieved, news and other information.
 
-18F Product Leads are responsible for their Dashboard page.  It should be created at the start of your project and reviewed monthly with regular updates of milestones achieved, news and other information.
+Putting your information on the dashboard is a three step process. First, you'll create the content for your entry. Next, you'll preview this material. And finally, the material will be added to the dashboard. The process is detailed below.
 
-Steps:
+## Creating an entry in the dashboard
 
-1. *Provide your project information.*
+1. *Provide your project's basic information.*
 
-   A. If a project has a github repository, create or edit an `.about.yml` file in the main repo.  For more information about this format, check out the [team-api README](https://github.com/18F/team-api.18f.gov/blob/master/README.md).
+   A. If a project has a GitHub repository, create or edit an `.about.yml` file in the main repo.  For more information about this format, check out the [team-api README](https://github.com/18F/team-api.18f.gov/blob/master/README.md), which explains how to create an about.yml file in detail.
 
    B. If your project does not have a github repository, you may add a file to [data-private/projects](https://github.com/18F/data-private/tree/master/projects) that conforms to the same format as `about.yml`.
 
-2. Coming Soon: *Preview your dashboard page.*  You can see what your page will look like before starting the review process.  The dashboard preview feature allows the display of a page based on external data hosted on github.  
+2. Coming Soon: *Preview your dashboard page.*  You will be able to see what your page will look like before starting the review process.  The dashboard preview feature allows the display of a page based on external data hosted on GitHub.
 
-  The easiest way to preview is to first submit a pull request to your own project or data-private with new about.yml content for your own team members to review.  You can also drop your project description into the #writing-lab slack channel or ask those folks to review your PR as well. Using a link to that file on github, you can preview how it will look on the dashboard.  Using the Project Preview link `https://18f.gsa.gov/dashboard/project/preview?url=<link to about.yml file>`. Note that this requires an URL parameter which is expected to point at a github URL.
+## Previewing your submission
 
-  For example, the [Open Opps about.yml](https://github.com/18F/openopps-platform/blob/dev/.about.yml) can be previewed at: [https://18f.gsa.gov/dashboard/project/preview?url=https://github.com/18F/openopps-platform/blob/dev/.about.yml](https://18f.gsa.gov/dashboard/project/preview?url=https://github.com/18F/openopps-platform/blob/dev/.about.yml)
+_Right now, the easiest way to preview is to first submit a pull request to your own project or data-private with new about.yml content for your own team members to review.  You can also drop your project's about.yml details into the #writing-lab Slack channel or ask those folks to review your PR as well. 
 
-3. *For new projects: Add to the Dashboard.* When the content looks good to you and your team, it is time to propose to 18F Comms that your project be showcased on the dashboard.  You can do this by:
+We provide a preview link for you to use with your about.yml file. Copy the link to the about.yml file in GitHub and drop it in this link. Make sure you delete the extra apostrophe at the end. If you have any questions about this, please drop by the #Dashboard channel in Slack. `https://18f.gsa.gov/dashboard/project/preview?url=YOUR_ABOUT_YML`. 
 
-  A. Edit the [project_filter.yml](https://github.com/18F/dashboard/blob/staging/_data/project_filter.yml) to add your project to the list and submit as a pull request.  
+### Example preview
 
-  B. File an [issue](https://github.com/18F/dashboard/issues/new) with a link to your about.yml github URL, and we'll queue it up for the next sprint.  
+The [Open Opps about.yml](https://github.com/18F/openopps-platform/blob/dev/.about.yml) can be previewed at: [https://18f.gsa.gov/dashboard/project/preview?url=https://github.com/18F/openopps-platform/blob/dev/.about.yml](https://18f.gsa.gov/dashboard/project/preview?url=https://github.com/18F/openopps-platform/blob/dev/.about.yml)
 
-4. New content is reviewed at least once a week and the website is updated subsequently. Keep an eye on your pull-requests, editorial folk will make comments there with suggested improvements.  
+## Add your project to the dashboard
+
+3. When the content looks good to you and your team, it is time to propose to 18F Comms that your project be showcased on the dashboard.  You can do this by:
+
+  A. Editing the [project_filter.yml](https://github.com/18F/dashboard/blob/staging/_data/project_filter.yml) to add your project to the list. Then submit as a pull request to have your changes integrated.  
+
+  B. Filing an [issue](https://github.com/18F/dashboard/issues/new) with a link to your about.yml github URL, and we'll queue it up for the next sprint.  
+
+New content is reviewed at least once a week and the website is updated subsequently. Keep an eye on your pull-requests, editorial folk will make comments there with suggested improvements.  
+
+### Contact information and help
 
 If you are eager for a quick response on any of these steps or have questions, please don't hesitate to shout out on the #dashboard channel.
 
 The info below under "Installing" is *not* required to update a repo's
 `.about.yml` file.
 
+## Copying the dashboard for other use cases
+
+**If you're looking to make your own dashboard using this dashboard as an example, you can:**
+
+1. Copy the `_data/projects.json.example` file to `_data/projects.json`
+2. Update it by adding a new object (labeled with a slugified version of your project name) and filling in all the fields for your project. 
+3. In the `_config.yml` file, change the `team_api:` property to `_team_api:` to disable fetching from the Team API server.
+
 ## Data for the Dashboard
 
-**If you're trying to stand up your own version of Dashboard,** you'll want to include a file in the `_data` directory called `projects.json` or `projects.yml`. There is an example `projects.json` file in the `_data` directory you could adapt to your needs, be sure to read the [Installing](#installing) section first, though. **If you're an 18F team member updating your project** keep reading.
+**If you're trying to stand up your own version of Dashboard,** you'll want to include a file in the `_data` directory called `projects.json` or `projects.yml`. There is an example `projects.json` file in the `_data` directory you can adapt to your needs, be sure to read the [Installing](#installing) section first, though. **If you're an 18F team member updating your project** keep reading.
 
 For each piece of content about your project on the 18F Dashboard, there is a different data field (such as `name` or `description`) followed by a `:` to fill in the `.about.yml` file.
 
