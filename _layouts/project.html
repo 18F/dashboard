@@ -7,6 +7,7 @@ layout: bare
   - the project object, which is the project inside _data/projects.yml
     whose `project` field matches thie page's `title` field.
 -->
+
 {% assign project = page.project %}<section class="dashboard-project">
   <nav><a href="{{ site.baseurl }}/"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i> back to main dashboard</a></nav>
   <h1>{{ project.full_name }} <span class="status {{ project.stage }}">{% if project.stage %}{{ project.stage }}{% else %}unknown{% endif %}</span></h1>
@@ -28,14 +29,14 @@ layout: bare
       {% endif %}
     {% endfor %}
   </p>
-  {% capture blog %}{{ project.blog }}{% endcapture %}
+  {% capture blog %}{{ project.blogTag | default: project.blog }}{% endcapture %}
   {% assign tags = blog | split: ',' %}
   {% if tags.size > 0 %}
     <p>
       <i class="fa fa-newspaper-o"></i>  /
       <span class="blog-tags" itemprop="keywords">
         {% for t in tags %}
-          <a href="https://18f.gsa.gov/tags/{{ t }}">News</a>
+          <a href="https://18f.gsa.gov/tags/{{ t | strip }}">News</a>
           /
         {% endfor %}
       </span>
@@ -194,7 +195,9 @@ layout: bare
   </div>
 </section>
 
-{% include dashboard-contact.html %}
+
 
 <script src="{{site.baseurl}}/assets/js/underscore.js"></script>
 <script src="{{site.baseurl}}/assets/js/main.js"></script>
+
+{{ content }}

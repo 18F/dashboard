@@ -38,12 +38,17 @@ def init
     exec_cmd 'gem install bundler'
     puts "Bundler installed; installing gems"
   end
-  exec_cmd 'bundle_install'
+  exec_cmd 'bundle install'
+  install_node_modules
 end
 
 def install_gems
   exec_cmd 'bundle install'
   exec_cmd 'git add Gemfile.lock'
+end
+
+def install_node_modules
+  exec_cmd 'npm install'
 end
 
 def update_data
@@ -53,12 +58,13 @@ end
 def serve
   puts 'Updating from the team API'
   update_data
-  exec 'bundle exec jekyll serve --trace'
+  exec_cmd 'npm run watchify &'
+  exec_cmd 'bundle exec jekyll serve --trace'
 end
 
 def build
-  update_data
   puts 'Building the site...'
+  exec_cmd('npm run browserify')
   exec_cmd('bundle exec jekyll b --trace')
   puts 'Site built successfully.'
 end
@@ -72,8 +78,6 @@ def ci_build
 end
 
 def deploy
-  puts 'Updating data from Team-API'
-  update_data
   puts 'Pulling the latest changes...'
   exec_cmd('git pull')
   puts 'Building the site...'
@@ -91,6 +95,7 @@ end
 COMMANDS = {
   :init => 'Set up the Hub dev environment',
   :install_gems => 'Execute Bundler to update gem set',
+  :install_node_modules => 'Install Node dependencies',
   :update_data => 'Updates data files from data-private',
   :serve => 'Serves the site at localhost:4000',
   :build => 'Builds the site',

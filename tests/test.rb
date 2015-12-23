@@ -3,7 +3,8 @@ require 'safe_yaml'
 
 data = SafeYAML.load_file '_data/project_filter.yml', safe: true
 redirects = Dir.glob('pages/project/*')
-expect_size = data.size + redirects.size
+# we expect one page generated for each project in the project filter, plus any redirects, plus 1 for the preview page.
+expect_size = data['projects'].size + redirects.size + 1
 actual_size = Dir.glob('_site/dashboard/project/*').size
 if expect_size == actual_size
   puts "Dashboard pages generated correctly. There are #{actual_size} projects."
