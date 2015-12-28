@@ -43,7 +43,7 @@ def init
 end
 
 def install_gems
-  exec_cmd 'bundle install'
+  exec_cmd 'bundle install --without development'
   exec_cmd 'git add Gemfile.lock'
 end
 
