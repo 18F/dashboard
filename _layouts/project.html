@@ -29,14 +29,14 @@ layout: bare
       {% endif %}
     {% endfor %}
   </p>
-  {% capture blog %}{{ project.blog }}{% endcapture %}
+  {% capture blog %}{{ project.blogTag | default: project.blog }}{% endcapture %}
   {% assign tags = blog | split: ',' %}
   {% if tags.size > 0 %}
     <p>
       <i class="fa fa-newspaper-o"></i>  /
       <span class="blog-tags" itemprop="keywords">
         {% for t in tags %}
-          <a href="https://18f.gsa.gov/tags/{{ t }}">News</a>
+          <a href="https://18f.gsa.gov/tags/{{ t | strip }}">News</a>
           /
         {% endfor %}
       </span>
