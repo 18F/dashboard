@@ -2,6 +2,7 @@
   "name": "18f-dashboard",
   "repository": "git@github.com:18F/dashboard.git",
   "scripts": {
+    "install": "npm run browserify",
     "browserify": "browserify assets/js/preview.js -o assets/js/preview-bundle.js -t brfs",
     "watchify": "watchify assets/js/preview.js -o assets/js/preview-bundle.js -t brfs"
   },
