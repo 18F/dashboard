@@ -62,10 +62,18 @@ department-of-state:
   url: http://www.state.gov
   full_name: State Department
 department-of-health-and-human-services:
-  url: http://dhs.gov
+  url: http://www.hhs.gov/
   full_name: Department of Health and Human Services
   acronym: DHS
 department-of-justice:
   url: http://www.justice.gov/
   full_name: Justice Department
   acronym: DOJ
+small-business-administration:
+  url: https://www.sba.gov/
+  full_name: Small Business Administration
+  acronym: SBA
+department-of-labor:
+  url: https://www.dol.gov/
+  full_name: Department of Labor
+  acronym: DOL

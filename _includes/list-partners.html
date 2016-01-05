@@ -1,6 +1,6 @@
 {% for agency in project.partners %}
   {% capture agencyname %}{{ agency | slugify }}{% endcapture %}
-  {% capture partnerurl %}{% for partner in site.data.partners %}{% if partner[0] == agencyname %}{{ partner[1].url }}{% else %}{% endif %}{% endfor %}{% endcapture %}
+  {% capture partnerurl %}{% for partner in site.data.partners %}{% if partner[0] == agencyname or partner[1].full_name == agency %}{{ partner[1].url }}{% break %}{% else %}{% endif %}{% endfor %}{% endcapture %}
   {% if include.style == "list" %}
     {% unless partnerurl == empty %}
       <li><a href="{{ partnerurl }}">{{ agency }}</a></li>
