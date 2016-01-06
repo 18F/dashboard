@@ -5,3 +5,4 @@
 *.pyc
 _data/projects.json
 node_modules/
+assets/js/preview-bundle.js
