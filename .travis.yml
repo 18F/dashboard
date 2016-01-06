@@ -7,13 +7,15 @@ rvm:
 before_install: npm install
 
 script: "./go ci_build"
+
 git:
   submodules: false
 
 notifications:
   email:
     recipients:
-      - michelle.hertzfeld@gsa.gov
       - gregory.boone@gsa.gov
     on_success: change
     on_failure: change
+
+cache: bundler
