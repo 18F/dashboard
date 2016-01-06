@@ -1,4 +1,5 @@
-projects = YAML.load_file('_data/project_filter.yml')
+data = YAML.load_file('_data/project_filter.yml')
+projects = data['projects']
 RSpec.describe "project page", :type => :feature do
   projects.each_with_index do |project, index|
     it "#{project} should not have errors" do
