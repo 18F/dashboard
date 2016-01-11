@@ -26,9 +26,9 @@ department-of-homeland-security:
   url: http://dhs.gov
   full_name: Department of Homeland Security
   acronym: DHS
-u-s-citizen-and-immigration-services:
+u-s-citizenship-and-immigration-services:
   url: http://uscis.gov
-  full_name: U.S. Citizen and Immigration Services
+  full_name: U.S. Citizenship and Immigration Services
   acronym: USCIS
 peace-corps:
   url: http://peacecorps.gov
