@@ -129,7 +129,7 @@ module Dashboard
     def generate_project_pages(site)
       site.data['projects'].delete('all')
       site.data['projects'].each do |project_id, project|
-        ProjectPage.create site, project_id, project
+        ProjectPage.create site, project_id.downcase, project
       end
     end
   end
