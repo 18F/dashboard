@@ -24,7 +24,7 @@ By default you get all of our projects. You can refresh their information by run
 ### Deploying on Linux and Docker
 1. Clone the dashboard repo
 1. Build the docker image by running `docker build -t yourname/dashboard .`
-1. Run the docker container `docker run -p 4000:4000 -t yourname/dashboard bash --login -c "cd /home/dashboard/dashboard && ./go serve"
+1. Run the docker container `docker run -p 4000:4000 -t yourname/dashboard bash --login -c "cd /home/dashboard/dashboard && ./go serve"`
 1. Visit http://localhost:4000/dashboard/ in your web browser to see the local site
 
 ## Editing the 18F Dashboard
