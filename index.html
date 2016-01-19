@@ -53,14 +53,15 @@ permalink: /
 
           <div>
             <p>{% if project.partners.size == 1 %}Partner: {%else%}Partners: {%endif%}{% if project.partners %}{% include list-partners.html style="strong" %}{% else %}Coming soon{% endif %}</p>
-            {% if project.github.first.name %}
-              {% assign repo_name = project.github.first.name %}
-            {% else %}
-              {% assign repo_name = project.github.first %}
+            {% if project.github %}
+              {% if project.github.first.name %}
+                {% assign repo_name = project.github.first.name %}
+              {% else %}
+                {% assign repo_name = project.github.first %}
+              {% endif %}
+              <p><i class="fa fa-github-alt"></i> / <a class="github-url" href="https://github.com/{{repo_name}}">Code</a> / </p>
             {% endif %}
-            <p><i class="fa fa-github-alt"></i> / <a class="github-url" href="https://github.com/{{repo_name}}">Code</a> / </p>
-
-            <p><i class="fa fa-bar-chart"></i> / <a href="{{ site.baseurl }}/project/{{ project_name }}">Metrics</a> / </p>
+            <p><i class="fa fa-bar-chart"></i> / <a href="{{ site.baseurl }}/project/{{ project_name | slugify }}">Metrics</a> / </p>
 
             {% capture blog %}{{ project.blogTag | default: project.blog }}{% endcapture %}
             {% assign tags = blog | split: ',' %}
