@@ -8,22 +8,22 @@ RSpec.describe "project page", :type => :feature do
     end
     it "#{project} should have the basic project header", :type => 'missing' do
       visit_url(project)
-      page.should have_css(".dashboard-project")
+      expect(page).to have_selector(".dashboard-project")
     end
 
     it "#{project} should have a status", :type => 'missing' do
       visit_url(project)
-      page.should have_css(".dashboard-project .status")
+      expect(page).to have_selector(".dashboard-project .status")
     end
 
     it "#{project} should have a contact", :type => 'missing' do
       visit_url(project)
-      page.should have_css(".project-contact") # add css for "contact"
+      expect(page).to have_selector(".project-contact") # add css for "contact"
     end
 
     it "#{project} should have an impact statement", :type => 'missing' do
       visit_url(project)
-      page.should have_css(".project-impact")
+      expect(page).to have_selector(".project-impact")
     end
   end
 end
