@@ -17,10 +17,15 @@ Is there data that you'd like to see about our projects that's not listed in [th
 1. Clone the dashboard repo. 
 1. Install all its dependencies by running `./go init` in your terminal. 
 1. Run `./go update` and `./go serve` to serve the site locally in your browser.
-1. visit http://localhost:4000/dashboard/ in your web browser to see the local site.
+1. Visit http://localhost:4000/dashboard/ in your web browser to see the local site.
 
 By default you get all of our projects. You can refresh their information by running the `_data/import-public.rb` script.
 
+### Deploying on Linux and Docker
+1. Clone the dashboard repo
+1. Build the docker image by running `docker build -t yourname/dashboard .`
+1. Run the docker container `docker run -p 4000:4000 -t yourname/dashboard bash --login -c "cd /home/dashboard/dashboard && ./go serve"`
+1. Visit http://localhost:4000/dashboard/ in your web browser to see the local site
 
 ## Editing the 18F Dashboard
 
