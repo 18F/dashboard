@@ -8,6 +8,11 @@ before_install: npm install
 
 script: "./go ci_build"
 
+branches:
+  only:
+  - staging
+  - production
+
 git:
   submodules: false
 
