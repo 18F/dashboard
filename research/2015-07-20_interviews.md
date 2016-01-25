@@ -6,11 +6,13 @@ In July 2015, 18F held a 'transparency sprint' to work on and think about how be
 
 We conducted eight 30 minute interviews over July 20-23 with the following types of participants:
 
-| Staff Managers | 4 |
-| Operations | 2 |
-| Product Manager | 1 |
-| Talent | 1 |
-| *Total Interviews* | *8* |
+Position | #
+--- | ---
+Staff Managers | 4
+Operations | 2
+Product Manager | 1
+Talent | 1
+*Total Interviews* | *8*
 
 ## Summary
 
