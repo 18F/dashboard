@@ -8,16 +8,16 @@ However, our first resolution in our blog post was to develop metrics. I'm not s
 
 To paraphrase the illustrious Eric Mill's words into a hypotheses waiting for metrics:
 
-**We believe that** many of the tools we build could be really useful for people who work at a variety of organizations  
-**Will** _TBD_  
+**We believe that** many of the tools we build   
+**Will** be really useful for people who work at a variety of organizations   
 **We will know that we are right when** _TBD_
 
 **We believe that** surfacing those tools, writing about them more, and identifying the parts of our work that are generic  
 **Will** _TBD_  
 **We will know that we are right when** _TBD_
 
-**We believe that** decoupling them from the applications we developed them for will make it easier for others to reuse them
-**Will** _TBD_  
+**We believe that** decoupling them from the applications we developed them for  
+**Will** make it easier for others to reuse them   
 **We will know that we are right when** _TBD_
 
 .
