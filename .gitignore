@@ -1,8 +1,0 @@
-/_site
-.sass-cache
-.DS_Store
-*.log
-*.pyc
-_data/projects.json
-node_modules/
-assets/js/preview-bundle.js
