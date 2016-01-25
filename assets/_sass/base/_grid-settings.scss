@@ -1,0 +1,12 @@
+@import '../neat/neat-helpers'; // or '../neat/neat-helpers' when not in Rails
+
+// Breakpoint variables
+//********************************************************
+//$biggest: new-breakpoint(min-width 1430px); //untested
+ //////BASE SIZE HERE//////
+$small: new-breakpoint(max-width 1130px);
+$smaller: new-breakpoint(max-width 995px);
+$smallest: new-breakpoint(max-width 785px);
+$tiny: new-breakpoint(max-width 590px);
+$tinier: new-breakpoint(max-width 480px); //only used in hero unit
+$tiniest: new-breakpoint(max-width 390px);

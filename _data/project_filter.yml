@@ -1,0 +1,41 @@
+# This file should contain only the identifiers of projects that should be
+# published to the Dashboard from the Team API.
+projects:
+- api-data-gov
+- betaFEC
+- C2
+- calc
+- cloud.gov
+- collegescorecard
+- dap
+- dashboard
+- dataact
+- developer-program
+- discovery
+- ekip-api
+- fbopen
+- federalist
+- foia
+- openopps
+- myra
+- myusa
+- peacecorps-site
+- pulse
+- sbirez
+- uscis
+- useiti-report
+fields:
+- full_name
+- stage
+- description
+- contact
+- blog
+- impact
+- partners
+- milestones
+- github
+- licenses
+- links
+- errors
+- name
+- parent
