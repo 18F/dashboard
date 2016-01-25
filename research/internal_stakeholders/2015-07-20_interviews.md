@@ -1,6 +1,6 @@
 ## Background
 
-In July 2015, 18F held a 'transparency sprint' to work on and think about how better to structure internal mechanisms to support data-driven decision-making, and how best to share that information. To support this, we did user interviews with internal staff. Note: this research was focused on internal stakeholders and does not reflect potential needs of external dashboard users.
+In July 2015, 18F held a 'transparency sprint' to work on and think about how better to structure internal mechanisms to support data-driven decision-making, and how best to share that information. To support this, we did user interviews with internal staff. Note: this research was focused on internal stakeholders and does not reflect potential needs of external dashboard users. This information was originally shared as an [internal google doc](https://docs.google.com/document/d/1dno2gtYtsfe-DOlHOAfEHcTM8ePGmnzAW6CQIc1AICw/edit#heading=h.6q1xk43scllq).
 
 ## Methodology
 
