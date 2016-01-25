@@ -1,6 +1,6 @@
 ## Background
 
-The Agile Guild did research into the current dashboard and what it might be in the future. All the detail is [here](https://docs.google.com/document/d/1H8Jq40_CYpmOjiXQZxBxZotyzZQmtS0i3-rLN2yZqYY/edit#).
+The Agile Guild did research into the current dashboard and what it might be in the future. All the detail is [here](https://docs.google.com/document/d/1H8Jq40_CYpmOjiXQZxBxZotyzZQmtS0i3-rLN2yZqYY/edit#). Related interviews are [here](https://drive.google.com/drive/folders/0B_n2YScccqDXa283dS1yOUo3NEk).
 
 ## Key Questions
 
