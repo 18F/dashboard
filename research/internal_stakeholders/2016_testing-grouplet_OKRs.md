@@ -5,7 +5,9 @@ There is a testing workgroup within 18F that wants to make sure code is healthy 
 ## Summary
 
 - **We believe that:** surfacing metrics on %age of passing builds; %age of testing coverage; existence of linting; automated code quality diagnostics score; dependency status (systems that track if your dependencies are current, and secure)
+
 **Will:** enable us to identify the pain points we should address first, or the projects most in need of assistance
+
 **We will know we are right when:** we see product leads and 18F folks using the surfaced data to track project health
 
 - **We believe that:** partnering with project leads
