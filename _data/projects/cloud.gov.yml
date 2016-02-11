@@ -2,13 +2,11 @@
 name: cloud.gov
 full_name: cloud.gov Platform-As-A-Service
 stage: alpha
-description: cloud.gov takes care of infrastructure concerns so teams can focus all
-  of their efforts on their app rather than fighting the environment
+description: cloud.gov includes a Platform-as-a-Service (PaaS) specifically built for government, based on the open source Cloud Foundry. It provides a secure, scalable platform for teams to build and host their application or website. It can help development teams work faster and cheaper by handling much of their deployment complexity. The cloud.gov platform is currently in a small pilot program, but we will be expanding access over time.
 partners:
 - 18F
 - GSA
-impact: The cloud.gov PaaS has the potential to reduce costs and complexity of IT
-  projects across the federal government by an order of magnitude.
+impact: Gives government teams the ability to develop, run, and manage web applications without the complexity and cost of building and maintaining infrastructure.
 licenses:
   cg-landing:
     name: CC0
