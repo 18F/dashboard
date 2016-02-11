@@ -2,11 +2,7 @@
 name: ekip-api
 full_name: Every Kid in a Park
 stage: live
-description: "The Every Kid in a Park initiative is part of President Obama’s commitment
-  to protect \nour Nation’s unique outdoor spaces and ensure that every American has
-  the opportunity \nto visit and enjoy them. This initiative provides all fourth grade
-  students and their \nfamilies with free admission to National Parks and other federal
-  lands and waters for \na full year.\n"
+description: "In 2015, President Obama formally announced the Every Kid in a Park program, which provides fourth graders and their families with free access to more than 2,000 federally-managed sites. 18F worked with the Department of the Interior to create the program’s website, which was written at a fourth grade level with the help of fourth graders."
 partners:
 - U.S. Department of the Interior
 milestones:
@@ -17,7 +13,7 @@ milestones:
 - July 2015 - Ticketing Application Demo
 - September 1, 2015 - Site Launch
 impact: |
-  Written at a 4th grade level and tested with kids, this site provides an optimized user experience to generate a paper pass to visit national lands and waters.
+  Designed by and for fourth graders, this site provides an optimized user experience to generate a paper pass to visit more than 2,000 federally-managed sites.
 licenses:
   ekip-api:
     name: CC0-1.0
