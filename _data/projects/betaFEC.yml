@@ -2,8 +2,7 @@
 name: betaFEC
 full_name: betaFEC
 stage: beta
-description: A new Federal Election Commission (FEC) website that will make campaign
-  finance information more accessible and understandable to all users.
+description: The Federal Election Commission (FEC) has long been a pioneer of open data. 18F was able to help the FEC build its first public API, and a new site on top of that API. This site helps make campaign finance information more accessible to the public, as part of a larger redesign of the FEC’s online presence.
 links:
 - url: https://beta.fec.gov
   text: betaFEC
@@ -16,8 +15,7 @@ milestones:
 - 'October 2015: Public release of beta site'
 partners:
 - Federal Election Commission
-impact: The FEC collects data about how campaigns are financed that affect all 318
-  million Americans every 2 years.
+impact: The new site makes it easy to search, share, and understand campaign finance data.
 licenses:
   betaFEC:
     name: CC0-1.0
