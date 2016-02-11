@@ -3,7 +3,8 @@ name: dap
 github:
 - gsa/analytics.usa.gov
 - 18f/analytics-reporter
-description: A lightweight dashboard that shows web traffic across the .gov domain.
+description: 18F worked with the Digital Analytics Program, the U.S. Digital Service, and the White House to build and host a lightweight dashboard and public dataset that shows web traffic across the .gov domain.
+impact: Gives agencies a tool to make data-driven decisions and gives the public an easy way to see .gov traffic as well as what kinds of technology people are using to access .gov websites.
 partners:
 - General Services Administration
 stage: beta
