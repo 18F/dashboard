@@ -39,9 +39,7 @@ Putting your information on the dashboard is a three step process. First, you'll
 
 1. *Provide your project's basic information.*
 
-   A. If a project has a GitHub repository, create or edit an `.about.yml` file in the main repo.  For more information about this format, check out the [team-api README](https://github.com/18F/team-api.18f.gov/blob/master/README.md), which explains how to create an about.yml file in detail.
-
-   B. If your project does not have a github repository, you may add a file to [data-private/projects](https://github.com/18F/data-private/tree/master/projects) that conforms to the same format as `about.yml`.
+   A. If a project has a GitHub repository, create or edit an `.about.yml` file in the main repo.  For more information about this format, check out the [team-api README](https://github.com/18F/team-api.18f.gov/blob/master/README.md), which explains how to create a YAML file so that your project appears in the dashboard.
 
 2. *Preview your dashboard page.*  You will be able to see what your page will look like before starting the review process.  The dashboard preview feature allows the display of a page based on external data hosted on GitHub.
 
