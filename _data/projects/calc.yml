@@ -2,11 +2,10 @@
 name: calc
 github:
 - 18F/calc
-description: CALC is a tool to help contracting personnel estimate their per-hour
-  labor costs for a contract, based on historical pricing information.
+description: The Contract Awarded Labor Category (CALC) tool helps the federal contracting community make smarter, faster buying decisions by allowing them to search for hourly labor rates across numerous government contracts. The CALC tool is helping contracting officers move from paper-based research to simple, efficient online search.
 partners:
 - General Services Administration
-impact: All federal acquisition personnel involved in buying professional services
+impact: Saves contracting officers in the federal government hours of work every week and provides them with better data. By having a tool that understands fair and reasonable prices, contracting officers will be better equipped to negotiate with vendors, which will ensure that the government is spending taxpayer dollars wisely and in the most efficient way.
 stage: live
 milestones:
 - 'November 2014: Initial discovery stage begins'

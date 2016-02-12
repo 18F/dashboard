@@ -2,11 +2,10 @@
 name: discovery
 github:
 - 18F/discovery
-description: Market research tool for the OASIS procurement vehicle, which serves
-  contracting specialists throughout the U.S. Federal Government.
+description: Discovery allows federal acquisition personnel to conduct initial market research more easily and quickly, allowing users to discover and research vendors offering work across a number of professional service categories.
 partners:
 - General Services Administration
-impact: 
+impact: Makes the procurement process a lot easier for GSA’s contracting officers — the people who are responsible for buying products and services for the federal government. Discovery lets these contracting officers find and sort vendors based on their experience levels and other attributes, saving them hours of time in the process.
 stage: beta
 milestones:
 - 'May 2014: Initial Discovery stage began for task order generator project'

@@ -3,14 +3,13 @@ name: C2
 github:
   name: 18F/C2
   description: an approval process automation tool
-description: an approval process automation tool
+description: More than a quarter million federal employees use government credit cards, called purchase cards, to buy small items like office supplies and furniture. Each purchase needs to be approved and audited to prevent fraud. With our partners at the General Service Administration's Public Buildings Service in Washington, D.C., we built a simplified, email-based purchasing approval tool for purchase card holders authorized to buy office supplies for the government. We designed it to be intuitive and convenient so that federal employees could drastically reduce the time they spend on purchase card approvals.
 partners:
 - GSA National Capital Region
 - 18F
 - GSA Common Acquisition Platform
 stage: live
-impact: For the GSA use cases alone, Communicart could be used by over 80,000 U.S.
-  Federal Government purchase card holders.
+impact: As C2 streamlines the purchase card approval process, government employees can spend more time performing their essential work and less time on the paperwork required to buy their micropurchases. An updated process will help restore public confidence that government employees are only using cards for valid purchases and save the government agencies millions of dollars by creating a more reliable, efficient approval system for micropurchases.
 milestones: 
 contact:
 - url: https://cap.18f.gov/feedback

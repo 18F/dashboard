@@ -2,15 +2,12 @@
 name: developer-program
 github:
 - 18F/API-All-the-X
-description: A suite of tools, resources, and consulting services to assist agencies
-  in the production and management of government APIs.  This two-year-old program
-  was adopted by 18F to scale out its impact and to grow the government’s API portfolio.
+description: The /Developer program provides comprehensive support and resources for any federal agency engaged in the production or use of APIs. 
 partners:
 - General Services Administration
 stage: live
-impact: Over 70 agencies served, including each cabinet department, National Archives,
-  Federal Communications Commission, Consumer Financial Protection Bureau, and the
-  Office of Personnel Management.
+impact: "Helps federal agencies develop useful, robust APIs through educational resource and tools. The program has served ver 70 agencies, including each cabinet department, the National Archives,the Federal Communications Commission, the Consumer Financial Protection Bureau, and the
+Office of Personnel Management."
 milestones:
 - 'January 2014: 18F began work on project'
 - 'May 2014: API Usability Program Launched'

@@ -2,14 +2,10 @@
 name: dataact
 github:
 - fedspendingtransparency/fedspendingtransparency.github.io
-description: Consulting engagement to advise on the federal spending data standards
-  and corresponding pilot project mandated by the DATA Act.
+description: The DATA Act was signed in 2014 to bring transparency into how the federal government spends money. 18F advises the Treasury Department on how to implement the DATA Act, and provides agency outreach, technical assistance, and content.
 partners:
 - U.S. Department of Treasury
-impact: The federal agencies, state and local governments, transparency advocacy organizations,
-  non-profits, academic researchers, and individuals who use federal spending data.
-  All federal agencies can benefit from the pilot software and lessons learned as
-  they prepare to comply with the DATA Act.
+impact: Makes it easier for the public to understand how trillions of tax dollars are spent by the government every year.
 stage: alpha
 milestones:
 - 'January 2015: 18F began work on project'
