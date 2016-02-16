@@ -39,13 +39,13 @@ Putting your information on the dashboard is a three step process. First, you'll
 
 1. *Provide your project's basic information.*
 
-   A. If a project has a GitHub repository, create or edit an `.about.yml` file in the main repo.  For more information about this format, check out the [team-api README](https://github.com/18F/team-api.18f.gov/blob/master/README.md), which explains how to create a YAML file so that your project appears in the dashboard.
+Check out the [team-api README](https://github.com/18F/team-api.18f.gov/blob/master/README.md), which explains how to create a YAML file so that your project appears in the dashboard. (If your project has its own repo, create an `.about.yml` file in that repo, if not, create a project file in the `_data/projects` directory of the [Team API](https://github.com/18F/team-api.18f.gov) repo.)
 
-2. *Preview your dashboard page.*  You will be able to see what your page will look like before starting the review process.  The dashboard preview feature allows the display of a page based on external data hosted on GitHub.
+2. *Preview your dashboard page.*  You will be able to see what your page will look like before starting the review process. The dashboard preview feature allows the display of a page based on external data hosted on GitHub.
 
-Right now, the easiest way to preview is to first submit a pull request to your own project or data-private with new about.yml content for your own team members to review.  You can also drop your project's about.yml details into the #writing-lab Slack channel or ask those folks to review your PR as well. 
+Right now, the easiest way to preview is to first submit a pull request with your new or revised project data for your team to review. You can also drop your project details into the #writing-lab Slack channel or ask those folks to review your PR as well. 
 
-You will also able to preview your project in the dashboard using the example URL below. Just replace the GitHub link after the '?url=' part of the URL with a link to your about.yml file. Then paste the entire URL into your browser. (Make sure you delete the extra apostrophe at the end.) If you have any questions about this, please drop by the #dashboard channel in Slack. `https://18f.gsa.gov/dashboard/project/preview?url=YOUR_ABOUT_YML`. 
+You will also able to preview your project in the dashboard using the example URL below. Just replace the GitHub link after the '?url=' part of the URL with a link to your project's YAML file `https://18f.gsa.gov/dashboard/project/preview?url=YOUR_PROJECTS_YAML_FILE`. Then paste the entire URL into your browser. (Make sure you delete the extra apostrophe at the end.) If you have any questions about this, please drop by the #dashboard channel in Slack.
 
 ### Example preview link
 
@@ -65,8 +65,7 @@ New content is reviewed at least once a week and the website is updated subseque
 
 If you are eager for a quick response on any of these steps or have questions, please don't hesitate to shout out on the #dashboard channel.
 
-The info below under "Installing" is *not* required to update a repo's
-`.about.yml` file.
+The info under ["Installing"](#installing) is *not* required to get your project to appear on the 18F dashboard.
 
 ## Copying the dashboard for other use cases
 
