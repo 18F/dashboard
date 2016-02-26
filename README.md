@@ -1,7 +1,11 @@
 Dashboard
 =========
 
-*This repo is being sunset.* Please file issue relating to what you see at 18f.gsa.gov/dashboard in the [18F/18f.gsa.gov](https://github.com/18f/18f.gsa.gov) repo.
+*This repo is being sunset.* 
+
+If you have a bug relating to what you see at 18f.gsa.gov/dashboard please file an issue in the [18F/18f.gsa.gov](https://github.com/18f/18f.gsa.gov/issues/new) repo.
+
+If you have a request for a feature or want to leave a general comment about the dashboard please file it in the [18F/beta.18f.gov](https://github.com/18F/beta.18f.gov/issues/new) repo.
 
 ## Archival README
 
