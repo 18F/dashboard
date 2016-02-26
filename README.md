@@ -1,6 +1,12 @@
 Dashboard
 =========
 
+*This repo is being sunset.* Please file issue relating to what you see at 18f.gsa.gov/dashboard in the [18F/18f.gsa.gov](https://github.com/18f/18f.gsa.gov) repo.
+
+## Archival README
+
+The below is an accurate description of how to configure and edit the software contained in this repo.
+
 The 18F dashboard provides data and information about our projects, including their current status.
 
 Our goal is to provide transparency and insight into 18F work for anyone who is curious about what we do. We see the audience as including, but not limited to, members of the 18F team, GSA and other government agencies, journalists, and people who are interested in working both for and with 18F.
